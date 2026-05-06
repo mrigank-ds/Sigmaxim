@@ -1,0 +1,21 @@
+uuid: 87e2d4b6-d728-46e8-a48b-8b66a02c7651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.icc_connectors.field_list_txt10
+field_name: field_list_txt10
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Cable Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

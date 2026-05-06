@@ -1,0 +1,23 @@
+uuid: 1c4ae8b3-b4e7-456c-85a2-5e4af2bba05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_iges
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_iges
+field_name: field_iges
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: IGES
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

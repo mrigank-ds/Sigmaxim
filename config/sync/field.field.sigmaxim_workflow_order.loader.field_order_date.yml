@@ -1,0 +1,24 @@
+uuid: fe0bfce4-d137-4fb8-81a3-168b55fbd18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_order_date
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - datetime
+id: sigmaxim_workflow_order.loader.field_order_date
+field_name: field_order_date
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Order Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,16 @@
+uuid: d53c9a7d-8491-4ba0-8f8b-6aaeece8300e
+langcode: en
+status: true
+dependencies: {  }
+id: te_connector
+label: 'TE Connector'
+description: 'site testing product'
+group: null
+name: null
+value: null
+watched_folder: order/te_connector
+permission:
+  - administrator_role
+  - admin_role
+weight: '-10'
+product_category: '9'

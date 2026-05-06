@@ -1,0 +1,23 @@
+uuid: 0864fe6e-f4e0-41eb-8064-6adfce13684a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_creoview
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_creoview
+field_name: field_creoview
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: CreoView
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,37 @@
+uuid: e3d19245-1fdc-45aa-bb67-ad20422510bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.field.comment.comment.comment_body
+    - field.field.comment.comment.field_dilip_test_math
+  module:
+    - field_expression
+    - text
+_core:
+  default_config_hash: aBQUGsQ46M4048fIlFuTXwl2zV0j2cJX89CTUobh9hA
+id: comment.comment.default
+targetEntityType: comment
+bundle: comment
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_dilip_test_math:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

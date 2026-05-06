@@ -1,0 +1,799 @@
+uuid: 85709a45-a3ca-4c23-b030-e52cf0a7028b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.test_product.field_concat1
+    - field.field.sigmaxim_workflow_order.test_product.field_concat_test
+    - field.field.sigmaxim_workflow_order.test_product.field_controlled
+    - field.field.sigmaxim_workflow_order.test_product.field_fieldset_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_fieldset_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_float_field
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_field
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_field_checkbox
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_fieldset_checkbox
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_multi
+    - field.field.sigmaxim_workflow_order.test_product.field_integer_field
+    - field.field.sigmaxim_workflow_order.test_product.field_issue1
+    - field.field.sigmaxim_workflow_order.test_product.field_issue2
+    - field.field.sigmaxim_workflow_order.test_product.field_issue3
+    - field.field.sigmaxim_workflow_order.test_product.field_issue4
+    - field.field.sigmaxim_workflow_order.test_product.field_issue5
+    - field.field.sigmaxim_workflow_order.test_product.field_issue6
+    - field.field.sigmaxim_workflow_order.test_product.field_issue7
+    - field.field.sigmaxim_workflow_order.test_product.field_issue8
+    - field.field.sigmaxim_workflow_order.test_product.field_issue9
+    - field.field.sigmaxim_workflow_order.test_product.field_math_div
+    - field.field.sigmaxim_workflow_order.test_product.field_math_expression_add
+    - field.field.sigmaxim_workflow_order.test_product.field_math_expression_multiply
+    - field.field.sigmaxim_workflow_order.test_product.field_math_sin
+    - field.field.sigmaxim_workflow_order.test_product.field_math_sub
+    - field.field.sigmaxim_workflow_order.test_product.field_multi_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_multi_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_php_floor
+    - field.field.sigmaxim_workflow_order.test_product.field_php_max
+    - field.field.sigmaxim_workflow_order.test_product.field_php_min
+    - field.field.sigmaxim_workflow_order.test_product.field_reset
+    - field.field.sigmaxim_workflow_order.test_product.field_target1
+    - field.field.sigmaxim_workflow_order.test_product.field_target2
+    - field.field.sigmaxim_workflow_order.test_product.field_text_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_text_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_units_conversion_value
+    - field.field.sigmaxim_workflow_order.test_product.field_units_radiobutton
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - concat_field
+    - conditional_fields
+    - field_expression
+    - field_group
+    - field_group_image
+    - readonly_field_widget
+    - resetfield
+third_party_settings:
+  field_group:
+    group_concat_tests:
+      children:
+        - field_text_field_1
+        - field_text_field_2
+        - field_concat_test
+        - field_issue1
+        - field_issue2
+      label: 'Concatenation Tests'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_math_tests:
+      children:
+        - field_integer_field
+        - field_float_field
+        - field_math_expression_add
+        - field_math_expression_multiply
+        - field_php_floor
+        - field_php_min
+        - field_php_max
+        - field_issue3
+        - field_math_sub
+        - field_math_div
+        - field_math_sin
+      label: 'Math Tests'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_units_group:
+      children:
+        - field_units_radiobutton
+        - field_units_conversion_value
+        - field_issue4
+      label: 'Units Conversion Test'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_hide_fieldset:
+      children:
+        - field_fieldset_field_1
+        - field_fieldset_field_2
+      label: 'Hide Fieldset'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_hide_field_test:
+      children:
+        - field_hide_field
+        - field_hide_field_checkbox
+        - field_reset
+      label: 'Hide Field Test'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_std_data:
+      children:
+        - field_issue5
+      label: 'Standard Data Reference Test'
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_aadvanced_data_reference:
+      children:
+        - field_issue6
+      label: 'Advanced Data Reference'
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_multi:
+      children:
+        - group_multi_group
+      label: 'Multiple Fieldgroup non-column type'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_multi_group:
+      children:
+        - field_multi_field_1
+        - field_multi_field_2
+      label: 'multi group'
+      region: content
+      parent_name: group_multi
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_dynamic_image:
+      children:
+        - field_issue8
+      label: 'Dynamic Image'
+      region: content
+      parent_name: ''
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_batch_drag:
+      children: {  }
+      label: BATCH_DRAG
+      region: content
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_dependency_tests:
+      children:
+        - field_controlled
+        - field_target1
+        - field_target2
+      label: 'Dependency Tests'
+      region: content
+      parent_name: ''
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_concat_tests:
+      image: 0
+      image_style: large
+      image_position: above
+    group_math_tests:
+      image: 0
+      image_style: large
+      image_position: above
+    group_units_group:
+      image: 0
+      image_style: large
+      image_position: above
+    group_hide_fieldset:
+      image: 0
+      image_style: large
+      image_position: above
+    group_hide_field_test:
+      image: 0
+      image_style: large
+      image_position: above
+    group_std_data:
+      image: 0
+      image_style: large
+      image_position: above
+    group_aadvanced_data_reference:
+      image: 0
+      image_style: large
+      image_position: above
+    group_multi:
+      image: 0
+      image_style: large
+      image_position: above
+    group_multi_group:
+      image: 0
+      image_style: large
+      image_position: above
+    group_dynamic_image:
+      image: 0
+      image_style: large
+      image_position: above
+    group_batch_drag:
+      image: 0
+      image_style: large
+      image_position: above
+    group_dependency_tests:
+      image: 0
+      image_style: large
+      image_position: above
+id: sigmaxim_workflow_order.test_product.default
+targetEntityType: sigmaxim_workflow_order
+bundle: test_product
+mode: default
+content:
+  field_concat1:
+    type: concat_field_default
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_concat_test:
+    type: concat_field_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_controlled:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dd_mm_yy:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fieldset_field_1:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fieldset_field_2:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        6442810e-5143-4c4b-b3b1-2163a0a19a1f:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_controlled
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_float_field:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_hide_field:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        4d8efd82-3fcf-4595-9e5a-9966898c446c:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_hide_field_checkbox
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_hide_field_checkbox:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_hide_fieldset_checkbox:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_hide_multi:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_integer_field:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_issue1:
+    type: readonly_field_widget
+    weight: 11
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue2:
+    type: readonly_field_widget
+    weight: 12
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue3:
+    type: readonly_field_widget
+    weight: 11
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue4:
+    type: readonly_field_widget
+    weight: 18
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue5:
+    type: readonly_field_widget
+    weight: 11
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue6:
+    type: readonly_field_widget
+    weight: 10
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue7:
+    type: readonly_field_widget
+    weight: 10
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue8:
+    type: readonly_field_widget
+    weight: 17
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_issue9:
+    type: readonly_field_widget
+    weight: 14
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_link_20230109:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_math_div:
+    type: expression_editable
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_math_expression_add:
+    type: expression_editable
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_math_expression_multiply:
+    type: expression_editable
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_math_sin:
+    type: expression_editable
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_math_sub:
+    type: expression_editable
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_multi_field_1:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_multi_field_2:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_php_floor:
+    type: expression_editable
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_php_max:
+    type: expression_editable
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_php_min:
+    type: expression_editable
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_reset:
+    type: reset_button_widget
+    weight: 13
+    region: content
+    settings:
+      button_text: ''
+      fields_to_reset: ''
+    third_party_settings: {  }
+  field_target1:
+    type: readonly_field_widget
+    weight: 21
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        35fb89ad-866c-4f43-8969-43d01a841784:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_controlled
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Red
+            effect: show
+            effect_options: {  }
+            selector: ''
+        888078f1-52f3-4000-8f30-802ffe0d676d:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_controlled
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Blue
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_target2:
+    type: readonly_field_widget
+    weight: 22
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        9f20e0f0-5d23-4034-9758-37667ca2f785:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_controlled
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Yellow
+            effect: show
+            effect_options: {  }
+            selector: ''
+        c9347a61-f699-4054-a09a-f147a131d5a1:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_controlled
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Green
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_text_field_1:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text_field_2:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_units_conversion_value:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_units_radiobutton:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group_hide_fieldset:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        141f7a09-f61c-4f88-9046-b459deac649f:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_hide_fieldset_checkbox
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  group_multi:
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        8fdb4ec5-a296-4bd0-8309-8d3581f54f6b:
+          entity_type: sigmaxim_workflow_order
+          bundle: test_product
+          dependee: field_hide_multi
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_express_dec_20230109: true
+  field_folder_id: true
+  field_int1: true

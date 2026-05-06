@@ -1,0 +1,10 @@
+name: Monarch Data Entity
+type: module
+description: Allows admins to create custom data entities for managing data and integrating with views.
+package: Monarch
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - views
+  - entity_browser
+  - feeds
+configure: entity.table_definition.collection

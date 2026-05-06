@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: d37a530b-f35b-4273-81b5-1d45eb960976
+name: 'SIGMAXIM SmartDesignServer'
+mail: test@gmail.com
+slogan: 'Powered by <a href="http://www.sigmaxim.com" target="_blank">SIGMAXIM SmartDesignServer™</a>'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

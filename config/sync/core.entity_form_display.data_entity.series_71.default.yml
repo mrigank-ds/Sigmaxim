@@ -1,0 +1,350 @@
+uuid: 7876fccf-40cf-4daf-8f89-e4badfadaf5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.series_71.feeds_item
+    - field.field.data_entity.series_71.field_a
+    - field.field.data_entity.series_71.field_ac
+    - field.field.data_entity.series_71.field_adapter
+    - field.field.data_entity.series_71.field_b
+    - field.field.data_entity.series_71.field_b1
+    - field.field.data_entity.series_71.field_b2
+    - field.field.data_entity.series_71.field_b2hubmaxbore
+    - field.field.data_entity.series_71.field_bal_rpm
+    - field.field.data_entity.series_71.field_bhubmaxbore
+    - field.field.data_entity.series_71.field_bhubminbore
+    - field.field.data_entity.series_71.field_c_min
+    - field.field.data_entity.series_71.field_capscrew
+    - field.field.data_entity.series_71.field_cdimension
+    - field.field.data_entity.series_71.field_cm_generic
+    - field.field.data_entity.series_71.field_cm_instance
+    - field.field.data_entity.series_71.field_couplingsize
+    - field.field.data_entity.series_71.field_disc_pack_asm
+    - field.field.data_entity.series_71.field_disc_pack_bolts
+    - field.field.data_entity.series_71.field_disc_pack_kt
+    - field.field.data_entity.series_71.field_disc_pack_thickness
+    - field.field.data_entity.series_71.field_e
+    - field.field.data_entity.series_71.field_flex_joint_kt
+    - field.field.data_entity.series_71.field_g
+    - field.field.data_entity.series_71.field_hub_name
+    - field.field.data_entity.series_71.field_locknut
+    - field.field.data_entity.series_71.field_mct
+    - field.field.data_entity.series_71.field_not_bal_rpm
+    - field.field.data_entity.series_71.field_pot
+    - field.field.data_entity.series_71.field_service_factor
+    - field.field.data_entity.series_71.field_std_c
+    - field.field.data_entity.series_71.field_washer
+    - field.field.data_entity.series_71.field_wcpi
+    - field.field.data_entity.series_71.field_weight
+    - field.field.data_entity.series_71.field_wr2
+    - field.field.data_entity.series_71.field_wr2_cpi
+    - monarch_data_entity.data_entity_type.series_71
+id: data_entity.series_71.default
+targetEntityType: data_entity
+bundle: series_71
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_a:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ac:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_adapter:
+    type: string_textfield
+    weight: 37
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_b:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_b1:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_b2:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_b2hubmaxbore:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bal_rpm:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bhubmaxbore:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bhubminbore:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_c_min:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_capscrew:
+    type: string_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cdimension:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cm_generic:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cm_instance:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_couplingsize:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_disc_pack_asm:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_disc_pack_bolts:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_disc_pack_kt:
+    type: string_textfield
+    weight: 35
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_disc_pack_thickness:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_e:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_flex_joint_kt:
+    type: string_textfield
+    weight: 36
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_g:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hub_name:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_locknut:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mct:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_not_bal_rpm:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pot:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_service_factor:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_std_c:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_washer:
+    type: string_textfield
+    weight: 33
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_wcpi:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_weight:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_wr2:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_wr2_cpi:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden:
+  feeds_item: true

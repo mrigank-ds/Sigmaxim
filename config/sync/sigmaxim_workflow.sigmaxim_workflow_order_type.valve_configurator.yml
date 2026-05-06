@@ -1,0 +1,17 @@
+uuid: 2b858607-accd-4775-a43a-e44a8fedfc98
+langcode: en
+status: true
+dependencies: {  }
+id: valve_configurator
+label: 'Valve Configurator'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '18'

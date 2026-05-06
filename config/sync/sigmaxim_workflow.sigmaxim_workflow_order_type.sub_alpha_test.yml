@@ -1,0 +1,17 @@
+uuid: 0d6f2fd0-c42a-4b5c-b1d4-c8dc0ec4626f
+langcode: en
+status: true
+dependencies: {  }
+id: sub_alpha_test
+label: Sub-alpha-test
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/Sub-alpha-test
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '35'

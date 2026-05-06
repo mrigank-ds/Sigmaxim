@@ -1,0 +1,40 @@
+uuid: a5138e18-86d5-4c9e-a1e3-f97469db58bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_balance_type
+field_name: field_balance_type
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Standard
+      label: Standard
+    -
+      value: Extended
+      label: Extended
+    -
+      value: 'Heavy Duty'
+      label: 'Heavy Duty'
+    -
+      value: 'Light Duty'
+      label: 'Light Duty'
+    -
+      value: 'Fully Balanced'
+      label: 'Fully Balanced'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,33 @@
+uuid: 83ca1745-09bd-4ef0-91b4-298dd90c11e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_radial_angle
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753457206
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_radial_angle
+field_name: field_radial_angle
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Radial Angle'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '70.00'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal

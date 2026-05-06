@@ -1,0 +1,23 @@
+uuid: 8daf7c98-7d20-477a-b3cd-9712e4fc69f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float75
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float75
+field_name: field_float75
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P5 Label Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

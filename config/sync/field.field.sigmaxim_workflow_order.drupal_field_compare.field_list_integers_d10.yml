@@ -1,0 +1,28 @@
+uuid: d2399519-d479-4765-a6ca-67e0ce987107
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_integers_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758072975
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_list_integers_d10
+field_name: field_list_integers_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'List Integers'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

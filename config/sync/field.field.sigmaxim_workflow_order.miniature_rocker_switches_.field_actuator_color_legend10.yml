@@ -1,0 +1,23 @@
+uuid: 67d3c763-45bb-4293-ba18-5cd24dbb2e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_actuator_color_legend10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator_color_legend10
+field_name: field_actuator_color_legend10
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Actuator Color & Legend'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1 - Actuator Color'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

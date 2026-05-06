@@ -1,0 +1,29 @@
+uuid: 3ec2ad22-b2c1-45a6-82ba-4cae7a2083ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_field_nominal_shaft_refere
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746184425
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_field_nominal_shaft_refere
+field_name: field_field_nominal_shaft_refere
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Nominal Shaft STD Max Reference'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '[field_coupling_size_xtsr71:BHUBMAXBORE]'
+default_value_callback: ''
+settings: {  }
+field_type: string

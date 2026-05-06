@@ -1,0 +1,6 @@
+uuid: 44dd619e-650b-45fc-a190-f9624a73a9e3
+langcode: en
+status: true
+dependencies: {  }
+id: cbc_filter_inputs
+label: CBC_FILTER_INPUTS

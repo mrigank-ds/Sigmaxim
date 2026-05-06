@@ -1,0 +1,30 @@
+uuid: 5d93b460-4c7c-4f7c-ab60-adb508eb163d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_radial_piece_ty
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753457600
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.pressure_vessel.field_radial_piece_ty
+field_name: field_radial_piece_ty
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Radial Staggred Piece Types'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: EQUAL_STAGGERED_PIECES
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 79eedc11-66cb-4272-8a8c-2d867cc0c0c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_advance_data_table1_d10
+field_name: field_advance_data_table1_d10
+entity_type: sigmaxim_workflow_order
+type: entity_reference
+settings:
+  target_type: data_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

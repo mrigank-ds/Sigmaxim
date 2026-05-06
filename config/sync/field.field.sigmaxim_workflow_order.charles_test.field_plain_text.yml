@@ -1,0 +1,19 @@
+uuid: 6a571900-9d68-4fb4-8ac9-77d10fa8652d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_plain_text
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+id: sigmaxim_workflow_order.charles_test.field_plain_text
+field_name: field_plain_text
+entity_type: sigmaxim_workflow_order
+bundle: charles_test
+label: 'Plain Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

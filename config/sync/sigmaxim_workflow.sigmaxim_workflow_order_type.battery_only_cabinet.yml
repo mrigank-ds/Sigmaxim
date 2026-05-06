@@ -1,0 +1,17 @@
+uuid: 71b0fd98-00d9-4e2f-893b-bb5ea2e20a20
+langcode: en
+status: true
+dependencies: {  }
+id: battery_only_cabinet
+label: 'BATTERY ONLY CABINET'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/battery_only_cabinet
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '33'

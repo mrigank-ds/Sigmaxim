@@ -1,0 +1,23 @@
+uuid: 1500306b-3ad6-46fe-a8c6-c2a63a2108c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt63
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - options
+id: sigmaxim_workflow_order.valmount.field_list_txt63
+field_name: field_list_txt63
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Pole Cap'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: None
+default_value_callback: ''
+settings: {  }
+field_type: list_string

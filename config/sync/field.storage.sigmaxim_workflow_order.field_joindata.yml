@@ -1,0 +1,25 @@
+uuid: 903abca5-656e-417d-b5d1-ad7d0dbe2c75
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_joindata
+field_name: field_joindata
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+uuid: 7ebb1fc6-21cd-4304-9d3d-eb768ac450d8
+langcode: en
+status: true
+dependencies: {  }
+id: battery_database_d10
+label: 'Battery Database D10'

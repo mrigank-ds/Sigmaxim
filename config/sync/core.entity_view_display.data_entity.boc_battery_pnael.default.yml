@@ -1,0 +1,35 @@
+uuid: fff2d148-51f0-4d4b-90ab-e679184505ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_battery_pnael.feeds_item
+    - field.field.data_entity.boc_battery_pnael.field_gcode_boc_bp
+    - field.field.data_entity.boc_battery_pnael.field_panel_desc_boc_bp
+    - monarch_data_entity.data_entity_type.boc_battery_pnael
+id: data_entity.boc_battery_pnael.default
+targetEntityType: data_entity
+bundle: boc_battery_pnael
+mode: default
+content:
+  field_gcode_boc_bp:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_panel_desc_boc_bp:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

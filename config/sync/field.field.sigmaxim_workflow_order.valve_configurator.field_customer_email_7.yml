@@ -1,0 +1,21 @@
+uuid: 8335f4cb-c26e-4d5a-9889-708c45636579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_customer_email_7
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_customer_email_7
+field_name: field_customer_email_7
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Customer Email'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: customer_email_7
+default_value_callback: ''
+settings: {  }
+field_type: string

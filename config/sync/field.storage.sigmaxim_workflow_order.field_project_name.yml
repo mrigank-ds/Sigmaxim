@@ -1,0 +1,25 @@
+uuid: 99cc32ab-4482-42c7-9b36-b49a8a7c6eed
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_project_name
+field_name: field_project_name
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,430 @@
+uuid: a2b2bd5a-0278-4818-8b10-928137fd8aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.test_product.field_concat1
+    - field.field.sigmaxim_workflow_order.test_product.field_concat_test
+    - field.field.sigmaxim_workflow_order.test_product.field_controlled
+    - field.field.sigmaxim_workflow_order.test_product.field_fieldset_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_fieldset_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_float_field
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_field
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_field_checkbox
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_fieldset_checkbox
+    - field.field.sigmaxim_workflow_order.test_product.field_hide_multi
+    - field.field.sigmaxim_workflow_order.test_product.field_integer_field
+    - field.field.sigmaxim_workflow_order.test_product.field_issue1
+    - field.field.sigmaxim_workflow_order.test_product.field_issue2
+    - field.field.sigmaxim_workflow_order.test_product.field_issue3
+    - field.field.sigmaxim_workflow_order.test_product.field_issue4
+    - field.field.sigmaxim_workflow_order.test_product.field_issue5
+    - field.field.sigmaxim_workflow_order.test_product.field_issue6
+    - field.field.sigmaxim_workflow_order.test_product.field_issue7
+    - field.field.sigmaxim_workflow_order.test_product.field_issue8
+    - field.field.sigmaxim_workflow_order.test_product.field_issue9
+    - field.field.sigmaxim_workflow_order.test_product.field_math_div
+    - field.field.sigmaxim_workflow_order.test_product.field_math_expression_add
+    - field.field.sigmaxim_workflow_order.test_product.field_math_expression_multiply
+    - field.field.sigmaxim_workflow_order.test_product.field_math_sin
+    - field.field.sigmaxim_workflow_order.test_product.field_math_sub
+    - field.field.sigmaxim_workflow_order.test_product.field_multi_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_multi_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_php_floor
+    - field.field.sigmaxim_workflow_order.test_product.field_php_max
+    - field.field.sigmaxim_workflow_order.test_product.field_php_min
+    - field.field.sigmaxim_workflow_order.test_product.field_reset
+    - field.field.sigmaxim_workflow_order.test_product.field_target1
+    - field.field.sigmaxim_workflow_order.test_product.field_target2
+    - field.field.sigmaxim_workflow_order.test_product.field_text_field_1
+    - field.field.sigmaxim_workflow_order.test_product.field_text_field_2
+    - field.field.sigmaxim_workflow_order.test_product.field_units_conversion_value
+    - field.field.sigmaxim_workflow_order.test_product.field_units_radiobutton
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - concat_field
+    - field_expression
+    - field_group
+    - options
+    - resetfield
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_general1:
+      children:
+        - field_bool_test_20230109
+        - field_express_20230109
+        - field_link_20230109
+        - field_timestamp
+        - field_express_dec_20230109
+      label: general1
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: sigmaxim_workflow_order.test_product.default
+targetEntityType: sigmaxim_workflow_order
+bundle: test_product
+mode: default
+content:
+  field_concat1:
+    type: concat_field_default
+    label: above
+    settings:
+      wrap_tag: div
+      show_empty: false
+    third_party_settings: {  }
+    weight: 48
+    region: content
+  field_concat_test:
+    type: concat_field_default
+    label: above
+    settings:
+      wrap_tag: div
+      show_empty: false
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_controlled:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_dd_mm_yy:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fieldset_field_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_fieldset_field_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_float_field:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_hide_field:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_hide_field_checkbox:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_hide_fieldset_checkbox:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_hide_multi:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_integer_field:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_issue1:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_issue2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_issue3:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_issue4:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_issue5:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_issue6:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_issue7:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_issue8:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_issue9:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_math_div:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 46
+    region: content
+  field_math_expression_add:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_math_expression_multiply:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_math_int:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_math_sin:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 47
+    region: content
+  field_math_sub:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_multi_field_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_multi_field_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_php_floor:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_php_max:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_php_min:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_reset:
+    type: reset_button_formatter
+    label: above
+    settings:
+      display_mode: button_only
+      show_fields_list: false
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  field_target1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  field_target2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_text_field_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_text_field_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_units_conversion_value:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_units_radiobutton:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_express_dec_20230109: true
+  field_folder_id: true
+  field_int1: true

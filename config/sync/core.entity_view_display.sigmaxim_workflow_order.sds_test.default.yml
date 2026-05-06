@@ -1,0 +1,140 @@
+uuid: 4a8c538e-59fe-4b1f-8cd7-e3dfe9007237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.sds_test.field_checkbox
+    - field.field.sigmaxim_workflow_order.sds_test.field_concat_1
+    - field.field.sigmaxim_workflow_order.sds_test.field_concatenation
+    - field.field.sigmaxim_workflow_order.sds_test.field_cos_testing
+    - field.field.sigmaxim_workflow_order.sds_test.field_cos_val
+    - field.field.sigmaxim_workflow_order.sds_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.sds_test.field_india
+    - field.field.sigmaxim_workflow_order.sds_test.field_joindata
+    - field.field.sigmaxim_workflow_order.sds_test.field_new_numbers
+    - field.field.sigmaxim_workflow_order.sds_test.field_radio
+    - field.field.sigmaxim_workflow_order.sds_test.field_sigmaxim
+    - field.field.sigmaxim_workflow_order.sds_test.field_sum
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+    - options
+    - user
+id: sigmaxim_workflow_order.sds_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: sds_test
+mode: default
+content:
+  field_checkbox:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_concat_1:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_concatenation:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_cos_testing:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_cos_val:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_india:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_joindata:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_new_numbers:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_radio:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_sigmaxim:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sum:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

@@ -1,0 +1,17 @@
+uuid: af5765a6-aae0-41f6-a445-b91b2b321e30
+langcode: en
+status: true
+dependencies: {  }
+id: test_product
+label: 'Test Product'
+description: 'Tried to Mimic the D7 test Product'
+group: null
+name: null
+value: null
+watched_folder: test_product
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '3'

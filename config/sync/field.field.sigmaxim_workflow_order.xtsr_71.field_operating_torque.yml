@@ -1,0 +1,38 @@
+uuid: 0585e8bf-10d0-4e01-8b41-75fb8c8fd801
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_operating_torque
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745803049
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_operating_torque
+field_name: field_operating_torque
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: operating_torque
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '63025*[field_operating_power]/[field_operating_speed]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ' in-lbs'
+  min: ''
+  max: ''
+field_type: expression_decimal

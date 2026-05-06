@@ -1,0 +1,80 @@
+uuid: e2b2db58-df7d-43eb-b112-9170a7eedd8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.standard_data_d10.feeds_item
+    - field.field.data_entity.standard_data_d10.field_companies
+    - field.field.data_entity.standard_data_d10.field_country
+    - field.field.data_entity.standard_data_d10.field_market_occupancy
+    - field.field.data_entity.standard_data_d10.field_sector
+    - field.field.data_entity.standard_data_d10.field_state
+    - monarch_data_entity.data_entity_type.standard_data_d10
+id: data_entity.standard_data_d10.default
+targetEntityType: data_entity
+bundle: standard_data_d10
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_companies:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_country:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_market_occupancy:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sector:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_state:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden:
+  feeds_item: true

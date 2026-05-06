@@ -1,0 +1,253 @@
+uuid: c90bae03-c77e-489d-8aa0-7a5e1f75c0a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - entity_browser.browser.data
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.filedepot_folder
+    - node.type.page
+    - rest.resource.all_products
+    - taxonomy.vocabulary.sigmaxim_workflow_product_info
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.test_04112022
+  module:
+    - admin_toolbar_search
+    - block
+    - block_content
+    - comment
+    - conditional_fields
+    - config
+    - contact
+    - contextual
+    - entity_browser
+    - fancy_file_delete
+    - feeds
+    - field_label
+    - field_permissions
+    - field_ui
+    - file
+    - filter
+    - help
+    - image
+    - login_destination
+    - monarch_data_entity
+    - node
+    - path
+    - replicate_ui
+    - rest
+    - search
+    - shortcut
+    - sigmaxim_workflow
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+    - update
+    - views_ui
+id: sql_d10_user_role
+label: sql_d10_user_role
+weight: 6
+is_admin: null
+permissions:
+  - '10020 create entities'
+  - '10028 create entities'
+  - '10030 create entities'
+  - '10031 create entities'
+  - '10033 create entities'
+  - '10034 create entities'
+  - '10036 create entities'
+  - '10039 create entities'
+  - '10041 create entities'
+  - '10042 create entities'
+  - '10043 create entities'
+  - '10044 create entities'
+  - '10045 create entities'
+  - '10046 create entities'
+  - '10049 create entities'
+  - '10058 create entities'
+  - '10062 create entities'
+  - 'access administration pages'
+  - 'access block library'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access data entity browser pages'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access private fields'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access site-wide contact form'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'add unmanaged files entities'
+  - 'administer account settings'
+  - 'administer actions'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer comment display'
+  - 'administer comment fields'
+  - 'administer comment form display'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer contact forms'
+  - 'administer contact_message display'
+  - 'administer contact_message fields'
+  - 'administer contact_message form display'
+  - 'administer content types'
+  - 'administer data types'
+  - 'administer data_entity display'
+  - 'administer data_entity fields'
+  - 'administer data_entity form display'
+  - 'administer display modes'
+  - 'administer entity browsers'
+  - 'administer fancy file delete'
+  - 'administer feeds_feed display'
+  - 'administer feeds_feed fields'
+  - 'administer feeds_feed form display'
+  - 'administer field permissions'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer login destination settings'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer products entities'
+  - 'administer rest resources'
+  - 'administer search'
+  - 'administer shortcuts'
+  - 'administer sigmaxim_workflow_order display'
+  - 'administer sigmaxim_workflow_order fields'
+  - 'administer sigmaxim_workflow_order form display'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer tour'
+  - 'administer unmanaged files entities'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create article content'
+  - 'create basic block content'
+  - 'create data'
+  - 'create filedepot_folder content'
+  - 'create page content'
+  - 'create terms in sigmaxim_workflow_product_info'
+  - 'create terms in tags'
+  - 'create terms in test_04112022'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete all revisions'
+  - 'delete all taxonomy revisions'
+  - 'delete any article content'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete any file'
+  - 'delete any filedepot_folder content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete conditional fields'
+  - 'delete data'
+  - 'delete filedepot_folder revisions'
+  - 'delete own article content'
+  - 'delete own filedepot_folder content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'delete term revisions in sigmaxim_workflow_product_info'
+  - 'delete term revisions in tags'
+  - 'delete term revisions in test_04112022'
+  - 'delete terms in sigmaxim_workflow_product_info'
+  - 'delete terms in tags'
+  - 'delete terms in test_04112022'
+  - 'delete unmanaged files entities'
+  - 'edit any article content'
+  - 'edit any basic block content'
+  - 'edit any filedepot_folder content'
+  - 'edit any page content'
+  - 'edit conditional fields'
+  - 'edit data'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own filedepot_folder content'
+  - 'edit own page content'
+  - 'edit terms in sigmaxim_workflow_product_info'
+  - 'edit terms in tags'
+  - 'edit terms in test_04112022'
+  - 'edit unmanaged files entities'
+  - edit_field_label_class
+  - edit_field_label_class_select
+  - edit_field_label_tag
+  - edit_field_label_value
+  - 'export configuration'
+  - 'import configuration'
+  - 'link to any page'
+  - 'post comments'
+  - 'replicate entities'
+  - 'restful get all_products'
+  - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'revert any basic block content revisions'
+  - 'revert article revisions'
+  - 'revert filedepot_folder revisions'
+  - 'revert page revisions'
+  - 'revert term revisions in sigmaxim_workflow_product_info'
+  - 'revert term revisions in tags'
+  - 'revert term revisions in test_04112022'
+  - 'search content'
+  - 'select account cancellation method'
+  - 'skip comment approval'
+  - 'switch shortcut sets'
+  - 'synchronize configuration'
+  - 'use admin toolbar search'
+  - 'use advanced search'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any basic block content history'
+  - 'view article revisions'
+  - 'view conditional fields'
+  - 'view data'
+  - 'view field_standard_data_d10'
+  - 'view filedepot_folder revisions'
+  - 'view own field_standard_data_d10'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view term revisions in sigmaxim_workflow_product_info'
+  - 'view term revisions in tags'
+  - 'view term revisions in test_04112022'
+  - 'view the administration theme'
+  - 'view unmanaged files entities'
+  - 'view update notifications'
+  - 'view user email addresses'
+  - 'view vocabulary labels'

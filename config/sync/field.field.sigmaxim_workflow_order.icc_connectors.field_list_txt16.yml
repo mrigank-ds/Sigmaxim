@@ -1,0 +1,21 @@
+uuid: 959b21b4-0857-441c-bd84-63626c9bc960
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt16
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.icc_connectors.field_list_txt16
+field_name: field_list_txt16
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: "Right Connector 'P#' Layout"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,35 @@
+uuid: 115d2125-d7bd-4685-a132-e72b6a108a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_other_options.feeds_item
+    - field.field.data_entity.boc_other_options.field_gcode_oth_opt_boc
+    - field.field.data_entity.boc_other_options.field_oth_desc_oth_opt_boc
+    - monarch_data_entity.data_entity_type.boc_other_options
+id: data_entity.boc_other_options.default
+targetEntityType: data_entity
+bundle: boc_other_options
+mode: default
+content:
+  field_gcode_oth_opt_boc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_oth_desc_oth_opt_boc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

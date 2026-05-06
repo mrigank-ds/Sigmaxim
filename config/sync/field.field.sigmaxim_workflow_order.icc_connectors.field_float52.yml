@@ -1,0 +1,23 @@
+uuid: 7d513dbf-bc5e-4e40-9a80-8f8bfec6a950
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float52
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float52
+field_name: field_float52
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Set10 Distance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

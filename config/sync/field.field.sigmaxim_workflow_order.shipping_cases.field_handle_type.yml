@@ -1,0 +1,21 @@
+uuid: 45ee3405-2e15-444d-b08c-ba92c5af7f4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_handle_type
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - options
+id: sigmaxim_workflow_order.shipping_cases.field_handle_type
+field_name: field_handle_type
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Handle Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

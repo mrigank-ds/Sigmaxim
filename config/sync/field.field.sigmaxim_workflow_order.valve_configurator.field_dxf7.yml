@@ -1,0 +1,23 @@
+uuid: 4506ae2c-12cc-4c5f-98c1-b4100d1275ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dxf7
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_dxf7
+field_name: field_dxf7
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: DXF
+description: dxf7
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

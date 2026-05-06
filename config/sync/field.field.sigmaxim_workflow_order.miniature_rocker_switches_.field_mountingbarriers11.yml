@@ -1,0 +1,23 @@
+uuid: 747185cd-c4a0-4ea0-8efd-080b1ec0c7ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_mountingbarriers11
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_mountingbarriers11
+field_name: field_mountingbarriers11
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: Mounting/Barriers
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1 - 6-32 x 0.195 inches Threaded Insert - Barriers'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

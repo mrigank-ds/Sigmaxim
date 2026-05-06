@@ -1,0 +1,23 @@
+uuid: 2875e179-889f-4025-a53a-60d9e1ef8e1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_bool_6
+field_name: field_bool_6
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'HF (Halogen Free)'
+description: bool_6
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'HF (Halogen Free)'
+field_type: boolean

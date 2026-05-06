@@ -1,0 +1,58 @@
+uuid: 30c7448e-3c72-4011-967d-c985dfe12a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.filedepot_folder.body
+    - field.field.node.filedepot_folder.field_dilip_test_math
+    - field.field.node.filedepot_folder.field_files
+    - field.field.node.filedepot_folder.field_order_id
+    - node.type.filedepot_folder
+  module:
+    - field_expression
+    - file
+    - text
+    - user
+id: node.filedepot_folder.default
+targetEntityType: node
+bundle: filedepot_folder
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_dilip_test_math:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_files:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_order_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

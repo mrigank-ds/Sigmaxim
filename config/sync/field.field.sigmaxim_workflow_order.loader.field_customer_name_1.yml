@@ -1,0 +1,21 @@
+uuid: 46e028df-da75-4f77-9b99-1f6feb52f343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_customer_name_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_customer_name_1
+field_name: field_customer_name_1
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Customer Name'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: customer_name_1
+default_value_callback: ''
+settings: {  }
+field_type: string

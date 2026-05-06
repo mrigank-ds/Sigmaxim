@@ -1,0 +1,23 @@
+uuid: becea579-049c-4a1c-b0e7-19a7077aa929
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_maths1
+field_name: field_maths1
+entity_type: node
+type: field_expression
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

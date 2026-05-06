@@ -1,0 +1,23 @@
+uuid: 528685a3-9580-4924-9b4a-15adf32e2ea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dxf8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_dxf8
+field_name: field_dxf8
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: DXF
+description: dxf8
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

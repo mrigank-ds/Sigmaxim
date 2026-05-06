@@ -1,0 +1,26 @@
+uuid: 4128d4ac-0fe5-4258-9b2c-80975a66f6ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.feeds_item
+    - monarch_data_entity.data_entity_type.boc_cabinet
+  module:
+    - feeds
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737520688
+id: data_entity.boc_cabinet.feeds_item
+field_name: feeds_item
+entity_type: data_entity
+bundle: boc_cabinet
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

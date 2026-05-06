@@ -1,0 +1,21 @@
+uuid: 3ea65663-a3c3-49ac-b5c2-35db44e929a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_order_or_quote_number_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_order_or_quote_number_1
+field_name: field_order_or_quote_number_1
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Order or Quote Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: order_or_quote_number_1
+default_value_callback: ''
+settings: {  }
+field_type: string

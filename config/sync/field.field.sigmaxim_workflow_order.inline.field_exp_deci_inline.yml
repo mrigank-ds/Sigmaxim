@@ -1,0 +1,35 @@
+uuid: ea128330-5d2e-4c62-9331-c9789ccec8cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_exp_deci_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_expression
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_exp_deci_inline
+field_name: field_exp_deci_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: exp_deci_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 2.5+1.4
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_decimal

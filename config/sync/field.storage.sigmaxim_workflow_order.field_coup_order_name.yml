@@ -1,0 +1,21 @@
+uuid: dc05b3d8-8b95-41d0-9046-c794726d36d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_coup_order_name
+field_name: field_coup_order_name
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

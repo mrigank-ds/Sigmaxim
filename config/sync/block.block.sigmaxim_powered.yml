@@ -1,0 +1,22 @@
+uuid: ac62ddf1-1292-40b7-9be2-6f4b37822744
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sigmaxim
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: sigmaxim_powered
+theme: sigmaxim
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

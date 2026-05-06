@@ -1,0 +1,10 @@
+entity.sigmaxim_workflow_order.add_form:
+  route_name: entity.sigmaxim_workflow_order.add_page
+  title: 'Add Order'
+  appears_on:
+    - entity.sigmaxim_workflow_order.collection
+entity.sigmaxim_workflow_order_type.add_form:
+  route_name: entity.sigmaxim_workflow_order_type.add_form
+  title: 'Add Product'
+  appears_on:
+    - entity.sigmaxim_workflow_order_type.collection

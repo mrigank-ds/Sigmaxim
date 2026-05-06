@@ -1,0 +1,35 @@
+uuid: b89ab892-9e64-4958-81d6-de0ab52c2be4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.cbc_cabinet.feeds_item
+    - field.field.data_entity.cbc_cabinet.field_cabinet_description_cbc
+    - field.field.data_entity.cbc_cabinet.field_gcode_cbc
+    - monarch_data_entity.data_entity_type.cbc_cabinet
+id: data_entity.cbc_cabinet.default
+targetEntityType: data_entity
+bundle: cbc_cabinet
+mode: default
+content:
+  field_cabinet_description_cbc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gcode_cbc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

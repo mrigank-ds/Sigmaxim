@@ -1,0 +1,27 @@
+uuid: 7abcd269-67f0-46b0-a441-a5c91918907c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_list_txt3
+field_name: field_list_txt3
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Yes'
+      label: 'Yes'
+    -
+      value: 'No'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 395e2559-c3d4-48f8-8768-a57f13bba75b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_bool_4
+field_name: field_bool_4
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Cable model with shrink'
+description: bool_4
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Cable model with shrink'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 740c992a-1d28-496a-946c-b5a8f7d01289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_35
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_bool_35
+field_name: field_bool_35
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Left Heat Shrink'
+description: bool_35
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Left Heat Shrink'
+field_type: boolean

@@ -1,0 +1,24 @@
+uuid: c8ae03a9-ddc3-4cbc-9d5e-b6ec6c8aeaaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_pressure_rating_test_
+field_name: field_pressure_rating_test_
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

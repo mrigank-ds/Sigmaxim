@@ -1,0 +1,49 @@
+uuid: 6ce45bb4-9126-4e5a-a55b-5a49af823b87
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_seat_configuration11
+field_name: field_seat_configuration11
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Standard Low Back, Fixed'
+      label: 'Standard Low Back, Fixed'
+    -
+      value: 'Standard Low Back, Suspension'
+      label: 'Standard Low Back, Suspension'
+    -
+      value: 'Captains Low Back, Fixed'
+      label: 'Captains Low Back, Fixed'
+    -
+      value: 'Captains Low Back, Suspension'
+      label: 'Captains Low Back, Suspension'
+    -
+      value: 'Standard High Back, Fixed'
+      label: 'Standard High Back, Fixed'
+    -
+      value: 'Standard High Back, Suspension'
+      label: 'Standard High Back, Suspension'
+    -
+      value: 'Captains High Back, Fixed'
+      label: 'Captains High Back, Fixed'
+    -
+      value: 'Captains High Back, Suspension'
+      label: 'Captains High Back, Suspension'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

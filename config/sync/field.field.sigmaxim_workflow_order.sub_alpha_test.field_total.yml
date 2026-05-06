@@ -1,0 +1,38 @@
+uuid: c06ab824-1b56-4e83-8e32-4b0d825b55c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_total
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sub_alpha_test
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1712838650
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.sub_alpha_test.field_total
+field_name: field_total
+entity_type: sigmaxim_workflow_order
+bundle: sub_alpha_test
+label: Total
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '[sigmaxim_workflow_order:field_test1]+[sigmaxim_workflow_order:field_test2]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

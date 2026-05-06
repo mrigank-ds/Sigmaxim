@@ -1,0 +1,24 @@
+uuid: 046c40c9-c8e0-4714-861b-891d73a586d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - monarch_data_entity
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_cbc_filter_inputs
+field_name: field_cbc_filter_inputs
+entity_type: sigmaxim_workflow_order
+type: entity_reference
+settings:
+  target_type: data_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

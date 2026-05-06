@@ -1,0 +1,21 @@
+uuid: 75d70644-0084-4814-aee7-a91a37f702a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_32
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_label_32
+field_name: field_label_32
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Customer Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_32
+default_value_callback: ''
+settings: {  }
+field_type: string

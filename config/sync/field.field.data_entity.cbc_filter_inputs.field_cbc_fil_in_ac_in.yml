@@ -1,0 +1,27 @@
+uuid: 2d1314ca-d4e8-4a19-9f4a-c4970eef4276
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cbc_fil_in_ac_in
+    - monarch_data_entity.data_entity_type.cbc_filter_inputs
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737536080
+  field_inline_label:
+    inline_label: 0
+id: data_entity.cbc_filter_inputs.field_cbc_fil_in_ac_in
+field_name: field_cbc_fil_in_ac_in
+entity_type: data_entity
+bundle: cbc_filter_inputs
+label: AC_INPUT
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

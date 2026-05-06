@@ -1,0 +1,24 @@
+uuid: 07bf7f33-4623-4e23-a571-f27516612e08
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - monarch_data_entity
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_cbc_ext_cabinet
+field_name: field_cbc_ext_cabinet
+entity_type: sigmaxim_workflow_order
+type: entity_reference
+settings:
+  target_type: data_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

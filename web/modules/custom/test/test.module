@@ -1,0 +1,46 @@
+<?php
+
+use Drupal\Core\Block\BlockBase;
+
+/**
+ * Implements hook_theme().
+ */
+function test_theme() {
+  return [
+    'test_example_block' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function test_block_info() {
+  $blocks = [];
+
+  $blocks['test_example_block'] = [
+    'info' => t('Example Block'),
+  ];
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function test_block_view($delta = '') {
+  $block = [];
+
+  if ($delta === 'test_example_block') {
+    $block['subject'] = t('Example Block');
+    $block['content'] = [
+      '#theme' => 'test_example_block',
+      '#content' => t('This is an example block content.'),
+    ];
+  }
+
+  return $block;
+}

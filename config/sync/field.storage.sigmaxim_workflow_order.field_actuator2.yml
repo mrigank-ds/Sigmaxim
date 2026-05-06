@@ -1,0 +1,37 @@
+uuid: 24e3b9b3-0f6c-427b-9513-8b430fa05220
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_actuator2
+field_name: field_actuator2
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'A - Handle, one per pole</option>'
+      label: 'A - Handle, one per pole</option>'
+    -
+      value: 'B - Handle, one per multipole unit</option>'
+      label: 'B - Handle, one per multipole unit</option>'
+    -
+      value: 'S - Mid-Trip Handle, one per pole</option>'
+      label: 'S - Mid-Trip Handle, one per pole</option>'
+    -
+      value: 'T - Mid-Trip, one per pole & Alarm Switch</option>'
+      label: 'T - Mid-Trip, one per pole & Alarm Switch</option>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

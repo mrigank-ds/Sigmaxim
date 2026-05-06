@@ -1,0 +1,23 @@
+uuid: 92308a9c-61e6-4b0c-ba11-9353f308e3b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_36
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_bool_36
+field_name: field_bool_36
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'LS (lLow Smoke)'
+description: bool_36
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'LS (lLow Smoke)'
+field_type: boolean

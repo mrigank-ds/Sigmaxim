@@ -1,0 +1,325 @@
+uuid: 93697657-7598-4003-a777-dc9f635a51bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.series_71.feeds_item
+    - field.field.data_entity.series_71.field_a
+    - field.field.data_entity.series_71.field_ac
+    - field.field.data_entity.series_71.field_adapter
+    - field.field.data_entity.series_71.field_b
+    - field.field.data_entity.series_71.field_b1
+    - field.field.data_entity.series_71.field_b2
+    - field.field.data_entity.series_71.field_b2hubmaxbore
+    - field.field.data_entity.series_71.field_bal_rpm
+    - field.field.data_entity.series_71.field_bhubmaxbore
+    - field.field.data_entity.series_71.field_bhubminbore
+    - field.field.data_entity.series_71.field_c_min
+    - field.field.data_entity.series_71.field_capscrew
+    - field.field.data_entity.series_71.field_cdimension
+    - field.field.data_entity.series_71.field_cm_generic
+    - field.field.data_entity.series_71.field_cm_instance
+    - field.field.data_entity.series_71.field_couplingsize
+    - field.field.data_entity.series_71.field_disc_pack_asm
+    - field.field.data_entity.series_71.field_disc_pack_bolts
+    - field.field.data_entity.series_71.field_disc_pack_kt
+    - field.field.data_entity.series_71.field_disc_pack_thickness
+    - field.field.data_entity.series_71.field_e
+    - field.field.data_entity.series_71.field_flex_joint_kt
+    - field.field.data_entity.series_71.field_g
+    - field.field.data_entity.series_71.field_hub_name
+    - field.field.data_entity.series_71.field_locknut
+    - field.field.data_entity.series_71.field_mct
+    - field.field.data_entity.series_71.field_not_bal_rpm
+    - field.field.data_entity.series_71.field_pot
+    - field.field.data_entity.series_71.field_service_factor
+    - field.field.data_entity.series_71.field_std_c
+    - field.field.data_entity.series_71.field_washer
+    - field.field.data_entity.series_71.field_wcpi
+    - field.field.data_entity.series_71.field_weight
+    - field.field.data_entity.series_71.field_wr2
+    - field.field.data_entity.series_71.field_wr2_cpi
+    - monarch_data_entity.data_entity_type.series_71
+id: data_entity.series_71.default
+targetEntityType: data_entity
+bundle: series_71
+mode: default
+content:
+  field_a:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_ac:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_adapter:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_b:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_b1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_b2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_b2hubmaxbore:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_bal_rpm:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_bhubmaxbore:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_bhubminbore:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_capscrew:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_cdimension:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cm_generic:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cm_instance:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_couplingsize:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_disc_pack_asm:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_disc_pack_bolts:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_disc_pack_kt:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_disc_pack_thickness:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_flex_joint_kt:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_g:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_hub_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_locknut:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_mct:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_not_bal_rpm:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_pot:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_service_factor:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_std_c:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_washer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_wcpi:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_weight:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_wr2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_wr2_cpi:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  field_c_min: true
+  label: true
+  status: true

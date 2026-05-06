@@ -1,0 +1,23 @@
+uuid: 27a9ee5c-bb06-4150-89e9-d44351ed7fe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_autocalc1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_autocalc1
+field_name: field_autocalc1
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: Autocalc
+description: autocalc1
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Off'
+field_type: boolean

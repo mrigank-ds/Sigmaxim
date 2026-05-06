@@ -1,0 +1,35 @@
+uuid: 03196d17-7648-48c3-9fbc-1acdb87d3581
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: sigmaxim_products
+theme: sigmaxim
+region: content
+weight: -4
+provider: null
+plugin: product_block
+settings:
+  id: product_block
+  label: 'Administrator Dashboard'
+  label_display: '0'
+  provider: sigmaxim_workflow
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator

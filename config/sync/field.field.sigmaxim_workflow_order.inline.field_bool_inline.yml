@@ -1,0 +1,28 @@
+uuid: ac66e666-b0a6-4b41-be19-c98f381a9ebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.inline.field_bool_inline
+field_name: field_bool_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: bool_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

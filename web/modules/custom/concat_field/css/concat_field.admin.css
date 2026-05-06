@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Styles for the Concat Field admin widget.
+ */
+
+/* Computed / disabled textfield — make it visually distinct */
+input.concat-field-computed,
+[data-concat-pattern] {
+  background-color: #f7f7f7;
+  border-style: dashed;
+  color: #555;
+  cursor: default;
+}
+
+/* Token pattern textarea in field settings */
+.form-item--token-pattern textarea {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* Available fields details block */
+details.concat-field-info summary {
+  font-weight: bold;
+}

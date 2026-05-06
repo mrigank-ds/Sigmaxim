@@ -1,0 +1,23 @@
+uuid: 7ba95cca-8bbc-4fd2-9fad-3534473337a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_hydraulic_upgrades9
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_hydraulic_upgrades9
+field_name: field_hydraulic_upgrades9
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Hydraulic Upgrades'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: None
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: aecbe568-ee5a-429d-bad8-1957e929fcbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_42
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_bool_42
+field_name: field_bool_42
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Hand Hole'
+description: bool_42
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

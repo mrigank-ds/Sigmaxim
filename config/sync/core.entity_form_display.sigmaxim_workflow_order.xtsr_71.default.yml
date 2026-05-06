@@ -1,0 +1,1243 @@
+uuid: 7f7e88e3-e380-4151-aa44-f33fefd669b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_balance_grade
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_balance_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_center_member_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_coup_order_name
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_coupling_size_xtsr71
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_custom_c_dimension
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_des_hub_len_xl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_des_hub_len_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_desired_hub_length_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_field_nominal_shaft_refere
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_folder_id
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_bore_fit
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_bore_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_desired_hub_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_cbore_dia
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_key_precision
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_keyway_shape
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_nominal_shaft
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_puller_holes
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_set_screws
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_taper_rate
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_key_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_key_style
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_bore_across_key
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_bore_tolerance
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_key_width
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_bore_across_key
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_bore_tolerance
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_key_width
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_override_agma_keyway
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_stand_off
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_taper_key_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_taper_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_thread_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_dia_xl_reference
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_dia_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_reference
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_nom_shaft_xl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_nom_shaft_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_power
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_power_metric
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_speed
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_torque
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_bore_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_hub_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_hub_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_service_factor_met_xtsr71
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_service_factor_xtsr71
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - conditional_fields
+    - field_expression
+    - field_group
+    - field_group_image
+    - monarch_data_entity
+    - readonly_field_widget
+third_party_settings:
+  field_group_image:
+    group_center_member_dimensions:
+      image: 274
+      image_style: large
+      image_position: right
+    group_tabs:
+      image: 0
+      image_style: large
+      image_position: above
+    group_dimension:
+      image: 0
+      image_style: large
+      image_position: above
+    group_left_hub:
+      image: 0
+      image_style: medium
+      image_position: above
+    group__left_hub_options:
+      image: 277
+      image_style: large
+      image_position: right
+  field_group:
+    group_center_member_dimensions:
+      children:
+        - field_center_member_units
+        - field_balance_type
+        - field_balance_grade
+        - field_coupling_size_xtsr71
+        - field_custom_c_dimension
+        - field_operating_power
+        - field_operating_power_metric
+        - field_operating_speed
+        - field_service_factor_xtsr71
+        - field_service_factor_met_xtsr71
+        - field_operating_torque
+      label: 'Center Member Dimensions'
+      region: content
+      parent_name: group_dimension
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_tabs:
+      children:
+        - group_dimension
+        - group_left_hub
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_dimension:
+      children:
+        - group_center_member_dimensions
+      label: Main
+      region: content
+      parent_name: group_tabs
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_left_hub:
+      children:
+        - group__left_hub_options
+      label: 'Driver Hub'
+      region: content
+      parent_name: group_tabs
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group__left_hub_options:
+      children:
+        - field_left_hub_size
+        - field_left_bore_type
+        - field_left_hub_units
+        - field_left_key_style
+        - field_left_taper_key_type
+        - field_left_override_agma_keyway
+        - field_left_bore_fit
+        - field_left_max_bore_tolerance
+        - field_left_min_bore_tolerance
+        - field_left_hub_nominal_shaft
+        - field_field_nominal_shaft_refere
+        - field_nom_shaft_xl_ref
+        - field_nom_shaft_xxl_ref
+        - field_left_hub_key_precision
+        - field_left_key_size
+        - field_left_hub_keyway_shape
+        - field_left_max_bore_across_key
+        - field_left_min_bore_across_key
+        - field_left_max_key_width
+        - field_left_min_key_width
+        - field_left_stand_off
+        - field_left_hub_cbore_dia
+        - field_max_cbore_reference
+        - field_max_cbore_dia_xl_reference
+        - field_max_cbore_dia_xxl_ref
+        - field_left_desired_hub_length
+        - field_desired_hub_length_ref
+        - field_des_hub_len_xl_ref
+        - field_des_hub_len_xxl_ref
+        - field_left_hub_taper_rate
+        - field_left_taper_length
+        - field_left_thread_length
+        - field_left_hub_puller_holes
+        - field_left_hub_set_screws
+      label: '   Hub Options'
+      region: content
+      parent_name: group_left_hub
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.xtsr_71.default
+targetEntityType: sigmaxim_workflow_order
+bundle: xtsr_71
+mode: default
+content:
+  field_balance_grade:
+    type: options_select
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_balance_type:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_center_member_units:
+    type: options_buttons
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_coup_order_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_coupling_size_xtsr71:
+    type: monarch_data_entity_data_drill_down
+    weight: 29
+    region: content
+    settings:
+      height: '4'
+      weights:
+        field_a:
+          weight: '0'
+        field_not_bal_rpm:
+          weight: '0'
+        field_e:
+          weight: '0'
+        field_flex_joint_kt:
+          weight: '0'
+        field_g:
+          weight: '0'
+        field_hub_name:
+          weight: '0'
+        field_locknut:
+          weight: '0'
+        field_mct:
+          weight: '0'
+        field_pot:
+          weight: '0'
+        field_disc_pack_kt:
+          weight: '0'
+        field_service_factor:
+          weight: '0'
+        field_std_c:
+          weight: '0'
+        field_washer:
+          weight: '0'
+        field_wcpi:
+          weight: '0'
+        field_weight:
+          weight: '0'
+        field_wr2:
+          weight: '0'
+        field_disc_pack_thickness:
+          weight: '0'
+        field_disc_pack_bolts:
+          weight: '0'
+        field_ac:
+          weight: '0'
+        field_bhubmaxbore:
+          weight: '0'
+        field_adapter:
+          weight: '0'
+        field_b:
+          weight: '0'
+        field_b1:
+          weight: '0'
+        field_b2:
+          weight: '0'
+        field_b2hubmaxbore:
+          weight: '0'
+        field_bal_rpm:
+          weight: '0'
+        field_bhubminbore:
+          weight: '0'
+        field_disc_pack_asm:
+          weight: '0'
+        field_c_min:
+          weight: '0'
+        field_capscrew:
+          weight: '0'
+        field_cdimension:
+          weight: '0'
+        field_cm_generic:
+          weight: '0'
+        field_cm_instance:
+          weight: '0'
+        field_couplingsize:
+          weight: '0'
+        field_wr2_cpi:
+          weight: '0'
+    third_party_settings: {  }
+  field_custom_c_dimension:
+    type: number
+    weight: 30
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        d428eb53-ba2c-41ac-ac19-45bbb8b33583:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_coupling_size_xtsr71
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 6
+            value: ''
+            values: {  }
+            value_form:
+              -
+                wrapper:
+                  field_a:
+                    field_a: ''
+                  field_bhubminbore:
+                    field_bhubminbore: ''
+                  field_adapter:
+                    field_adapter: ''
+                  field_b:
+                    field_b: ''
+                  field_b1:
+                    field_b1: ''
+                  field_b2:
+                    field_b2: ''
+                  field_b2hubmaxbore:
+                    field_b2hubmaxbore: ''
+                  field_bal_rpm:
+                    field_bal_rpm: ''
+                  field_disc_pack_asm:
+                    field_disc_pack_asm: ''
+                  field_ac:
+                    field_ac: ''
+                  field_c_min:
+                    field_c_min: ''
+                  field_capscrew:
+                    field_capscrew: ''
+                  field_cdimension:
+                    field_cdimension: ''
+                  field_cm_generic:
+                    field_cm_generic: ''
+                  field_cm_instance:
+                    field_cm_instance: ''
+                  field_couplingsize:
+                    field_couplingsize: ''
+                  field_bhubmaxbore:
+                    field_bhubmaxbore: ''
+                  field_disc_pack_bolts:
+                    field_disc_pack_bolts: ''
+                  field_not_bal_rpm:
+                    field_not_bal_rpm: ''
+                  field_pot:
+                    field_pot: ''
+                  field_e:
+                    field_e: ''
+                  field_flex_joint_kt:
+                    field_flex_joint_kt: ''
+                  field_g:
+                    field_g: ''
+                  field_hub_name:
+                    field_hub_name: ''
+                  field_locknut:
+                    field_locknut: ''
+                  field_mct:
+                    field_mct: ''
+                  field_disc_pack_kt:
+                    field_disc_pack_kt: ''
+                  field_disc_pack_thickness:
+                    field_disc_pack_thickness: ''
+                  field_service_factor:
+                    field_service_factor: ''
+                  field_std_c:
+                    field_std_c: ''
+                  field_washer:
+                    field_washer: ''
+                  field_wcpi:
+                    field_wcpi: ''
+                  field_weight:
+                    field_weight: ''
+                  field_wr2:
+                    field_wr2: ''
+                  field_wr2_cpi:
+                    field_wr2_cpi: ''
+                  clear-input: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+            regex: '.*,custom'
+  field_des_hub_len_xl_ref:
+    type: readonly_field_widget
+    weight: 32
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        bbc018bd-8cae-474b-970c-7380c033a9b4:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_des_hub_len_xxl_ref:
+    type: readonly_field_widget
+    weight: 33
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        5848ad33-9d3d-401f-b1c1-f414c9adc1eb:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_desired_hub_length_ref:
+    type: readonly_field_widget
+    weight: 31
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        a934f46b-d61c-4e4a-8318-5a36f96daef3:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_field_nominal_shaft_refere:
+    type: readonly_field_widget
+    weight: 15
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_left_bore_fit:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_bore_type:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_desired_hub_length:
+    type: number
+    weight: 30
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        92ac1122-312d-478c-b44d-6a2b2eac3776:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_hub_cbore_dia:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        cb88e177-6cb9-4e5c-9850-c21876b5cf8e:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_hub_key_precision:
+    type: options_buttons
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        81647626-f79c-44d5-9937-8e8c31d0decf:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_key_style
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Keyed Fit'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        f20e42e4-8616-438d-a73c-87a9766282f6:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_hub_keyway_shape:
+    type: options_buttons
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_hub_nominal_shaft:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        87673e6d-dd6c-469e-b462-0eae4ea2255f:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_key_style
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Keyed Fit'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        2200aaf1-ecc7-4293-8134-9a39db2c2e0b:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_hub_puller_holes:
+    type: boolean_checkbox
+    weight: 37
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_left_hub_set_screws:
+    type: boolean_checkbox
+    weight: 38
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_left_hub_size:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_hub_taper_rate:
+    type: options_select
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        2423b793-284c-406d-8ce3-ea46fdf66c7d:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+        2a122db4-8e76-40cd-804d-35a5de01633d:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_hub_units:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_key_size:
+    type: options_buttons
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        085a4426-9dbc-48b9-8d23-0c500d07f5eb:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_key_style
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Keyed Fit'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        bfe89e62-4e6f-4262-8823-98fa678b1112:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_key_style:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_left_max_bore_across_key:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        fcfaf70d-9ae1-4793-a051-2568a39435a2:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: true
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_max_bore_tolerance:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_left_max_key_width:
+    type: number
+    weight: 23
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        b2790165-0c72-4e77-9938-d4753ceacb21:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_min_bore_across_key:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        db3875fe-d92d-4e76-91f3-74fc357a5da0:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_min_bore_tolerance:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_left_min_key_width:
+    type: number
+    weight: 24
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        5ba42ac6-fdc6-444d-a75d-bab88f9997ac:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_override_agma_keyway
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_override_agma_keyway:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        b6f64312-5780-43eb-8d22-a13ca87cb939:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_key_style
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Keyed Fit'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_stand_off:
+    type: number
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        eceda19b-4b48-49e9-ae00-359e0e9a0451:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_taper_key_type:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        ec840fe7-fca0-46c2-8c19-d0603c481c9c:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_taper_length:
+    type: number
+    weight: 35
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        a4c5e23f-1da6-486e-93e7-956cfb399d77:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_left_thread_length:
+    type: number
+    weight: 36
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        d0baf58d-424f-47e0-ad29-13e5a780321a:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_max_cbore_dia_xl_reference:
+    type: readonly_field_widget
+    weight: 28
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        a6167bd0-2991-481d-ba24-89b8407f80a5:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_max_cbore_dia_xxl_ref:
+    type: readonly_field_widget
+    weight: 29
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        ffece5e4-3a4b-4791-a012-d66df3be7817:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_max_cbore_reference:
+    type: readonly_field_widget
+    weight: 27
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        c53ba2c4-942e-4743-8b92-b077fb778b7d:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_left_bore_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Tapered
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_nom_shaft_xl_ref:
+    type: readonly_field_widget
+    weight: 16
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_nom_shaft_xxl_ref:
+    type: readonly_field_widget
+    weight: 17
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_operating_power:
+    type: number
+    weight: 31
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        73ce21f6-9da1-45b7-9053-a2d4d2fa205d:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_center_member_units
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Imperial
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_operating_power_metric:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        dd30d0a4-c3d7-4ef0-bf4c-989312676aeb:
+          entity_type: sigmaxim_workflow_order
+          bundle: xtsr_71
+          dependee: field_center_member_units
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Metric
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_operating_speed:
+    type: number
+    weight: 33
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_operating_torque:
+    type: expression
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_right_bore_type:
+    type: options_select
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_right_hub_size:
+    type: options_select
+    weight: 39
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_right_hub_units:
+    type: options_select
+    weight: 41
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_factor_met_xtsr71:
+    type: field_expression_default
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_factor_xtsr71:
+    type: field_expression_default
+    weight: 36
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

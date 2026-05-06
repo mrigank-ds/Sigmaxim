@@ -1,0 +1,34 @@
+uuid: d88d39c2-92eb-4c3a-8c99-32718eb8acb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_enclosure9
+field_name: field_enclosure9
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ODP
+      label: ODP
+    -
+      value: 'other 1'
+      label: 'other 1'
+    -
+      value: 'other 2'
+      label: 'other 2'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

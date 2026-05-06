@@ -1,0 +1,37 @@
+uuid: 1acc94cd-a184-49ee-96bf-71745c4e55e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_cabinet_new
+    - monarch_data_entity.data_entity_type.boc_battery_pnael
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1738145356
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.charger_battery_cabinet.field_cabinet_new
+field_name: field_cabinet_new
+entity_type: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+label: 'cabinet new'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      boc_battery_pnael: boc_battery_pnael
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: boc_battery_pnael
+field_type: entity_reference

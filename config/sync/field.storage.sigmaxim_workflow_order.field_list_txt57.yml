@@ -1,0 +1,28 @@
+uuid: 79325a7b-0472-445b-9317-66ca19323734
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_list_txt57
+field_name: field_list_txt57
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Without Logo'
+      label: 'Without Logo'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

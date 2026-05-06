@@ -1,0 +1,36 @@
+uuid: 1fa7d612-7fae-48dd-9ab1-d06fa1425727
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.filedepot_folder.body
+    - field.field.node.filedepot_folder.field_dilip_test_math
+    - field.field.node.filedepot_folder.field_files
+    - field.field.node.filedepot_folder.field_order_id
+    - node.type.filedepot_folder
+  module:
+    - text
+    - user
+id: node.filedepot_folder.teaser
+targetEntityType: node
+bundle: filedepot_folder
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_dilip_test_math: true
+  field_files: true
+  field_order_id: true

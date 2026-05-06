@@ -1,0 +1,17 @@
+uuid: 9102a68e-d6e5-4628-b896-c0e4c16ae6cd
+langcode: en
+status: true
+dependencies: {  }
+id: miniature_rocker_switches_
+label: 'Miniature Rocker Switches '
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '24'

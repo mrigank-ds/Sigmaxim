@@ -1,0 +1,25 @@
+uuid: 0d08a11c-bff4-422a-8716-ac0c4ca7eba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_width3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+id: sigmaxim_workflow_order.counter.field_width3
+field_name: field_width3
+entity_type: sigmaxim_workflow_order
+bundle: counter
+label: Width
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 32.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

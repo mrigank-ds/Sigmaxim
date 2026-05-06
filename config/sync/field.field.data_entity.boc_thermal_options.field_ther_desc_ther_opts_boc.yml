@@ -1,0 +1,27 @@
+uuid: 5c21c321-c199-4f10-8167-f8bd23b47d9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_ther_desc_ther_opts_boc
+    - monarch_data_entity.data_entity_type.boc_thermal_options
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737528999
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_thermal_options.field_ther_desc_ther_opts_boc
+field_name: field_ther_desc_ther_opts_boc
+entity_type: data_entity
+bundle: boc_thermal_options
+label: THERMAL_DESCRIPTION
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

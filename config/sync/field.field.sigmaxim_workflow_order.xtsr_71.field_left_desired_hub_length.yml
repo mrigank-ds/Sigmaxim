@@ -1,0 +1,33 @@
+uuid: d86948bd-4017-476f-995e-cf02b9027f26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_desired_hub_length
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746189172
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_desired_hub_length
+field_name: field_left_desired_hub_length
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Desired Hub Length'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: float

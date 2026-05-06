@@ -1,0 +1,79 @@
+ /* CSS for orders table */
+
+/* .mobile-view-order {
+  display:none;
+}
+
+@media (max-width: 768px) {
+  .mobile-view-order {
+    display: block; margin: 0 auto;
+  }
+}
+
+.large-view-order {
+  display:block;
+}
+
+@media (max-width: 768px) {
+  .large-view-order { 
+    display: none;
+  }
+} */
+
+ /* CSS for orders table ends here */
+
+ /* CSS to override the css applied in sigmaim_workflow Module for dropdown button of order table */
+
+/* .dropbutton-wrapper .dropbutton-widget .dropbutton {
+  padding: 0.25em 2.25em 0 0.35em !important;
+}
+
+@media (max-width: 600px) {
+  .dropbutton .dropbutton .dropbutton-action > a {
+    padding-left: 0.35em;
+  }
+} */
+
+/* CSS to override the css applied in sigmaim_workflow Module for dropdown button of order table ends here */
+
+/* CSS to override the css applied in sigmaim_workflow Module for product detail page box */
+
+.sigmaxim-workflow-product-table-wrapper #sigmaxim-workflow-product-table li.cell[key="31"] {
+  width: auto;
+}
+
+.sigmaxim-workflow-product-table-wrapper #sigmaxim-workflow-product-table li.cell[key="33"] {
+  height: auto;
+}
+
+.sigmaxim-workflow-product-table-wrapper #sigmaxim-workflow-product-table li.cell[key="34"] {
+  width: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .sigmaxim-workflow-product-table-wrapper #sigmaxim-workflow-product-table li.cell[key="31"] {
+    width: 25%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sigmaxim-workflow-product-table-wrapper #sigmaxim-workflow-product-table li.cell[key="34"] {
+    width: 25%;
+    height: auto;
+  }
+}
+
+/* CSS to override the css applied in sigmaim_workflow Module for product detail page box */
+
+/* @media (max-width: 768px) {
+  .field-group-tab .image-wrapper {
+    float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .field-group-tab .details-wrapper {
+    float: left;
+  }
+} */

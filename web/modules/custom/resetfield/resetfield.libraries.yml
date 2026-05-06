@@ -1,0 +1,12 @@
+reset_button:
+  version: 1.x
+  js:
+    js/reset-button.js: {}
+  css:
+    theme:
+      css/reset-button.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once

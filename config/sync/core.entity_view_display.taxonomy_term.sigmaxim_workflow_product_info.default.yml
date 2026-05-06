@@ -1,0 +1,36 @@
+uuid: 55df47bd-afeb-4668-b2bc-f69e5c05c084
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sigmaxim_workflow_product_info.field_product_image
+    - taxonomy.vocabulary.sigmaxim_workflow_product_info
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: sx55cqnup-SlTLhUAlAS5RWemRwHEr5OF7DGmZ5eJ0k
+id: taxonomy_term.sigmaxim_workflow_product_info.default
+targetEntityType: taxonomy_term
+bundle: sigmaxim_workflow_product_info
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_product_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

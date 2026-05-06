@@ -1,0 +1,21 @@
+uuid: 01ae162f-0326-4a67-a29f-6a2998bcdbcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_customer_last_name_4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_customer_last_name_4
+field_name: field_customer_last_name_4
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Customer Last Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: customer_last_name_4
+default_value_callback: ''
+settings: {  }
+field_type: string

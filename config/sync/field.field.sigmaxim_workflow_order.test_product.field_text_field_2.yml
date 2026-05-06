@@ -1,0 +1,27 @@
+uuid: 731df85c-68e6-4587-b185-31104fc6fda6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_text_field_2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753355417
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_text_field_2
+field_name: field_text_field_2
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Text Field 2'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

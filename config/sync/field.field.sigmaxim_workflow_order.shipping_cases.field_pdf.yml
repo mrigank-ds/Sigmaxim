@@ -1,0 +1,23 @@
+uuid: dc8aebc8-acbb-4cd7-8af7-9a23e0a82e72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_pdf
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_pdf
+field_name: field_pdf
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: PDF
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

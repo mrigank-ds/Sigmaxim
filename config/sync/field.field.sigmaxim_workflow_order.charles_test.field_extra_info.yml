@@ -1,0 +1,21 @@
+uuid: 8cddee75-a51e-4f75-8d2e-0a107e245371
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_extra_info
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+  module:
+    - text
+id: sigmaxim_workflow_order.charles_test.field_extra_info
+field_name: field_extra_info
+entity_type: sigmaxim_workflow_order
+bundle: charles_test
+label: 'Extra Info'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

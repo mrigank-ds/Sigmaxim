@@ -1,0 +1,19 @@
+uuid: eb74ef47-e556-4dc6-86be-22165733042e
+langcode: en
+status: true
+dependencies:
+  module:
+    - concat_field
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_concat
+field_name: field_concat
+entity_type: sigmaxim_workflow_order
+type: concat_field
+settings: {  }
+module: concat_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: cb40facc-96a7-4f50-8182-7981982f080e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_concat
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+  module:
+    - concat_field
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1764934747
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.dilip_test.field_concat
+field_name: field_concat
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: Concat
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  token_pattern: 'strleft([field_text_concat],2)'
+field_type: concat_field

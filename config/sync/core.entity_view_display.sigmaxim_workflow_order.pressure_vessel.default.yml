@@ -1,0 +1,154 @@
+uuid: 82819880-dfb0-44ff-9364-37c595871e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_body_types
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_diameter_of_cylinder_
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_each_ring_height
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_height_of_cylinder
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_height_of_each_ring
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_no_of_hor_strged_pies
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_number_of_vertical_rings
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_radial_angle
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_radial_piece_ty
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_ring_height_types
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_thick_cyl_wall
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_vessel_orientation
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_expression
+    - options
+    - user
+id: sigmaxim_workflow_order.pressure_vessel.default
+targetEntityType: sigmaxim_workflow_order
+bundle: pressure_vessel
+mode: default
+content:
+  field_body_types:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_diameter_of_cylinder_:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_each_ring_height:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_height_of_cylinder:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_height_of_each_ring:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_no_of_hor_strged_pies:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_number_of_vertical_rings:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_radial_angle:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_radial_piece_ty:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_ring_height_types:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_thick_cyl_wall:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_vessel_orientation:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

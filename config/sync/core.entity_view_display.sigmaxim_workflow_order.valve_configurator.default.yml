@@ -1,0 +1,253 @@
+uuid: 1420a276-b679-4b88-a200-66ff72bf7339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_3d_pdf6
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_bypas_pressure
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_cartridge_material_option4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_customer_email_7
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_customer_name_3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing_reference_1_4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing_reference_2_5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_dxf7
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_folder_id
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_job_name_2
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_jpeg3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_location_6
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_opening_pressure
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pdf5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pressure_rating_design_
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pressure_rating_test_
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_project_number_1
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_seal_option5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_shrinkwrap1
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_step2
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_telephone_number_8
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_temperature_requirements3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_valve_option1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.valve_configurator.default
+targetEntityType: sigmaxim_workflow_order
+bundle: valve_configurator
+mode: default
+content:
+  field_3d_pdf6:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_bypas_pressure:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_cartridge_material_option4:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_customer_email_7:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_customer_name_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_drawing4:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_drawing_reference_1_4:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_drawing_reference_2_5:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_dxf7:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_job_name_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_jpeg3:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_location_6:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_opening_pressure:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_pdf5:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_pressure_rating_design_:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_pressure_rating_test_:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_project_number_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_seal_option5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_shrinkwrap1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_step2:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_telephone_number_8:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_temperature_requirements3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_valve_option1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

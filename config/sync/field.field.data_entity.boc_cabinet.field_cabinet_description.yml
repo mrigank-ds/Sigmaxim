@@ -1,0 +1,27 @@
+uuid: c5e56274-2aff-438b-8d0e-b01f219ee44e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cabinet_description
+    - monarch_data_entity.data_entity_type.boc_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737520588
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_cabinet.field_cabinet_description
+field_name: field_cabinet_description
+entity_type: data_entity
+bundle: boc_cabinet
+label: CABINET_DESCRIPTION
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

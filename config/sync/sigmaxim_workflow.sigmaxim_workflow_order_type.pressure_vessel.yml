@@ -1,0 +1,16 @@
+uuid: f0601afd-a921-469d-abca-fcd625ab18f0
+langcode: en
+status: true
+dependencies: {  }
+id: pressure_vessel
+label: 'Pressure Vessel'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/vessel
+permission:
+  - administrator_role
+  - admin_role
+weight: '-10'
+product_category: '45'

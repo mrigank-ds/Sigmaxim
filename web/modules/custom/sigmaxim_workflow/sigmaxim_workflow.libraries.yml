@@ -1,0 +1,24 @@
+sigmaxim_workflow.all_products:
+  css:
+    theme:
+      css/all_products.css: {}
+      css/product_abb.css: {}
+  js:
+    js/all_products.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal
+    - core/js-cookie
+
+admin_pages:
+  js:
+    https://unpkg.com/mathjs@11.0.1/lib/browser/math.js: {}
+    js/expression.js: {}
+
+fancy_file_custom:
+  css:
+    theme:
+      css/fancy-file-search.css: {}
+  js:
+    js/fancy-file-search.js: {}

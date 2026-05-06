@@ -1,0 +1,28 @@
+uuid: dfe22b86-a6a2-47ba-9a02-f16c33f6d96f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_date
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sub_alpha_test
+  module:
+    - datetime
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1712840358
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.sub_alpha_test.field_date
+field_name: field_date
+entity_type: sigmaxim_workflow_order
+bundle: sub_alpha_test
+label: Date
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

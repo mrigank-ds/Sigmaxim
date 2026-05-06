@@ -1,0 +1,16 @@
+uuid: 3ebad974-356e-4efe-8e2d-b305ad215a62
+langcode: en
+status: true
+dependencies: {  }
+id: mbd
+label: MBD
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/mbd
+permission:
+  - administrator_role
+  - admin_role
+weight: '-10'
+product_category: '44'

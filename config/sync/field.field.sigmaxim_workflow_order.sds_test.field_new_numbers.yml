@@ -1,0 +1,21 @@
+uuid: b55cdfb9-b418-43ca-bf93-3fbc000db504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_new_numbers
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - options
+id: sigmaxim_workflow_order.sds_test.field_new_numbers
+field_name: field_new_numbers
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: 'New Numbers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

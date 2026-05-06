@@ -1,0 +1,23 @@
+uuid: 05606209-5e56-4b75-953e-924171e034bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float66
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float66
+field_name: field_float66
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Breakout Point (mm)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

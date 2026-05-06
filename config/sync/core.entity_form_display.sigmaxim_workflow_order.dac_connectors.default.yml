@@ -1,0 +1,643 @@
+uuid: b515ebf3-36c6-4dbb-8e03-4a6307431f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_35
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_36
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_37
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_38
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_39
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_40
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_bool_41
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float54
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float55
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float56
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float57
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float58
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float59
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float60
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float61
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float62
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float63
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float64
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float65
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float66
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float67
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float68
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float69
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float70
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float71
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float72
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float73
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float74
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float75
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float76
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float77
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float78
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float79
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float80
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float81
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float82
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float83
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float84
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_float85
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_folder_id
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_19
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_20
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_21
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_22
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_23
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_24
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_25
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_26
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_27
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_28
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_29
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_30
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_label_31
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_int10
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_int8
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_int9
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt37
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt38
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt39
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt40
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt41
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt42
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt43
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt44
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt45
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt46
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt47
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt48
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt49
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt50
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt51
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt52
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt53
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt54
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt55
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt56
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt57
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt58
+    - field.field.sigmaxim_workflow_order.dac_connectors.field_list_txt59
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.default
+targetEntityType: sigmaxim_workflow_order
+bundle: dac_connectors
+mode: default
+content:
+  field_bool_35:
+    type: boolean_checkbox
+    weight: 33
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_36:
+    type: boolean_checkbox
+    weight: 39
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_37:
+    type: boolean_checkbox
+    weight: 40
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_38:
+    type: boolean_checkbox
+    weight: 41
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_39:
+    type: boolean_checkbox
+    weight: 44
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_40:
+    type: boolean_checkbox
+    weight: 59
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_41:
+    type: boolean_checkbox
+    weight: 99
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_float54:
+    type: number
+    weight: 34
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float55:
+    type: number
+    weight: 45
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float56:
+    type: number
+    weight: 46
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float57:
+    type: number
+    weight: 47
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float58:
+    type: number
+    weight: 48
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float59:
+    type: number
+    weight: 49
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float60:
+    type: number
+    weight: 50
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float61:
+    type: number
+    weight: 51
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float62:
+    type: number
+    weight: 52
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float63:
+    type: number
+    weight: 53
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float64:
+    type: number
+    weight: 54
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float65:
+    type: number
+    weight: 55
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float66:
+    type: number
+    weight: 56
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float67:
+    type: number
+    weight: 62
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float68:
+    type: number
+    weight: 63
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float69:
+    type: number
+    weight: 66
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float70:
+    type: number
+    weight: 67
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float71:
+    type: number
+    weight: 70
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float72:
+    type: number
+    weight: 71
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float73:
+    type: number
+    weight: 74
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float74:
+    type: number
+    weight: 75
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float75:
+    type: number
+    weight: 78
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float76:
+    type: number
+    weight: 79
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float77:
+    type: number
+    weight: 82
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float78:
+    type: number
+    weight: 83
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float79:
+    type: number
+    weight: 86
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float80:
+    type: number
+    weight: 87
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float81:
+    type: number
+    weight: 90
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float82:
+    type: number
+    weight: 91
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float83:
+    type: number
+    weight: 94
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float84:
+    type: number
+    weight: 95
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float85:
+    type: number
+    weight: 100
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_19:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_20:
+    type: string_textfield
+    weight: 42
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_21:
+    type: string_textfield
+    weight: 61
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_22:
+    type: string_textfield
+    weight: 65
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_23:
+    type: string_textfield
+    weight: 69
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_24:
+    type: string_textfield
+    weight: 73
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_25:
+    type: string_textfield
+    weight: 77
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_26:
+    type: string_textfield
+    weight: 81
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_27:
+    type: string_textfield
+    weight: 85
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_28:
+    type: string_textfield
+    weight: 89
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_29:
+    type: string_textfield
+    weight: 93
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_30:
+    type: string_textfield
+    weight: 102
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_31:
+    type: string_textfield
+    weight: 103
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_int10:
+    type: options_select
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_int8:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_int9:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt37:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt38:
+    type: options_select
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt39:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt40:
+    type: options_select
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt41:
+    type: options_select
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt42:
+    type: options_select
+    weight: 36
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt43:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt44:
+    type: options_select
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt45:
+    type: options_select
+    weight: 43
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt46:
+    type: options_select
+    weight: 57
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt47:
+    type: options_select
+    weight: 58
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt48:
+    type: options_select
+    weight: 60
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt49:
+    type: options_select
+    weight: 64
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt50:
+    type: options_select
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt51:
+    type: options_select
+    weight: 72
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt52:
+    type: options_select
+    weight: 76
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt53:
+    type: options_select
+    weight: 80
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt54:
+    type: options_select
+    weight: 84
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt55:
+    type: options_select
+    weight: 88
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt56:
+    type: options_select
+    weight: 92
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt57:
+    type: options_select
+    weight: 96
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt58:
+    type: options_select
+    weight: 97
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt59:
+    type: options_select
+    weight: 98
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install required things for the module.
+ */
+
+use Drupal\Core\Entity\Entity\EntityViewMode;
+
+/**
+ * Install the table view mode for content.
+ */
+function sigmaxim_data_entity_update_9000() {
+  if (empty(EntityViewMode::load('data_entity.table'))) {
+    EntityViewMode::create([
+      'id' => 'data_entity.table',
+      'status' => TRUE,
+      'label' => 'Table',
+      'targetEntityType' => 'data_entity',
+    ])->save();
+  }
+}
+
+/**
+ * Install the table view mode for content.
+ */
+function sigmaxim_data_entity_update_9001() {
+  $view_mode = EntityViewMode::load('data_entity.table');
+  if (!empty($view_mode)) {
+    $view_mode->delete();
+  }
+}

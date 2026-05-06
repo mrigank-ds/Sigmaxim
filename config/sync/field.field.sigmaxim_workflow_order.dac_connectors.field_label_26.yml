@@ -1,0 +1,21 @@
+uuid: 035ba2ae-9cfd-43df-83a3-ae5f102c997d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_26
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_label_26
+field_name: field_label_26
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P6 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_26
+default_value_callback: ''
+settings: {  }
+field_type: string

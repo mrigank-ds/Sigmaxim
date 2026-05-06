@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the resetfield module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function resetfield_install() {
+  // Set default configuration
+  $config = \Drupal::configFactory()->getEditable('resetfield.settings');
+  if ($config->get('enabled_fields') === NULL) {
+    $config->set('enabled_fields', [])->save();
+  }
+  
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function resetfield_uninstall() {
+  // Clean up configuration
+  \Drupal::configFactory()->getEditable('resetfield.settings')->delete();
+}

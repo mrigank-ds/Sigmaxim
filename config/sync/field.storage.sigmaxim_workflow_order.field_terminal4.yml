@@ -1,0 +1,52 @@
+uuid: 5f9ff1a1-8f89-4025-aa56-03bd698d0107
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_terminal4
+field_name: field_terminal4
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1 - Stud 10-32</option>'
+      label: '1 - Stud 10-32</option>'
+    -
+      value: '2 - Screw 10-32</option'
+      label: '2 - Screw 10-32</option'
+    -
+      value: '3 - Stud 1/4-20</option'
+      label: '3 - Stud 1/4-20</option'
+    -
+      value: '4 - Stud M5 x 0.8</opti'
+      label: '4 - Stud M5 x 0.8</opti'
+    -
+      value: '5 - Screw M5 x 0.8</opt'
+      label: '5 - Screw M5 x 0.8</opt'
+    -
+      value: '6 - Stud M6</option>'
+      label: '6 - Stud M6</option>'
+    -
+      value: '9 - 7/16” Clip Terminal'
+      label: '9 - 7/16” Clip Terminal'
+    -
+      value: 'A - Plug-In Stud</optio'
+      label: 'A - Plug-In Stud</optio'
+    -
+      value: 'C - 5/16” Clip Terminal'
+      label: 'C - 5/16” Clip Terminal'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

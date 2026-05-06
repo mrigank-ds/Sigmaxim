@@ -1,0 +1,26 @@
+uuid: 8bd7bada-65e2-4086-9fb0-9a25417da8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_email_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_email_inline
+field_name: field_email_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: email_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: dilip.k@cal.sigmaxim.net
+default_value_callback: ''
+settings: {  }
+field_type: email

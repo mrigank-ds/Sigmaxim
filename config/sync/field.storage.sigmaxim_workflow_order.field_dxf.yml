@@ -1,0 +1,18 @@
+uuid: 4d06c3df-35d4-4b02-ac3d-86042ceaa632
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_dxf
+field_name: field_dxf
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

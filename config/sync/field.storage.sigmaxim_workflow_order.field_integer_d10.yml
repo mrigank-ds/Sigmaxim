@@ -1,0 +1,20 @@
+uuid: 85a7b59e-91dd-444c-a7ae-489aae6f7eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_integer_d10
+field_name: field_integer_d10
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 87fcdd5c-635e-4a7c-953b-7a6283df61a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_15
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_15
+field_name: field_label_15
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: Note
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_15
+default_value_callback: ''
+settings: {  }
+field_type: string

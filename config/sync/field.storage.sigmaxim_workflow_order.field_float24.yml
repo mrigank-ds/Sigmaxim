@@ -1,0 +1,22 @@
+uuid: 55d4d69b-e25e-4d0c-83dc-c0893566f816
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_float24
+field_name: field_float24
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

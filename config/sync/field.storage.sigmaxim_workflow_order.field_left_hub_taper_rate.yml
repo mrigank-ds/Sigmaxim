@@ -1,0 +1,52 @@
+uuid: 76559b75-bb42-4ff1-8ed1-ae345b421b77
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_hub_taper_rate
+field_name: field_left_hub_taper_rate
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '8'
+      label: '1/8 (1.5in/ft)'
+    -
+      value: '9.6'
+      label: 1/9.6(1.25in/ft)
+    -
+      value: '10'
+      label: 1/10
+    -
+      value: '15'
+      label: 1/15
+    -
+      value: '16'
+      label: 1/16(0.75in/ft)
+    -
+      value: '20'
+      label: 1/20
+    -
+      value: '24'
+      label: 1/24(0.50in/ft)
+    -
+      value: '57.2987'
+      label: '1/57.2987 (2 deg incl angle)'
+    -
+      value: '14.593'
+      label: '1/114.593 (1 deg incl angle)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

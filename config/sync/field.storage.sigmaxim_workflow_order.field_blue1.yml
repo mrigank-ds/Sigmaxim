@@ -1,0 +1,20 @@
+uuid: 63b5f7de-2ecf-4f55-8828-1623b0fefba5
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_blue1
+field_name: field_blue1
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,55 @@
+uuid: c708a889-47a5-4309-80be-c6ad17ef8e5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_current_rating8
+field_name: field_current_rating8
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '210'
+      label: '210'
+    -
+      value: '215'
+      label: '215'
+    -
+      value: '220'
+      label: '220'
+    -
+      value: '225'
+      label: '225'
+    -
+      value: '230'
+      label: '230'
+    -
+      value: '235'
+      label: '235'
+    -
+      value: '240'
+      label: '240'
+    -
+      value: '245'
+      label: '245'
+    -
+      value: '250'
+      label: '250'
+    -
+      value: '255'
+      label: '255'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

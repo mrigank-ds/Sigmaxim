@@ -1,0 +1,23 @@
+uuid: ac2a1fc9-40f8-437d-9faa-7f9c9222ef20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float54
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float54
+field_name: field_float54
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Left Heat Shrink Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

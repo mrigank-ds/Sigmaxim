@@ -1,0 +1,26 @@
+uuid: 3afad235-c6a9-4219-91b6-a7b664f41b0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - boolean_image
+    - sigmaxim_workflow
+third_party_settings:
+  boolean_image:
+    image_style: thumbnail
+    on_image:
+      image: '356'
+    off_image:
+      image: '357'
+id: sigmaxim_workflow_order.field_radio_button_d10
+field_name: field_radio_button_d10
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

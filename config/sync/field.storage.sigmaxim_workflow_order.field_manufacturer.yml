@@ -1,0 +1,45 @@
+uuid: 1a2f0997-0f28-47bf-af31-f8325d02227c
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    exide: null
+    amaron: null
+    bosch: null
+    luminous: null
+    tata: null
+id: sigmaxim_workflow_order.field_manufacturer
+field_name: field_manufacturer
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: exide
+      label: Exide
+    -
+      value: amaron
+      label: Amaron
+    -
+      value: bosch
+      label: Bosch
+    -
+      value: luminous
+      label: Luminous
+    -
+      value: tata
+      label: Tata
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

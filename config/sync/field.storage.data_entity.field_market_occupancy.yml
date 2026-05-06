@@ -1,0 +1,21 @@
+uuid: d6e843de-13e3-4c92-8c15-c0f9b1196a31
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+id: data_entity.field_market_occupancy
+field_name: field_market_occupancy
+entity_type: data_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

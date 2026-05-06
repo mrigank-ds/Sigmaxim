@@ -1,0 +1,18 @@
+uuid: 6a248b86-f213-4ece-a6d0-a163b628226c
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_left_thread_length
+field_name: field_left_thread_length
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the field_group_image module.
+ *
+ * @ingroup xmlsitemap
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function field_group_image_install() {
+  // Set this module's weight to 100 so that all alters run at last.
+  module_set_weight('field_group_image', 1);
+}

@@ -1,0 +1,32 @@
+uuid: df5b973f-7d35-49ea-bea5-ff3c87a502c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_link_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+    - link
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.inline.field_link_inline
+field_name: field_link_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: link_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.sigmaxim.net/'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '1'
+field_type: link

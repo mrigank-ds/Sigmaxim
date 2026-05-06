@@ -1,0 +1,27 @@
+uuid: 6a7f9f83-90b3-402f-9652-698e0b4db581
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_oth_desc_oth_opt_boc
+    - monarch_data_entity.data_entity_type.boc_other_options
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737530032
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_other_options.field_oth_desc_oth_opt_boc
+field_name: field_oth_desc_oth_opt_boc
+entity_type: data_entity
+bundle: boc_other_options
+label: OTHER_DESCRIPTION
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

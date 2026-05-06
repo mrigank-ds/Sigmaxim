@@ -1,0 +1,23 @@
+uuid: 5ec255f9-3041-4523-a599-8ba95212947c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_cartridge_material_option4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - options
+id: sigmaxim_workflow_order.valve_configurator.field_cartridge_material_option4
+field_name: field_cartridge_material_option4
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Cartridge Material Option'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

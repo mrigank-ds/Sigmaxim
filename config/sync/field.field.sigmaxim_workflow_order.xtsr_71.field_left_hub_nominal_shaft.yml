@@ -1,0 +1,33 @@
+uuid: 61d5b65c-a87b-4112-9e48-1a5ece4fd196
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_nominal_shaft
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746184061
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_nominal_shaft
+field_name: field_left_hub_nominal_shaft
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Nominal Shaft'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: in
+field_type: float

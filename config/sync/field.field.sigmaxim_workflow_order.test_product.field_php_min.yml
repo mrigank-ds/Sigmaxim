@@ -1,0 +1,38 @@
+uuid: df49c5b4-8776-49bf-8590-7d3f7e831d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_php_min
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753430112
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_php_min
+field_name: field_php_min
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'PHP Min'
+description: 'should display the smaller of the two field values from Integer Field and Float Field'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 'min([field_integer_field],[field_float_field])'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

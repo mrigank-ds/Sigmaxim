@@ -1,0 +1,16 @@
+uuid: 8288459b-ed83-4b07-bcbc-4f9e0cd1bb69
+langcode: en
+status: true
+dependencies: {  }
+id: new_ds_test
+label: 'New ds test'
+description: 'New ds test'
+group: null
+name: null
+value: null
+watched_folder: ''
+permission:
+  - administrator_role
+  - admin_role
+weight: '-10'
+product_category: none

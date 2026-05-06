@@ -1,0 +1,23 @@
+uuid: f48a81ff-b8b1-4092-8bb2-6eac830d2044
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_38
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_bool_38
+field_name: field_bool_38
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Flex Sleeve?'
+description: bool_38
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Flex Sleeve?'
+field_type: boolean

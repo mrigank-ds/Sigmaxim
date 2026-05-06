@@ -1,0 +1,25 @@
+uuid: a8945a28-3e6c-4477-9e28-e27a56e9cd60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_opening_pressure
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_opening_pressure
+field_name: field_opening_pressure
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Opening Pressure'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

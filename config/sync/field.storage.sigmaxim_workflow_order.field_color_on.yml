@@ -1,0 +1,18 @@
+uuid: 598a761f-88eb-43ff-88cb-f8590f1603f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_color_on
+field_name: field_color_on
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

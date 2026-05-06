@@ -1,0 +1,33 @@
+uuid: 061bfc22-f7ea-464b-9e91-d6c9de49fdb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_types
+field_name: field_types
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Standard
+      label: Standard
+    -
+      value: Extended
+      label: Extended
+    -
+      value: Whatever
+      label: Whatever
+    -
+      value: Advanced
+      label: Advanced
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

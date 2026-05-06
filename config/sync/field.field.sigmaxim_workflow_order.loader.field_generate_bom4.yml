@@ -1,0 +1,23 @@
+uuid: 38c3e8ec-4211-4fa9-8fd3-676512eceb1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_generate_bom4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_generate_bom4
+field_name: field_generate_bom4
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Generate BOM'
+description: generate_bom4
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

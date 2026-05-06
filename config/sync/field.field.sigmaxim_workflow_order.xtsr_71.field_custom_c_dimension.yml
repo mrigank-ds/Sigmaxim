@@ -1,0 +1,31 @@
+uuid: c72f584e-2bd0-4b19-9caa-37b8ef981698
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_custom_c_dimension
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745799285
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_custom_c_dimension
+field_name: field_custom_c_dimension
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Custom C Dimension'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: float

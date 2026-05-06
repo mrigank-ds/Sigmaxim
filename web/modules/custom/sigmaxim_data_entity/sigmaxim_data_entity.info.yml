@@ -1,0 +1,7 @@
+name: Sigmaxim Data Entity
+type: module
+description: Provides complex widgets for working with data.
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - monarch_data_entity

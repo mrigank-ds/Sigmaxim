@@ -1,0 +1,68 @@
+uuid: 89a1e727-1c95-48b1-a4fd-07040c14be15
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_aimage
+    - field.field.node.article.field_calendar
+    - field.field.node.article.field_career
+    - field.field.node.article.field_dilip_test_math
+    - field.field.node.article.field_green
+    - field.field.node.article.field_image
+    - field.field.node.article.field_int_new
+    - field.field.node.article.field_maths
+    - field.field.node.article.field_maths1
+    - field.field.node.article.field_new_field
+    - field.field.node.article.field_new_list_string
+    - field.field.node.article.field_others
+    - field.field.node.article.field_readonly
+    - field.field.node.article.field_services
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_tax
+    - field.field.node.article.field_tax1
+    - field.field.node.article.field_tea
+    - field.field.node.article.field_test
+    - field.field.node.article.field_test_12
+    - field.field.node.article.field_testing
+    - field.field.node.article.field_time
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_aimage: true
+  field_calendar: true
+  field_career: true
+  field_dilip_test_math: true
+  field_green: true
+  field_image: true
+  field_int_new: true
+  field_maths: true
+  field_maths1: true
+  field_new_field: true
+  field_new_list_string: true
+  field_others: true
+  field_readonly: true
+  field_services: true
+  field_tags: true
+  field_tax: true
+  field_tax1: true
+  field_tea: true
+  field_test: true
+  field_test_12: true
+  field_testing: true
+  field_time: true

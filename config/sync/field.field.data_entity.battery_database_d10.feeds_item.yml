@@ -1,0 +1,26 @@
+uuid: f5af0959-9ead-4b91-a8ae-d47c6af46155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.feeds_item
+    - monarch_data_entity.data_entity_type.battery_database_d10
+  module:
+    - feeds
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758062242
+id: data_entity.battery_database_d10.feeds_item
+field_name: feeds_item
+entity_type: data_entity
+bundle: battery_database_d10
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

@@ -1,0 +1,23 @@
+uuid: 0c25cbe3-bd30-4206-9948-56d2269af9d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_time
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_time
+field_name: field_time
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Time Out'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

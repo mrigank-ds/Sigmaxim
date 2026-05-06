@@ -1,0 +1,17 @@
+uuid: 414ecb08-6455-45b8-a5eb-8afe1021f7e9
+langcode: en
+status: true
+dependencies: {  }
+id: sds_test
+label: 'SDS TEST'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '14'

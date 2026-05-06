@@ -1,0 +1,33 @@
+uuid: 94b1ac19-d980-4f65-849e-10d17bef8c29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_cbc_ext_cabinet
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737535282
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.charger_battery_cabinet.field_cbc_ext_cabinet
+field_name: field_cbc_ext_cabinet
+entity_type: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+label: CABINET
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: cbc_cabinet_ext
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

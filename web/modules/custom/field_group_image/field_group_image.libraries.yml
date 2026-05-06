@@ -1,0 +1,19 @@
+# Library for field group image.
+field_group_image:
+  version: 1.x
+  js:
+    js/field_group_image.js: {}
+  css:
+    component:
+      css/field_group_image.css: {}
+  dependencies:
+    - field_group/core
+field_group_image.form_display:
+  version: 1.x
+  js:
+    js/field_group_image.form_display.js: {}
+  dependencies:
+    - field_group/core
+    - core/jquery
+    - core/once
+    - core/drupal

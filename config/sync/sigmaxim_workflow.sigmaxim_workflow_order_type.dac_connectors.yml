@@ -1,0 +1,17 @@
+uuid: 5d95371e-21e5-4a94-bc0f-a5d44b98d6ba
+langcode: en
+status: true
+dependencies: {  }
+id: dac_connectors
+label: 'DAC Connectors'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '15'

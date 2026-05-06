@@ -1,0 +1,7 @@
+name: 'Easy Install'
+description: 'Provides UI to delete configuration while uninstalling or reinstalling the modules.'
+package: 'System'
+type: module
+core_version_requirement: ^9.3 || ^10
+
+configure: easy_install.purge_configurations

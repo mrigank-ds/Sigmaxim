@@ -1,0 +1,23 @@
+uuid: 4c82e62c-b113-4dae-a842-30985094f81a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float18
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float18
+field_name: field_float18
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P2 Label Distance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

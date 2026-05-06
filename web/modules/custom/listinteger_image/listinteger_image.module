@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @file
+ * Contains general hooks and alters.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Link;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\ContentEntityFormInterface;
+use Drupal\Core\Field\FieldConfigInterface;
+use Drupal\file\FileInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
+ */
+function listinteger_image_form_field_config_edit_form_alter(array &$form, FormStateInterface $form_state) {
+
+  $field = $form_state->getFormObject()->getEntity();
+  // Check if it is list (text) field or not.
+  if ($field->getType() == 'list_integer') {
+    $field_storage_definition = $field->getFieldStorageDefinition();
+	  $settings = $field_storage_definition->getSettings();
+	    // Add image fields in the form to store images for each
+    // list item.
+    if (isset($settings['allowed_values'])) {
+      $options = [];
+      foreach (\Drupal::entityTypeManager()->getStorage('image_style')->loadMultiple() as $id => $image_style) {
+        $options[$id] = $image_style->label();
+      }
+      $form['list_integer'] = [
+        '#type' => 'details',
+        '#title' => t('List Images'),
+        '#open' => TRUE,
+      ];
+
+
+      // Image style field.
+      $form['list_integer']['image_style'] = [
+        'image_style' => [
+          '#type' => 'select',
+          '#title' => t('Image style'),
+          '#description' => t('Select image style for list images.'),
+          '#default_value' => $field_storage_definition->getThirdPartySetting('list_integer', 'image_style', 'thumbnail'),
+          '#options' => $options,
+        ],
+      ];
+      foreach ($settings['allowed_values'] as $key => $label) { 		  
+        // List image field.
+        $form['list_integer']['image_' . $key] = [
+          '#type' => 'managed_file',
+          '#title' => t('Upload Image for <i>@key</i>', [
+            '@key' => $label,
+          ]),
+          '#description' => t('Upload an image for this list item.'),
+          '#format' => 'rich_text',
+          '#default_value' => [
+            'fid' => $field_storage_definition->getThirdPartySetting('list_integer', $key)['image'] ?? 0,
+          ],
+          '#upload_location' => 'public://list_image/',
+        ];
+      }
+	  
+      // Add custom submit handler.
+      $form['actions']['submit']['#submit'][] = 'listinteger_edit_form_submit';
+    }
+  }
+}
+
+/**
+ * A submit handler to store images for the list items.
+ */
+function listinteger_edit_form_submit(&$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  $field_storage_definition = $field->getFieldStorageDefinition();
+  $settings = $field_storage_definition->getSettings();
+  // Add image fields in the form to store images for each
+  // list item.
+  if (isset($settings['allowed_values'])) {
+    $data = [];
+    $field_storage_definition->setThirdPartySetting(
+      'list_integer',
+      'image_style',
+      $form_state->getValue('image_style') ?? '',
+    );	
+	foreach ($settings['allowed_values'] as $key => $value) {
+      $fid = $form_state->getValue('image_' . $key);
+	 
+      $fid = $fid ? reset($fid) : '';
+      if (isset($fid)) {
+        $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+        if ($file) {
+			// Load the file via file.fid.
+          $file->status = FileInterface::STATUS_PERMANENT;
+          $file->save();
+          $field_storage_definition->setThirdPartySetting(
+            'list_integer',
+            $key,
+            ['image' => $fid],
+          );
+        }
+      }
+    }
+    $field_storage_definition->save();
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ */
+function listinteger_image_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (!($form_state->getFormObject() instanceof ContentEntityFormInterface)) {
+    return;
+  }
+
+  /** @var \Drupal\Core\Entity\EntityForm $entity_form */
+  $entity_form = $form_state->getFormObject();
+  /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+  $entity = $entity_form->getEntity();
+  $targets = [];
+  $file_ids = [];
+  $style_ids = [];
+
+  foreach ($entity->getFields() as $field_name => $field) {
+    if (
+      !isset($form[$field_name]['widget']['#options']) ||
+      !is_array($form[$field_name]['widget']['#options'])
+    ) {
+      continue;
+    }
+
+    /** @var \Drupal\Core\Field\FieldConfigInterface $field_config */
+    if (!($field_config = $field->getFieldDefinition()) instanceof FieldConfigInterface) {
+      continue;
+    }
+
+    if ($field_config->getType() !== 'list_integer') {
+      continue;
+    }
+
+    $field_storage_config = $field_config->getFieldStorageDefinition();
+    $images_by_option = [];
+
+    foreach ($form[$field_name]['widget']['#options'] as $option_name => $option_label) {
+      $list_item = $field_storage_config->getThirdPartySetting('list_integer', $option_name, 0);
+      if (empty($list_item['image'])) {
+        continue;
+      }
+
+      $fid = (int) $list_item['image'];
+      $images_by_option[$option_name] = $fid;
+      $file_ids[$fid] = $fid;
+    }
+
+    if (!$images_by_option) {
+      continue;
+    }
+
+    $image_style = $field_storage_config->getThirdPartySetting('list_integer', 'image_style', 'thumbnail');
+    $targets[$field_name] = [
+      'image_style' => $image_style,
+      'images_by_option' => $images_by_option,
+    ];
+
+    if (!empty($image_style)) {
+      $style_ids[$image_style] = $image_style;
+    }
+  }
+
+  if (!$targets) {
+    return;
+  }
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $files = $entity_type_manager->getStorage('file')->loadMultiple(array_values($file_ids));
+  $styles = $entity_type_manager->getStorage('image_style')->loadMultiple(array_values($style_ids));
+  $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+  $attach_library = FALSE;
+
+  foreach ($targets as $field_name => $target) {
+    $markup = '<div class="list_image__wrapper">';
+    $has_markup = FALSE;
+
+    foreach ($target['images_by_option'] as $option_name => $fid) {
+      $image_url = buildinteger_image_style_url($fid, $target['image_style'], $files, $styles, $toolkit_available);
+      if ($image_url === '') {
+        continue;
+      }
+
+      $markup .= '<img class="' . htmlspecialchars('list_image__' . $option_name) . '" src="' . htmlspecialchars($image_url) . '" style="display:none;" />';
+      $has_markup = TRUE;
+    }
+
+    if (!$has_markup) {
+      continue;
+    }
+
+    $markup .= '</div>';
+    $form[$field_name]['widget']['#attributes']['class'][] = 'list_image__field_input';
+    $form[$field_name]['#attributes']['class'][] = 'list_image__field_wrapper';
+    $form[$field_name]['widget']['#suffix'] = Markup::create($markup);
+    $attach_library = TRUE;
+  }
+
+  if ($attach_library) {
+    $form['#attached']['library'][] = 'listinteger_image/listinteger_image';
+  }
+}
+
+/**
+ * Function to build and return image url after applying
+ * image style.
+ */
+function buildinteger_image_style_url($image, $image_style, array $files = [], array $styles = [], $toolkit_available = NULL) {
+  // Load file by id and create file uri.
+  $file = $files[$image] ?? \Drupal::entityTypeManager()->getStorage('file')
+    ->load($image);
+  if ($file) {
+    $file_uri = $file->getFileUri();
+    $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_uri);
+    if ($toolkit_available === NULL) {
+      $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+    }
+    // If image style is set.
+    if (!empty($image_style) && $toolkit_available) {
+      // Load selected image style.
+      $style = $styles[$image_style] ?? ImageStyle::load($image_style);
+      // Build styled image url if it is valid image style.
+      if ($style) {
+        $image_url = \Drupal::service('file_url_generator')->transformRelative($style->buildUrl($file_uri));
+      }
+    }
+
+    return $image_url;
+  }
+
+  return '';
+}

@@ -1,0 +1,5 @@
+name: 'Results File List'
+type: module
+description: 'Displays files from the results folder.'
+core_version_requirement: ^9 || ^10
+package: Custom

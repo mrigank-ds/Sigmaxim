@@ -1,0 +1,23 @@
+uuid: c4029f2e-1c94-451f-94f6-4388cae35ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_seat_location12
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_seat_location12
+field_name: field_seat_location12
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Seat Location'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

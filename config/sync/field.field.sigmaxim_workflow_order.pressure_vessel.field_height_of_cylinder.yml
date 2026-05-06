@@ -1,0 +1,33 @@
+uuid: c302d9a8-677b-4404-b70c-037c843f6d9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_height_of_cylinder
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751868737
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_height_of_cylinder
+field_name: field_height_of_cylinder
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Height Of Cylinder'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: '1000.0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal

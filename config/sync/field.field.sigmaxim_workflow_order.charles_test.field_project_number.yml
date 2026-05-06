@@ -1,0 +1,31 @@
+uuid: 0cbaef5a-a7ad-4462-98d2-5f9e3a6cd986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_project_number
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.charles_test.field_project_number
+field_name: field_project_number
+entity_type: sigmaxim_workflow_order
+bundle: charles_test
+label: 'Project Number'
+description: 'Help test'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: random
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: 'ID Pre'
+  suffix: 'ID Post'
+  min: ''
+  max: ''
+field_type: expression_integer

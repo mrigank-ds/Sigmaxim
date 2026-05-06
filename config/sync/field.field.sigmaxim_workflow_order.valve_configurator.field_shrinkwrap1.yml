@@ -1,0 +1,23 @@
+uuid: 9a1500f8-9934-4128-aa0d-e916392554f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_shrinkwrap1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_shrinkwrap1
+field_name: field_shrinkwrap1
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: Shrinkwrap
+description: shrinkwrap1
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: de03d8cb-d8f2-4f53-836d-e89c95f6e929
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float14
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float14
+field_name: field_float14
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Breakout Point (mm)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

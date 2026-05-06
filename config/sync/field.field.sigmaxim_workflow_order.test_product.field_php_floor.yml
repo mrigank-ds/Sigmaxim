@@ -1,0 +1,38 @@
+uuid: 9c9794e9-05f6-4dce-ad1f-936bcec4f8e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_php_floor
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753430050
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_php_floor
+field_name: field_php_floor
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'PHP Floor'
+description: 'result should be the FLOOR of the calculated value from the field Math Expression Add'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 'floor([field_math_expression_add])'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

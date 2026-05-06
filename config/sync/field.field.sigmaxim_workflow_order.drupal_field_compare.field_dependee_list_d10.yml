@@ -1,0 +1,28 @@
+uuid: cdd7d507-9982-40be-bd60-77b8fac8bf91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dependee_list_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758060109
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.drupal_field_compare.field_dependee_list_d10
+field_name: field_dependee_list_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Dependee List'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

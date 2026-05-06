@@ -1,0 +1,38 @@
+uuid: 81d33dc8-5ca2-400c-b554-b999d5bbb951
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3576f54d-a316-4876-8ba7-185c967570ab'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: administratordashboard
+theme: sigmaxim
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:3576f54d-a316-4876-8ba7-185c967570ab'
+settings:
+  id: 'block_content:3576f54d-a316-4876-8ba7-185c967570ab'
+  label: 'Administrator Dashboard'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/user/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin: admin

@@ -1,0 +1,37 @@
+uuid: 774a3d25-de52-41dd-8132-3b25d1004c43
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    1981: null
+    2001: null
+    2009: null
+id: sigmaxim_workflow_order.field_list_integers_d10
+field_name: field_list_integers_d10
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1981
+      label: '1981'
+    -
+      value: 2001
+      label: '2001'
+    -
+      value: 2009
+      label: '2009'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+uuid: 6d3b5968-b20a-4643-b718-c5998de7c060
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+    - serialization
+    - user
+_core:
+  default_config_hash: 500iv9ACK7XFzQElGXN1tqmJf1KH--3jocW1jXIfnm4
+id: entity.data_entity
+plugin_id: 'entity:data_entity'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  POST:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  DELETE:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

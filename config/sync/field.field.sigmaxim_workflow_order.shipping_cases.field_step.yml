@@ -1,0 +1,23 @@
+uuid: 5ff70fbd-de28-46ec-9475-fe2fe5e8fa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_step
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_step
+field_name: field_step
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: STEP
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

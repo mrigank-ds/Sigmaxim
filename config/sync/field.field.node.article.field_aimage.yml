@@ -1,0 +1,38 @@
+uuid: 2e399e08-ed46-4cb7-aa97-39039926c26a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aimage
+    - node.type.article
+  module:
+    - image
+id: node.article.field_aimage
+field_name: field_aimage
+entity_type: node
+bundle: article
+label: Aimage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: 1
+  alt_field_required: 1
+  title_field: 0
+  title_field_required: 0
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

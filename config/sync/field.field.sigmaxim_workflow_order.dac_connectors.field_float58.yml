@@ -1,0 +1,25 @@
+uuid: 43f37f48-5792-4aeb-ad9b-5bd6fadd5b04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float58
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float58
+field_name: field_float58
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Length P3-P4'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 10.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

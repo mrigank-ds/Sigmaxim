@@ -1,0 +1,23 @@
+uuid: e43f26b1-c01f-426e-975f-6778849d80e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_26
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_bool_26
+field_name: field_bool_26
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'No Label'
+description: bool_26
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'No Label'
+field_type: boolean

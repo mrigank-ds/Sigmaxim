@@ -1,0 +1,16 @@
+uuid: c95dd8e1-b6e1-42e2-8092-6fecfaf4cc3c
+langcode: en
+status: true
+dependencies: {  }
+id: uttensils
+label: Uttensils
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/utensils
+permission:
+  - administrator_role
+  - admin_role
+weight: '-10'
+product_category: '46'

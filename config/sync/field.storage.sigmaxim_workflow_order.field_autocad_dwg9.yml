@@ -1,0 +1,22 @@
+uuid: f3dafcd1-3428-4006-b536-bb57087780eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_autocad_dwg9
+field_name: field_autocad_dwg9
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

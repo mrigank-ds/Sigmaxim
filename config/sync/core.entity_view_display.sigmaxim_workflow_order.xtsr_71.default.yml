@@ -1,0 +1,510 @@
+uuid: 0a9567f5-2f38-44d9-963f-df8681f0ef95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_balance_grade
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_balance_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_center_member_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_coup_order_name
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_coupling_size_xtsr71
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_custom_c_dimension
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_des_hub_len_xl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_des_hub_len_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_desired_hub_length_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_field_nominal_shaft_refere
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_folder_id
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_bore_fit
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_bore_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_desired_hub_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_cbore_dia
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_key_precision
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_keyway_shape
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_nominal_shaft
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_puller_holes
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_set_screws
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_taper_rate
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_hub_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_key_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_key_style
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_bore_across_key
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_bore_tolerance
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_max_key_width
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_bore_across_key
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_bore_tolerance
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_min_key_width
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_override_agma_keyway
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_stand_off
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_taper_key_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_taper_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_left_thread_length
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_dia_xl_reference
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_dia_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_max_cbore_reference
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_nom_shaft_xl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_nom_shaft_xxl_ref
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_power
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_power_metric
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_speed
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_operating_torque
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_bore_type
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_hub_size
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_right_hub_units
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_service_factor_met_xtsr71
+    - field.field.sigmaxim_workflow_order.xtsr_71.field_service_factor_xtsr71
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_expression
+    - options
+    - user
+id: sigmaxim_workflow_order.xtsr_71.default
+targetEntityType: sigmaxim_workflow_order
+bundle: xtsr_71
+mode: default
+content:
+  field_balance_grade:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_balance_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_center_member_units:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_coup_order_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_coupling_size_xtsr71:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_custom_c_dimension:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_des_hub_len_xl_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_des_hub_len_xxl_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  field_desired_hub_length_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_field_nominal_shaft_refere:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_left_bore_fit:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_left_bore_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_left_desired_hub_length:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_left_hub_cbore_dia:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_left_hub_key_precision:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_left_hub_keyway_shape:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_left_hub_nominal_shaft:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_left_hub_puller_holes:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 47
+    region: content
+  field_left_hub_set_screws:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 48
+    region: content
+  field_left_hub_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_left_hub_taper_rate:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_left_hub_units:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_left_key_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_left_key_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_left_max_bore_across_key:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_left_max_bore_tolerance:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_left_max_key_width:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_left_min_bore_across_key:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_left_min_bore_tolerance:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_left_min_key_width:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_left_override_agma_keyway:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_left_stand_off:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_left_taper_key_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_left_taper_length:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_left_thread_length:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 46
+    region: content
+  field_max_cbore_dia_xl_reference:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_max_cbore_dia_xxl_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_max_cbore_reference:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_nom_shaft_xl_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_nom_shaft_xxl_ref:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_operating_power:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_operating_power_metric:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_operating_speed:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_operating_torque:
+    type: expression_decimal
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_right_bore_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  field_right_hub_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_right_hub_units:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 51
+    region: content
+  field_service_factor_met_xtsr71:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_service_factor_xtsr71:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

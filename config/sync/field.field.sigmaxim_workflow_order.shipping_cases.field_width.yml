@@ -1,0 +1,25 @@
+uuid: 0494890d-ac16-4abd-ad9c-7485ea47d471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_width
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_width
+field_name: field_width
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: Width
+description: 'Width of the case'
+required: false
+translatable: false
+default_value:
+  -
+    value: 30.0
+default_value_callback: ''
+settings:
+  min: 12.0
+  max: 30.0
+  prefix: ''
+  suffix: inches
+field_type: float

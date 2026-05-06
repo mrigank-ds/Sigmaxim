@@ -1,0 +1,33 @@
+uuid: 9b559608-c33c-4f0f-b2bb-d65afa66e609
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_thick_cyl_wall
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751870034
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_thick_cyl_wall
+field_name: field_thick_cyl_wall
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Thickness of Cylindrical Wall'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1.0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal

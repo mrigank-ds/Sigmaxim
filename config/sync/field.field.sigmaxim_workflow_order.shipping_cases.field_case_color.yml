@@ -1,0 +1,30 @@
+uuid: 57d35708-21af-488f-8b47-c68b40afa039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_case_color
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1718003534
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.shipping_cases.field_case_color
+field_name: field_case_color
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Case Color'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

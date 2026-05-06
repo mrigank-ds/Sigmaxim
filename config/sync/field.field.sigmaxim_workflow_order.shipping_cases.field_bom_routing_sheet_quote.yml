@@ -1,0 +1,23 @@
+uuid: ffb7e3b5-d9aa-48f8-a94c-c9a390ad6798
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bom_routing_sheet_quote
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_bom_routing_sheet_quote
+field_name: field_bom_routing_sheet_quote
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'BOM / Routing Sheet / Quote'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

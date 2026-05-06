@@ -1,0 +1,39 @@
+/**
+ * @file
+ * sigmaxim layout styling.
+ */
+
+/**
+ * Container
+ */
+.layout-container {
+  box-sizing: border-box;
+  /*max-width: 860px;*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* @media all and (min-width: 851px) {
+  .layout-container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
+} */
+
+.layout-container {
+  max-width: 97%;
+  margin: 0 auto;
+}
+
+/**
+ * Main
+ */
+.layout-main-wrapper {
+  min-height: 300px;
+}
+.layout-main {
+  background: white;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,27 @@
+uuid: 4c08d3b9-4782-46cb-b13e-04942a632053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_concatenation
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.sds_test.field_concatenation
+field_name: field_concatenation
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: Concatenation
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  expression: '[sigmaxim_workflow_order:field_india] . [sigmaxim_workflow_order:field_joindata]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+field_type: field_expression

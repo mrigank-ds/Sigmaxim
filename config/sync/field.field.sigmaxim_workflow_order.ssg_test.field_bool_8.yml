@@ -1,0 +1,23 @@
+uuid: ad3160e8-2b32-421f-837e-b3626d15d988
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_bool_8
+field_name: field_bool_8
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Use Same Right Connector'
+description: bool_8
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Use Same Right Connector'
+field_type: boolean

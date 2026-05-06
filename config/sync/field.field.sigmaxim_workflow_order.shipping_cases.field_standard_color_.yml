@@ -1,0 +1,23 @@
+uuid: f6734a71-f5d7-4212-9eb7-185ee1bfa410
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_standard_color_
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_standard_color_
+field_name: field_standard_color_
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Standard Color?'
+description: 'Do you want to stay with only standard colors, or will you order a custom color (surcharge applies)'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

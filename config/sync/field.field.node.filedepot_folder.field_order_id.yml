@@ -1,0 +1,23 @@
+uuid: aeee695a-33ae-452c-98b0-af717a2b9288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_id
+    - node.type.filedepot_folder
+id: node.filedepot_folder.field_order_id
+field_name: field_order_id
+entity_type: node
+bundle: filedepot_folder
+label: 'Order ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

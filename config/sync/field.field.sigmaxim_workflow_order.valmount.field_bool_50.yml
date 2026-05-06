@@ -1,0 +1,23 @@
+uuid: 47a0c8a6-bdca-453f-9285-3dc3f5de814b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_50
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_bool_50
+field_name: field_bool_50
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: BOM
+description: bool_50
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

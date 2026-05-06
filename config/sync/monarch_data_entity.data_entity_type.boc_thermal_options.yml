@@ -1,0 +1,6 @@
+uuid: 0fdc0a7d-fb4e-4ab9-a84a-9afa48d23e89
+langcode: en
+status: true
+dependencies: {  }
+id: boc_thermal_options
+label: BOC_THERMAL_OPTIONS

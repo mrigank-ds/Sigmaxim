@@ -1,0 +1,31 @@
+uuid: dccfce63-9e61-4f69-9d3b-3bfcd8297391
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_bore_type
+field_name: field_left_bore_type
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Straight
+      label: Straight
+    -
+      value: Tapered
+      label: Tapered
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

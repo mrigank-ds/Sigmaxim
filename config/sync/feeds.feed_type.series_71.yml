@@ -1,0 +1,498 @@
+uuid: 8b364746-c26f-4726-80bd-2b1a9beff651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.series_71.field_a
+    - field.field.data_entity.series_71.field_ac
+    - field.field.data_entity.series_71.field_adapter
+    - field.field.data_entity.series_71.field_b
+    - field.field.data_entity.series_71.field_b1
+    - field.field.data_entity.series_71.field_b2
+    - field.field.data_entity.series_71.field_b2hubmaxbore
+    - field.field.data_entity.series_71.field_bal_rpm
+    - field.field.data_entity.series_71.field_bhubmaxbore
+    - field.field.data_entity.series_71.field_bhubminbore
+    - field.field.data_entity.series_71.field_c_min
+    - field.field.data_entity.series_71.field_capscrew
+    - field.field.data_entity.series_71.field_cdimension
+    - field.field.data_entity.series_71.field_cm_generic
+    - field.field.data_entity.series_71.field_cm_instance
+    - field.field.data_entity.series_71.field_couplingsize
+    - field.field.data_entity.series_71.field_disc_pack_asm
+    - field.field.data_entity.series_71.field_disc_pack_bolts
+    - field.field.data_entity.series_71.field_disc_pack_kt
+    - field.field.data_entity.series_71.field_disc_pack_thickness
+    - field.field.data_entity.series_71.field_e
+    - field.field.data_entity.series_71.field_flex_joint_kt
+    - field.field.data_entity.series_71.field_g
+    - field.field.data_entity.series_71.field_hub_name
+    - field.field.data_entity.series_71.field_locknut
+    - field.field.data_entity.series_71.field_mct
+    - field.field.data_entity.series_71.field_not_bal_rpm
+    - field.field.data_entity.series_71.field_pot
+    - field.field.data_entity.series_71.field_service_factor
+    - field.field.data_entity.series_71.field_std_c
+    - field.field.data_entity.series_71.field_washer
+    - field.field.data_entity.series_71.field_wcpi
+    - field.field.data_entity.series_71.field_weight
+    - field.field.data_entity.series_71.field_wr2
+    - field.field.data_entity.series_71.field_wr2_cpi
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - monarch_data_entity
+label: 'Series 71'
+id: series_71
+description: 'feeds importer for series 71 couplings'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: series_71
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  coupling_size:
+    value: 'Coupling Size'
+    label: 'Coupling Size'
+    machine_name: coupling_size
+    type: csv
+  c_dimension:
+    value: 'C Dimension'
+    label: 'C Dimension'
+    machine_name: c_dimension
+    type: csv
+  cm_instance:
+    value: CM_INSTANCE
+    label: CM_INSTANCE
+    machine_name: cm_instance
+    type: csv
+  cm_generic:
+    value: CM_GENERIC
+    label: CM_GENERIC
+    machine_name: cm_generic
+    type: csv
+  hub_name:
+    value: HUB_NAME
+    label: HUB_NAME
+    machine_name: hub_name
+    type: csv
+  bhubmaxbore:
+    value: BHUBMAXBORE
+    label: BHUBMAXBORE
+    machine_name: bhubmaxbore
+    type: csv
+  b2hubmaxbore:
+    value: B2HUBMAXBORE
+    label: B2HUBMAXBORE
+    machine_name: b2hubmaxbore
+    type: csv
+  bhubminbore:
+    value: BHUBMINBORE
+    label: BHUBMINBORE
+    machine_name: bhubminbore
+    type: csv
+  a:
+    value: A
+    label: A
+    machine_name: a
+    type: csv
+  b:
+    value: B
+    label: B
+    machine_name: b
+    type: csv
+  b1:
+    value: B1
+    label: B1
+    machine_name: b1
+    type: csv
+  b2:
+    value: B2
+    label: B2
+    machine_name: b2
+    type: csv
+  std_c:
+    value: STD_C
+    label: STD_C
+    machine_name: std_c
+    type: csv
+  c_min:
+    value: C_MIN
+    label: C_MIN
+    machine_name: c_min
+    type: csv
+  e:
+    value: E
+    label: E
+    machine_name: e
+    type: csv
+  g:
+    value: G
+    label: G
+    machine_name: g
+    type: csv
+  disc_pack_thickness:
+    value: DISC_PACK_THICKNESS
+    label: DISC_PACK_THICKNESS
+    machine_name: disc_pack_thickness
+    type: csv
+  service_factor:
+    value: SERVICE_FACTOR
+    label: SERVICE_FACTOR
+    machine_name: service_factor
+    type: csv
+  not_bal_rpm:
+    value: NOT_BAL_RPM
+    label: NOT_BAL_RPM
+    machine_name: not_bal_rpm
+    type: csv
+  bal_rpm:
+    value: BAL_RPM
+    label: BAL_RPM
+    machine_name: bal_rpm
+    type: csv
+  mct:
+    value: MCT
+    label: MCT
+    machine_name: mct
+    type: csv
+  pot:
+    value: POT
+    label: POT
+    machine_name: pot
+    type: csv
+  weight:
+    value: WEIGHT
+    label: WEIGHT
+    machine_name: weight
+    type: csv
+  wcpi:
+    value: WCPI
+    label: WCPI
+    machine_name: wcpi
+    type: csv
+  wr2:
+    value: WR2
+    label: WR2
+    machine_name: wr2
+    type: csv
+  wr2_cpi:
+    value: WR2_CPI
+    label: WR2_CPI
+    machine_name: wr2_cpi
+    type: csv
+  ac:
+    value: AC
+    label: AC
+    machine_name: ac
+    type: csv
+  capscrew:
+    value: CAPSCREW
+    label: CAPSCREW
+    machine_name: capscrew
+    type: csv
+  disc_pack_bolts:
+    value: DISC_PACK_BOLTS
+    label: DISC_PACK_BOLTS
+    machine_name: disc_pack_bolts
+    type: csv
+  locknut:
+    value: LOCKNUT
+    label: LOCKNUT
+    machine_name: locknut
+    type: csv
+  washer:
+    value: WASHER
+    label: WASHER
+    machine_name: washer
+    type: csv
+  disc_pack_asm:
+    value: DISC_PACK_ASM
+    label: DISC_PACK_ASM
+    machine_name: disc_pack_asm
+    type: csv
+  disc_pack_kt:
+    value: DISC_PACK_KT
+    label: DISC_PACK_KT
+    machine_name: disc_pack_kt
+    type: csv
+  flex_joint_kt:
+    value: FLEX_JOINT_KT
+    label: FLEX_JOINT_KT
+    machine_name: flex_joint_kt
+    type: csv
+  adapter:
+    value: ADAPTER
+    label: ADAPTER
+    machine_name: adapter
+    type: csv
+mappings:
+  -
+    target: field_couplingsize
+    map:
+      value: coupling_size
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_cdimension
+    map:
+      value: c_dimension
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: coupling_size
+    settings: {  }
+    unique: {  }
+  -
+    target: field_cm_instance
+    map:
+      value: cm_instance
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_cm_generic
+    map:
+      value: cm_generic
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hub_name
+    map:
+      value: hub_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_bhubmaxbore
+    map:
+      value: bhubmaxbore
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_b2hubmaxbore
+    map:
+      value: b2hubmaxbore
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_bhubminbore
+    map:
+      value: bhubminbore
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_a
+    map:
+      value: a
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_b
+    map:
+      value: b
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_b1
+    map:
+      value: b1
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_b2
+    map:
+      value: b2
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_std_c
+    map:
+      value: std_c
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_c_min
+    map:
+      value: c_min
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_e
+    map:
+      value: e
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_g
+    map:
+      value: g
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_disc_pack_thickness
+    map:
+      value: disc_pack_thickness
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_service_factor
+    map:
+      value: service_factor
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_not_bal_rpm
+    map:
+      value: not_bal_rpm
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_bal_rpm
+    map:
+      value: bal_rpm
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_mct
+    map:
+      value: mct
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_pot
+    map:
+      value: pot
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_weight
+    map:
+      value: weight
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_wcpi
+    map:
+      value: wcpi
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_wr2
+    map:
+      value: wr2
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_wr2_cpi
+    map:
+      value: wr2_cpi
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_ac
+    map:
+      value: ac
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_capscrew
+    map:
+      value: capscrew
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_disc_pack_bolts
+    map:
+      value: disc_pack_bolts
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_locknut
+    map:
+      value: locknut
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_washer
+    map:
+      value: washer
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_disc_pack_asm
+    map:
+      value: disc_pack_asm
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_disc_pack_kt
+    map:
+      value: disc_pack_kt
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_flex_joint_kt
+    map:
+      value: flex_joint_kt
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_adapter
+    map:
+      value: adapter
+    settings:
+      language: null
+    unique: {  }

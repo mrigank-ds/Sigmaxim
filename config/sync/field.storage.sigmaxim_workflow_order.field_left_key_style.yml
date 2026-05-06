@@ -1,0 +1,31 @@
+uuid: d3c3cc4d-496a-4390-b07f-d1705af2f349
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_key_style
+field_name: field_left_key_style
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Keyed Fit'
+      label: 'Keyed Fit'
+    -
+      value: 'Keyless Fit'
+      label: 'Keyless Fit'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

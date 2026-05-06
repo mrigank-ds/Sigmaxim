@@ -1,0 +1,21 @@
+uuid: 87cc7892-481f-4593-a58d-3b1731549c6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_project_number
+field_name: field_project_number
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 008c3706-2a71-4267-ac04-66e731fe10ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_circuit5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit5
+field_name: field_circuit5
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: Circuit
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'B - Series Trip'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

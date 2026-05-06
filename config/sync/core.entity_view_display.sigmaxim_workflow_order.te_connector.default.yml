@@ -1,0 +1,92 @@
+uuid: ac85599e-5677-430a-bb8b-20957f17f7ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.te_connector.field_color_on
+    - field.field.sigmaxim_workflow_order.te_connector.field_colors
+    - field.field.sigmaxim_workflow_order.te_connector.field_dilip_test_math
+    - field.field.sigmaxim_workflow_order.te_connector.field_exp
+    - field.field.sigmaxim_workflow_order.te_connector.field_folder_id
+    - field.field.sigmaxim_workflow_order.te_connector.field_int_1
+    - field.field.sigmaxim_workflow_order.te_connector.field_int_2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+  module:
+    - field_expression
+    - options
+    - user
+id: sigmaxim_workflow_order.te_connector.default
+targetEntityType: sigmaxim_workflow_order
+bundle: te_connector
+mode: default
+content:
+  field_color_on:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_colors:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dilip_test_math:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_exp:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_int_1:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_int_2:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

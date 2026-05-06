@@ -1,0 +1,25 @@
+uuid: e9da13aa-36d2-4d59-89c6-3bc1b5ce0fe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_length
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_length
+field_name: field_length
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: Length
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 40.0
+default_value_callback: ''
+settings:
+  min: 6.0
+  max: 40.0
+  prefix: ''
+  suffix: inches
+field_type: float

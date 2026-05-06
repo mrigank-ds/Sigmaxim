@@ -1,0 +1,46 @@
+uuid: 6f227a3e-30cb-48c0-9999-da1dab141d91
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_auxiliaryalarm_switch5
+field_name: field_auxiliaryalarm_switch5
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0 - Without Aux Switch'
+      label: '0 - Without Aux Switch'
+    -
+      value: '2 - S.P.D.T., 0.110 Q.C. Term.'
+      label: '2 - S.P.D.T., 0.110 Q.C. Term.'
+    -
+      value: '3 - S.P.D.T., 0.139 Solder Lug'
+      label: '3 - S.P.D.T., 0.139 Solder Lug'
+    -
+      value: '4 - S.P.D.T., 0.110 Q.C. Term.'
+      label: '4 - S.P.D.T., 0.110 Q.C. Term.'
+    -
+      value: '6 - S.P.S.T., 0.139 Solder Lug'
+      label: '6 - S.P.S.T., 0.139 Solder Lug'
+    -
+      value: '8 - S.P.S.T., 0.187 Q.C. Term.'
+      label: '8 - S.P.S.T., 0.187 Q.C. Term.'
+    -
+      value: '9 - S.P.D.T., 0.187 Q.C. Term.'
+      label: '9 - S.P.D.T., 0.187 Q.C. Term.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+uuid: 464f4fb0-0729-4ea2-8935-c37965f8ea29
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:77255af1-fb0e-4b97-8974-b763d75cab54'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: productadministration
+theme: sigmaxim
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:77255af1-fb0e-4b97-8974-b763d75cab54'
+settings:
+  id: 'block_content:77255af1-fb0e-4b97-8974-b763d75cab54'
+  label: 'Product Administration'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin: admin
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/user/*"

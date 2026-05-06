@@ -1,0 +1,23 @@
+uuid: ab0dabdc-9d19-4819-9327-741b18379a07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_generate_a_manufacturing_l
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_generate_a_manufacturing_l
+field_name: field_generate_a_manufacturing_l
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Generate a Manufacturing List ?'
+description: generate_a_manufacturing_list_3
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: c79602be-5109-4e3f-b17b-34350857ee22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_splash_side_34
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+id: sigmaxim_workflow_order.counter.field_splash_side_34
+field_name: field_splash_side_34
+entity_type: sigmaxim_workflow_order
+bundle: counter
+label: 'Splash Side 3'
+description: splash_side_34
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

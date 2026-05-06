@@ -1,0 +1,21 @@
+uuid: 92221476-0e4c-43ef-b6df-d16ac82f134e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_testingrr
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+  module:
+    - options
+id: sigmaxim_workflow_order.dilip_test.field_testingrr
+field_name: field_testingrr
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: testingrr
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

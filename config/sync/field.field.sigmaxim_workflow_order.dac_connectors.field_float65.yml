@@ -1,0 +1,23 @@
+uuid: 3f6c1706-7195-48bc-abde-2a6e87726b6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float65
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float65
+field_name: field_float65
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Tubing Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

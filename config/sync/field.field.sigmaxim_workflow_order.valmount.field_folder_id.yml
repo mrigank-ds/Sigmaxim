@@ -1,0 +1,26 @@
+uuid: 46fd1699-aefd-41ee-b018-c4c112ca1c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263293
+id: sigmaxim_workflow_order.valmount.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

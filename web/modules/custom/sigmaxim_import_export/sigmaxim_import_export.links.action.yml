@@ -1,0 +1,5 @@
+sigmaxim_import_export.import_product:
+  route_name: sigmaxim_import_export.import_form
+  title: 'Import Product'
+  appears_on:
+    - entity.sigmaxim_workflow_order_type.collection

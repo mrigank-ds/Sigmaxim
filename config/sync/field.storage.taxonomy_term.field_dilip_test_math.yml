@@ -1,0 +1,19 @@
+uuid: 6962af1b-3c20-44a2-87a8-a64cf11b257a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - taxonomy
+id: taxonomy_term.field_dilip_test_math
+field_name: field_dilip_test_math
+entity_type: taxonomy_term
+type: field_expression
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

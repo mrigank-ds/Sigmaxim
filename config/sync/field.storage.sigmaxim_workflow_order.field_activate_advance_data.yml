@@ -1,0 +1,33 @@
+uuid: 4d4ac616-ed14-4660-a2aa-cfc57192fff7
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    'yes': null
+    'no': null
+id: sigmaxim_workflow_order.field_activate_advance_data
+field_name: field_activate_advance_data
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'Yes'
+    -
+      value: 'no'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

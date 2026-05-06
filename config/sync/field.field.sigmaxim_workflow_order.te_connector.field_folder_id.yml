@@ -1,0 +1,26 @@
+uuid: cac3dd68-e82d-4527-8801-1137fd2e23f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263291
+id: sigmaxim_workflow_order.te_connector.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: te_connector
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

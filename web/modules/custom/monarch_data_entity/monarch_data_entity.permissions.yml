@@ -1,0 +1,12 @@
+administer data types:
+  title: 'Administer data types'
+  description: 'Maintain the types of data entity.'
+  restrict access: true
+delete data:
+  title: Delete data
+create data:
+  title: Create data
+view data:
+  title: View data
+edit data:
+  title: Edit data

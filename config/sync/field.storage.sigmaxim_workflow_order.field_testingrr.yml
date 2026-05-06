@@ -1,0 +1,34 @@
+uuid: f8e3b1f8-1741-40a5-a7c3-1225b343c21e
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_testingrr
+field_name: field_testingrr
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: '1'
+    -
+      value: '2'
+      label: '2'
+    -
+      value: '3'
+      label: '3'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

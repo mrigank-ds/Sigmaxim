@@ -1,0 +1,17 @@
+uuid: 3e0ff2b1-b728-4fd5-8e62-c48832302f78
+langcode: en
+status: true
+dependencies: {  }
+id: dilip_test
+label: DILIP_TEST
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/dilip_test
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '11'

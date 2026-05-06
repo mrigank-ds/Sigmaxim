@@ -1,0 +1,37 @@
+uuid: 8edc4ebd-5171-400c-b59a-67379880eb24
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_window_options15
+field_name: field_window_options15
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Standard
+      label: Standard
+    -
+      value: '30% tint / UV'
+      label: '30% tint / UV'
+    -
+      value: '50% tint / UV'
+      label: '50% tint / UV'
+    -
+      value: 'Metallic tint / UV'
+      label: 'Metallic tint / UV'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

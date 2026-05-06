@@ -1,0 +1,23 @@
+uuid: d7dc9866-259e-4c23-b3c9-a01bcbf207b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_terminal4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_terminal4
+field_name: field_terminal4
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: Terminal
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1 - Stud 10-32</option>'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

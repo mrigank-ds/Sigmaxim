@@ -1,0 +1,21 @@
+uuid: 83845ac3-abc8-4a6d-86e8-2479f4d74feb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_telephone_number_8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_telephone_number_8
+field_name: field_telephone_number_8
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Telephone Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: telephone_number_8
+default_value_callback: ''
+settings: {  }
+field_type: string

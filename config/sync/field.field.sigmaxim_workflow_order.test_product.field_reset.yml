@@ -1,0 +1,32 @@
+uuid: 8eea12b6-6ea2-48d1-96ca-d42da1a7db76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_reset
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - resetfield
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1764582765
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_reset
+field_name: field_reset
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Reset
+description: 'This Helps to Reset the Fields (Text Field1, Text Field 2 , Integer Field, Float Field)'
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  button_label: Reset
+  button_style: rectangular
+  reset_confirmation: 0
+  fields_list: '[field_hide_field_checkbox]'
+field_type: reset_button_field

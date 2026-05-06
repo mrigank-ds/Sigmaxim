@@ -1,0 +1,235 @@
+<?php
+
+/**
+ * @file
+ * Contains general hooks and alters.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Link;
+use Drupal\file\FileInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adds a field to store field group image.
+ */
+function field_group_image_form_field_group_add_form_alter(&$form, FormStateInterface $form_state) {
+  // We alter this form only if this is formatter form.
+  if ($form_state->get('step') == 'formatter') {
+    // Field group image field.
+    $form['new_group_wrapper']['image'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Group Image'),
+      '#upload_location' => 'public://field_group_image/',
+      '#field_suffix' => '</span>&lrm;',
+    ];
+
+    $options = [];
+    foreach (\Drupal::entityTypeManager()->getStorage('image_style')->loadMultiple() as $id => $image_style) {
+      $options[$id] = $image_style->label();
+    }
+    // Image style field.
+    $form['new_group_wrapper']['image_style'] = [
+      'image_style' => [
+        '#type' => 'select',
+        '#title' => t('Image style'),
+        '#description' => t('Upload an image for this field group.'),
+        '#options' => $options,
+      ],
+    ];
+
+    $form['new_group_wrapper']['image_position'] = [
+      'image_position' => [
+        '#type' => 'select',
+        '#title' => t('Image position'),
+        '#description' => t('Upload an image for this field group.'),
+        '#options' => [
+        'above' => t('Above'),
+        'below' => t('Below'),
+        'left' => t('Left'),
+        'right' => t('Right'),
+      ],
+      ],
+    ];
+    $form['actions']['submit']['#submit'][] = 'field_group_formatter_submit';
+  }
+}
+
+function field_group_image_field_group_format_summary($group) {
+  $output = '';
+  $display_settings = isset($group->format_settings['fgi']) ? $group->format_settings['fgi'] : array();
+  $fields = array(
+    'image' => t('Group image'),
+    'image_style' => t('Image style'),
+    'image_position' => t('Image position'),
+  );
+  foreach ($fields as $field => $label) {
+    if (!empty($display_settings[$field])) {
+      $output .= '<br />';
+      $output .= '<strong>' . $label . '</strong> ';
+
+      if ($field == 'image') {
+        $file = file_load($display_settings['image']);
+        $value = $file->filename;
+      }
+      else {
+        $value = $display_settings[$field];
+      }
+
+      // Shorten the string.
+      if (drupal_strlen($value) > 38) {
+        $value = truncate_utf8($value, 50, TRUE, TRUE);
+      }
+      $output .= check_plain($value);
+    }
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_field_group_form_process().
+ */
+function field_group_image_field_group_form_process(array &$element, &$group, &$complete_form) {
+  $display = EntityFormDisplay::load($group->entity_type . '.' . $group->bundle . '.default');
+  if ($display instanceof EntityDisplayInterface) {
+    // Check if field group image settings are available.
+    $display_settings =  $display->getThirdPartySetting('field_group_image', $group->group_name);
+    if (!empty($display_settings) && !empty($display_settings['image'])) {
+      // Load file by id and create file uri.
+      $file = \Drupal::entityTypeManager()->getStorage('file')
+        ->load($display_settings['image']);
+      if ($file) {
+        $file_uri = $file->getFileUri();
+        $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_uri);
+        // If image style is set.
+        if (!empty($display_settings['image_style'])) {
+          // Load selected image style.
+          $style = ImageStyle::load($display_settings['image_style']);
+          // Build styled image url if it is valid image style.
+          if ($style && !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits())) {
+            $image_url = \Drupal::service('file_url_generator')->transformRelative($style->buildUrl($file_uri));
+          }
+        }
+
+        // Prepare markup to render image for a field group.
+        if (!empty($image_url)) {
+          $markup = '<img id="custom-image" class="image-position-' . $display_settings['image_position'] . '" src="' . $image_url . '"/>';
+          // Add all field group image to the js settings.
+          $element['#attached']['drupalSettings']['fieldGroupImage'] = [
+            $group->group_name => $markup,
+          ];
+
+          // Add data-group attribute with group name to all elements.
+          // Required only if image is present.
+          $element['#attributes']['data-group'][] = $group->group_name;
+          // Add 'field-group-image' class to identify that image is attached or not.
+          $element['#attributes']['class'][] = 'field-group-image';
+          // Attach field group image library, required only if image is present.
+          $element['#attached']['library'][] = 'field_group_image/field_group_image';
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * A submit handler to store field group image.
+ */
+function field_group_formatter_submit(&$form, FormStateInterface $form_state) {
+  // We are completely handling the submission of step 1 for 'add field group'
+  // form as the form gets broken when adding image via separate custom
+  // submit handler.
+  if ($form_state->get('step') == 'formatter') {
+    $form_state->set('step', 'configuration');
+    $form_state->set('group_label', $form_state->getValue('label'));
+    $form_state->set('group_name', $form_state->getValue('group_name'));
+    $form_state->set('group_formatter', $form_state->getValue('group_formatter'));
+    // Get entity type and bundle from build info args.
+    [$entity_type, $bundle] = $form_state->getBuildInfo()['args'];
+    $data = [
+      'image' => (int) $form_state->getValue('image')[0] ?? '',
+      'image_style' => $form_state->getValue('image_style') ?? '',
+      'image_position' => $form_state->getValue('image_position') ?? '',
+    ];
+    // Save field group image in content type display settings.
+    save_field_group_image($data, $form_state->getValue('group_name'), $entity_type, $bundle, 'default');
+    $form_state->setRebuild();
+  }
+}
+
+/**
+ * Saves a group image in config.
+ */
+function save_field_group_image($data, $group_name, $entity_type, $bundle, $mode) {
+  $fid = $data['image'];
+  if (isset($fid)) {
+    $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+    if ($file) {
+      $file->status = FileInterface::STATUS_PERMANENT;
+      $file->save();
+    }
+    // Currently implemented only for form display.
+    $display = EntityFormDisplay::load($entity_type . '.' . $bundle . '.' . $mode);
+    if ($display instanceof EntityDisplayInterface) {
+      $display->setThirdPartySetting('field_group_image', $group_name, $data);
+      $display->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_field_group_delete_field_group().
+ *
+ * @param $group
+ *   The deleted group.
+ */
+function field_group_image_field_group_delete_field_group($group) {
+  // Delete the field group image config when group is deleted.
+  $display = EntityFormDisplay::load($group->entity_type . '.' . $group->bundle . '.' . $group->mode);
+  if (isset($display)) {
+    $display_settings =  $display->getThirdPartySetting('field_group_image', $group->group_name);
+    // Delete the image file from file system.
+    if (!empty($display_settings) && !empty($display_settings['image'])) {
+      $file = \Drupal::entityTypeManager()->getStorage('file')
+        ->load($display_settings['image']);
+      $file->delete();
+    }
+    // Delete the field group image settings from config.
+    $display->unsetThirdPartySetting('field_group_image', $group->group_name);
+    $display->save();
+  }
+}
+
+/**
+ * Implements hook_field_group_delete_field_group().
+ *
+ * @param $group
+ *   The deleted group.
+ */
+function get_field_group_image_data($group_name, $entity_type_id, $bundle, $mode) {
+  $data = [];
+  // Load field group image settings.
+  $display = EntityFormDisplay::load($entity_type_id . '.' . $bundle . '.' . $mode);
+  if (isset($display)) {
+    $data =  $display->getThirdPartySetting('field_group_image', $group_name);
+  }
+  return $data;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * 
+ */
+function field_group_image_form_entity_form_display_edit_form_alter(&$form, FormStateInterface $form_state) {
+  // Attach field group image library, required only if image is present.
+  $form['#attached']['library'][] = 'field_group_image/field_group_image.form_display';
+  
+}

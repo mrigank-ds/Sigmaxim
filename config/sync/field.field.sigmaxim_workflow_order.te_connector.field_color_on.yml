@@ -1,0 +1,31 @@
+uuid: e3e494fd-3dbc-4cc3-a19c-e6cfc21cff0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_color_on
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746192502
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.te_connector.field_color_on
+field_name: field_color_on
+entity_type: sigmaxim_workflow_order
+bundle: te_connector
+label: 'Color On'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

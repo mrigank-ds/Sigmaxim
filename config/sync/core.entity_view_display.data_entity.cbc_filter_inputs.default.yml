@@ -1,0 +1,35 @@
+uuid: 62af6dc3-ca28-4111-b76d-ad2cdfd02df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.cbc_filter_inputs.feeds_item
+    - field.field.data_entity.cbc_filter_inputs.field_cbc_fil_in_ac_in
+    - field.field.data_entity.cbc_filter_inputs.field_cbc_fil_in_dc_out
+    - monarch_data_entity.data_entity_type.cbc_filter_inputs
+id: data_entity.cbc_filter_inputs.default
+targetEntityType: data_entity
+bundle: cbc_filter_inputs
+mode: default
+content:
+  field_cbc_fil_in_ac_in:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cbc_fil_in_dc_out:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

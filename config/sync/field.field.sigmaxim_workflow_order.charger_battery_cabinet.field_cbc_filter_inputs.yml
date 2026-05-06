@@ -1,0 +1,37 @@
+uuid: cbf26548-3f3a-4764-be3b-d7a661ed2cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_cbc_filter_inputs
+    - monarch_data_entity.data_entity_type.cbc_filter_inputs
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737536506
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.charger_battery_cabinet.field_cbc_filter_inputs
+field_name: field_cbc_filter_inputs
+entity_type: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+label: 'FILTER INPUTS'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      cbc_filter_inputs: cbc_filter_inputs
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

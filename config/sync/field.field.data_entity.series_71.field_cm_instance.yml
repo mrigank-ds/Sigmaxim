@@ -1,0 +1,27 @@
+uuid: 83de6055-803b-43a1-ab5d-1a0ef68a079a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cm_instance
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745589896
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_cm_instance
+field_name: field_cm_instance
+entity_type: data_entity
+bundle: series_71
+label: CM_INSTANCE
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

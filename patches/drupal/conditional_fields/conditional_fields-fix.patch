@@ -1,0 +1,55 @@
+--- a/src/ConditionalFieldsFormHelper.php
++++ b/src/ConditionalFieldsFormHelper.php
+@@ -533,8 +533,20 @@
+     }
+
+     /** @var \Drupal\Core\Entity\ContentEntityFormInterface $entity_form */
+-    $entity_form = $form_state->getFormObject();
+-    $entity_type_id = $entity_form->getEntity()->getEntityTypeId();
++    $entity_form = $form_state->getFormObject();
++    $entity = NULL;
++
++    if (method_exists($entity_form, 'getEntity')) {
++      $entity = $entity_form->getEntity();
++    }
++    elseif (method_exists($entity_form, 'getFormEntity')) {
++      $entity = $entity_form->getFormEntity();
++    }
++    elseif (isset($form['#entity'])) {
++      $entity = $form['#entity'];
++    }
++
++    $entity_type_id = $entity ? $entity->getEntityTypeId() : NULL;
+     if ($inline_entity_form_parents) {
+       $ief_element = self::fieldRemoveInlineEntityFormParents($element, $inline_entity_form_parents);
+       $dependent = $form['#conditional_fields'][reset($ief_element['#array_parents'])];
+
+--- a/src/Form/ConditionalFieldEditForm.php
++++ b/src/Form/ConditionalFieldEditForm.php
+@@ -610,10 +610,24 @@
+     // Set Submitted value or restore from settings.
+     $user_input = $form_state->getUserInput();
+     if (isset($user_input[$field_name])) {
+       $form_state_new->setUserInput([$field_name => $user_input[$field_name]]);
+       $form_state_new->setProgrammed(TRUE);
+       $form_state_new->setValidationComplete(TRUE);
+     }
+-    elseif ($default_value) {
+-      $form_state_new->setUserInput([$field_name => $default_value]);
+-    }
+
+--- a/src/Form/ConditionalFieldEditForm.php
++++ b/src/Form/ConditionalFieldEditForm.php
+@@ -362,6 +362,18 @@
++        if (is_array($value) && isset($value[0]['wrapper']['target_id'])) {
++          $settings['value_form_raw'] = $value;
++          $id = $value[0]['wrapper']['target_id'];
++          // Convert to standard format [0 => ['target_id' => ID]].
++          $value = [['target_id' => (int) $id]];
++        }
++        elseif (is_array($value) && isset($value[0]['target_id']) && is_string($value[0]['target_id']) && strpos($value[0]['target_id'], ',') !== FALSE) {
++           // ViewWidget uses comma-separated string in target_id.
++           $settings['value_form_raw'] = $value;
++        }
++
+         $settings['value_form'] = $value;

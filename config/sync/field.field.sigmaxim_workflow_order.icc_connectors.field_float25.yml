@@ -1,0 +1,23 @@
+uuid: 4a3bef94-6042-4060-aead-23fad11e3270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float25
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float25
+field_name: field_float25
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P6 Label Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

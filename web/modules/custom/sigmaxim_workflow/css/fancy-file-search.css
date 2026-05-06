@@ -1,0 +1,4 @@
+#views-exposed-form-duplicate-of-fancy-file-delete-page-1 .form--inline .form-actions,
+#views-exposed-form-fancy-file-delete-page-1 .form--inline .form-actions {
+    display: none;
+}

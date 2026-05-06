@@ -1,0 +1,17 @@
+uuid: 938e28bc-ff31-4776-889a-3096b717a023
+langcode: en
+status: true
+dependencies: {  }
+id: inline
+label: INLINE
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/inline
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '29'

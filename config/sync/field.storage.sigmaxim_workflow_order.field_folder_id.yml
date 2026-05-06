@@ -1,0 +1,20 @@
+uuid: 1974e408-2506-442c-a2d7-57da9f4568b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 3d6abeea-9583-48c5-860c-313761dcabc2
+langcode: en
+status: true
+dependencies: {  }
+name: redirection
+label: Redirection
+triggers:
+  login: login
+destination_path: 'internal:/node'
+pages_type: 0
+pages: ''
+language: ''
+roles:
+  authenticated: authenticated
+  administrator: administrator
+  admin: admin
+  user: user
+weight: 0
+enabled: true

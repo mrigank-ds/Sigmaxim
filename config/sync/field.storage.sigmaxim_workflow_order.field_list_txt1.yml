@@ -1,0 +1,33 @@
+uuid: ca0bd53e-1ea1-41e2-9ae9-c1a9d226d808
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_list_txt1
+field_name: field_list_txt1
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Straight (P1-P2)'
+      label: 'Straight (P1-P2)'
+    -
+      value: 'Y Cable (P1-P2&P3)'
+      label: 'Y Cable (P1-P2&P3)'
+    -
+      value: 'X Cable (P1&P2 - P3&P4)'
+      label: 'X Cable (P1&P2 - P3&P4)'
+    -
+      value: 'Breakout (P1-P2,P3,P4...)'
+      label: 'Breakout (P1-P2,P3,P4...)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

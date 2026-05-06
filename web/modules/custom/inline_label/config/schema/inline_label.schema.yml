@@ -1,0 +1,6 @@
+field_config_base:
+  type: config_entity
+  mapping:
+    inline:
+      type: boolean
+      label: 'Inline field'

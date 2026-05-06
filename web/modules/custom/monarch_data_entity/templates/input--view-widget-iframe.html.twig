@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Template for embedded view filters.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% apply spaceless %}
+    {% if view_url %}
+      <div>
+        <div class="view-widget-iframe" style="position:relative;overflow:hidden;height:0;padding:{{ height }} 0 0 0">
+          <iframe{{ create_attribute().setAttribute('src', view_url).setAttribute('data-cardinality', cardinality).setAttribute('data-entity-prefix', entity_prefix).setAttribute('style', 'position:absolute;border:none;left:0;top:0;width:100%;height:100%;') }}></iframe>
+        </div>
+        <input{{ attributes }} />
+        <div class="view-widget-selection-text"></div>
+      </div>
+    {% else %}
+      <div>
+        <input{{ attributes }} />
+        <div class="view-widget-selection-text"><b>View Not Available...</b></div>
+      </div>
+    {% endif %}
+    {{ children }}
+{% endapply %}

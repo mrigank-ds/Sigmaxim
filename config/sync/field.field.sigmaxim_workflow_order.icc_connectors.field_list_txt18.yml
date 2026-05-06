@@ -1,0 +1,21 @@
+uuid: cf4f7df1-bf1d-4050-a60a-e67a00fc2a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt18
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.icc_connectors.field_list_txt18
+field_name: field_list_txt18
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P2 Label Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

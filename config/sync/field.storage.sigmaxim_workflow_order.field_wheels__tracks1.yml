@@ -1,0 +1,37 @@
+uuid: 2f17ad65-c0f3-430b-a368-f5b33ce38eb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_wheels__tracks1
+field_name: field_wheels__tracks1
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Standard Tire Assembly'
+      label: 'Standard Tire Assembly'
+    -
+      value: 'Narrow Tire Assembly'
+      label: 'Narrow Tire Assembly'
+    -
+      value: 'Off-Road Tire Assembly'
+      label: 'Off-Road Tire Assembly'
+    -
+      value: 'Standard Width Track Assembly'
+      label: 'Standard Width Track Assembly'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

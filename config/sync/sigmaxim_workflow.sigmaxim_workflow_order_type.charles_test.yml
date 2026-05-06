@@ -1,0 +1,17 @@
+uuid: cb7271d3-a5bd-41aa-9a3d-fab3a45cceca
+langcode: en
+status: true
+dependencies: {  }
+id: charles_test
+label: 'Charles Test'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: charles
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '10'

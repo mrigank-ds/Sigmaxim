@@ -1,0 +1,33 @@
+uuid: fe35ab47-aaa6-4ee2-ab1e-1bad0820ff7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_first_input_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757365880
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.drupal_field_compare.field_first_input_d10
+field_name: field_first_input_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'First Input'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '10'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

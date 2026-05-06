@@ -1,0 +1,22 @@
+uuid: 3f976dd9-effb-409b-a88b-06d92edd0428
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_splash_side_12
+field_name: field_splash_side_12
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

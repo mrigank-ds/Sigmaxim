@@ -1,0 +1,21 @@
+uuid: 83beb6d6-c4d3-4d01-b522-5cae6a16075c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_agency_approval6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_agency_approval6
+field_name: field_agency_approval6
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Agency Approval'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

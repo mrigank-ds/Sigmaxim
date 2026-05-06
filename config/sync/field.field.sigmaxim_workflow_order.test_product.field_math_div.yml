@@ -1,0 +1,36 @@
+uuid: 8461bb3a-337d-45a4-abc4-9b15f1433a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_math_div
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1762209377
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_math_div
+field_name: field_math_div
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Math Div'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  expression: "[field_float_field]/[field_integer_field]\r\n"
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

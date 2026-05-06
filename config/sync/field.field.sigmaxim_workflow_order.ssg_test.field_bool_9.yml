@@ -1,0 +1,23 @@
+uuid: 0780b1bb-f3d4-4281-a7f7-481c9419d40e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_9
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_bool_9
+field_name: field_bool_9
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Left Tape'
+description: bool_9
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Left Tape'
+field_type: boolean

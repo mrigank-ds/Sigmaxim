@@ -1,0 +1,23 @@
+uuid: ae7c1c21-373c-4acc-9c2d-c8b0b157e121
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_fuel_cell3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_fuel_cell3
+field_name: field_fuel_cell3
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Fuel Cell'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

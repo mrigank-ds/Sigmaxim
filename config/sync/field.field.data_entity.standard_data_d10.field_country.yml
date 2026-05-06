@@ -1,0 +1,27 @@
+uuid: 392d24fa-6d36-4b1d-b696-e780d465b5ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_country
+    - monarch_data_entity.data_entity_type.standard_data_d10
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757369767
+  field_inline_label:
+    inline_label: 0
+id: data_entity.standard_data_d10.field_country
+field_name: field_country
+entity_type: data_entity
+bundle: standard_data_d10
+label: Country
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: d4afed60-ba58-4c55-b914-dfa87bc89e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_panel_desc_boc_bp
+    - monarch_data_entity.data_entity_type.boc_battery_pnael
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737526579
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_battery_pnael.field_panel_desc_boc_bp
+field_name: field_panel_desc_boc_bp
+entity_type: data_entity
+bundle: boc_battery_pnael
+label: PANEL_DESCRIPTION
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

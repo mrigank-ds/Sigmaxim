@@ -1,0 +1,31 @@
+uuid: 75846278-94ef-4f35-9c33-2ac72cf2063b
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_ring_height_types
+field_name: field_ring_height_types
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: EQUAL_RING_HEIGHT
+      label: EQUAL_RING_HEIGHT
+    -
+      value: VARIABLE_RING_HEIGHT
+      label: VARIABLE_RING_HEIGHT
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

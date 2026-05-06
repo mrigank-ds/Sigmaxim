@@ -1,0 +1,38 @@
+uuid: 4e674590-7d79-440e-a4c0-97685147ccfe
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a39b8ce7-83b6-4ebc-923e-8dd88b827843'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: useradministration
+theme: sigmaxim
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:a39b8ce7-83b6-4ebc-923e-8dd88b827843'
+settings:
+  id: 'block_content:a39b8ce7-83b6-4ebc-923e-8dd88b827843'
+  label: 'User Administration'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/user/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin: admin

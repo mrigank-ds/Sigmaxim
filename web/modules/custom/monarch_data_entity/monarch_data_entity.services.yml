@@ -1,0 +1,3 @@
+services:
+  monarch_data_entity.token_service:
+    class: Drupal\monarch_data_entity\TokenService

@@ -1,0 +1,17 @@
+uuid: 05567653-8573-40f9-b733-8db3314b1851
+langcode: en
+status: true
+dependencies: {  }
+id: counter
+label: Counter
+description: Counter
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '22'

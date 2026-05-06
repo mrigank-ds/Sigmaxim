@@ -1,0 +1,20 @@
+uuid: a19abede-e393-4c37-bd30-aea4f829bdfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.testing_form
+id: contact_message.testing_form.default
+targetEntityType: contact_message
+bundle: testing_form
+mode: default
+content:
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

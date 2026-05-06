@@ -1,0 +1,37 @@
+uuid: 8bfc1b1f-2fe0-4476-b2c3-099896ff7bce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_battery_d10
+    - monarch_data_entity.data_entity_type.battery_database_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758064169
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_battery_d10
+field_name: field_battery_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: Battery
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      battery_database_d10: battery_database_d10
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

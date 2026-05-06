@@ -1,0 +1,21 @@
+uuid: a2a06c3d-2c3e-44c0-b7cc-77cd08dca328
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_operating_torque
+field_name: field_operating_torque
+entity_type: sigmaxim_workflow_order
+type: expression_decimal
+settings:
+  precision: '10'
+  scale: '2'
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: 99fb34b0-d5d6-4173-8978-5bc1082c84d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_list_int3
+field_name: field_list_int3
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 3
+      label: '3'
+    -
+      value: 4
+      label: '4'
+    -
+      value: 5
+      label: '5'
+    -
+      value: 6
+      label: '6'
+    -
+      value: 7
+      label: '7'
+    -
+      value: 8
+      label: '8'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: dc504af4-0be5-4f33-9df5-2a711f6bdc17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float19
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float19
+field_name: field_float19
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P3 Label Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

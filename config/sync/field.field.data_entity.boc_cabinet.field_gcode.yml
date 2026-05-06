@@ -1,0 +1,27 @@
+uuid: 50e25d87-19b1-45e7-a576-1460d6e2e945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_gcode
+    - monarch_data_entity.data_entity_type.boc_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737520530
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_cabinet.field_gcode
+field_name: field_gcode
+entity_type: data_entity
+bundle: boc_cabinet
+label: GCODE
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

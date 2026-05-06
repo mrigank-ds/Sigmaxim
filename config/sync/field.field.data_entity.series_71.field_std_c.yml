@@ -1,0 +1,27 @@
+uuid: 5159e7bd-3b1e-40ee-8f87-6f46d8d75eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_std_c
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745590146
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_std_c
+field_name: field_std_c
+entity_type: data_entity
+bundle: series_71
+label: STD_C
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

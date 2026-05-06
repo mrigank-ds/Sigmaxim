@@ -1,0 +1,30 @@
+uuid: add65f9a-b494-4968-8020-85dc924c6069
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_controlled
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753458517
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_controlled
+field_name: field_controlled
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Controlled
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: Red
+default_value_callback: ''
+settings: {  }
+field_type: list_string

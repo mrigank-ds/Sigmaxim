@@ -1,0 +1,13 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function resetfield_field_widget_single_element_form_alter(&$element, FormStateInterface $form_state, $context) {
+  if (!empty($context['items'])) {
+    $field_name = $context['items']->getName();
+    if (!isset($element['#attributes'])) {
+      $element['#attributes'] = [];
+    }
+    $element['#attributes']['data-field-name'] = $field_name;
+  }
+}

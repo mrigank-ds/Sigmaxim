@@ -1,0 +1,322 @@
+uuid: cf54b0d8-5407-4f11-b001-f11b49d6d813
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_activate_advance_data
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_activate_battery
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_addition_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_advance_data_table1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_advance_data_table_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery1
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_name_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_type
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_type_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_boolean_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_concat_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependee_list_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependent_boolean1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependent_boolean_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_first_input_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_float_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_integer_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_iss_sta_da_fie_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_list_integers_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_manufacturer
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_math_expression_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_math_multiply
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_radio_button_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_reset_field_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_second_input_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_standard_data_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_standard_data_table1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_test_math_token_ad
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_text_list_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_expression
+    - options
+    - text
+    - user
+id: sigmaxim_workflow_order.drupal_field_compare.default
+targetEntityType: sigmaxim_workflow_order
+bundle: drupal_field_compare
+mode: default
+content:
+  field_activate_advance_data:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_activate_battery:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_addition_d10:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_advance_data_table1_d10:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_advance_data_table_d10:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_battery1:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_battery_d10:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_battery_name_d10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_battery_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_battery_type_d10:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_boolean_d10:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_concat_d10:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_dependee_list_d10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_dependent_boolean1_d10:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_dependent_boolean_d10:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_first_input_d10:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_float_d10:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_integer_d10:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_iss_sta_da_fie_d10:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_list_integers_d10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_manufacturer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_math_expression_d10:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_math_multiply:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_radio_button_d10:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_reset_field_d10:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_second_input_d10:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_standard_data_d10:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_standard_data_table1_d10:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_test_math_token_ad:
+    type: expression_decimal
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_text_list_d10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: c02fa9e0-95db-48a1-b9bb-d16726e37bea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_concat1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - concat_field
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1762859946
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_concat1
+field_name: field_concat1
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: CONCAT1
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  token_pattern: '[field_controlled]  [field_fieldset_field_1]'
+field_type: concat_field

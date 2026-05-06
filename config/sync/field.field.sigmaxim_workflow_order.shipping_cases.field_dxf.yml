@@ -1,0 +1,21 @@
+uuid: aa689931-2770-4158-97bb-88a4878899b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dxf
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_dxf
+field_name: field_dxf
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: DXF
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

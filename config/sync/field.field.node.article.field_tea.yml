@@ -1,0 +1,26 @@
+uuid: e6c8724b-15f7-4038-86ff-5a43b3068348
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tea
+    - node.type.article
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: node.article.field_tea
+field_name: field_tea
+entity_type: node
+bundle: article
+label: Tea
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: Tea
+default_value_callback: ''
+settings: {  }
+field_type: string

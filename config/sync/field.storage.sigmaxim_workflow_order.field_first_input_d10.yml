@@ -1,0 +1,20 @@
+uuid: 62489716-e7a4-4223-82cc-00f13197cc8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_first_input_d10
+field_name: field_first_input_d10
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

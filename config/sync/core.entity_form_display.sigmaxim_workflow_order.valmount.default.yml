@@ -1,0 +1,510 @@
+uuid: 4d1ec089-39e8-4662-9d5f-5c761843e094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_42
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_43
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_44
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_45
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_46
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_47
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_48
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_49
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_50
+    - field.field.sigmaxim_workflow_order.valmount.field_bool_51
+    - field.field.sigmaxim_workflow_order.valmount.field_float86
+    - field.field.sigmaxim_workflow_order.valmount.field_float87
+    - field.field.sigmaxim_workflow_order.valmount.field_float88
+    - field.field.sigmaxim_workflow_order.valmount.field_float89
+    - field.field.sigmaxim_workflow_order.valmount.field_float90
+    - field.field.sigmaxim_workflow_order.valmount.field_float91
+    - field.field.sigmaxim_workflow_order.valmount.field_folder_id
+    - field.field.sigmaxim_workflow_order.valmount.field_label_32
+    - field.field.sigmaxim_workflow_order.valmount.field_label_33
+    - field.field.sigmaxim_workflow_order.valmount.field_label_34
+    - field.field.sigmaxim_workflow_order.valmount.field_list_int11
+    - field.field.sigmaxim_workflow_order.valmount.field_list_int12
+    - field.field.sigmaxim_workflow_order.valmount.field_list_txt60
+    - field.field.sigmaxim_workflow_order.valmount.field_list_txt61
+    - field.field.sigmaxim_workflow_order.valmount.field_list_txt62
+    - field.field.sigmaxim_workflow_order.valmount.field_list_txt63
+    - field.field.sigmaxim_workflow_order.valmount.field_list_txt64
+    - field.field.sigmaxim_workflow_order.valmount.field_read_test
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - conditional_fields
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_main
+        - group_arms
+        - group_poles_and_posts
+        - group_base_plate1
+        - group_label
+        - group_output_formats1
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_main:
+      children:
+        - group_proj
+        - group_pole_assembly
+      label: Main
+      region: content
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+    group_proj:
+      children:
+        - field_label_32
+        - field_label_33
+      label: 'Project Information'
+      region: content
+      parent_name: group_main
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_pole_assembly:
+      children:
+        - field_list_txt60
+        - field_list_txt61
+        - field_list_txt62
+      label: 'Pole Assembly'
+      region: content
+      parent_name: group_main
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_arms:
+      children:
+        - field_float86
+        - field_list_int11
+      label: Arms
+      region: content
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_poles_and_posts:
+      children:
+        - field_float87
+        - field_float88
+        - field_bool_42
+        - field_list_txt63
+      label: 'Poles and Posts'
+      region: content
+      parent_name: group_tabs
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_base_plate1:
+      children:
+        - field_float89
+        - field_list_txt64
+        - field_float90
+        - field_float91
+        - field_bool_43
+      label: 'Base Plate'
+      region: content
+      parent_name: group_tabs
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_label:
+      children:
+        - field_bool_44
+        - field_label_34
+        - field_list_int12
+      label: Label
+      region: content
+      parent_name: group_tabs
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_output_formats1:
+      children:
+        - field_bool_45
+        - field_bool_46
+        - field_bool_47
+        - field_bool_48
+        - field_bool_49
+        - field_bool_50
+        - field_bool_51
+      label: 'Output Formats'
+      region: content
+      parent_name: group_tabs
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_n_tab:
+      children:
+        - field_read_test
+      label: N_Tab
+      region: hidden
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_proj:
+      image: ''
+      image_style: large
+    group_pole_assembly:
+      image: 43
+      image_style: large
+    group_arms:
+      image: 39
+      image_style: large
+    group_poles_and_posts:
+      image: 40
+      image_style: large
+    group_base_plate1:
+      image: 41
+      image_style: large
+    group_output_formats1:
+      image: 42
+      image_style: large
+id: sigmaxim_workflow_order.valmount.default
+targetEntityType: sigmaxim_workflow_order
+bundle: valmount
+mode: default
+content:
+  field_bool_42:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_43:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_44:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_45:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_46:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_47:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_48:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_49:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_50:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_51:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_float86:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float87:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float88:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float89:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float90:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float91:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        dee5296e-16b9-477e-9745-5cf3737aae87:
+          entity_type: sigmaxim_workflow_order
+          bundle: valmount
+          dependee: field_list_txt64
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Rectangle
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_label_32:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_33:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_34:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c4a1ab06-bb3a-4b6b-afcd-ad1ec886d5d0:
+          entity_type: sigmaxim_workflow_order
+          bundle: valmount
+          dependee: field_bool_44
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_list_int11:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  field_list_int12:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        225cd827-cb23-4e94-a31b-fff1c475a821:
+          entity_type: sigmaxim_workflow_order
+          bundle: valmount
+          dependee: field_bool_44
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_list_txt60:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt61:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt62:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        41fe650a-48c9-476d-9f7f-add196b52862:
+          entity_type: sigmaxim_workflow_order
+          bundle: valmount
+          dependee: field_list_txt61
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: "3\r\n4"
+            value_form:
+              -
+                value: '4'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        58a91e6a-6f7c-4b6b-ad08-604e05c86c3f:
+          entity_type: sigmaxim_workflow_order
+          bundle: valmount
+          dependee: field_list_txt61
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "3\r\n4"
+            value_form:
+              -
+                value: 'Galvanized and Finish Paint'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_list_txt63:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt64:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true
+  field_read_test: true
+  name: true
+  user_id: true

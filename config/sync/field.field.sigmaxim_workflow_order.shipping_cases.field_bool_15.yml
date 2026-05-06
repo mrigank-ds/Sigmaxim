@@ -1,0 +1,23 @@
+uuid: 6550102d-fbaf-4532-8950-70dbab80d218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_15
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_bool_15
+field_name: field_bool_15
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Same Lengths'
+description: bool_15
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Same Lengths'
+field_type: boolean

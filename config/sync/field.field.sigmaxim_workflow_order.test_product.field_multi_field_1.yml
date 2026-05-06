@@ -1,0 +1,27 @@
+uuid: 10245b5e-92b1-4ec1-8d7d-a3e7c1bc361a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_multi_field_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753361124
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_multi_field_1
+field_name: field_multi_field_1
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'multi field 1'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

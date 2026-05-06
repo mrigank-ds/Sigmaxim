@@ -1,0 +1,32 @@
+.reset-button {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.reset-button:hover {
+  background-color: #e8e8e8;
+  border-color: #999;
+}
+
+.reset-button:active {
+  background-color: #ddd;
+}
+
+.reset-button-circular {
+  border-radius: 25px;
+}
+
+.reset-button-rectangular {
+  border-radius: 4px;
+}

@@ -1,0 +1,27 @@
+uuid: 505f376f-63fc-4009-a725-531718489cb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_wcpi
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745590713
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_wcpi
+field_name: field_wcpi
+entity_type: data_entity
+bundle: series_71
+label: WCPI
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

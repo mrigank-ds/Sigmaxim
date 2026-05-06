@@ -1,0 +1,23 @@
+uuid: 89dad422-f2fc-4754-b3d0-5fd7c2a191a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt64
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - options
+id: sigmaxim_workflow_order.valmount.field_list_txt64
+field_name: field_list_txt64
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Base Plate Shape'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Square
+default_value_callback: ''
+settings: {  }
+field_type: list_string

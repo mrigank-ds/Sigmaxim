@@ -1,0 +1,20 @@
+uuid: 313718ed-3aea-4b4b-8bcf-7fff72d28984
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_diameter_of_cylinder_
+field_name: field_diameter_of_cylinder_
+entity_type: sigmaxim_workflow_order
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

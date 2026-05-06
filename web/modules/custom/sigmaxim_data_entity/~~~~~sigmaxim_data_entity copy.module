@@ -1,0 +1,215 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Sigmaxim Data Entity module.
+ */
+
+use Drupal\Core\Extension\Extension;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\field\FieldConfigInterface;
+use Drupal\sigmaxim_data_entity\DataEntityListBuilder;
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function sigmaxim_data_entity_field_widget_info_alter(array &$info)
+{
+  $info['monarch_data_entity_view']['label'] = new TranslatableMarkup('Advanced Data Reference');
+}
+
+/**
+ * Implements hook_system_info_alter().
+ */
+function sigmaxim_data_entity_system_info_alter(array &$info, Extension $file, $type)
+{
+  if ($info['type'] === 'module' && $file->getFilename() === 'monarch_data_entity.info.yml') {
+    $info['name'] = 'Data Entity Base';
+    $info['package'] = 'Custom';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function sigmaxim_data_entity_theme_suggestions_data_entity(array $variables)
+{
+  $entity = $variables["elements"]["#data_entity"];
+
+  return [
+    'data_entity__' . $variables['elements']['#view_mode'],
+    'data_entity__' . $entity->bundle(),
+    'data_entity__' . $entity->bundle() . '__' . $variables['elements']['#view_mode'],
+    'data_entity__' . $entity->id(),
+    'data_entity__' . $entity->id() . '__' . $variables['elements']['#view_mode'],
+  ];
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function sigmaxim_data_entity_preprocess_data_entity(&$var)
+{
+  if ($var['view_mode'] === 'full' && ($var['content']['#type'] ?? NULL) !== 'table') {
+    $new_content = [
+      '#type' => 'table',
+      '#header' => [
+        t('Column'),
+        t('Value'),
+      ],
+    ];
+
+    foreach ($var['content'] as $field_name => &$field) {
+      if (!empty(Element::children($field))) {
+        $new_content[$field_name]['column'] = ['#markup' => $field['#title'] ?? $field_name];
+        $new_content[$field_name]['value'] = [];
+
+        foreach (Element::children($field) as $key) {
+          $new_content[$field_name]['value'][$key] = &$field[$key];
+        }
+      }
+    }
+
+    $var['content'] = $new_content;
+  }
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function sigmaxim_data_entity_entity_type_build(array &$entity_types)
+{
+  $handlers = $entity_types["data_entity"]->get('handlers');
+  $handlers['list_builder'] = DataEntityListBuilder::class;
+  $entity_types["data_entity"]->set('handlers', $handlers);
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function sigmaxim_data_entity_entity_presave($entity)
+{
+  if ($entity instanceof FieldConfigInterface && empty($entity->getThirdPartySetting('sigmaxim_data_entity', 'timestamp'))) {
+    $entity->setThirdPartySetting('sigmaxim_data_entity', 'timestamp', time());
+  }
+
+  if ($entity->getEntityTypeId() === 'feeds_feed_type') {
+    $state_key = 'sigmaxim_feeds_pending_bundle_' . $entity->id();
+    $pending = \Drupal::state()->get($state_key);
+    if ($pending) {
+      \Drupal::state()->delete($state_key);
+      $collections = $entity->getPluginCollections();
+      $processor_collection = $collections['processor_configuration'];
+      $configuration = $processor_collection->getConfiguration();
+      $configuration['values'] = [$pending['bundle_key'] => $pending['bundle_value']];
+      $processor_collection->setConfiguration($configuration);
+      // Flag for postsave to create the feeds_item field with correct bundle.
+      \Drupal::state()->set('sigmaxim_feeds_postsave_' . $entity->id(), $pending);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function sigmaxim_data_entity_entity_insert($entity)
+{
+  _sigmaxim_data_entity_feeds_postsave($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function sigmaxim_data_entity_entity_update($entity)
+{
+  _sigmaxim_data_entity_feeds_postsave($entity);
+}
+
+/**
+ * Reloads the feed type after save and calls onFeedTypeSave() with correct bundle.
+ */
+function _sigmaxim_data_entity_feeds_postsave($entity)
+{
+  if ($entity->getEntityTypeId() !== 'feeds_feed_type') {
+    return;
+  }
+  $state_key = 'sigmaxim_feeds_postsave_' . $entity->id();
+  $pending = \Drupal::state()->get($state_key);
+  if (!$pending) {
+    return;
+  }
+  \Drupal::state()->delete($state_key);
+
+  // Reload from storage so the processor has the correctly saved bundle.
+  $feed_type = \Drupal::entityTypeManager()
+    ->getStorage('feeds_feed_type')
+    ->loadUnchanged($entity->id());
+  if ($feed_type) {
+    $feed_type->getProcessor()->onFeedTypeSave(TRUE);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sigmaxim_data_entity_form_feeds_feed_type_form_alter(&$form, FormStateInterface $form_state)
+{
+  if (isset($form["processor_configuration"]["update_existing"]["#default_value"])) {
+    $form["processor_configuration"]["update_existing"]["#default_value"] = 2;
+  }
+
+  if (isset($form["processor_configuration"]["update_non_existent"]["#default_value"])) {
+    $form["processor_configuration"]["update_non_existent"]["#default_value"] = '_delete';
+  }
+
+  if (isset($form["processor_configuration"]["advanced"]["skip_validation"]["#default_value"])) {
+    $form["processor_configuration"]["advanced"]["skip_validation"]["#default_value"] = TRUE;
+  }
+
+  $form['#validate'][] = 'sigmaxim_data_entity_feeds_feed_type_form_validate';
+}
+
+/**
+ * Form validate handler - captures the bundle value from raw user input.
+ */
+function sigmaxim_data_entity_feeds_feed_type_form_validate(array &$form, FormStateInterface $form_state)
+{
+  if ($form_state->getErrors()) {
+    return;
+  }
+
+  $user_input = $form_state->getUserInput();
+
+  if (($user_input['processor'] ?? '') !== 'entity:data_entity') {
+    return;
+  }
+
+  $bundle_value = $user_input['processor_wrapper']['advanced']['values']['bundle'] ?? NULL;
+  if (!$bundle_value) {
+    return;
+  }
+
+  $feed_type_id = $user_input['id'] ?? NULL;
+  if (!$feed_type_id) {
+    return;
+  }
+
+  \Drupal::state()->set('sigmaxim_feeds_pending_bundle_' . $feed_type_id, [
+    'bundle_key' => 'bundle',
+    'bundle_value' => $bundle_value,
+  ]);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function sigmaxim_data_entity_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  if ($form_id === 'data_entity_type_edit_form' || $form_id === 'data_entity_type_add_form') {
+    if (isset($form['primary_keys']['#options'])) {
+      $form['primary_keys']['#default_value'] = array_keys($form['primary_keys']['#options']);
+    }
+  }
+}

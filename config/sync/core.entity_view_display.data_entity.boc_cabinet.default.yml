@@ -1,0 +1,35 @@
+uuid: 4d42477a-90fb-448f-a33d-4f51837f20b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_cabinet.feeds_item
+    - field.field.data_entity.boc_cabinet.field_cabinet_description
+    - field.field.data_entity.boc_cabinet.field_gcode
+    - monarch_data_entity.data_entity_type.boc_cabinet
+id: data_entity.boc_cabinet.default
+targetEntityType: data_entity
+bundle: boc_cabinet
+mode: default
+content:
+  field_cabinet_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

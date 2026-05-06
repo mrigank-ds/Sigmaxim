@@ -1,0 +1,136 @@
+uuid: f26d8ee2-02fb-45da-b68f-9254e691b488
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.battery_database_d10.field_battery_id
+    - field.field.data_entity.battery_database_d10.field_battery_name
+    - field.field.data_entity.battery_database_d10.field_capacity_ah
+    - field.field.data_entity.battery_database_d10.field_manufacturer
+    - field.field.data_entity.battery_database_d10.field_type
+    - field.field.data_entity.battery_database_d10.field_voltage_v
+    - field.field.data_entity.battery_database_d10.field_warranty_years
+    - monarch_data_entity.data_entity_type.battery_database_d10
+  module:
+    - monarch_data_entity
+label: 'Battery Database D10'
+id: battery_database_d10
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: battery_database_d10
+  insert_new: 1
+  update_existing: 1
+  update_non_existent: _delete
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  battery_id:
+    value: Battery_ID
+    label: Battery_ID
+    machine_name: battery_id
+    type: csv
+  battery_name:
+    value: Battery_Name
+    label: Battery_Name
+    machine_name: battery_name
+    type: csv
+  manufacturer:
+    value: Manufacturer
+    label: Manufacturer
+    machine_name: manufacturer
+    type: csv
+  type:
+    value: Type
+    label: Type
+    machine_name: type
+    type: csv
+  capacity_ah:
+    value: Capacity_Ah
+    label: Capacity_Ah
+    machine_name: capacity_ah
+    type: csv
+  voltage_v:
+    value: Voltage_V
+    label: Voltage_V
+    machine_name: voltage_v
+    type: csv
+  warranty_years:
+    value: Warranty_Years
+    label: Warranty_Years
+    machine_name: warranty_years
+    type: csv
+mappings:
+  -
+    target: field_battery_id
+    map:
+      value: battery_id
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: battery_id
+    settings: {  }
+    unique: {  }
+  -
+    target: field_battery_name
+    map:
+      value: battery_name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_manufacturer
+    map:
+      value: manufacturer
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_type
+    map:
+      value: type
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_capacity_ah
+    map:
+      value: capacity_ah
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_voltage_v
+    map:
+      value: voltage_v
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_warranty_years
+    map:
+      value: warranty_years
+    settings:
+      language: null
+    unique: {  }

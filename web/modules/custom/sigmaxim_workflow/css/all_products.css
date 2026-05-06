@@ -1,0 +1,87 @@
+#sigmaxim-workflow-product-table .cell {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  display: inline-block;
+  height: 145px;
+  min-width: 150px;
+  padding: 5px;
+  text-align: center;
+  width: 25%;
+
+  /* CSS3 box-sizing. */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+#sigmaxim-workflow-product-table .product-image {
+  padding-top: 5px;
+  display: block;
+  margin: 0 auto;
+
+  
+}
+
+.main-content h2 {
+	font-size: 1.75em!important;
+  font-weight: bold !important;
+}
+
+ul {
+	padding: 0 0 0.25em 0em!important;
+}
+
+/* Target the form actions wrapper to be inline */
+.views-exposed-form .form-actions {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  vertical-align: bottom;
+}
+
+/* Target Apply button specifically */
+input[data-drupal-selector="edit-submit-orders-iouzw9zoiky"] {
+  padding: 8px 1em 9px 1em !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+}
+
+/* Target Reset button specifically */
+input[data-drupal-selector="edit-reset"] {
+  /* padding: 8px 1em 9px 1em !important; */
+  font-weight: bold !important;
+  margin: -0.4em !important;
+}
+
+/* Make full exposed form row flex */
+.views-exposed-form .form--inline,
+.views-exposed-form > .form-item,
+.views-exposed-form {
+  display: flex !important;
+  align-items: flex-end !important;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+input[type = "button"]:hover {
+    color: #d54e21!important;
+}
+
+a {
+	border-bottom: 1px!important;
+}
+
+
+a img {
+  padding:5px;
+}
+
+.views-table.views-view-table th,
+.views-table.views-view-table td {
+  padding: 4px !important;
+  text-align: left !important;
+  border: 1px solid #ccc !important;
+}
+

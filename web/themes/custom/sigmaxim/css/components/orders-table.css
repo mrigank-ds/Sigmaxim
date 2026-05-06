@@ -1,0 +1,12 @@
+.all-orders .dropbutton-multiple, .my-orders .dropbutton-multiple {
+    padding-right: 0em !important;
+  }
+  
+  .all-orders .dropbutton-wrapper .dropbutton-widget .dropbutton, .my-orders .dropbutton-wrapper .dropbutton-widget .dropbutton {
+    padding: 0 2em 0 0 !important;
+  }
+  
+  .all-orders .dropbutton-wrapper .dropbutton-widget .dropbutton > li >a, .my-orders .dropbutton-wrapper .dropbutton-widget .dropbutton > li >a {
+    padding: 0.1em 0.5em !important;
+  }
+  

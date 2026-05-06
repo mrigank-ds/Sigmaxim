@@ -1,0 +1,23 @@
+uuid: dcad8479-b351-4408-9b86-9cbeda98cc66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_autocad_dwg9
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_autocad_dwg9
+field_name: field_autocad_dwg9
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'AutoCAD DWG'
+description: autocad_dwg9
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

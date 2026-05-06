@@ -1,0 +1,23 @@
+uuid: 50857349-f459-480d-9a7f-1fb06bbb3cd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_types
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+  module:
+    - options
+id: sigmaxim_workflow_order.charles_test.field_types
+field_name: field_types
+entity_type: sigmaxim_workflow_order
+bundle: charles_test
+label: Types
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

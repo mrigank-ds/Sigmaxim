@@ -1,0 +1,34 @@
+uuid: d0fdbf87-cd05-4709-a0f4-7ad485a9ff0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_hub_size
+field_name: field_left_hub_size
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: STD
+      label: STD
+    -
+      value: XL
+      label: XL
+    -
+      value: XXL
+      label: XXL
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

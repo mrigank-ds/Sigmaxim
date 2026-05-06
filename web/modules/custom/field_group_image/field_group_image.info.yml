@@ -1,0 +1,5 @@
+name: Field Group Image
+type: module
+description: 'Provides the functionality to add field group image.'
+package: Web services
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,19 @@
+uuid: 87f8592b-031e-4952-8d17-5c054a00f922
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_service_factor_met_xtsr71
+field_name: field_service_factor_met_xtsr71
+entity_type: sigmaxim_workflow_order
+type: field_expression
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

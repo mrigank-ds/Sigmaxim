@@ -1,0 +1,18 @@
+uuid: 7efeb4d3-9a80-4ff8-8065-bc298ece42a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_dependent_boolean1_d10
+field_name: field_dependent_boolean1_d10
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

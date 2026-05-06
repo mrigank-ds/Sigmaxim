@@ -1,0 +1,23 @@
+uuid: 415e3428-f819-4867-8afe-40cf917009d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_16
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_bool_16
+field_name: field_bool_16
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Use Same Left Connector'
+description: bool_16
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Use Same Left Connector'
+field_type: boolean

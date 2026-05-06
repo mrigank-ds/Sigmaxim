@@ -1,0 +1,23 @@
+uuid: 630c78c9-195b-4a12-80ad-2c85af995a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_generate_routing_docs6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_generate_routing_docs6
+field_name: field_generate_routing_docs6
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Generate Routing Docs'
+description: generate_routing_docs6
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,259 @@
+<?php
+
+/**
+ * @file
+ * Contains general hooks and alters for List Image module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Link;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\ContentEntityFormInterface;
+use Drupal\Core\Field\FieldConfigInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
+ */
+function list_image_form_field_config_edit_form_alter(array &$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  
+  // Check if it is list (text or integer) field
+  if ($field->getType() == 'list_string' || $field->getType() == 'list_integer') {
+    $field_storage_definition = $field->getFieldStorageDefinition();
+    $settings = $field_storage_definition->getSettings();
+    
+    // Add image fields for each list item
+    if (isset($settings['allowed_values'])) {
+      // Get available image styles
+      $image_styles = [];
+      foreach (\Drupal::entityTypeManager()->getStorage('image_style')->loadMultiple() as $id => $image_style) {
+        $image_styles[$id] = $image_style->label();
+      }
+      
+      $form['list_image'] = [
+        '#type' => 'details',
+        '#title' => t('List Images'),
+        '#open' => TRUE,
+        '#tree' => TRUE,
+      ];
+
+      // Image style selection
+      $form['list_image']['image_style'] = [
+        '#type' => 'select',
+        '#title' => t('Image style'),
+        '#description' => t('Select image style for list images.'),
+        '#default_value' => $field_storage_definition->getThirdPartySetting('list_image', 'image_style', 'thumbnail'),
+        '#options' => $image_styles,
+      ];
+      
+      // Add image upload for each list option
+      foreach ($settings['allowed_values'] as $key => $label) {
+        // Create safe key for form elements
+        $safe_key = preg_replace('/[^a-zA-Z0-9_]/', '_', $key);
+        
+        // Get current image if exists
+        $current_image = $field_storage_definition->getThirdPartySetting('list_image', $key);
+        $default_fid = $current_image['image'] ?? NULL;
+        
+        $form['list_image']['items'][$safe_key] = [
+          '#type' => 'managed_file',
+          '#title' => t('Image for "@label"', ['@label' => $label]),
+          '#description' => t('Upload an image for this list item.'),
+          '#default_value' => $default_fid ? [$default_fid] : NULL,
+          '#upload_location' => 'public://list_image/',
+          '#upload_validators' => [
+            'file_validate_extensions' => ['png gif jpg jpeg'],
+          ],
+          '#list_image_original_key' => $key, // Store original key
+        ];
+      }
+      
+      // Add custom submit handler
+      array_unshift($form['actions']['submit']['#submit'], 'list_image_field_config_submit');
+    }
+  }
+}
+
+/**
+ * Custom submit handler for field config form.
+ */
+function list_image_field_config_submit(array &$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  $field_storage_definition = $field->getFieldStorageDefinition();
+  $settings = $field_storage_definition->getSettings();
+  
+  if (!isset($settings['allowed_values'])) {
+    return;
+  }
+
+  // Save image style setting
+  $image_style = $form_state->getValue(['list_image', 'image_style']);
+  $field_storage_definition->setThirdPartySetting('list_image', 'image_style', $image_style);
+  
+  // Process each list item image
+  $image_items = $form_state->getValue(['list_image', 'items']) ?: [];
+  
+  foreach ($image_items as $safe_key => $image_data) {
+    // Get original key from form element
+    $original_key = $form['list_image']['items'][$safe_key]['#list_image_original_key'];
+    $fid = !empty($image_data) ? reset($image_data) : NULL;
+    
+    if ($fid) {
+      // Make file permanent
+      $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+      if ($file) {
+        $file->setPermanent();
+        $file->save();
+        
+        // Save the file reference
+        $field_storage_definition->setThirdPartySetting(
+          'list_image',
+          $original_key,
+          ['image' => $fid]
+        );
+      }
+    } else {
+      // Remove the setting if no image
+      $field_storage_definition->setThirdPartySetting('list_image', $original_key, NULL);
+    }
+  }
+  
+  $field_storage_definition->save();
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function list_image_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (!($form_state->getFormObject() instanceof ContentEntityFormInterface)) {
+    return;
+  }
+
+  $entity_form = $form_state->getFormObject();
+  $entity = $entity_form->getEntity();
+  $targets = [];
+  $file_ids = [];
+  $style_ids = [];
+
+  foreach ($entity->getFields() as $field_name => $field) {
+    if (
+      !isset($form[$field_name]['widget']['#options']) ||
+      !is_array($form[$field_name]['widget']['#options'])
+    ) {
+      continue;
+    }
+
+    $field_config = $field->getFieldDefinition();
+    if (
+      !($field_config instanceof FieldConfigInterface) ||
+      !in_array($field_config->getType(), ['list_string', 'list_integer'], TRUE)
+    ) {
+      continue;
+    }
+
+    $field_storage_config = $field_config->getFieldStorageDefinition();
+    $options = $form[$field_name]['widget']['#options'];
+    $images_by_option = [];
+
+    foreach ($options as $option_name => $option_label) {
+      $list_item = $field_storage_config->getThirdPartySetting('list_image', $option_name);
+      if (empty($list_item['image'])) {
+        continue;
+      }
+
+      $fid = (int) $list_item['image'];
+      $images_by_option[$option_name] = $fid;
+      $file_ids[$fid] = $fid;
+    }
+
+    if (!$images_by_option) {
+      continue;
+    }
+
+    $image_style = $field_storage_config->getThirdPartySetting('list_image', 'image_style', 'thumbnail');
+    $targets[$field_name] = [
+      'image_style' => $image_style,
+      'images_by_option' => $images_by_option,
+    ];
+
+    if (!empty($image_style)) {
+      $style_ids[$image_style] = $image_style;
+    }
+  }
+
+  if (!$targets) {
+    return;
+  }
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $files = $entity_type_manager->getStorage('file')->loadMultiple(array_values($file_ids));
+  $styles = $entity_type_manager->getStorage('image_style')->loadMultiple(array_values($style_ids));
+  $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+  $attach_library = FALSE;
+
+  foreach ($targets as $field_name => $target) {
+    $markup = '<div class="list_image__wrapper">';
+    $has_markup = FALSE;
+
+    foreach ($target['images_by_option'] as $option_name => $fid) {
+      $image_url = build_image_style_url($fid, $target['image_style'], $files, $styles, $toolkit_available);
+      if ($image_url === '') {
+        continue;
+      }
+
+      $markup .= '<img class="list_image__' . htmlspecialchars($option_name) . '" src="' . htmlspecialchars($image_url) . '" style="display:none;" />';
+      $has_markup = TRUE;
+    }
+
+    if (!$has_markup) {
+      continue;
+    }
+
+    $markup .= '</div>';
+    $form[$field_name]['widget']['#attributes']['class'][] = 'list_image__field_input';
+    $form[$field_name]['#attributes']['class'][] = 'list_image__field_wrapper';
+    $form[$field_name]['widget']['#suffix'] = Markup::create($markup);
+    $attach_library = TRUE;
+  }
+
+  if ($attach_library) {
+    $form['#attached']['library'][] = 'list_image/list_image';
+  }
+}
+
+/**
+ * Builds an image URL with the specified image style.
+ */
+function build_image_style_url($image, $image_style, array $files = [], array $styles = [], $toolkit_available = NULL) {
+  $file = $files[$image] ?? \Drupal::entityTypeManager()->getStorage('file')->load($image);
+  if (!$file) {
+    return '';
+  }
+
+  $file_uri = $file->getFileUri();
+
+  if ($toolkit_available === NULL) {
+    $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+  }
+
+  if (!empty($image_style) && $toolkit_available) {
+    $style = $styles[$image_style] ?? ImageStyle::load($image_style);
+    if ($style) {
+      return $style->buildUrl($file_uri);
+    }
+  }
+
+  return \Drupal::service('file_url_generator')->generateAbsoluteString($file_uri);
+}
+
+/**
+ * Implements hook_webform_element_webform_entity_radios_alter().
+ */
+function list_image_webform_element_webform_entity_radios_alter(array &$element, \Drupal\Core\Form\FormStateInterface $form_state, array $context) {
+  $element['#attributes']['label-with-image'] = 'true';
+}

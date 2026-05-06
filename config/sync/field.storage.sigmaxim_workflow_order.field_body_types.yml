@@ -1,0 +1,48 @@
+uuid: c37373a8-e9bc-4b24-922f-8137d15bab73
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: large
+    'Single Rolled Piece':
+      image: '337'
+    'Multiple Rolled Rings':
+      image: '338'
+    'Multiple Vertical Pieces':
+      image: '339'
+    'Staggered Pieces':
+      image: '340'
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_body_types
+field_name: field_body_types
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Single Rolled Piece'
+      label: 'Single Rolled Piece'
+    -
+      value: 'Multiple Rolled Rings'
+      label: 'Multiple Rolled Rings'
+    -
+      value: 'Multiple Vertical Pieces'
+      label: 'Multiple Vertical Pieces'
+    -
+      value: 'Staggered Pieces'
+      label: 'Staggered Pieces'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

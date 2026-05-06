@@ -1,0 +1,23 @@
+uuid: abc44cc2-4aff-4c28-a7f6-2e158e805b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_terminal9
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_terminal9
+field_name: field_terminal9
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: Terminal
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1 - Stud 10-32</option>'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

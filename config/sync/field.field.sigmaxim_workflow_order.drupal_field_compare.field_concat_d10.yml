@@ -1,0 +1,29 @@
+uuid: 9775c5cf-4f5c-4ced-9ae5-b4e361824374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_concat_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757330243
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_concat_d10
+field_name: field_concat_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: Concat
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: "We don't have a Concat Field in the Drupal 10 as like in Drupal 7"
+default_value_callback: ''
+settings: {  }
+field_type: string

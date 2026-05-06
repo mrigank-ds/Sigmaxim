@@ -1,0 +1,25 @@
+uuid: 265a439a-b934-4e1a-bc4a-4a1f30c5518e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_red
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_red
+field_name: field_red
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: Red
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 200
+default_value_callback: ''
+settings:
+  min: 0
+  max: 255
+  prefix: ''
+  suffix: ''
+field_type: integer

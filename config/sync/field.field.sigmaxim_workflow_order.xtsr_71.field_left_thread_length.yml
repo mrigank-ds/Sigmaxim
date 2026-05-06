@@ -1,0 +1,33 @@
+uuid: 8437104d-4fc7-4a6b-bd53-608e28e04ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_thread_length
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746190087
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_thread_length
+field_name: field_left_thread_length
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Thread Length'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: float

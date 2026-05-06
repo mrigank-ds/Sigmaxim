@@ -1,0 +1,27 @@
+uuid: 55cab800-5dab-419d-b7fa-61428c88e871
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cbc_fil_in_dc_out
+    - monarch_data_entity.data_entity_type.cbc_filter_inputs
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737536140
+  field_inline_label:
+    inline_label: 0
+id: data_entity.cbc_filter_inputs.field_cbc_fil_in_dc_out
+field_name: field_cbc_fil_in_dc_out
+entity_type: data_entity
+bundle: cbc_filter_inputs
+label: DC_OUTPUT
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

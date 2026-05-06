@@ -1,0 +1,21 @@
+uuid: 072683bc-543e-4157-815b-c91332ab241e
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_math_expression_add
+field_name: field_math_expression_add
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,33 @@
+uuid: 1f25f645-160d-43fd-a630-2057243078a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_min_bore_tolerance
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746183894
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_min_bore_tolerance
+field_name: field_left_min_bore_tolerance
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Min Bore'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1.499'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: in
+field_type: float

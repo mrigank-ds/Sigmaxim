@@ -1,0 +1,23 @@
+uuid: e5cd48d4-e3d7-4a16-8e01-60edd3a15646
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_int12
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - options
+id: sigmaxim_workflow_order.valmount.field_list_int12
+field_name: field_list_int12
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Label Height (inches)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 18
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

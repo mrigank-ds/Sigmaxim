@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Contains field_inline_label hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\ContentEntityFormInterface;
+use Drupal\Core\Field\FieldConfigInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
+ */
+function field_inline_label_form_field_config_edit_form_alter(array &$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+
+  // Get existing value for inline label field.
+  $inline_label = (bool) $field->getThirdPartySetting(
+    'field_inline_label',
+    'inline_label',
+    FALSE
+  );
+  $form['inline_label'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show inline label'),
+    '#description' => t('Check it if you want to show inline label in edit/add form.'),
+    '#default_value' => $inline_label,
+  ];
+  // Add custom submit handler.
+  $form['actions']['submit']['#submit'][] = 'field_inline_label_form_submit';
+}
+
+/**
+ * A submit handler to store inline label status.
+ */
+function field_inline_label_form_submit(&$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  // Get inline label value from form.
+  $inline_label = $form_state->getValue('inline_label') ?? FALSE;
+
+  // Set inline label status for the field only if it is checked.
+  $field->setThirdPartySetting(
+    'field_inline_label',
+    'inline_label',
+    $inline_label,
+  );
+  $field->save();
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ */
+function field_inline_label_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_state->getFormObject() instanceof ContentEntityFormInterface) {
+    /** @var \Drupal\Core\Entity\EntityForm $entity_form */
+    $entity_form = $form_state->getFormObject();
+    /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+    $entity = $entity_form->getEntity();
+
+    foreach ($entity->getFields() as $field_name => $field) {
+      /** @var \Drupal\Core\Field\FieldConfigInterface $field_config */
+      if (!($field_config = $field->getFieldDefinition()) instanceof FieldConfigInterface) {
+        // Skip if field is not a configurable field.
+        continue;
+      }
+      // Check if inline label is set for the field or not.
+      $inline_label = (bool) $field_config->getThirdPartySetting(
+        'field_inline_label',
+        'inline_label',
+        FALSE
+      );
+      // Skip checkbox field as checkboxes already contain inline label.
+      if ($inline_label && $field_config->getType() != 'boolean') {
+        $form[$field_name]['#attributes']['class'][] = 'container-inline';
+      }
+    }
+  }
+}

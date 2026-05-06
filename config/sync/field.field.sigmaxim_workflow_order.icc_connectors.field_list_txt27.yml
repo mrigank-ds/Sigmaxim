@@ -1,0 +1,23 @@
+uuid: d3f5ef1d-9e0b-424a-8866-639637a0e3e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt27
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.icc_connectors.field_list_txt27
+field_name: field_list_txt27
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: P2_Right_PullTab
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Yes'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

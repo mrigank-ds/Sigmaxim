@@ -1,0 +1,21 @@
+uuid: 92e06cfe-9369-4829-a0ad-49dfcea3c5db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_34
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_label_34
+field_name: field_label_34
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_34
+default_value_callback: ''
+settings: {  }
+field_type: string

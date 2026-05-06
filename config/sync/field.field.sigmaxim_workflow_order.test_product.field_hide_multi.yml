@@ -1,0 +1,31 @@
+uuid: 14cf8757-0ed0-423c-890b-86ff15a3520e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_hide_multi
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753361366
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_hide_multi
+field_name: field_hide_multi
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Hide Multi'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

@@ -1,0 +1,17 @@
+uuid: 6940b8cc-b835-42ab-820a-cdc1fe1ce572
+langcode: en
+status: true
+dependencies: {  }
+id: lineup
+label: Lineup
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '17'

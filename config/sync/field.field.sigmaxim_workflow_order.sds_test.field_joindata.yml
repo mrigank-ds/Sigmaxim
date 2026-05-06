@@ -1,0 +1,19 @@
+uuid: 1a8f249a-b84f-4bfe-880e-818f3be4861b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_joindata
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+id: sigmaxim_workflow_order.sds_test.field_joindata
+field_name: field_joindata
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: Joindata
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

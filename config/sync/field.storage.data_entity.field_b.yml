@@ -1,0 +1,21 @@
+uuid: 3c9c1f8a-e318-40aa-a898-6c95fe965087
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+id: data_entity.field_b
+field_name: field_b
+entity_type: data_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

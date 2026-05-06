@@ -1,0 +1,31 @@
+uuid: e005934f-8b8c-4c7f-8074-cbc5170346e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_career
+    - node.type.article
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+  sigmaxim_data_entity:
+    timestamp: 1700815787
+id: node.article.field_career
+field_name: field_career
+entity_type: node
+bundle: article
+label: Career
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

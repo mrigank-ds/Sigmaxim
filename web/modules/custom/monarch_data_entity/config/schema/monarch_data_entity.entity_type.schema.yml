@@ -1,0 +1,18 @@
+monarch_data_entity.data_entity_type.*:
+  type: config_entity
+  label: 'Data type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    primary_keys:
+      type: sequence
+      label: 'Primary key fields'
+      sequence:
+        type: string
+        label: 'Field name'

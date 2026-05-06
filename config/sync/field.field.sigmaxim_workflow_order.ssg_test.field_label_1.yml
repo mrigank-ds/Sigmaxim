@@ -1,0 +1,21 @@
+uuid: 191d438f-7a3c-483b-aed4-09b98ae3a693
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_label_1
+field_name: field_label_1
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'TE Part Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_1
+default_value_callback: ''
+settings: {  }
+field_type: string

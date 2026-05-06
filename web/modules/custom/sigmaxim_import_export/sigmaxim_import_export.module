@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Sigmaxim Import Export module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_entity_operation_alter().
+ * 
+ * Adds Export operation to Product types and Node types.
+ */
+function sigmaxim_import_export_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  if (!\Drupal::currentUser()->hasPermission('export entities')) {
+    return;
+  }
+
+  /**
+   * CONTENT TYPE export (admin/structure/types)
+   * Entity type: node_type
+   */
+  if ($entity->getEntityTypeId() === 'node_type') {
+    $operations['export'] = [
+      'title' => t('Export'),
+      'weight' => 50,
+      'url' => Url::fromRoute(
+        'sigmaxim_import_export.export_node_type',
+        ['node_type' => $entity->id()]
+      ),
+    ];
+  }
+
+  /**
+   * PRODUCT TYPE export
+   * Entity type: sigmaxim_workflow_order_type
+   */
+  if ($entity->getEntityTypeId() === 'sigmaxim_workflow_order_type') {
+    $operations['export'] = [
+      'title' => t('Export'),
+      'weight' => 50,
+      'url' => Url::fromRoute(
+        'sigmaxim_import_export.product_export',
+        ['sigmaxim_workflow_order_type' => $entity->id()]
+      ),
+    ];
+  }
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ * 
+ * Optional: Add import/export to admin toolbar if needed.
+ */
+function sigmaxim_import_export_toolbar_alter(&$items) {
+  // Can add custom toolbar items here if needed
+}

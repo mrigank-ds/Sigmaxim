@@ -1,0 +1,26 @@
+uuid: 30324447-3206-4fe5-95b2-69e71b3e576c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263276
+id: sigmaxim_workflow_order.dilip_test.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

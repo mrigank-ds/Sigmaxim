@@ -1,0 +1,25 @@
+uuid: ecb58f30-46e9-46c9-95a4-80097b182071
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_date_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - datetime
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_date_inline
+field_name: field_date_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: date_inline
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

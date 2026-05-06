@@ -1,0 +1,38 @@
+uuid: 6140b806-3d49-487a-8e37-87a3f3ae00eb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2c10ab42-bf92-4043-9cb9-688be7c9cf4e'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: datatableadministration
+theme: sigmaxim
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:2c10ab42-bf92-4043-9cb9-688be7c9cf4e'
+settings:
+  id: 'block_content:2c10ab42-bf92-4043-9cb9-688be7c9cf4e'
+  label: 'Data Table Administration'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/user/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin: admin

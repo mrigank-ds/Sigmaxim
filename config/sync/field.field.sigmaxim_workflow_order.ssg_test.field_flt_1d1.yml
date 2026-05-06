@@ -1,0 +1,25 @@
+uuid: e29231bf-95c4-4623-8b62-082fc2eacb08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_flt_1d1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_flt_1d1
+field_name: field_flt_1d1
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: fl_1
+description: flt_1d1
+required: false
+translatable: false
+default_value:
+  -
+    value: 5.5
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: 100.0
+  prefix: ''
+  suffix: ''
+field_type: float

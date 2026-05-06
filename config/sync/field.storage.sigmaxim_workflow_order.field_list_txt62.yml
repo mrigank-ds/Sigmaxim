@@ -1,0 +1,70 @@
+uuid: 2cd22095-9da7-43a5-a316-c4c23de98e37
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_list_txt62
+field_name: field_list_txt62
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: White
+      label: White
+    -
+      value: Sandstone
+      label: Sandstone
+    -
+      value: Black
+      label: Black
+    -
+      value: 'Silver Metallic'
+      label: 'Silver Metallic'
+    -
+      value: Silver
+      label: Silver
+    -
+      value: 'Light Gray'
+      label: 'Light Gray'
+    -
+      value: 'Slate Gray'
+      label: 'Slate Gray'
+    -
+      value: 'Dark Tan'
+      label: 'Dark Tan'
+    -
+      value: 'Med Bronze'
+      label: 'Med Bronze'
+    -
+      value: Bronze
+      label: Bronze
+    -
+      value: 'Dark Bronze'
+      label: 'Dark Bronze'
+    -
+      value: Brown
+      label: Brown
+    -
+      value: 'Hunter Green'
+      label: 'Hunter Green'
+    -
+      value: 'Dark Green'
+      label: 'Dark Green'
+    -
+      value: Red
+      label: Red
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

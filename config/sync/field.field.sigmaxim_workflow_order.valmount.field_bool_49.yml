@@ -1,0 +1,23 @@
+uuid: 485ee8de-5b1f-4b08-8a99-03813a9b6b15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_49
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_bool_49
+field_name: field_bool_49
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: IGES
+description: bool_49
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

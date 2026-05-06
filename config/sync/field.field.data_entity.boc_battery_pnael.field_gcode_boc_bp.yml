@@ -1,0 +1,27 @@
+uuid: 2be58246-4ca8-4f50-914c-7e6326126c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_gcode_boc_bp
+    - monarch_data_entity.data_entity_type.boc_battery_pnael
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737526513
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_battery_pnael.field_gcode_boc_bp
+field_name: field_gcode_boc_bp
+entity_type: data_entity
+bundle: boc_battery_pnael
+label: GCODE
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

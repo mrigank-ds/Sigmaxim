@@ -1,0 +1,33 @@
+uuid: 1c798e70-0dd3-436b-9aca-3367cc1fde85
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.browse_data
+  module:
+    - views
+_core:
+  default_config_hash: rFBTz6eRrqI5lsvyyW8WS2sHh4rE1QGRIyqaYae8cuU
+name: data
+label: 'All Data'
+display: modal
+display_configuration:
+  width: '1200'
+  height: '675'
+  link_text: 'Select Data'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  81e5bc9b-295d-4470-94a5-13024d00a4c5:
+    settings:
+      submit_text: Add
+      auto_select: false
+      view: browse_data
+      view_display: entity_browser_1
+    uuid: 81e5bc9b-295d-4470-94a5-13024d00a4c5
+    weight: 1
+    label: 'Add Data'
+    id: view

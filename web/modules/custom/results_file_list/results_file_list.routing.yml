@@ -1,0 +1,7 @@
+results_file_list.view_entity_files:
+  path: '/results/files/{folder_id}'
+  defaults:
+    _controller: '\Drupal\results_file_list\Controller\ResultsFileController::listFiles'
+    _title: 'Folder Results'
+  requirements:
+    _permission: 'access content'

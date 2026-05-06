@@ -1,0 +1,21 @@
+uuid: bb990cef-a3ad-4d73-b464-cc1f53a908fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_field
+    - node.type.article
+  module:
+    - options
+id: node.article.field_new_field
+field_name: field_new_field
+entity_type: node
+bundle: article
+label: 'New Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

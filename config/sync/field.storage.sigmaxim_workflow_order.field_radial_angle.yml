@@ -1,0 +1,20 @@
+uuid: ea7b3d35-4e97-4c64-a415-2b803a6b5d94
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_radial_angle
+field_name: field_radial_angle
+entity_type: sigmaxim_workflow_order
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

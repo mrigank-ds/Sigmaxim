@@ -1,0 +1,23 @@
+uuid: f6029fad-ed29-4eee-b149-9bf47b9b8318
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dilip_test2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+id: sigmaxim_workflow_order.dilip_test.field_dilip_test2
+field_name: field_dilip_test2
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: DILIP_TEST2
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

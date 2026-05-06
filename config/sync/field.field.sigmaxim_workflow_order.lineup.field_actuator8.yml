@@ -1,0 +1,21 @@
+uuid: 4e2e723f-a3f0-4d79-bfaf-9737b88c70ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_actuator8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_actuator8
+field_name: field_actuator8
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: Actuator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

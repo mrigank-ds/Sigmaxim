@@ -1,0 +1,142 @@
+uuid: 41372a26-1fca-4851-aa96-7465d33fdd53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field__engineer
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_cabinet_int_cbc
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_cabinet_new
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_cbc_ext_cabinet
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_cbc_filter_inputs
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_display_type_cbc
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_folder_id
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_opportunity
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_proj_desc
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_project_name
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_quote
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_quote_engineer
+    - field.field.sigmaxim_workflow_order.charger_battery_cabinet.field_system_number
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.charger_battery_cabinet.default
+targetEntityType: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+mode: default
+content:
+  field__engineer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cabinet_int_cbc:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 9
+    region: content
+  field_cabinet_new:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_cbc_ext_cabinet:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_cbc_filter_inputs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_display_type_cbc:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_opportunity:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_proj_desc:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_project_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_quote:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_quote_engineer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_system_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

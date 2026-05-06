@@ -1,0 +1,31 @@
+uuid: fb347c11-68b6-4d20-9159-5f7cac9b2669
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_list_int11
+field_name: field_list_int11
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Single
+    -
+      value: 1
+      label: Double
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

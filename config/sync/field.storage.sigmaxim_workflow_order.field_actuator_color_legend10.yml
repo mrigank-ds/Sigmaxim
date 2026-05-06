@@ -1,0 +1,49 @@
+uuid: 85b6abf0-4d92-4c00-bfca-2021f5477ca7
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_actuator_color_legend10
+field_name: field_actuator_color_legend10
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1 - Actuator Color'
+      label: '1 - Actuator Color'
+    -
+      value: '2 - Actuator Color'
+      label: '2 - Actuator Color'
+    -
+      value: '3 - Actuator Color'
+      label: '3 - Actuator Color'
+    -
+      value: '4 - Actuator Color'
+      label: '4 - Actuator Color'
+    -
+      value: '5 - Actuator Color'
+      label: '5 - Actuator Color'
+    -
+      value: '6 - Actuator Color'
+      label: '6 - Actuator Color'
+    -
+      value: '7 - Actuator Color'
+      label: '7 - Actuator Color'
+    -
+      value: '8 - Actuator Color'
+      label: '8 - Actuator Color'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,1156 @@
+uuid: 09172d1f-98f1-4889-9198-ccf6926ec291
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float2
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float3
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float35
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float36
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float37
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float38
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float39
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float4
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float40
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float41
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float42
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float43
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float44
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float45
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float46
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float47
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float48
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float49
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float50
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float51
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float52
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float53
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float8
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float9
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_folder_id
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_3
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_4
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_8
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_9
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt35
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt36
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group_image:
+    group_connectors:
+      image: 0
+      image_style: large
+    group_left_side:
+      image: 0
+      image_style: large
+    group_p1_left:
+      image: 0
+      image_style: large
+  field_group:
+    group_connectors:
+      children:
+        - group_left_side
+        - group_p1_left
+      label: Connectors
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_left_side:
+      children:
+        - field_bool_18
+      label: 'Left Side'
+      region: content
+      parent_name: group_connectors
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+        open: false
+        formatter: closed
+    group_p1_left:
+      children:
+        - field_list_txt11
+        - field_list_txt13
+      label: P1_Left
+      region: content
+      parent_name: group_connectors
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+        formatter: closed
+id: sigmaxim_workflow_order.icc_connectors.default
+targetEntityType: sigmaxim_workflow_order
+bundle: icc_connectors
+mode: default
+content:
+  field_bool_16:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_17:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_18:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_19:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_20:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_21:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_22:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_23:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_24:
+    type: boolean_checkbox
+    weight: 34
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_25:
+    type: boolean_checkbox
+    weight: 39
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_26:
+    type: boolean_checkbox
+    weight: 44
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_27:
+    type: boolean_checkbox
+    weight: 49
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_28:
+    type: boolean_checkbox
+    weight: 54
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_29:
+    type: boolean_checkbox
+    weight: 59
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_30:
+    type: boolean_checkbox
+    weight: 64
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_31:
+    type: boolean_checkbox
+    weight: 69
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_32:
+    type: boolean_checkbox
+    weight: 74
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bool_33:
+    type: boolean_checkbox
+    weight: 78
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        69df6468-2567-494e-8795-df4cc95b7f58:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_bool_23
+          settings:
+            state: visible
+            condition: '!empty'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_bool_34:
+    type: boolean_checkbox
+    weight: 110
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_float10:
+    type: number
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float11:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float12:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float13:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float14:
+    type: number
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float15:
+    type: number
+    weight: 36
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float16:
+    type: number
+    weight: 37
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float17:
+    type: number
+    weight: 41
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float18:
+    type: number
+    weight: 42
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float19:
+    type: number
+    weight: 46
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float2:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float20:
+    type: number
+    weight: 47
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float21:
+    type: number
+    weight: 51
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float22:
+    type: number
+    weight: 52
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float23:
+    type: number
+    weight: 56
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float24:
+    type: number
+    weight: 57
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float25:
+    type: number
+    weight: 61
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float26:
+    type: number
+    weight: 62
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float27:
+    type: number
+    weight: 66
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float28:
+    type: number
+    weight: 67
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float29:
+    type: number
+    weight: 71
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float3:
+    type: number
+    weight: 18
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float30:
+    type: number
+    weight: 72
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float31:
+    type: number
+    weight: 76
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float32:
+    type: number
+    weight: 77
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float33:
+    type: number
+    weight: 80
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float34:
+    type: number
+    weight: 81
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float35:
+    type: number
+    weight: 82
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float36:
+    type: number
+    weight: 83
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float37:
+    type: number
+    weight: 84
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float38:
+    type: number
+    weight: 85
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float39:
+    type: number
+    weight: 86
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float4:
+    type: number
+    weight: 19
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        d840e11d-ed2b-4ac6-bae2-f4de5a2d072a:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_list_txt10
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "Straight (P1-P2)\r\nY Cable (P1-P2&P3)\r\nX Cable (P1&P2 - P3&P4)\r\nBreakout (P1-P2,P3,P4...)"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+        2274e435-e801-4f6e-8445-c3f20b404a9b:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_bool_22
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_float40:
+    type: number
+    weight: 87
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float41:
+    type: number
+    weight: 88
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float42:
+    type: number
+    weight: 89
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float43:
+    type: number
+    weight: 90
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float44:
+    type: number
+    weight: 91
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float45:
+    type: number
+    weight: 92
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float46:
+    type: number
+    weight: 93
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float47:
+    type: number
+    weight: 94
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float48:
+    type: number
+    weight: 95
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float49:
+    type: number
+    weight: 96
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float5:
+    type: number
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float50:
+    type: number
+    weight: 97
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float51:
+    type: number
+    weight: 98
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float52:
+    type: number
+    weight: 99
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float53:
+    type: number
+    weight: 111
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float6:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float7:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float8:
+    type: number
+    weight: 23
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float9:
+    type: number
+    weight: 24
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_10:
+    type: string_textfield
+    weight: 65
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_11:
+    type: string_textfield
+    weight: 70
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_12:
+    type: string_textfield
+    weight: 75
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_13:
+    type: string_textfield
+    weight: 79
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_14:
+    type: string_textfield
+    weight: 113
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_15:
+    type: string_textfield
+    weight: 114
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_16:
+    type: string_textfield
+    weight: 115
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_17:
+    type: string_textfield
+    weight: 116
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_18:
+    type: string_textfield
+    weight: 117
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_3:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_4:
+    type: string_textfield
+    weight: 35
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_5:
+    type: string_textfield
+    weight: 40
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_6:
+    type: string_textfield
+    weight: 45
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_7:
+    type: string_textfield
+    weight: 50
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_8:
+    type: string_textfield
+    weight: 55
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_label_9:
+    type: string_textfield
+    weight: 60
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_int5:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_int6:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_int7:
+    type: options_select
+    weight: 118
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt10:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt11:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt12:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt13:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt14:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt15:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt16:
+    type: options_select
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt17:
+    type: options_select
+    weight: 33
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt18:
+    type: options_select
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt19:
+    type: options_select
+    weight: 43
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt20:
+    type: options_select
+    weight: 48
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt21:
+    type: options_select
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt22:
+    type: options_select
+    weight: 58
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt23:
+    type: options_select
+    weight: 63
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt24:
+    type: options_select
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt25:
+    type: options_select
+    weight: 73
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt26:
+    type: options_select
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt27:
+    type: options_select
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt28:
+    type: options_select
+    weight: 102
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt29:
+    type: options_select
+    weight: 103
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt30:
+    type: options_select
+    weight: 104
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt31:
+    type: options_select
+    weight: 105
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt32:
+    type: options_select
+    weight: 106
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt33:
+    type: options_select
+    weight: 107
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt34:
+    type: options_select
+    weight: 108
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt35:
+    type: options_select
+    weight: 109
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list_txt36:
+    type: options_select
+    weight: 112
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group_left_side:
+    weight: 120
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        e4a2834f-06c1-4574-8961-545545cc030d:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_bool_16
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  group_p1_left:
+    weight: 119
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        012f9249-c8c4-4793-b7a3-f7d713e21108:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_list_txt10
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "Straight (P1-P2)\r\nY Cable (P1-P2&P3)\r\nX Cable (P1&P2 - P3&P4)\r\nBreakout (P1-P2,P3,P4...)"
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+        990ca106-e49d-43b6-8744-1c51eb4929d0:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_bool_16
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+        22e0ec55-8434-4e5c-afa1-a27914983794:
+          entity_type: sigmaxim_workflow_order
+          bundle: icc_connectors
+          dependee: field_list_int5
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '4'
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

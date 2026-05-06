@@ -1,0 +1,29 @@
+uuid: 833594e7-8a6a-4e59-9159-641a0c06413c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_max_cbore_reference
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746187611
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_max_cbore_reference
+field_name: field_max_cbore_reference
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Max Cbore Dia Reference'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '[field_coupling_size_xtsr71:MAX_CBORE_DIA]'
+default_value_callback: ''
+settings: {  }
+field_type: string

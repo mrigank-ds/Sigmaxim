@@ -1,0 +1,6 @@
+uuid: f1e1b082-048c-429b-8bb9-bb184a3f609b
+langcode: en
+status: true
+dependencies: {  }
+id: boc_battery_pnael
+label: BOC_BATTERY_PNAEL

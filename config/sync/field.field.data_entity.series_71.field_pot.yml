@@ -1,0 +1,27 @@
+uuid: 7a65e3e5-53ae-463d-bea7-374f4b48aba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_pot
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745590695
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_pot
+field_name: field_pot
+entity_type: data_entity
+bundle: series_71
+label: POT
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

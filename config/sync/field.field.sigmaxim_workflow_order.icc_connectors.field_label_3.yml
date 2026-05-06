@@ -1,0 +1,21 @@
+uuid: b3735c48-a459-4e95-88b9-30150f23f570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_3
+field_name: field_label_3
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'TE Part Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_3
+default_value_callback: ''
+settings: {  }
+field_type: string

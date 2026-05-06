@@ -1,0 +1,40 @@
+uuid: c7a8fa69-6d8f-4dbc-83f6-632bc14a67eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    sedan:
+      image: '343'
+    hatchback:
+      image: '344'
+    coupe:
+      image: '345'
+id: sigmaxim_workflow_order.field_text_list_d10
+field_name: field_text_list_d10
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: sedan
+      label: Sedan
+    -
+      value: hatchback
+      label: Hatchback
+    -
+      value: coupe
+      label: Coupe
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

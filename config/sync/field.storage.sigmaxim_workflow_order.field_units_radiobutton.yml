@@ -1,0 +1,31 @@
+uuid: f57a2d83-0334-49c8-8b73-7934860afa75
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_units_radiobutton
+field_name: field_units_radiobutton
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: inch/inch
+      label: inch/inch
+    -
+      value: mm/mm
+      label: mm/mm
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

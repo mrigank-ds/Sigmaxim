@@ -1,0 +1,30 @@
+uuid: a6834c92-6df6-49b3-9c8d-d8d9906c9388
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_key_style
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746182517
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_key_style
+field_name: field_left_key_style
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: Key
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: 'Keyless Fit'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

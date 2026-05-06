@@ -1,0 +1,23 @@
+uuid: 62c74ecf-e524-4b9c-b099-d208a3b82234
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+id: sitebranding
+theme: seven
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

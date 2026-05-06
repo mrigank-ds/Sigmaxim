@@ -1,0 +1,32 @@
+uuid: 0cee1b2e-5459-4566-afa5-e9c02ffe31e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_reset_boc
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - resetfield
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1764930931
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.battery_only_cabinet.field_reset_boc
+field_name: field_reset_boc
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: Reset
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  button_label: Reset
+  button_style: rectangular
+  reset_confirmation: 0
+  fields_list: '[sigmaxim_workflow_order:field_ther_opt_boc]'
+field_type: reset_button_field

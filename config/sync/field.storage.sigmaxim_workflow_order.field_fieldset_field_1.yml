@@ -1,0 +1,21 @@
+uuid: 7866c862-f2f4-48f9-8a98-4d28c4476f53
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_fieldset_field_1
+field_name: field_fieldset_field_1
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

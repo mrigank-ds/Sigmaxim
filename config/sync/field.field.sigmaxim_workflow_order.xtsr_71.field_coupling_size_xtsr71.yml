@@ -1,0 +1,37 @@
+uuid: 6e6485fb-07fa-4ced-91f9-287ab2f76022
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_coupling_size_xtsr71
+    - monarch_data_entity.data_entity_type.series_71
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745601063
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_coupling_size_xtsr71
+field_name: field_coupling_size_xtsr71
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Coupling Size'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      series_71: series_71
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

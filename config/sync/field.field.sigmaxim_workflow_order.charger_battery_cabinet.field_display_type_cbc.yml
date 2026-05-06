@@ -1,0 +1,28 @@
+uuid: df153602-2fee-4a65-b704-f897f768e74b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_display_type_cbc
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737532871
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.charger_battery_cabinet.field_display_type_cbc
+field_name: field_display_type_cbc
+entity_type: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+label: 'DISPLAY TYPE'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,115 @@
+uuid: bdcaadcc-80b3-4a73-bdc7-1300802af56c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.standard_data_d10.field_companies
+    - field.field.data_entity.standard_data_d10.field_country
+    - field.field.data_entity.standard_data_d10.field_market_occupancy
+    - field.field.data_entity.standard_data_d10.field_sector
+    - field.field.data_entity.standard_data_d10.field_state
+    - monarch_data_entity.data_entity_type.standard_data_d10
+  module:
+    - monarch_data_entity
+label: Standard_Data_D10
+id: standard_data_d10
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: standard_data_d10
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  country:
+    value: Country
+    label: Country
+    machine_name: country
+    type: csv
+  state:
+    value: State
+    label: State
+    machine_name: state
+    type: csv
+  sector:
+    value: Sector
+    label: Sector
+    machine_name: sector
+    type: csv
+  companies:
+    value: Companies
+    label: Companies
+    machine_name: companies
+    type: csv
+  market_occupancy:
+    value: 'Market Occupancy'
+    label: 'Market Occupancy'
+    machine_name: market_occupancy
+    type: csv
+mappings:
+  -
+    target: field_country
+    map:
+      value: country
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_state
+    map:
+      value: state
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_sector
+    map:
+      value: sector
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_companies
+    map:
+      value: companies
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_market_occupancy
+    map:
+      value: market_occupancy
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: country
+    settings: {  }
+    unique: {  }

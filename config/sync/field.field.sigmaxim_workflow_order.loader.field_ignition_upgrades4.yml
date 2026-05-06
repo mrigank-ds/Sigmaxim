@@ -1,0 +1,21 @@
+uuid: 72d3c7c2-3d6a-4297-9c64-9d9684eaf389
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_ignition_upgrades4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_ignition_upgrades4
+field_name: field_ignition_upgrades4
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Ignition Upgrades'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

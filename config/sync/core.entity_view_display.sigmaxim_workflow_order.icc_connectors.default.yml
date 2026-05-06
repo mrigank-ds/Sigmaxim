@@ -1,0 +1,1249 @@
+uuid: 8a0299f8-5e7d-4e3a-baaa-faf1a2fda52d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_bool_34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float2
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float3
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float35
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float36
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float37
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float38
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float39
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float4
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float40
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float41
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float42
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float43
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float44
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float45
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float46
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float47
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float48
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float49
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float50
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float51
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float52
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float53
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float8
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_float9
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_folder_id
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_3
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_4
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_8
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_label_9
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int5
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int6
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_int7
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt10
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt11
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt12
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt13
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt14
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt15
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt16
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt17
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt18
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt19
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt20
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt21
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt22
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt23
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt24
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt25
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt26
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt27
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt28
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt29
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt30
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt31
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt32
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt33
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt34
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt35
+    - field.field.sigmaxim_workflow_order.icc_connectors.field_list_txt36
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.icc_connectors.default
+targetEntityType: sigmaxim_workflow_order
+bundle: icc_connectors
+mode: default
+content:
+  field_bool_16:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_bool_17:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_bool_18:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_bool_19:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_bool_20:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_bool_21:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_bool_22:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_bool_23:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_bool_24:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_bool_25:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_bool_26:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  field_bool_27:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 48
+    region: content
+  field_bool_28:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 53
+    region: content
+  field_bool_29:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 58
+    region: content
+  field_bool_30:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 63
+    region: content
+  field_bool_31:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 68
+    region: content
+  field_bool_32:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 73
+    region: content
+  field_bool_33:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 77
+    region: content
+  field_bool_34:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_float10:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_float11:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_float12:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_float13:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_float14:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_float15:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_float16:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_float17:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_float18:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_float19:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_float2:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_float20:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 46
+    region: content
+  field_float21:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  field_float22:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 51
+    region: content
+  field_float23:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 55
+    region: content
+  field_float24:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 56
+    region: content
+  field_float25:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 60
+    region: content
+  field_float26:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 61
+    region: content
+  field_float27:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 65
+    region: content
+  field_float28:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 66
+    region: content
+  field_float29:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 70
+    region: content
+  field_float3:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_float30:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 71
+    region: content
+  field_float31:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 75
+    region: content
+  field_float32:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 76
+    region: content
+  field_float33:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 79
+    region: content
+  field_float34:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 80
+    region: content
+  field_float35:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 81
+    region: content
+  field_float36:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 82
+    region: content
+  field_float37:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 83
+    region: content
+  field_float38:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 84
+    region: content
+  field_float39:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 85
+    region: content
+  field_float4:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_float40:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 86
+    region: content
+  field_float41:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 87
+    region: content
+  field_float42:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 88
+    region: content
+  field_float43:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 89
+    region: content
+  field_float44:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 90
+    region: content
+  field_float45:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 91
+    region: content
+  field_float46:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 92
+    region: content
+  field_float47:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 93
+    region: content
+  field_float48:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 94
+    region: content
+  field_float49:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 95
+    region: content
+  field_float5:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_float50:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 96
+    region: content
+  field_float51:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 97
+    region: content
+  field_float52:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 98
+    region: content
+  field_float53:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_float6:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_float7:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_float8:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_float9:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_label_10:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 64
+    region: content
+  field_label_11:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 69
+    region: content
+  field_label_12:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 74
+    region: content
+  field_label_13:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 78
+    region: content
+  field_label_14:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_label_15:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_label_16:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_label_17:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_label_18:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_label_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_label_4:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_label_5:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_label_6:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_label_7:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_label_8:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 54
+    region: content
+  field_label_9:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 59
+    region: content
+  field_list_int5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_list_int6:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_list_int7:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_list_txt10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_list_txt11:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_list_txt12:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_list_txt13:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_list_txt14:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_list_txt15:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_list_txt16:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_list_txt17:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_list_txt18:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_list_txt19:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_list_txt20:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 47
+    region: content
+  field_list_txt21:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 52
+    region: content
+  field_list_txt22:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 57
+    region: content
+  field_list_txt23:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 62
+    region: content
+  field_list_txt24:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 67
+    region: content
+  field_list_txt25:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 72
+    region: content
+  field_list_txt26:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 99
+    region: content
+  field_list_txt27:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_list_txt28:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_list_txt29:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_list_txt30:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_list_txt31:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_list_txt32:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_list_txt33:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_list_txt34:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_list_txt35:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_list_txt36:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

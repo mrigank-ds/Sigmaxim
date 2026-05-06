@@ -1,0 +1,34 @@
+uuid: 87214526-5afa-438a-ad41-cb5f2aab6c9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_dashboard13
+field_name: field_dashboard13
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Standard Dashboard (Tach / Temp / Pressure / Warning Indicators / Lights)'
+      label: 'Standard Dashboard (Tach / Temp / Pressure / Warning Indicators / Lights)'
+    -
+      value: 'Standard Dashboard + Climate Control + Radio'
+      label: 'Standard Dashboard + Climate Control + Radio'
+    -
+      value: 'Standard Dashboard + Climate Control + Radio / MP3 Connection + GPS'
+      label: 'Standard Dashboard + Climate Control + Radio / MP3 Connection + GPS'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

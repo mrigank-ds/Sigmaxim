@@ -1,0 +1,26 @@
+uuid: 9c013faf-1422-499a-8b2a-5551448f9f70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_timestamp_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_timestamp_inline
+field_name: field_timestamp_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: timestamp_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 1687014719
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

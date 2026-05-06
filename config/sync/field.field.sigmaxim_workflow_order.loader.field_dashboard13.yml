@@ -1,0 +1,23 @@
+uuid: 9a0e4bcd-044a-4db7-97d1-29aac6ef8677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dashboard13
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_dashboard13
+field_name: field_dashboard13
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: Dashboard
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Standard Dashboard (Tach / Temp / Pressure / Warning Indicators / Lights)'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

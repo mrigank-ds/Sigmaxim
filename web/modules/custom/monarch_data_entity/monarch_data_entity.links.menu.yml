@@ -1,0 +1,10 @@
+entity.data_entity_type.collection:
+  title: 'Data types'
+  description: 'Manage and CRUD actions on Data type.'
+  parent: system.admin_structure
+  route_name: entity.data_entity_type.collection
+data_entity.collection:
+  title: Data
+  route_name: entity.data_entity.collection
+  parent: system.admin_content
+  description: 'See and manage data entities.'

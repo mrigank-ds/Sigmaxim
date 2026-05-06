@@ -1,0 +1,23 @@
+uuid: 55358990-d27f-439c-aa0c-88762c5020cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float39
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float39
+field_name: field_float39
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Set4 Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

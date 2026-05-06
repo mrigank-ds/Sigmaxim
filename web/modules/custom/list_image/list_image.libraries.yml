@@ -1,0 +1,13 @@
+# Library for list image.
+list_image:
+  version: 2.1.x
+  js:
+    js/list_image.js: {}
+  css:
+    component:
+      css/list_image.css: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupalSettings
+    - core/drupal

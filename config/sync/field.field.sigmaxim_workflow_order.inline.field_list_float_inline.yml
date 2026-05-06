@@ -1,0 +1,25 @@
+uuid: 84191be9-6792-4a34-b72e-d3414c0ea7b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_float_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+    - options
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_list_float_inline
+field_name: field_list_float_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: list_float_inline
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

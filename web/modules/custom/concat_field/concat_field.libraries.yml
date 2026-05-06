@@ -1,0 +1,10 @@
+concat_field.admin:
+  version: 1.x
+  css:
+    theme:
+      css/concat_field.admin.css: {}
+  js:
+    js/concat_field.admin.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

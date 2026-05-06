@@ -1,0 +1,30 @@
+uuid: bb5437ec-f998-4a99-a1e0-8dee00a92abc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_name_plate_location
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753691620
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.shipping_cases.field_name_plate_location
+field_name: field_name_plate_location
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Name Plate Location'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: Top_Right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

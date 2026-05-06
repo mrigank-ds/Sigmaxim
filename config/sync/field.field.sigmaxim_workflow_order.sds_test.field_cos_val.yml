@@ -1,0 +1,31 @@
+uuid: e30c5783-0c4c-4125-a94c-f6efb9807ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_cos_val
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.sds_test.field_cos_val
+field_name: field_cos_val
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: Cos_val
+description: 'trigonometric formulas are not working'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 8+cos(45)
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

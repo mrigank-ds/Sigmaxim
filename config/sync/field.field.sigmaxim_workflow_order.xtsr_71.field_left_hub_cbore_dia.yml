@@ -1,0 +1,33 @@
+uuid: 2a0df942-2830-44dc-9796-c1f94f070dc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_cbore_dia
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746187368
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_cbore_dia
+field_name: field_left_hub_cbore_dia
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Hub Counterbore Dia'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: float

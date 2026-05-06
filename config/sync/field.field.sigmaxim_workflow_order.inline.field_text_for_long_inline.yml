@@ -1,0 +1,28 @@
+uuid: 0da53dd0-146b-48fb-8ea7-5a5d07715b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_text_for_long_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+    - text
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_text_for_long_inline
+field_name: field_text_for_long_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: text_for_long_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: "<p>1</p>\r\n\r\n<p>2</p>\r\n\r\n<p>3</p>\r\n\r\n<p>54</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,17 @@
+uuid: 5581549f-202e-44ea-ae72-0b5e8e798762
+langcode: en
+status: true
+dependencies: {  }
+id: ssg_test
+label: ssg_test
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '0'
+product_category: '13'

@@ -1,0 +1,17 @@
+uuid: 95cb5fd8-b159-48c1-89c0-9edac0846016
+langcode: en
+status: true
+dependencies: {  }
+id: valmount
+label: Valmount
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '16'

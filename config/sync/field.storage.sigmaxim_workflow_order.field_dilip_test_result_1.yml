@@ -1,0 +1,21 @@
+uuid: 95759158-85ee-4550-b9b7-96e0ed08ac7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_dilip_test_result_1
+field_name: field_dilip_test_result_1
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

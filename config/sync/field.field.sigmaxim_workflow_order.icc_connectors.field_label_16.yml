@@ -1,0 +1,21 @@
+uuid: 24041724-bbdd-49ca-8276-68c2ff494c3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_16
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_16
+field_name: field_label_16
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'SI request'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_16
+default_value_callback: ''
+settings: {  }
+field_type: string

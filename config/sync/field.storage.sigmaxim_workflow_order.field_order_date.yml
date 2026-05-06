@@ -1,0 +1,24 @@
+uuid: 78d5820f-7240-4fd9-a574-f74c1bdbefbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_order_date
+field_name: field_order_date
+entity_type: sigmaxim_workflow_order
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 8d4ed329-652a-40d6-a41f-de58b8bb1f41
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_no_of_hor_strged_pies
+field_name: field_no_of_hor_strged_pies
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

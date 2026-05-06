@@ -1,0 +1,19 @@
+uuid: 303a1eb1-03f9-4a4f-92b1-8b32e6b3d747
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_read_test
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_read_test
+field_name: field_read_test
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: read_test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

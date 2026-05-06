@@ -1,0 +1,12 @@
+uuid: c1e23113-f830-41b1-9de2-1db0926187c6
+langcode: en
+status: true
+dependencies: {  }
+id: testing_form
+label: 'Testing Form'
+recipients:
+  - nisha.yugasa@gmail.com
+reply: ''
+weight: 0
+message: 'Your Message Has Been Sent'
+redirect: /

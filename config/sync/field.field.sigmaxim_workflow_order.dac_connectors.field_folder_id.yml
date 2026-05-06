@@ -1,0 +1,26 @@
+uuid: be2bd6a8-547c-40d8-b4bb-0e185289bd37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263275
+id: sigmaxim_workflow_order.dac_connectors.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

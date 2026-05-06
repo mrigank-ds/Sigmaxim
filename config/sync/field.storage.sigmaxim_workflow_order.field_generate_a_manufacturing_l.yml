@@ -1,0 +1,22 @@
+uuid: b885c55b-3700-4be9-b2c8-4f16c00d5c5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_generate_a_manufacturing_l
+field_name: field_generate_a_manufacturing_l
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

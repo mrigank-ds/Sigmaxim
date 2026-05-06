@@ -1,0 +1,23 @@
+uuid: f26dbb27-c1d3-4b4a-a65b-f809a994a2e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_18
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_bool_18
+field_name: field_bool_18
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Left Tape'
+description: bool_18
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Left Tape'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 87d98ecc-9137-4f6d-b71b-6b7ffc96dccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_30
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_label_30
+field_name: field_label_30
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Customer Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_30
+default_value_callback: ''
+settings: {  }
+field_type: string

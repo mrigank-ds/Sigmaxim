@@ -1,0 +1,98 @@
+uuid: d4e460db-d7d1-4956-ace1-b6104dad35c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.te_connector.field_color_on
+    - field.field.sigmaxim_workflow_order.te_connector.field_colors
+    - field.field.sigmaxim_workflow_order.te_connector.field_dilip_test_math
+    - field.field.sigmaxim_workflow_order.te_connector.field_exp
+    - field.field.sigmaxim_workflow_order.te_connector.field_folder_id
+    - field.field.sigmaxim_workflow_order.te_connector.field_int_1
+    - field.field.sigmaxim_workflow_order.te_connector.field_int_2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+  module:
+    - conditional_fields
+    - field_expression
+id: sigmaxim_workflow_order.te_connector.default
+targetEntityType: sigmaxim_workflow_order
+bundle: te_connector
+mode: default
+content:
+  field_color_on:
+    type: boolean_checkbox
+    weight: 29
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_colors:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        395bba9e-248b-44a5-b594-6ea2cd6bbcf6:
+          entity_type: sigmaxim_workflow_order
+          bundle: te_connector
+          dependee: field_color_on
+          settings:
+            state: '!visible'
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_dilip_test_math:
+    type: field_expression_default
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_exp:
+    type: expression_editable
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_int_1:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_int_2:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

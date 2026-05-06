@@ -1,0 +1,18 @@
+uuid: 11008045-b5a9-41f6-b3a7-0cee667a66bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_left_min_bore_across_key
+field_name: field_left_min_bore_across_key
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

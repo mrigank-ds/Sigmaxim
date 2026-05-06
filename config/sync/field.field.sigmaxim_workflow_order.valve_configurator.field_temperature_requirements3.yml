@@ -1,0 +1,23 @@
+uuid: 09a5198d-ea2f-46d6-b58e-e092473ca625
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_temperature_requirements3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - options
+id: sigmaxim_workflow_order.valve_configurator.field_temperature_requirements3
+field_name: field_temperature_requirements3
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Temperature Requirements'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

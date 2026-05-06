@@ -1,0 +1,21 @@
+uuid: 5e246b6b-0a60-45b3-b8f0-c301fe64e7ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_addition_d10
+field_name: field_addition_d10
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

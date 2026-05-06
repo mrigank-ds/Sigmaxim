@@ -1,0 +1,270 @@
+<?php
+
+/**
+ * @file
+ * Contains general hooks and alters for Boolean Image module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Link;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\ContentEntityFormInterface;
+use Drupal\Core\Field\FieldConfigInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
+ */
+function boolean_image_form_field_config_edit_form_alter(array &$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  
+  // Check if it is a boolean field
+  if ($field->getType() == 'boolean') {
+    $field_storage_definition = $field->getFieldStorageDefinition();
+    
+    // Get available image styles
+    $image_styles = [];
+    foreach (\Drupal::entityTypeManager()->getStorage('image_style')->loadMultiple() as $id => $image_style) {
+      $image_styles[$id] = $image_style->label();
+    }
+    
+    $form['boolean_image'] = [
+      '#type' => 'details',
+      '#title' => t('Option Images'),
+      '#open' => TRUE,
+      '#tree' => TRUE,
+    ];
+
+    // Image style selection
+    $form['boolean_image']['image_style'] = [
+      '#type' => 'select',
+      '#title' => t('Image style'),
+      '#description' => t('Select image style for option  images.'),
+      '#default_value' => $field_storage_definition->getThirdPartySetting('boolean_image', 'image_style', 'thumbnail'),
+      '#options' => $image_styles,
+    ];
+    
+    // Get field settings for on/off labels
+    $field_settings = $field->getSettings();
+    $on_label = $field_settings['on_label'] ?? 'On';
+    $off_label = $field_settings['off_label'] ?? 'Off';
+    
+    // Image for TRUE/On state
+    $current_on_image = $field_storage_definition->getThirdPartySetting('boolean_image', 'on_image');
+    $on_fid = $current_on_image['image'] ?? NULL;
+    
+    $form['boolean_image']['on_image'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Image for "@label" (TRUE)', ['@label' => $on_label]),
+      '#description' => t('Upload an image for the TRUE/On state.'),
+      '#default_value' => $on_fid ? [$on_fid] : NULL,
+      '#upload_location' => 'public://boolean_image/',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png gif jpg jpeg'],
+      ],
+    ];
+    
+    // Image for FALSE/Off state
+    $current_off_image = $field_storage_definition->getThirdPartySetting('boolean_image', 'off_image');
+    $off_fid = $current_off_image['image'] ?? NULL;
+    
+    $form['boolean_image']['off_image'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Image for "@label" (FALSE)', ['@label' => $off_label]),
+      '#description' => t('Upload an image for the FALSE/Off state.'),
+      '#default_value' => $off_fid ? [$off_fid] : NULL,
+      '#upload_location' => 'public://boolean_image/',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png gif jpg jpeg'],
+      ],
+    ];
+    
+    // Add custom submit handler
+    array_unshift($form['actions']['submit']['#submit'], 'boolean_image_field_config_submit');
+  }
+}
+
+/**
+ * Custom submit handler for field config form.
+ */
+function boolean_image_field_config_submit(array &$form, FormStateInterface $form_state) {
+  $field = $form_state->getFormObject()->getEntity();
+  $field_storage_definition = $field->getFieldStorageDefinition();
+  
+  // Save image style setting
+  $image_style = $form_state->getValue(['boolean_image', 'image_style']);
+  $field_storage_definition->setThirdPartySetting('boolean_image', 'image_style', $image_style);
+  
+  // Process ON image
+  $on_image_data = $form_state->getValue(['boolean_image', 'on_image']);
+  $on_fid = !empty($on_image_data) ? reset($on_image_data) : NULL;
+  
+  if ($on_fid) {
+    // Make file permanent
+    $file = \Drupal::entityTypeManager()->getStorage('file')->load($on_fid);
+    if ($file) {
+      $file->setPermanent();
+      $file->save();
+      
+      // Save the file reference
+      $field_storage_definition->setThirdPartySetting(
+        'boolean_image',
+        'on_image',
+        ['image' => $on_fid]
+      );
+    }
+  } else {
+    // Remove the setting if no image
+    $field_storage_definition->setThirdPartySetting('boolean_image', 'on_image', NULL);
+  }
+  
+  // Process OFF image
+  $off_image_data = $form_state->getValue(['boolean_image', 'off_image']);
+  $off_fid = !empty($off_image_data) ? reset($off_image_data) : NULL;
+  
+  if ($off_fid) {
+    // Make file permanent
+    $file = \Drupal::entityTypeManager()->getStorage('file')->load($off_fid);
+    if ($file) {
+      $file->setPermanent();
+      $file->save();
+      
+      // Save the file reference
+      $field_storage_definition->setThirdPartySetting(
+        'boolean_image',
+        'off_image',
+        ['image' => $off_fid]
+      );
+    }
+  } else {
+    // Remove the setting if no image
+    $field_storage_definition->setThirdPartySetting('boolean_image', 'off_image', NULL);
+  }
+  
+  $field_storage_definition->save();
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function boolean_image_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (!($form_state->getFormObject() instanceof ContentEntityFormInterface)) {
+    return;
+  }
+
+  $entity_form = $form_state->getFormObject();
+  $entity = $entity_form->getEntity();
+  $targets = [];
+  $file_ids = [];
+  $style_ids = [];
+
+  foreach ($entity->getFields() as $field_name => $field) {
+    if (!isset($form[$field_name]['widget'])) {
+      continue;
+    }
+
+    $field_config = $field->getFieldDefinition();
+    if (!($field_config instanceof FieldConfigInterface) || $field_config->getType() !== 'boolean') {
+      continue;
+    }
+
+    $field_storage_config = $field_config->getFieldStorageDefinition();
+    $on_image = $field_storage_config->getThirdPartySetting('boolean_image', 'on_image');
+    $off_image = $field_storage_config->getThirdPartySetting('boolean_image', 'off_image');
+
+    if (empty($on_image['image']) && empty($off_image['image'])) {
+      continue;
+    }
+
+    $image_style = $field_storage_config->getThirdPartySetting('boolean_image', 'image_style', 'thumbnail');
+    $targets[$field_name] = [
+      'image_style' => $image_style,
+      'on_image' => !empty($on_image['image']) ? (int) $on_image['image'] : NULL,
+      'off_image' => !empty($off_image['image']) ? (int) $off_image['image'] : NULL,
+    ];
+
+    if (!empty($image_style)) {
+      $style_ids[$image_style] = $image_style;
+    }
+    if (!empty($on_image['image'])) {
+      $file_ids[(int) $on_image['image']] = (int) $on_image['image'];
+    }
+    if (!empty($off_image['image'])) {
+      $file_ids[(int) $off_image['image']] = (int) $off_image['image'];
+    }
+  }
+
+  if (!$targets) {
+    return;
+  }
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $files = $entity_type_manager->getStorage('file')->loadMultiple(array_values($file_ids));
+  $styles = $entity_type_manager->getStorage('image_style')->loadMultiple(array_values($style_ids));
+  $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+  $attach_library = FALSE;
+
+  foreach ($targets as $field_name => $target) {
+    $markup = '<div class="boolean_image__wrapper">';
+    $has_markup = FALSE;
+
+    if (!empty($target['on_image'])) {
+      $on_image_url = boolean_image_build_image_style_url($target['on_image'], $target['image_style'], $files, $styles, $toolkit_available);
+      if ($on_image_url !== '') {
+        $markup .= '<img class="boolean_image__on" data-boolean-value="1" src="' . htmlspecialchars($on_image_url) . '" style="display:none;" />';
+        $has_markup = TRUE;
+      }
+    }
+
+    if (!empty($target['off_image'])) {
+      $off_image_url = boolean_image_build_image_style_url($target['off_image'], $target['image_style'], $files, $styles, $toolkit_available);
+      if ($off_image_url !== '') {
+        $markup .= '<img class="boolean_image__off" data-boolean-value="0" src="' . htmlspecialchars($off_image_url) . '" style="display:none;" />';
+        $has_markup = TRUE;
+      }
+    }
+
+    if (!$has_markup) {
+      continue;
+    }
+
+    $markup .= '</div>';
+    $form[$field_name]['widget']['#attributes']['class'][] = 'boolean_image__field_input';
+    $form[$field_name]['#attributes']['class'][] = 'boolean_image__field_wrapper';
+    $form[$field_name]['widget']['#suffix'] = Markup::create($markup);
+    $attach_library = TRUE;
+  }
+
+  if ($attach_library) {
+    $form['#attached']['library'][] = 'boolean_image/boolean_image';
+  }
+}
+
+/**
+ * Builds an image URL with the specified image style.
+ */
+function boolean_image_build_image_style_url($image, $image_style, array $files = [], array $styles = [], $toolkit_available = NULL) {
+  $file = $files[$image] ?? \Drupal::entityTypeManager()->getStorage('file')->load($image);
+  if (!$file) {
+    return '';
+  }
+
+  $file_uri = $file->getFileUri();
+
+  if ($toolkit_available === NULL) {
+    $toolkit_available = !empty(\Drupal::service('image.toolkit.manager')->getAvailableToolkits());
+  }
+
+  if (!empty($image_style) && $toolkit_available) {
+    $style = $styles[$image_style] ?? ImageStyle::load($image_style);
+    if ($style) {
+      return $style->buildUrl($file_uri);
+    }
+  }
+
+  return \Drupal::service('file_url_generator')->generateAbsoluteString($file_uri);
+}

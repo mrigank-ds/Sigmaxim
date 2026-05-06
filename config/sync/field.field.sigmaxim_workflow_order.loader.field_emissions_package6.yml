@@ -1,0 +1,23 @@
+uuid: 63d5ad27-c361-4342-9c2c-d33623779ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_emissions_package6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_emissions_package6
+field_name: field_emissions_package6
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Emissions Package'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '49 State'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

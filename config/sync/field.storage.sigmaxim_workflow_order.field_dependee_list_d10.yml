@@ -1,0 +1,33 @@
+uuid: 04a67fd9-c82b-437a-9075-eb379e426de5
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    battery_type: null
+    fuel_type: null
+id: sigmaxim_workflow_order.field_dependee_list_d10
+field_name: field_dependee_list_d10
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: battery_type
+      label: 'Battery Type'
+    -
+      value: fuel_type
+      label: 'Fuel Type'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

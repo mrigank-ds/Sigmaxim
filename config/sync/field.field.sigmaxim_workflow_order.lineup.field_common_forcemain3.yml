@@ -1,0 +1,23 @@
+uuid: df8f2191-d651-42ee-8979-900d4a937e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_common_forcemain3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_common_forcemain3
+field_name: field_common_forcemain3
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Common Forcemain'
+description: common_forcemain3
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Off'
+field_type: boolean

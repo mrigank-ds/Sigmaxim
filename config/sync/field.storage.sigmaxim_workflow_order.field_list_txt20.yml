@@ -1,0 +1,31 @@
+uuid: 294e56b3-56f8-477e-8eb9-65859317b969
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_list_txt20
+field_name: field_list_txt20
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Flag
+      label: Flag
+    -
+      value: Wrap
+      label: Wrap
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 6583722d-d645-4e66-908d-67d3dd993b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_oa_height1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+id: sigmaxim_workflow_order.counter.field_oa_height1
+field_name: field_oa_height1
+entity_type: sigmaxim_workflow_order
+bundle: counter
+label: 'O.A. Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 34.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,31 @@
+uuid: 59b64288-603f-4dca-b09a-8bc7708dba03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_set_screws
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746190832
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_set_screws
+field_name: field_left_hub_set_screws
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Set Screw (keyed fit only)'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

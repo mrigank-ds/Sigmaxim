@@ -1,0 +1,21 @@
+uuid: fd166301-822a-472c-bfcb-bb5e3845f49d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt35
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.icc_connectors.field_list_txt35
+field_name: field_list_txt35
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Right Flip Connector'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

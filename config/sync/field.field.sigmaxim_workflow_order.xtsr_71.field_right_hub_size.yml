@@ -1,0 +1,28 @@
+uuid: 05ffd44a-49e1-42c3-849b-0937d5e83f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_right_hub_size
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746194812
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_right_hub_size
+field_name: field_right_hub_size
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Hub Size'
+description: ''
+required: 1
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

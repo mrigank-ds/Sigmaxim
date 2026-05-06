@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Sigmaxim Data Entity module.
+ */
+
+use Drupal\Core\Extension\Extension;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\field\FieldConfigInterface;
+use Drupal\sigmaxim_data_entity\DataEntityListBuilder;
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function sigmaxim_data_entity_field_widget_info_alter(array &$info) {
+  $info['monarch_data_entity_view']['label'] = new TranslatableMarkup('Advanced Data Reference');
+}
+
+/**
+ * Implements hook_system_info_alter().
+ */
+function sigmaxim_data_entity_system_info_alter(array &$info, Extension $file, $type) {
+  if ($info['type'] === 'module' && $file->getFilename() === 'monarch_data_entity.info.yml') {
+    $info['name'] = 'Data Entity Base';
+    $info['package'] = 'Custom';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function sigmaxim_data_entity_theme_suggestions_data_entity(array $variables) {
+  $entity = $variables["elements"]["#data_entity"];
+
+  return [
+    'data_entity__' . $variables['elements']['#view_mode'],
+    'data_entity__' . $entity->bundle(),
+    'data_entity__' . $entity->bundle() . '__' . $variables['elements']['#view_mode'],
+    'data_entity__' . $entity->id(),
+    'data_entity__' . $entity->id() . '__' . $variables['elements']['#view_mode'],
+  ];
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function sigmaxim_data_entity_preprocess_data_entity(&$var) {
+  if ($var['view_mode'] === 'full' && ($var['content']['#type'] ?? NULL) !== 'table') {
+    $new_content = [
+      '#type' => 'table',
+      '#header' => [
+        t('Column'),
+        t('Value'),
+      ],
+    ];
+
+    foreach ($var['content'] as $field_name => &$field) {
+      if (!empty(Element::children($field))) {
+        $new_content[$field_name]['column'] = ['#markup' => $field['#title'] ?? $field_name];
+        $new_content[$field_name]['value'] = [];
+
+        foreach (Element::children($field) as $key) {
+          $new_content[$field_name]['value'][$key] = &$field[$key];
+        }
+      }
+    }
+
+    $var['content'] = $new_content;
+  }
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function sigmaxim_data_entity_entity_type_build(array &$entity_types) {
+  $handlers = $entity_types["data_entity"]->get('handlers');
+  $handlers['list_builder'] = DataEntityListBuilder::class;
+  $entity_types["data_entity"]->set('handlers', $handlers);
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function sigmaxim_data_entity_entity_presave($entity) {
+  if ($entity instanceof FieldConfigInterface && empty($entity->getThirdPartySetting('sigmaxim_data_entity', 'timestamp'))) {
+    $entity->setThirdPartySetting('sigmaxim_data_entity', 'timestamp', time());
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sigmaxim_data_entity_form_feeds_feed_type_form_alter(&$form, FormStateInterface $form_state) {
+  if (isset($form["processor_configuration"]["update_existing"]["#default_value"])) {
+    $form["processor_configuration"]["update_existing"]["#default_value"] = 2;
+  }
+
+  if (isset($form["processor_configuration"]["update_non_existent"]["#default_value"])) {
+    $form["processor_configuration"]["update_non_existent"]["#default_value"] = '_delete';
+  }
+}

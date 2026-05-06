@@ -1,0 +1,21 @@
+uuid: 9faf96d6-f830-4cbd-be15-f0cfbeb19d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+  module:
+    - options
+id: sigmaxim_workflow_order.ssg_test.field_list_txt4
+field_name: field_list_txt4
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Left Flip Connector'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,243 @@
+uuid: 1b77ec72-a4d5-4d9c-8ca8-99d9d5f30fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.counter.field_90_degree_corner_turn1
+    - field.field.sigmaxim_workflow_order.counter.field__of_sides1
+    - field.field.sigmaxim_workflow_order.counter.field__of_sides2
+    - field.field.sigmaxim_workflow_order.counter.field_folder_id
+    - field.field.sigmaxim_workflow_order.counter.field_oa_height1
+    - field.field.sigmaxim_workflow_order.counter.field_oa_height2
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length1
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length2
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length3
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_12
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_23
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_34
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_45
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_56
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_67
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_78
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_89
+    - field.field.sigmaxim_workflow_order.counter.field_width1
+    - field.field.sigmaxim_workflow_order.counter.field_width2
+    - field.field.sigmaxim_workflow_order.counter.field_width3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.counter.default
+targetEntityType: sigmaxim_workflow_order
+bundle: counter
+mode: default
+content:
+  field_90_degree_corner_turn1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field__of_sides1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field__of_sides2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_oa_height1:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_oa_height2:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_oa_length1:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_oa_length2:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_oa_length3:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_splash_side_12:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_splash_side_23:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_splash_side_34:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_splash_side_45:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_splash_side_56:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_splash_side_67:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_splash_side_78:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_splash_side_89:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_width1:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_width2:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_width3:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

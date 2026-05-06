@@ -1,0 +1,537 @@
+<?php
+
+/**
+ * @file
+ * Provides a data entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\FieldConfigInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_theme().
+ */
+function monarch_data_entity_theme($themes)
+{
+  return [
+    'data_entity' => [
+      'render element' => 'elements',
+    ],
+    'input__view_widget_iframe' => [
+      'render element' => 'element',
+      'base hook' => 'input',
+    ],
+    'html__view_input_view_embed' => [
+      'render element' => 'html',
+      'base hook' => 'html',
+    ],
+    'page__view_input_view_embed' => [
+      'render element' => 'page',
+      'base hook' => 'page',
+    ],
+    'html__view_input_view_embed_admin' => [
+      'render element' => 'html',
+      'base hook' => 'html',
+    ],
+    'page__view_input_view_embed_admin' => [
+      'render element' => 'page',
+      'base hook' => 'page',
+    ],
+    'monarch_data_entity_result_table' => [
+      'variables' => [
+        'header' => [],
+        'rows' => [],
+        'empty' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_data().
+ */
+function monarch_data_entity_views_data()
+{
+  $data = [];
+
+  foreach (\Drupal::entityTypeManager()->getDefinitions() as $entity_type => $entity_info) {
+    if ($base_table = $entity_info->getBaseTable()) {
+      $entity_keys = $entity_info->get('entity_keys');
+      $data[$base_table]['view_input_selector'] = [
+        'title' => t('Input Selector'),
+        'help' => t('Display input selector for views embedded for input.'),
+        'field' => [
+          'id' => 'view_input_selector',
+          'real field' => $entity_keys['id'],
+        ],
+      ];
+    }
+  }
+
+  return $data;
+}
+
+/**
+ * Prepares variables for data templates.
+ *
+ * Default template: data-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the data information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function monarch_data_entity_preprocess_data_entity(array &$variables)
+{
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function monarch_data_entity_preprocess_input__view_widget_iframe(&$var)
+{
+  $var['height'] = $var['element']['#height'] ?? ((9 / 16) . '%');
+  $var['cardinality'] = $var['element']['#cardinality'] ?? 1;
+  $view_name = $var['element']['#view_name'] ?? NULL;
+  $view_display_id = $var['element']['#view_display_id'] ?? NULL;
+  $view_args = $var['element']['#view_args'] ?? [];
+  $view_filter_tokens = $var['element']['#view_filter_tokens'] ?? [];
+
+  if ($view_name && $view_display_id) {
+    $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+
+    $route_params = [
+      'view_name' => $view_name,
+      'view_display_id' => $view_display_id,
+      'view_arguments' => base64_encode(json_encode($view_args)),
+    ];
+
+    $options = [];
+    if (!empty($view_filter_tokens)) {
+      $options['query']['filter_tokens'] = base64_encode(json_encode($view_filter_tokens));
+    }
+
+    $url = Url::fromRoute('monarch_data_entity.view_input_view_embed.' . ($is_admin ? 'admin' : 'normal'), $route_params, $options);
+
+    $var['view_url'] = $url->toString();
+  }
+}
+
+/**
+ * Implements hook_preprocess_page__entity_browser__iframe().
+ */
+function monarch_data_entity_preprocess_page__view_input_view_embed(&$variables)
+{
+  if (!\Drupal::moduleHandler()->moduleExists('block')) {
+    return;
+  }
+  $variables['messages'] = '';
+  $blocks = \Drupal::entityTypeManager()->getStorage('block')->loadByProperties([
+    'theme' => \Drupal::theme()->getActiveTheme()->getName(),
+    'plugin' => 'system_messages_block',
+  ]);
+
+  if ($messages = current($blocks)) {
+    /** @var \Drupal\block\BlockInterface $messages */
+    if (!empty($variables['page'][$messages->getRegion()][$messages->id()])) {
+      $variables['messages'] = $variables['page'][$messages->getRegion()][$messages->id()];
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
+ *
+ */
+function monarch_data_entity_form_field_config_edit_form_alter(array &$form, FormStateInterface $form_state)
+{
+  $field = $form_state->getFormObject()->getEntity();
+  if (!($field instanceof FieldConfigInterface)) {
+    return;
+  }
+
+  $target_type = $field->getFieldStorageDefinition()->getSetting('target_type') ?? $field->getSetting('target_type');
+  if (empty($target_type)) {
+    return;
+  }
+
+  $entity_field_manager = \Drupal::service('entity_field.manager');
+  $entity_type_manager = \Drupal::entityTypeManager();
+
+  $handler_settings = $field->getSetting('handler_settings');
+  $target_bundles = $handler_settings['target_bundles'] ?? [];
+  $target_bundle = !empty($target_bundles) ? reset($target_bundles) : NULL;
+
+  if ($target_bundle) {
+    $target_field_definitions = $entity_field_manager->getFieldDefinitions($target_type, $target_bundle);
+  } else {
+    $target_field_definitions = $entity_field_manager->getBaseFieldDefinitions($target_type);
+  }
+
+  // Load the primary keys from the DataEntityType config entity.
+  $primary_keys = [];
+  if ($target_bundle) {
+    $bundle_entity = $entity_type_manager->getStorage('data_entity_type')->load($target_bundle);
+    if ($bundle_entity && method_exists($bundle_entity, 'getPrimaryKeys')) {
+      $primary_keys = $bundle_entity->getPrimaryKeys();
+    }
+  }
+
+  // Get the active widget for this field to conditionally show settings.
+  // We need to look at the entity type and bundle where this field is attached.
+  $host_entity_type = $field->getTargetEntityTypeId();
+  $host_bundle = $field->getTargetBundle();
+  $form_display = \Drupal\Core\Entity\Entity\EntityFormDisplay::load("$host_entity_type.$host_bundle.default");
+  $widget_type = NULL;
+  if ($form_display) {
+    if ($component = $form_display->getComponent($field->getName())) {
+      $widget_type = $component['type'];
+    }
+  }
+
+  // We use the 'monarch_data_entity' namespace for third party settings now.
+  $weights = $field->getThirdPartySetting('monarch_data_entity', 'weights', []);
+  $rows = [];
+  $excluded_fields = [
+    'id',
+    'uuid',
+    'bundle',
+    'label',
+    'status',
+    'created',
+    'changed',
+    'feeds_item',
+    'default_langcode',
+    'revision_translation_affected'
+  ];
+
+  foreach ($target_field_definitions as $field_name => $target_field_definition) {
+    if (in_array($field_name, $excluded_fields)) {
+      continue;
+    }
+
+    $label = $target_field_definition->getLabel();
+
+    $is_primary_key = in_array($field_name, $primary_keys);
+    if ($is_primary_key) {
+      $label .= ' (primary key)';
+    }
+
+    $rows[$field_name] = [
+      'title' => (string) $label,
+      'weight' => $weights[$field_name]['weight'] ?? 0,
+      'token' => $weights[$field_name]['token'] ?? '',
+      'enabled' => $weights[$field_name]['enabled'] ?? TRUE, // Default to true for new ones
+    ];
+
+    if ($widget_type === 'sigmaxim_simple_data_reference' && $is_primary_key) {
+      $rows[$field_name]['visibility'] = $weights[$field_name]['visibility'] ?? TRUE;
+    }
+  }
+
+  // // Add virtual __pkc row.
+  // $rows['__pkc'] = [
+  //   'title' => '__pkc',
+  //   'weight' => $weights['__pkc']['weight'] ?? 100,
+  //   'token' => $weights['__pkc']['token'] ?? '',
+  //   'enabled' => $weights['__pkc']['enabled'] ?? FALSE,
+  // ];
+  // if ($widget_type === 'sigmaxim_simple_data_reference') {
+  //   $rows['__pkc']['visibility'] = $weights['__pkc']['visibility'] ?? FALSE;
+  // }
+
+  uasort($rows, function ($a, $b) {
+    return (int) $a['weight'] - (int) $b['weight'];
+  });
+
+  $form['monarch_data_entity_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Data Reference Column Settings'),
+    '#open' => TRUE,
+    '#weight' => 10,
+  ];
+
+  $header = [
+    t('Column'),
+    t('Weight'),
+    t('Filter Token'),
+    t('Display'),
+  ];
+  if ($widget_type === 'sigmaxim_simple_data_reference') {
+    $header[] = t('Visibility');
+  }
+
+  $form['monarch_data_entity_settings']['weights'] = [
+    '#type' => 'table',
+    '#header' => $header,
+    '#tabledrag' => [
+      [
+        'action' => 'order',
+        'relationship' => 'sibling',
+        'group' => 'table-sort-weight',
+      ],
+    ],
+    '#tree' => TRUE,
+  ];
+
+  foreach ($rows as $name => $info) {
+    $form['monarch_data_entity_settings']['weights'][$name] = [
+      '#attributes' => ['class' => ['draggable']],
+      '#weight' => $info['weight'],
+      'name' => [
+        '#markup' => $info['title'] . '<div style="color:#747474; font-size: 0.9em;">ID: <em>' . $name . '</em></div>',
+      ],
+      'weight' => [
+        '#type' => 'weight',
+        '#title' => t('Weight for @title', ['@title' => $info['title']]),
+        '#title_display' => 'invisible',
+        '#default_value' => $info['weight'],
+        '#attributes' => ['class' => ['table-sort-weight']],
+      ],
+      'token' => [
+        '#type' => 'textfield',
+        '#default_value' => $info['token'],
+      ],
+      'enabled' => [
+        '#type' => 'checkbox',
+        '#default_value' => $info['enabled'],
+      ],
+    ];
+
+    if ($widget_type === 'sigmaxim_simple_data_reference' && isset($info['visibility'])) {
+      $form['monarch_data_entity_settings']['weights'][$name]['visibility'] = [
+        '#type' => 'checkbox',
+        '#default_value' => $info['visibility'],
+      ];
+    } elseif ($widget_type === 'sigmaxim_simple_data_reference') {
+      // Create empty placeholder so table columns map correctly
+      $form['monarch_data_entity_settings']['weights'][$name]['visibility'] = [
+        '#markup' => '',
+      ];
+    }
+  }
+
+  $form['actions']['submit']['#submit'][] = 'monarch_data_entity_field_config_edit_form_submit';
+}
+
+/**
+ * Submit handler for the field config edit form.
+ */
+function monarch_data_entity_field_config_edit_form_submit($form, FormStateInterface $form_state)
+{
+  $field = $form_state->getFormObject()->getEntity();
+  $weights = $form_state->getValue('weights') ?: $form_state->getValue(['monarch_data_entity_settings', 'weights']);
+
+  if ($weights) {
+    $field->setThirdPartySetting('monarch_data_entity', 'weights', $weights);
+    $field->save();
+  }
+}
+
+/**
+ * JSON callback for getting the result table.
+ */
+function monarch_data_entity_json_data_reference_get_result_table($field_name, $bundle, $entity_type, $values)
+{
+  $field_definition = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle)[$field_name];
+  if (!$field_definition) {
+    return ['success' => FALSE, 'message' => 'Field not found'];
+  }
+
+  $target_type = $field_definition->getFieldStorageDefinition()->getSetting('target_type');
+  $storage = \Drupal::entityTypeManager()->getStorage($target_type);
+
+  // load the form display to get the widget settings.
+  $form_display = \Drupal\Core\Entity\Entity\EntityFormDisplay::load("$entity_type.$bundle.default");
+
+  $weights = [];
+  if ($field_definition instanceof \Drupal\Core\Config\Entity\ThirdPartySettingsInterface) {
+    $weights = $field_definition->getThirdPartySetting('monarch_data_entity', 'weights');
+  }
+
+  if (empty($weights)) {
+    $widget_settings = $form_display->getComponent($field_name)['settings'] ?? [];
+    $weights = $widget_settings['weights'] ?? [];
+  }
+
+  // Sort weights.
+  uasort($weights, function ($a, $b) {
+    return ($a['weight'] ?? 0) - ($b['weight'] ?? 0);
+  });
+
+  $query = $storage->getQuery()->accessCheck(FALSE);
+  if (!empty($values['target_id'])) {
+    $target_ids = explode(',', $values['target_id']);
+    $query->condition($storage->getEntityType()->getKey('id'), reset($target_ids));
+  } else {
+    foreach ($values as $col => $val) {
+      if (!empty($val) && $storage->getEntityType()->hasKey($col)) {
+        $query->condition($col, $val);
+      }
+    }
+  }
+
+  $ids = $query->execute();
+  if (empty($ids)) {
+    return ['success' => TRUE, 'data' => []];
+  }
+
+  $entity = $storage->load(reset($ids));
+  if (!$entity) {
+    return ['success' => TRUE, 'data' => []];
+  }
+
+  if (!($entity instanceof \Drupal\Core\Entity\FieldableEntityInterface)) {
+    return ['success' => TRUE, 'data' => []];
+  }
+
+  // Check if any configured weight has an enabled field that exists on the entity.
+  $has_valid_field = FALSE;
+  if (!empty($weights)) {
+    foreach ($weights as $fw => $fi) {
+      if (!empty($fi['enabled']) && $entity->hasField($fw)) {
+        $has_valid_field = TRUE;
+        break;
+      }
+    }
+  }
+
+  if (!$has_valid_field) {
+    $excluded_fields = [
+      'id',
+      'uuid',
+      'bundle',
+      'label',
+      'status',
+      'created',
+      'changed',
+      'feeds_item',
+      'default_langcode',
+      'revision_translation_affected'
+    ];
+    $new_weights = [];
+    $weight_counter = 0;
+    foreach ($entity->getFields() as $tfn => $field_item) {
+      if (!in_array($tfn, $excluded_fields)) {
+        $new_weights[$tfn] = [
+          'enabled' => TRUE,
+          'title' => (string) $field_item->getFieldDefinition()->getLabel(),
+          'weight' => $weight_counter++,
+        ];
+      }
+    }
+    $new_weights['__pkc'] = ['enabled' => FALSE, 'title' => '__pkc', 'weight' => 100];
+    $weights = $new_weights;
+  }
+
+  // Sort weights.
+  uasort($weights, function ($a, $b) {
+    return ($a['weight'] ?? 0) - ($b['weight'] ?? 0);
+  });
+
+  $data = [];
+  foreach ($weights as $field_name_target => $info) {
+    if (!empty($info['enabled'])) {
+      $label = $info['title'] ?? (isset($entity) && $entity->hasField($field_name_target) ? $entity->get($field_name_target)->getFieldDefinition()->getLabel() : $field_name_target);
+
+      if (isset($entity) && $entity->hasField($field_name_target)) {
+        $field_item = $entity->get($field_name_target);
+        $value = $field_item->value ?? $field_item->target_id;
+
+        // If it's a reference field, try to get the label of the referenced entity.
+        if (isset($field_item->entity)) {
+          $value = $field_item->entity->label();
+        }
+
+        $data[] = [
+          'column' => (string) $label,
+          'value' => (string) $value,
+          'weight' => $info['weight'] ?? 0,
+        ];
+      } elseif ($field_name_target == '__pkc') {
+        $data[] = [
+          'column' => (string) $label,
+          'value' => '',
+          'weight' => $info['weight'] ?? 0,
+        ];
+      }
+    }
+  }
+
+  return ['success' => TRUE, 'data' => $data];
+}
+
+/**
+ * Implements hook_views_query_alter().
+ *
+ */
+function monarch_data_entity_views_query_alter($view, $query)
+{
+  $request = \Drupal::request();
+  $filter_tokens_param = $request->query->get('filter_tokens');
+
+  if (!$filter_tokens_param) {
+    return;
+  }
+
+  $filters = json_decode(base64_decode($filter_tokens_param), TRUE);
+  if (!is_array($filters) || empty($filters)) {
+    return;
+  }
+
+  $base_table = $view->storage->get('base_table');
+  $entity_type = $view->getBaseEntityType();
+  if (!$entity_type) {
+    return;
+  }
+  $entity_type_id = $entity_type->id();
+
+  // Determine the correct column for each filter field.
+  $field_storage_definitions = \Drupal::service('entity_field.manager')->getFieldStorageDefinitions($entity_type_id);
+
+  // Build a lowercase map for case insensitive lookup.
+  $storage_by_lc = [];
+  foreach ($field_storage_definitions as $name => $def) {
+    $storage_by_lc[strtolower($name)] = $def;
+  }
+
+  foreach ($filters as $field_name => $value) {
+    if ($value === NULL || $value === '') {
+      continue;
+    }
+
+    $field_name_lc = strtolower($field_name);
+    $storage_definition = $storage_by_lc[$field_name_lc] ?? $storage_by_lc['field_' . $field_name_lc] ?? NULL;
+
+    if (!$storage_definition) {
+      $query->addWhere(0, "$base_table.$field_name", $value, '=');
+      continue;
+    }
+
+    $effective_field_name = $storage_definition->getName();
+    $is_base_field = method_exists($storage_definition, 'isBaseField') ? $storage_definition->isBaseField() : TRUE;
+
+    if (!$is_base_field) {
+      $field_table = $base_table . '__' . $effective_field_name;
+      $main_property = $storage_definition->getMainPropertyName() ?: 'value';
+      $column_name = "{$effective_field_name}_{$main_property}";
+
+      $table_alias = $query->ensureTable($field_table);
+      if ($table_alias) {
+        $query->addWhere(0, "$table_alias.$column_name", $value, '=');
+      }
+    } else {
+      $query->addWhere(0, "$base_table.$effective_field_name", $value, '=');
+    }
+  }
+}

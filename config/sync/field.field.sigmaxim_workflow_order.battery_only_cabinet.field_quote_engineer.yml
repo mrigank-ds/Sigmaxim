@@ -1,0 +1,29 @@
+uuid: 7371f416-f349-44be-b82d-ec8fbd6d240f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_quote_engineer
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700482140
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.battery_only_cabinet.field_quote_engineer
+field_name: field_quote_engineer
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: 'Quote Engineer'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: MO1245AF_QE
+default_value_callback: ''
+settings: {  }
+field_type: string

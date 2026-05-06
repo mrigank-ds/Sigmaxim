@@ -1,0 +1,37 @@
+uuid: f489a3a9-087c-427c-a6cd-50c98cdddf00
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_balance_grade
+field_name: field_balance_grade
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'ISO 1940 G6.3'
+      label: 'ISO 1940 G6.3'
+    -
+      value: 'ISO 1940 G2.5'
+      label: 'ISO 1940 G2.5'
+    -
+      value: 'ISO 1940 G1.0'
+      label: 'ISO 1940 G1.0'
+    -
+      value: 'Rexnord 4W/N'
+      label: 'Rexnord 4W/N'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

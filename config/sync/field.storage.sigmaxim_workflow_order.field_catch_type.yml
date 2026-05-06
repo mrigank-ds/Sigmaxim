@@ -1,0 +1,31 @@
+uuid: ea844380-9c1d-4c62-882e-bea62133cc04
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_catch_type
+field_name: field_catch_type
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1748'
+      label: '1748'
+    -
+      value: '1779'
+      label: '1779'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 9fcb8b52-e900-4dd6-b0f0-8a1a4c7893e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_control_module3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_control_module3
+field_name: field_control_module3
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Control Module'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

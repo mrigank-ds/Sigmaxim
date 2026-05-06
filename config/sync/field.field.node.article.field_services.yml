@@ -1,0 +1,31 @@
+uuid: c423edbe-453e-479e-bcb3-d9592883a7b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services
+    - node.type.article
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700740002
+  field_inline_label:
+    inline_label: 0
+id: node.article.field_services
+field_name: field_services
+entity_type: node
+bundle: article
+label: Services
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

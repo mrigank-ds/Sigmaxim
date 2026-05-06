@@ -1,0 +1,23 @@
+uuid: c0cb59b8-910d-4ff0-b6e3-0a8854530f33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_bool1
+field_name: field_bool1
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: bool1
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '10'
+  off_label: '20'
+field_type: boolean

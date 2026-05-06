@@ -1,0 +1,17 @@
+uuid: ed50b007-0ad1-49dc-9467-c20104bee2f6
+langcode: en
+status: true
+dependencies: {  }
+id: xtsr_71
+label: 'XTSR 71'
+description: 'Coupling Advance XT Series'
+group: null
+name: null
+value: null
+watched_folder: order/Couplings
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '43'

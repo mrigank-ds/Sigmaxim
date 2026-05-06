@@ -1,0 +1,23 @@
+uuid: 1ce15fc1-8aa3-4e4f-b0f8-d0863fab529d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_int_2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+id: sigmaxim_workflow_order.te_connector.field_int_2
+field_name: field_int_2
+entity_type: sigmaxim_workflow_order
+bundle: te_connector
+label: 'int 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

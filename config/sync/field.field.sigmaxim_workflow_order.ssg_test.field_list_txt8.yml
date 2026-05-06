@@ -1,0 +1,21 @@
+uuid: 56538f96-11a4-4ad6-b2c0-4aff24ef3c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+  module:
+    - options
+id: sigmaxim_workflow_order.ssg_test.field_list_txt8
+field_name: field_list_txt8
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: P2_Left_PullTab
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

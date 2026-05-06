@@ -1,0 +1,30 @@
+uuid: f83d8aa9-107f-46d8-b81c-762ef18f02e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_balance_grade
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1744903594
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_balance_grade
+field_name: field_balance_grade
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Balance Grade'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: 'ISO 1940 G6.3'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

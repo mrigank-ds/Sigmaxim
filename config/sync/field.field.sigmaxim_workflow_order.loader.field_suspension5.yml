@@ -1,0 +1,23 @@
+uuid: 57f3e250-0471-4847-83a1-61b36ce34951
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_suspension5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_suspension5
+field_name: field_suspension5
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: Suspension
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Standard Travel'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

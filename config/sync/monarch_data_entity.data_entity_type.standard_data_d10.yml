@@ -1,0 +1,7 @@
+uuid: 4e383a4b-59a1-44e5-9891-e53bb77ec2b0
+langcode: en
+status: true
+dependencies: {  }
+id: standard_data_d10
+label: Standard_Data_D10
+primary_keys: {  }

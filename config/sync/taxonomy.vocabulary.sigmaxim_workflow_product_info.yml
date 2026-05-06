@@ -1,0 +1,11 @@
+uuid: 5dbb5f23-fd32-4556-9d0d-b96ad0245b2e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: APaBPzHtg1JyMs_-fTUIK5wrFs1Qw2YoPn4rRPDBCSM
+name: 'Product Information'
+vid: sigmaxim_workflow_product_info
+description: null
+weight: 0
+new_revision: false

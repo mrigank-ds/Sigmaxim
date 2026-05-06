@@ -1,0 +1,446 @@
+uuid: a18fef34-62ce-445f-ba98-7e8bfc85a5d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_add_name_on_a_name_plate
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_blue1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bom_routing_sheet_quote
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bool1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bool_15
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_case_color
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_case_depth
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_caster
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_catch_type
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_corner_type_
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_creoview
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_dxf
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_first_name_on_plate
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_float1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_folder_id
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_green
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_handle_type
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_iges
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_length
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_lid_height
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_name_plate_location
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_order_name
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_pdf
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_red
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_shrinkwrap
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_standard_color_
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_step
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_width
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - conditional_fields
+    - field_group
+    - field_group_image
+    - readonly_field_widget
+third_party_settings:
+  field_group:
+    group_case_tabs:
+      children:
+        - group_case_dimensions
+        - group_color_settings
+        - group_additional_options
+        - group_output_formats
+      label: 'case tabs'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_color_settings:
+      children:
+        - field_standard_color_
+        - field_case_color
+        - group_custom_color
+      label: 'Color Settings'
+      region: content
+      parent_name: group_case_tabs
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+    group_case_dimensions:
+      children:
+        - field_length
+        - field_width
+        - field_case_depth
+        - field_lid_height
+      label: 'Case Dimensions'
+      region: content
+      parent_name: group_case_tabs
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_custom_color:
+      children:
+        - field_red
+        - field_green
+        - field_blue1
+      label: 'Custom Color'
+      region: content
+      parent_name: group_color_settings
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_additional_options:
+      children:
+        - group_name_plate
+        - group_hardware_selection
+      label: 'Additional Options'
+      region: content
+      parent_name: group_case_tabs
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+    group_name_plate:
+      children:
+        - field_add_name_on_a_name_plate
+        - field_first_name_on_plate
+        - field_name_plate_location
+      label: 'Name Plate'
+      region: content
+      parent_name: group_additional_options
+      weight: 39
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_hardware_selection:
+      children:
+        - field_corner_type_
+        - field_handle_type
+        - field_catch_type
+        - field_caster
+      label: 'Hardware Selection'
+      region: content
+      parent_name: group_additional_options
+      weight: 40
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_output_formats:
+      children:
+        - field_pdf
+        - field_dxf
+        - field_shrinkwrap
+        - field_step
+        - field_iges
+        - field_creoview
+        - field_bom_routing_sheet_quote
+      label: 'Output Formats'
+      region: content
+      parent_name: group_case_tabs
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+        direction: horizontal
+        width_breakpoint: 640
+  field_group_image:
+    group_case_dimensions:
+      image: 228
+      image_style: large
+      image_position: right
+id: sigmaxim_workflow_order.shipping_cases.default
+targetEntityType: sigmaxim_workflow_order
+bundle: shipping_cases
+mode: default
+content:
+  field_add_name_on_a_name_plate:
+    type: boolean_checkbox
+    weight: 53
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_blue1:
+    type: number
+    weight: 51
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_bom_routing_sheet_quote:
+    type: boolean_checkbox
+    weight: 42
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_case_color:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        579a099d-3d25-4e42-a3bc-6444734441e6:
+          entity_type: sigmaxim_workflow_order
+          bundle: shipping_cases
+          dependee: field_standard_color_
+          settings:
+            state: '!visible'
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_case_depth:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_caster:
+    type: options_buttons
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_catch_type:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_corner_type_:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_creoview:
+    type: boolean_checkbox
+    weight: 41
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dxf:
+    type: boolean_checkbox
+    weight: 37
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_first_name_on_plate:
+    type: string_textfield
+    weight: 54
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        89cd5d90-9360-49d4-8161-db301ba613bc:
+          entity_type: sigmaxim_workflow_order
+          bundle: shipping_cases
+          dependee: field_add_name_on_a_name_plate
+          settings:
+            state: '!visible'
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+        8b72a5d7-7857-42c0-b688-94ca7987e1c5:
+          entity_type: sigmaxim_workflow_order
+          bundle: shipping_cases
+          dependee: field_add_name_on_a_name_plate
+          settings:
+            state: required
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_green:
+    type: number
+    weight: 50
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_handle_type:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_iges:
+    type: boolean_checkbox
+    weight: 40
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_length:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_lid_height:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_name_plate_location:
+    type: options_buttons
+    weight: 55
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_order_name:
+    type: readonly_field_widget
+    weight: 0
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_pdf:
+    type: boolean_checkbox
+    weight: 36
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_red:
+    type: number
+    weight: 49
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_shrinkwrap:
+    type: boolean_checkbox
+    weight: 38
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_standard_color_:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_step:
+    type: boolean_checkbox
+    weight: 39
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_width:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  group_custom_color:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        8b2d7c36-e9fd-433f-94d1-0938b1259c8d:
+          entity_type: sigmaxim_workflow_order
+          bundle: shipping_cases
+          dependee: field_standard_color_
+          settings:
+            state: '!visible'
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+hidden:
+  field_bool1: true
+  field_bool_15: true
+  field_float1: true
+  field_folder_id: true
+  name: true
+  user_id: true

@@ -1,0 +1,23 @@
+uuid: e4996fdf-db81-4e3d-b568-ff623e054e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float13
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float13
+field_name: field_float13
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Tubing Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

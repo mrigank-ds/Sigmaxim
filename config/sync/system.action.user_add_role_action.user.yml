@@ -1,0 +1,14 @@
+uuid: 06ea5749-6adc-4266-991c-f0ef3681cc6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.user
+  module:
+    - user
+id: user_add_role_action.user
+label: 'Add the User role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: user

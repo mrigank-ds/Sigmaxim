@@ -1,0 +1,37 @@
+uuid: 7c222114-30c2-4a14-895c-6e2d5faf96fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_ther_opt_boc
+    - monarch_data_entity.data_entity_type.boc_thermal_options
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737529635
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.battery_only_cabinet.field_ther_opt_boc
+field_name: field_ther_opt_boc
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: THERMAL_OPTIONS
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      boc_thermal_options: boc_thermal_options
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

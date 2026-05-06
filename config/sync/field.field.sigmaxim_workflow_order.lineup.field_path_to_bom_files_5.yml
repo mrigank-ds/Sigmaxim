@@ -1,0 +1,21 @@
+uuid: ff33365b-c18b-4bba-a7ca-67b0c7b29e42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_path_to_bom_files_5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_path_to_bom_files_5
+field_name: field_path_to_bom_files_5
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Path to BOM Files'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'C:\SIGMAXIM\SA_Library\component_engine\Demos\SDS-Lineup\model_builder_data'
+default_value_callback: ''
+settings: {  }
+field_type: string

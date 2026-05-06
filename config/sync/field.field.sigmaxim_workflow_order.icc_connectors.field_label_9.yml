@@ -1,0 +1,21 @@
+uuid: da5ea8d6-f162-4080-9e6b-112e1b50d507
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_9
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_9
+field_name: field_label_9
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P6 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_9
+default_value_callback: ''
+settings: {  }
+field_type: string

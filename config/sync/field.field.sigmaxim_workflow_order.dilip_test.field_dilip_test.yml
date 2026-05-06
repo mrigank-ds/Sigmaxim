@@ -1,0 +1,28 @@
+uuid: 2b7c7afd-be92-4a78-a576-889e4001097a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_dilip_test
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1775114139
+id: sigmaxim_workflow_order.dilip_test.field_dilip_test
+field_name: field_dilip_test
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: DILIP_TEST
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 10.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

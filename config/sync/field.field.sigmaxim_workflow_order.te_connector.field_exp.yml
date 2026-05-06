@@ -1,0 +1,31 @@
+uuid: a28c64ea-5c66-45ab-b146-943c6145a375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_exp
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.te_connector.field_exp
+field_name: field_exp
+entity_type: sigmaxim_workflow_order
+bundle: te_connector
+label: 'Exp integer'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '[sigmaxim_workflow_order:field_int_1] - [sigmaxim_workflow_order:field_int_2]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

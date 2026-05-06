@@ -1,0 +1,30 @@
+uuid: 4096e52f-6429-41c8-923e-0d0dd610a1f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_taper_rate
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746189664
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_taper_rate
+field_name: field_left_hub_taper_rate
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Taper Rate'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '8'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

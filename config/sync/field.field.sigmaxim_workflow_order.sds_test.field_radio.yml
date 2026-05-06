@@ -1,0 +1,21 @@
+uuid: fcb93c8e-f418-4ef9-b769-7aa364c080f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_radio
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - options
+id: sigmaxim_workflow_order.sds_test.field_radio
+field_name: field_radio
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: 'Radio '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: 30ca980f-2785-41a4-9078-3fd0f46ea309
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_vessel_orientation
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751868911
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.pressure_vessel.field_vessel_orientation
+field_name: field_vessel_orientation
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Vessel Orientation'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: Vertical
+default_value_callback: ''
+settings: {  }
+field_type: list_string

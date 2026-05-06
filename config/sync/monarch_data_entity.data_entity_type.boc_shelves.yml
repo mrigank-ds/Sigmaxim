@@ -1,0 +1,6 @@
+uuid: c61254f7-338b-4c88-875a-605185d93edc
+langcode: en
+status: true
+dependencies: {  }
+id: boc_shelves
+label: BOC_SHELVES

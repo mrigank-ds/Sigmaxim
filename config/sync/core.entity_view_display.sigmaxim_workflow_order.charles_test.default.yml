@@ -1,0 +1,70 @@
+uuid: 3171e6b4-f9ce-4ba8-aaa2-72a6548d77af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.charles_test.field_extra_info
+    - field.field.sigmaxim_workflow_order.charles_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.charles_test.field_plain_text
+    - field.field.sigmaxim_workflow_order.charles_test.field_project_number
+    - field.field.sigmaxim_workflow_order.charles_test.field_types
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+  module:
+    - field_expression
+    - options
+    - text
+    - user
+id: sigmaxim_workflow_order.charles_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: charles_test
+mode: default
+content:
+  field_extra_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_plain_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_number:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_types:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

@@ -1,0 +1,23 @@
+uuid: f21fef46-7609-4881-bb59-a8925e81d04c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_current_rating8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_current_rating8
+field_name: field_current_rating8
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Current Rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '210'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

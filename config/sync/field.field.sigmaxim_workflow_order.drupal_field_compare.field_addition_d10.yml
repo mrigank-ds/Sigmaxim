@@ -1,0 +1,36 @@
+uuid: 1ef84ce9-23b6-48f7-82e3-2aabc2d6b115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_addition_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757366382
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.drupal_field_compare.field_addition_d10
+field_name: field_addition_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: Addition
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  expression: '[sigmaxim_workflow_order:field_first_input_d10]+[sigmaxim_workflow_order:field_second_input_d10]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

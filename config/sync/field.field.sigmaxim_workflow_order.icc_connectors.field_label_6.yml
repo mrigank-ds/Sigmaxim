@@ -1,0 +1,21 @@
+uuid: 8d5c4d64-f950-4a93-b000-e845ab4c7e0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_6
+field_name: field_label_6
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P3 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_6
+default_value_callback: ''
+settings: {  }
+field_type: string

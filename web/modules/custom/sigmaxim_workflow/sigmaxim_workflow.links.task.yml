@@ -1,0 +1,23 @@
+# Products routing definition
+
+entity.sigmaxim_workflow_order.canonical:
+  route_name: entity.sigmaxim_workflow_order.canonical
+  base_route: entity.sigmaxim_workflow_order.canonical
+  title: 'View'
+
+entity.sigmaxim_workflow_order.edit_form:
+  route_name: entity.sigmaxim_workflow_order.edit_form
+  base_route: entity.sigmaxim_workflow_order.canonical
+  title: 'Edit'
+
+entity.sigmaxim_workflow_order.version_history:
+  route_name: entity.sigmaxim_workflow_order.version_history
+  base_route: entity.sigmaxim_workflow_order.canonical
+  title: 'Revisions'
+
+entity.sigmaxim_workflow_order.delete_form:
+  route_name:  entity.sigmaxim_workflow_order.delete_form
+  base_route:  entity.sigmaxim_workflow_order.canonical
+  title: Delete
+  weight: 10
+  

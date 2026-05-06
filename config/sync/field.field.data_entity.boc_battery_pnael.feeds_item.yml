@@ -1,0 +1,26 @@
+uuid: 8ab78e7c-deb5-488c-aebc-9ee0266dbfc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.feeds_item
+    - monarch_data_entity.data_entity_type.boc_battery_pnael
+  module:
+    - feeds
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737526713
+id: data_entity.boc_battery_pnael.feeds_item
+field_name: feeds_item
+entity_type: data_entity
+bundle: boc_battery_pnael
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

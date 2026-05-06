@@ -1,0 +1,27 @@
+uuid: e87f8074-739d-47fd-a437-43003a38438a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field__engineer
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charger_battery_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700484333
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.charger_battery_cabinet.field__engineer
+field_name: field__engineer
+entity_type: sigmaxim_workflow_order
+bundle: charger_battery_cabinet
+label: Engineer
+description: ''
+required: 0
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 2655a26a-7f60-4040-b793-1182dfdad1c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_order_name
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1718026194
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.shipping_cases.field_order_name
+field_name: field_order_name
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Order name'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: '1880661556-07/02/2024 - 06:29'
+default_value_callback: ''
+settings: {  }
+field_type: string

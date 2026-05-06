@@ -1,0 +1,38 @@
+uuid: 2d2eec56-3af1-47bf-a9e6-97f473b793d4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f1e090d5-574d-4756-81ca-bc7b5d0e8c19'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - sigmaxim
+id: systemadministratordashboard
+theme: sigmaxim
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:f1e090d5-574d-4756-81ca-bc7b5d0e8c19'
+settings:
+  id: 'block_content:f1e090d5-574d-4756-81ca-bc7b5d0e8c19'
+  label: 'System Administrator Dashboard'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

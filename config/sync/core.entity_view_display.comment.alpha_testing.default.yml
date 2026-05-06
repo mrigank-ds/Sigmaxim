@@ -1,0 +1,27 @@
+uuid: 57c035e7-df23-4005-8386-d4906fc891af
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.alpha_testing
+    - field.field.comment.alpha_testing.comment_body
+  module:
+    - text
+id: comment.alpha_testing.default
+targetEntityType: comment
+bundle: alpha_testing
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

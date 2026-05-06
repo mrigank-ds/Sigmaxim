@@ -1,0 +1,23 @@
+uuid: 455f6fd1-61a6-493b-919c-0b770751413d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_check_box
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_check_box
+field_name: field_check_box
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: check_box
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

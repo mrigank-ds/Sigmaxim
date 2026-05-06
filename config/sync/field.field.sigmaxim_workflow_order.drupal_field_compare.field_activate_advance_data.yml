@@ -1,0 +1,28 @@
+uuid: 7c26a65d-304e-442d-9880-b96d9fd2f723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_activate_advance_data
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758072382
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_activate_advance_data
+field_name: field_activate_advance_data
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Activate Advance Data'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

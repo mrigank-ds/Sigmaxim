@@ -1,0 +1,5 @@
+name: List Image
+type: module
+description: 'Provides the functionality to add images for list field image.'
+package: Custom
+core_version_requirement: ^9 || ^10

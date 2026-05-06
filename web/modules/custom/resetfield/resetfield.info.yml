@@ -1,0 +1,8 @@
+name: Reset Field
+type: module
+description: 'Provides a dynamic reset button field with token support for any content type'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:field
+  - drupal:token

@@ -1,0 +1,41 @@
+uuid: ccfc766a-2290-4a50-a97d-c9182204c35c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.mbd.field_company_name
+    - field.field.sigmaxim_workflow_order.mbd.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.mbd
+id: sigmaxim_workflow_order.mbd.default
+targetEntityType: sigmaxim_workflow_order
+bundle: mbd
+mode: default
+content:
+  field_company_name:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

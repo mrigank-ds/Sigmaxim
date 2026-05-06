@@ -1,0 +1,23 @@
+uuid: 618a113e-a2f8-4bac-88e3-f6ce0504a28c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt60
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - options
+id: sigmaxim_workflow_order.valmount.field_list_txt60
+field_name: field_list_txt60
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Pole Assembly'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "DS30 RTS 1' Rise Pipe Arm Assembly"
+default_value_callback: ''
+settings: {  }
+field_type: list_string

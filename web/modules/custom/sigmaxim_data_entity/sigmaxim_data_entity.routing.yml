@@ -1,0 +1,11 @@
+sigmaxim_data_entity.table_view:
+  path: '/data-entity/{bundle}/view'
+  defaults:
+    _title: 'Browse'
+    _form: 'Drupal\sigmaxim_data_entity\Form\TableViewForm'
+  options:
+    parameters:
+      bundle:
+        type: entity:data_entity_type
+  requirements:
+    _permission: 'view data'

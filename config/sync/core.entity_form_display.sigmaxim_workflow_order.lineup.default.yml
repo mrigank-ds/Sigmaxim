@@ -1,0 +1,366 @@
+uuid: c7025f9b-8f7d-4584-af13-dbf5b4d1ded4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.lineup.field_accessories10
+    - field.field.sigmaxim_workflow_order.lineup.field_actuator8
+    - field.field.sigmaxim_workflow_order.lineup.field_agency_approval6
+    - field.field.sigmaxim_workflow_order.lineup.field_alternation4
+    - field.field.sigmaxim_workflow_order.lineup.field_anchor_method7
+    - field.field.sigmaxim_workflow_order.lineup.field_autocad_dwg9
+    - field.field.sigmaxim_workflow_order.lineup.field_autocalc1
+    - field.field.sigmaxim_workflow_order.lineup.field_bom5
+    - field.field.sigmaxim_workflow_order.lineup.field_common_forcemain3
+    - field.field.sigmaxim_workflow_order.lineup.field_control_module3
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_first_name_3
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_last_name_4
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_name_2
+    - field.field.sigmaxim_workflow_order.lineup.field_dxf8
+    - field.field.sigmaxim_workflow_order.lineup.field_enclosure9
+    - field.field.sigmaxim_workflow_order.lineup.field_folder_id
+    - field.field.sigmaxim_workflow_order.lineup.field_grounding1
+    - field.field.sigmaxim_workflow_order.lineup.field_level
+    - field.field.sigmaxim_workflow_order.lineup.field_order_or_quote_number_1
+    - field.field.sigmaxim_workflow_order.lineup.field_path_to_bom_files_5
+    - field.field.sigmaxim_workflow_order.lineup.field_pdf6
+    - field.field.sigmaxim_workflow_order.lineup.field_start_levels2
+    - field.field.sigmaxim_workflow_order.lineup.field_step7
+    - field.field.sigmaxim_workflow_order.lineup.field_style5
+    - field.field.sigmaxim_workflow_order.lineup.field_temperature_requirements2
+    - field.field.sigmaxim_workflow_order.lineup.field_terminal4
+    - field.field.sigmaxim_workflow_order.lineup.field_time
+    - field.field.sigmaxim_workflow_order.lineup.field_vertical_offset1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group:
+    group_order:
+      children:
+        - group_customer_info
+        - group_structural_options
+        - group_shipping_block_options1
+        - group_unit_options
+        - group_cabinet_options
+        - group_deliverables
+      label: Order
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_customer_info:
+      children:
+        - field_order_or_quote_number_1
+        - field_customer_name_2
+        - field_customer_first_name_3
+        - field_customer_last_name_4
+        - field_path_to_bom_files_5
+      label: 'Customer Info'
+      region: content
+      parent_name: group_order
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_structural_options:
+      children:
+        - field_grounding1
+        - field_temperature_requirements2
+        - field_control_module3
+        - field_terminal4
+        - field_style5
+      label: 'Structural Options'
+      region: content
+      parent_name: group_order
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_shipping_block_options1:
+      children:
+        - field_start_levels2
+        - field_agency_approval6
+        - field_anchor_method7
+      label: 'Shipping Block Options'
+      region: content
+      parent_name: group_order
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_unit_options:
+      children:
+        - field_common_forcemain3
+        - field_level
+        - field_time
+        - field_actuator8
+      label: 'Unit Options'
+      region: content
+      parent_name: group_order
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_cabinet_options:
+      children:
+        - field_alternation4
+        - field_vertical_offset1
+        - field_enclosure9
+        - field_accessories10
+      label: 'Cabinet Options'
+      region: content
+      parent_name: group_order
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_deliverables:
+      children:
+        - field_bom5
+        - field_pdf6
+        - field_step7
+        - field_dxf8
+        - field_autocad_dwg9
+      label: Deliverables
+      region: content
+      parent_name: group_order
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_customer_info:
+      image: 44
+      image_style: large
+      image_position: below
+    group_structural_options:
+      image: 45
+      image_style: large
+    group_deliverables:
+      image: 46
+      image_style: large
+id: sigmaxim_workflow_order.lineup.default
+targetEntityType: sigmaxim_workflow_order
+bundle: lineup
+mode: default
+content:
+  field_accessories10:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_actuator8:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_agency_approval6:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alternation4:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_anchor_method7:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_autocad_dwg9:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_bom5:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_common_forcemain3:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_control_module3:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_customer_first_name_3:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_last_name_4:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_name_2:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dxf8:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_enclosure9:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_grounding1:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_level:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_order_or_quote_number_1:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_path_to_bom_files_5:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pdf6:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_start_levels2:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_step7:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_style5:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_temperature_requirements2:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_terminal4:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_time:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_vertical_offset1:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_autocalc1: true
+  field_folder_id: true
+  name: true
+  user_id: true

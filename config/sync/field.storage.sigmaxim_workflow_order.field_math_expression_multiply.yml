@@ -1,0 +1,21 @@
+uuid: 7053516e-87cc-48ae-9a89-04e95e1cf95e
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_math_expression_multiply
+field_name: field_math_expression_multiply
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

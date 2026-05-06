@@ -1,0 +1,17 @@
+uuid: 857eed47-f582-469d-b93e-f7de67516586
+langcode: en
+status: true
+dependencies: {  }
+id: charger_battery_cabinet
+label: 'CHARGER + BATTERY CABINET'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: order/charger_plus_battery_cabinet
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '34'

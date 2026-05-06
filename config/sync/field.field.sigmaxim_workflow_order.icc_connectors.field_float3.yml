@@ -1,0 +1,23 @@
+uuid: b9dc4c4a-23ea-4ec4-b38d-71ca13b2009e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float3
+field_name: field_float3
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: Length
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

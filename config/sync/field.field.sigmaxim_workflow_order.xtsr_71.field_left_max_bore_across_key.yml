@@ -1,0 +1,33 @@
+uuid: a0dc4ffb-fdcd-4eb0-b7cf-64f0b037aee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_max_bore_across_key
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746186748
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_max_bore_across_key
+field_name: field_left_max_bore_across_key
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Max Bore Across Key'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: float

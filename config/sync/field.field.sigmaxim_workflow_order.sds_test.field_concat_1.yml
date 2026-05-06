@@ -1,0 +1,31 @@
+uuid: f6f03b15-25d6-4979-8c19-0bff30ed7441
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_concat_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.sds_test.field_concat_1
+field_name: field_concat_1
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: concat_1
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '[sigmaxim_workflow_order:field_sigmaxim].[sigmaxim_workflow_order:field_india]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

@@ -1,0 +1,30 @@
+uuid: e2dc631f-bbb6-4ddf-894a-0da0b195014e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_bore_fit
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746183554
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_left_bore_fit
+field_name: field_left_bore_fit
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Bore Fit (keyed fit only)'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: Clearance
+default_value_callback: ''
+settings: {  }
+field_type: list_string

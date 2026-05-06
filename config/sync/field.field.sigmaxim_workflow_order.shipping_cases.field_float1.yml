@@ -1,0 +1,23 @@
+uuid: f7eb4ce7-cdc0-43f8-a542-24b3c7bb4633
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_float1
+field_name: field_float1
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Temp Rating'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

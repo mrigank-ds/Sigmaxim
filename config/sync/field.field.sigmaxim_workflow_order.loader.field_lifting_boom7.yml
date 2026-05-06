@@ -1,0 +1,23 @@
+uuid: 1174425e-f456-4263-a0c7-257111a5a7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_lifting_boom7
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_lifting_boom7
+field_name: field_lifting_boom7
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Lifting Boom'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Vertical Lift Boom, Low Capacity Hydraulics'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

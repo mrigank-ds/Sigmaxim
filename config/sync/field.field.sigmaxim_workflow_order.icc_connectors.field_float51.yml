@@ -1,0 +1,23 @@
+uuid: 81cc4282-e78f-45f5-ab2c-fe42ca128003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float51
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float51
+field_name: field_float51
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Set10 Width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

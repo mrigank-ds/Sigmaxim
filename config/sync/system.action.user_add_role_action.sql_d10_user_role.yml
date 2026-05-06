@@ -1,0 +1,14 @@
+uuid: 48bb08d8-4b6b-4a35-80f0-f5e1b45c08db
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sql_d10_user_role
+  module:
+    - user
+id: user_add_role_action.sql_d10_user_role
+label: 'Add the sql_d10_user_role role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sql_d10_user_role

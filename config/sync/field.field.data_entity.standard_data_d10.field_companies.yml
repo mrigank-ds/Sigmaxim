@@ -1,0 +1,27 @@
+uuid: 1519e392-7691-444d-8401-66177b46b12e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_companies
+    - monarch_data_entity.data_entity_type.standard_data_d10
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757369896
+  field_inline_label:
+    inline_label: 0
+id: data_entity.standard_data_d10.field_companies
+field_name: field_companies
+entity_type: data_entity
+bundle: standard_data_d10
+label: Companies
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

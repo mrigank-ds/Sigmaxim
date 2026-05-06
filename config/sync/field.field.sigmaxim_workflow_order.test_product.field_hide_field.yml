@@ -1,0 +1,29 @@
+uuid: 784f6d07-adf2-4e98-bf75-620b2b57841f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_hide_field
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753358555
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_hide_field
+field_name: field_hide_field
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Hide Field'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 'hide me!'
+default_value_callback: ''
+settings: {  }
+field_type: string

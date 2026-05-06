@@ -1,0 +1,17 @@
+uuid: e54ab01f-63f9-44ae-aad4-418669edef77
+langcode: en
+status: true
+dependencies: {  }
+id: drupal_field_compare
+label: 'Drupal Field Compare'
+description: 'In this Product, we are creating the fields that function in SQL-based Drupal 7 website'
+group: null
+name: null
+value: null
+watched_folder: order/drupal_field_compare
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '1'
+product_category: '47'

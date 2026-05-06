@@ -1,0 +1,19 @@
+{
+  "name": "monarch/sigmaxim_data_entity",
+  "description": "Provides complex widgets for working with data.",
+  "type": "drupal-module",
+  "license": "MIT",
+  "keywords": [
+    "Drupal Module"
+  ],
+  "authors": [
+    {
+      "name": "Monarch Digital",
+      "email": "monarch@monarchdigital.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "monarch/monarch_data_entity": "^1.3.1"
+  }
+}

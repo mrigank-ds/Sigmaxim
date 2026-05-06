@@ -1,0 +1,21 @@
+uuid: 738f63e2-a99f-48ad-adec-fb63519fe7ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_frequency__delay46
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency__delay46
+field_name: field_frequency__delay46
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Frequency & Delay'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

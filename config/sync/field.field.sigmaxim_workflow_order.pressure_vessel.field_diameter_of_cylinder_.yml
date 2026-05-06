@@ -1,0 +1,33 @@
+uuid: fd758c62-82d6-42e3-afd6-6ebc670a40b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_diameter_of_cylinder_
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751868821
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_diameter_of_cylinder_
+field_name: field_diameter_of_cylinder_
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Diameter of Cylinder '
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: '500.00'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal

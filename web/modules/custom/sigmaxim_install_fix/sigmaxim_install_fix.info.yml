@@ -1,0 +1,7 @@
+name: 'Sigmaxim Install Fix'
+type: module
+description: 'Uninstalls modules with broken installs.'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - field

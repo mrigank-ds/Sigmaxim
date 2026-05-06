@@ -1,0 +1,9 @@
+sdr_cf_reattach:
+  version: VERSION
+  js:
+    js/sigmaxim_sdr_cf_reattach.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.states
+    - core/once

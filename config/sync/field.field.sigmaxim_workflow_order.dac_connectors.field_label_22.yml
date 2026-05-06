@@ -1,0 +1,21 @@
+uuid: fceb62c1-4f48-413f-b758-88d6a2f762de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_22
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_label_22
+field_name: field_label_22
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P2 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_22
+default_value_callback: ''
+settings: {  }
+field_type: string

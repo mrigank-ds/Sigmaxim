@@ -1,0 +1,27 @@
+uuid: f64857bb-7e50-4b98-b172-f9e70dd9cc22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_project_name
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700297547
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.battery_only_cabinet.field_project_name
+field_name: field_project_name
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: 'Project Name'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

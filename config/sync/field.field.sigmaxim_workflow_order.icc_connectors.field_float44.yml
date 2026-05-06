@@ -1,0 +1,23 @@
+uuid: f7437eba-2c88-4061-9639-5ae09a33e60d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float44
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float44
+field_name: field_float44
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Set6 Distance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

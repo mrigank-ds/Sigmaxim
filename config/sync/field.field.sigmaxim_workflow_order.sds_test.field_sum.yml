@@ -1,0 +1,31 @@
+uuid: f0b504a5-587d-4d2b-971f-70adb8f77383
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_sum
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+id: sigmaxim_workflow_order.sds_test.field_sum
+field_name: field_sum
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: Sum
+description: "1. Even when we create an integer expression in a product it is not showing in the front end when the widget type is a field expression\r\n2. Widget type: List options, Readonly and the Text field are missing in integer expression"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 3+4
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

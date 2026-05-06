@@ -1,0 +1,18 @@
+uuid: 0a090ada-162c-4013-b9aa-faeefc2d871d
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_left_stand_off
+field_name: field_left_stand_off
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

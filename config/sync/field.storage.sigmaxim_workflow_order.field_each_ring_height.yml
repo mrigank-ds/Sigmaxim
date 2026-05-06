@@ -1,0 +1,20 @@
+uuid: afb71bd6-00bf-4c0a-a002-10bf7fb9f97f
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_each_ring_height
+field_name: field_each_ring_height
+entity_type: sigmaxim_workflow_order
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

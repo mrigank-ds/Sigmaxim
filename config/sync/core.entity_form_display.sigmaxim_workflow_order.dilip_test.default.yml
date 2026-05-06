@@ -1,0 +1,138 @@
+uuid: 71497969-9bc5-4bcd-986a-0c27957bbd38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.dilip_test.field_concat
+    - field.field.sigmaxim_workflow_order.dilip_test.field_dilip_test
+    - field.field.sigmaxim_workflow_order.dilip_test.field_dilip_test1
+    - field.field.sigmaxim_workflow_order.dilip_test.field_dilip_test2
+    - field.field.sigmaxim_workflow_order.dilip_test.field_dilip_test_result_1
+    - field.field.sigmaxim_workflow_order.dilip_test.field_dilip_test_result_2
+    - field.field.sigmaxim_workflow_order.dilip_test.field_float
+    - field.field.sigmaxim_workflow_order.dilip_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.dilip_test.field_integer
+    - field.field.sigmaxim_workflow_order.dilip_test.field_testingrr
+    - field.field.sigmaxim_workflow_order.dilip_test.field_text_concat
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+  module:
+    - concat_field
+    - field_expression
+    - field_group
+third_party_settings:
+  field_group:
+    group_dilip_test_grp:
+      children:
+        - field_dilip_test
+        - field_dilip_test1
+        - field_dilip_test_result_1
+      label: DILIP_TEST_grp
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.dilip_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: dilip_test
+mode: default
+content:
+  field_concat:
+    type: concat_field_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dilip_test:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_dilip_test1:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_dilip_test2:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_dilip_test_result_1:
+    type: expression_editable
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dilip_test_result_2:
+    type: expression_editable
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_float:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_integer:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_testingrr:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text_concat:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  group_dilip_test_grp:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

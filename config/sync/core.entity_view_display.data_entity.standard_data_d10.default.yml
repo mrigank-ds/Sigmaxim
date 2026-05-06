@@ -1,0 +1,66 @@
+uuid: 4625b6f7-4d10-4b6f-a681-fd7846b29315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.standard_data_d10.feeds_item
+    - field.field.data_entity.standard_data_d10.field_companies
+    - field.field.data_entity.standard_data_d10.field_country
+    - field.field.data_entity.standard_data_d10.field_market_occupancy
+    - field.field.data_entity.standard_data_d10.field_sector
+    - field.field.data_entity.standard_data_d10.field_state
+    - monarch_data_entity.data_entity_type.standard_data_d10
+id: data_entity.standard_data_d10.default
+targetEntityType: data_entity
+bundle: standard_data_d10
+mode: default
+content:
+  field_companies:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 0
+    region: content
+  field_market_occupancy:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sector:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_state:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

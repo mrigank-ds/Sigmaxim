@@ -1,0 +1,33 @@
+uuid: cdd7d286-83b8-41b3-bd10-bab356b30b99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_no_of_hor_strged_pies
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753457150
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_no_of_hor_strged_pies
+field_name: field_no_of_hor_strged_pies
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Horizontal Staggered Pieces'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '6'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

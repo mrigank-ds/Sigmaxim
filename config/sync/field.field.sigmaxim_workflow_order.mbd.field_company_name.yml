@@ -1,0 +1,29 @@
+uuid: 1c618366-11dd-4c6d-b34a-6cd71dfc46df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_company_name
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.mbd
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745904453
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.mbd.field_company_name
+field_name: field_company_name
+entity_type: sigmaxim_workflow_order
+bundle: mbd
+label: 'Company Name'
+description: 'This is enter the company details where this product is from'
+required: 1
+translatable: false
+default_value:
+  -
+    value: SIGMAXIM
+default_value_callback: ''
+settings: {  }
+field_type: string

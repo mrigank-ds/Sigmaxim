@@ -1,0 +1,24 @@
+view_input_view_embed:
+  js:
+    js/view-input-view-embed.js: { attributes: { type: module } }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+view_widget_notifier:
+  js:
+    js/view-widget-notifier.js: { attributes: { type: module } }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+monarch_data_entity_widget:
+  js:
+    js/monarch_data_entity_widget.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once

@@ -1,0 +1,29 @@
+uuid: f3e300f1-2a8e-4e3a-a9f6-bc42d7bd367a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_des_hub_len_xxl_ref
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746189343
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_des_hub_len_xxl_ref
+field_name: field_des_hub_len_xxl_ref
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Desired Hub Length XXL Reference'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '[field_coupling_size_xtsr71:B_XXL]'
+default_value_callback: ''
+settings: {  }
+field_type: string

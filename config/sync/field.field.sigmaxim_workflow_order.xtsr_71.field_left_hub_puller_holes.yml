@@ -1,0 +1,31 @@
+uuid: 0213a2d6-60bf-4cce-ab69-852b2360f599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_puller_holes
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746190802
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_puller_holes
+field_name: field_left_hub_puller_holes
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Puller Holes'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

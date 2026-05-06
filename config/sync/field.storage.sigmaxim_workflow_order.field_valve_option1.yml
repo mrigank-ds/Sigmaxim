@@ -1,0 +1,43 @@
+uuid: ed8733b5-8ead-411a-acb4-acc2ab15ef01
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_valve_option1
+field_name: field_valve_option1
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: DDRXQ-55
+      label: DDRXQ-55
+    -
+      value: SDFDU-75
+      label: SDFDU-75
+    -
+      value: DSVJH-25
+      label: DSVJH-25
+    -
+      value: DSVBR-25
+      label: DSVBR-25
+    -
+      value: KKRTL-50
+      label: KKRTL-50
+    -
+      value: SSDTR-25
+      label: SSDTR-25
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

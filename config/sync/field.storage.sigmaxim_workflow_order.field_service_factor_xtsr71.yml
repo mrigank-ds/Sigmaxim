@@ -1,0 +1,19 @@
+uuid: b3fe4971-0ca0-415c-95fe-cdd8b1a6bbae
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_service_factor_xtsr71
+field_name: field_service_factor_xtsr71
+entity_type: sigmaxim_workflow_order
+type: field_expression
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

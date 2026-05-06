@@ -1,0 +1,37 @@
+uuid: e222f57b-1149-40b5-9989-4cabb8be83cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_advance_data_table1_d10
+    - monarch_data_entity.data_entity_type.standard_data_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757942184
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_advance_data_table1_d10
+field_name: field_advance_data_table1_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Advance Data Table1'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      standard_data_d10: standard_data_d10
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 6cb26370-2d9b-4b0c-bbd3-3def39aa62bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_max_cbore_dia_xl_reference
+field_name: field_max_cbore_dia_xl_reference
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 2acd8d4a-35c4-4212-bffa-679e194eed08
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_cos_testing
+field_name: field_cos_testing
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

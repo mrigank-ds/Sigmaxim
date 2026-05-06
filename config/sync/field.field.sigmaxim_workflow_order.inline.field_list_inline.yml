@@ -1,0 +1,35 @@
+uuid: 110da3f4-0a3f-48c4-ac39-961ce74f7a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+    - options
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_list_inline
+field_name: field_list_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: list_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1'
+  -
+    value: '2'
+  -
+    value: '3'
+  -
+    value: '4'
+  -
+    value: '5'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,11 @@
+uuid: 0465afbc-f007-4ea7-a37d-b8fc69ab6a61
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.token
+label: Token
+description: ''
+targetEntityType: sigmaxim_workflow_order
+cache: true

@@ -1,0 +1,23 @@
+uuid: 3e1dbbd8-0d5a-4905-9d64-31f205dc774d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float76
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_float76
+field_name: field_float76
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P5 Label Distance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

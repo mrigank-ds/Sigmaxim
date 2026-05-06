@@ -1,0 +1,19 @@
+uuid: c70dd5ef-b36a-4652-84e1-6bc198e1078e
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - node
+id: node.field_dilip_test_math
+field_name: field_dilip_test_math
+entity_type: node
+type: field_expression
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

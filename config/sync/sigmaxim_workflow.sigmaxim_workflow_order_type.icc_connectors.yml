@@ -1,0 +1,17 @@
+uuid: a01db6a6-8144-4a61-8ba5-1ced8dbfce4b
+langcode: en
+status: true
+dependencies: {  }
+id: icc_connectors
+label: 'ICC Connectors'
+description: 'ICC Connectors'
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '20'

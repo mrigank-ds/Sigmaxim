@@ -1,0 +1,52 @@
+uuid: 810c0e83-b9e9-4250-949c-4e1785cbfade
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_power_train2
+field_name: field_power_train2
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '45 HP, Standard Flow Intake, Low Temp Exhaust, LP Turbo,10 gal Tank, Single Speed'
+      label: '45 HP, Standard Flow Intake, Low Temp Exhaust, LP Turbo,10 gal Tank, Single Speed'
+    -
+      value: '45 HP, Medium Flow Intake, High Temp Exhaust, LP Turbo, 15 gal Tank, Single Speed'
+      label: '45 HP, Medium Flow Intake, High Temp Exhaust, LP Turbo, 15 gal Tank, Single Speed'
+    -
+      value: '45 HP, High Flow Intake, High Temp Exhaust, LP Turbo, 20 gal Tank, Single Speed'
+      label: '45 HP, High Flow Intake, High Temp Exhaust, LP Turbo, 20 gal Tank, Single Speed'
+    -
+      value: '58 HP, Medium Flow Intake, Low Temp Exhaust, LP Turbo, 10 gal Tank, Single Speed'
+      label: '58 HP, Medium Flow Intake, Low Temp Exhaust, LP Turbo, 10 gal Tank, Single Speed'
+    -
+      value: '58 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 15 gal Tank, Two Speed'
+      label: '58 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 15 gal Tank, Two Speed'
+    -
+      value: '58 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 20 gal Tank, Two Speed'
+      label: '58 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 20 gal Tank, Two Speed'
+    -
+      value: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 10 gal Tank, Single Speed'
+      label: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 10 gal Tank, Single Speed'
+    -
+      value: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 15 gal Tank, Single Speed'
+      label: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 15 gal Tank, Single Speed'
+    -
+      value: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 20 gal Tank, Single Speed'
+      label: '70 HP, High Flow Intake, High Temp Exhaust, HP Turbo, 20 gal Tank, Single Speed'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

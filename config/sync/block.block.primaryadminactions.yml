@@ -1,0 +1,18 @@
+uuid: 01cf55ba-028e-4eeb-a419-e38aa5443f80
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sigmaxim
+id: primaryadminactions
+theme: sigmaxim
+region: primary_menu
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 17bd6cb6-0d3a-48a3-be76-c653acdd0215
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_hide_fieldset_checkbox
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753358358
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_hide_fieldset_checkbox
+field_name: field_hide_fieldset_checkbox
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Hide Fieldset Checkbox'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

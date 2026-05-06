@@ -1,0 +1,25 @@
+uuid: ff8ce55e-f8f1-4e83-b980-de3faaf5dc0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_pressure_rating_design_
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_pressure_rating_design_
+field_name: field_pressure_rating_design_
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Pressure Rating (design)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 150
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

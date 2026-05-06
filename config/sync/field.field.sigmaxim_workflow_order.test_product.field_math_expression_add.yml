@@ -1,0 +1,38 @@
+uuid: 43cd375a-1b9f-4372-b9d6-17948512c868
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_math_expression_add
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753429616
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_math_expression_add
+field_name: field_math_expression_add
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Math Expression Add'
+description: 'Sum of Integer Field and Float Field'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '[field_integer_field]+[field_float_field]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

@@ -1,0 +1,20 @@
+uuid: ccc99db1-d89e-4e23-8512-8b8bec5ba96d
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_battery1
+field_name: field_battery1
+entity_type: sigmaxim_workflow_order
+type: entity_reference
+settings:
+  target_type: data_entity
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

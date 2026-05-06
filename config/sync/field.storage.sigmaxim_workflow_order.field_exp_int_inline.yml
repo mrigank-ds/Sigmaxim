@@ -1,0 +1,25 @@
+uuid: f61bd72c-1bbd-4b86-b1df-75e13077616b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_exp_int_inline
+field_name: field_exp_int_inline
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

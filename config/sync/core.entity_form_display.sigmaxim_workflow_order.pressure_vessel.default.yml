@@ -1,0 +1,270 @@
+uuid: 37646ec5-4ab0-4a79-997c-1f466d697f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_body_types
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_diameter_of_cylinder_
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_each_ring_height
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_height_of_cylinder
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_height_of_each_ring
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_no_of_hor_strged_pies
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_number_of_vertical_rings
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_radial_angle
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_radial_piece_ty
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_ring_height_types
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_thick_cyl_wall
+    - field.field.sigmaxim_workflow_order.pressure_vessel.field_vessel_orientation
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - conditional_fields
+    - field_expression
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group_image:
+    group_skeleton:
+      image: 308
+      image_style: large
+      image_position: right
+    group_body:
+      image: 0
+      image_style: large
+      image_position: above
+    group_vessel_tabs:
+      image: 0
+      image_style: large
+      image_position: above
+    group_batch_drag:
+      image: 0
+      image_style: large
+      image_position: above
+  field_group:
+    group_skeleton:
+      children:
+        - field_vessel_orientation
+        - field_height_of_cylinder
+        - field_diameter_of_cylinder_
+      label: Skeleton
+      region: content
+      parent_name: group_vessel_tabs
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_body:
+      children:
+        - field_body_types
+        - field_thick_cyl_wall
+        - field_number_of_vertical_rings
+        - field_no_of_hor_strged_pies
+        - field_radial_piece_ty
+        - field_ring_height_types
+        - field_radial_angle
+        - field_each_ring_height
+        - field_height_of_each_ring
+      label: Body
+      region: content
+      parent_name: group_vessel_tabs
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_vessel_tabs:
+      children:
+        - group_skeleton
+        - group_body
+      label: 'Vessel Tabs'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_batch_drag:
+      children: {  }
+      label: 'Batch Drag'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.pressure_vessel.default
+targetEntityType: sigmaxim_workflow_order
+bundle: pressure_vessel
+mode: default
+content:
+  field_body_types:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_diameter_of_cylinder_:
+    type: number
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_each_ring_height:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_height_of_cylinder:
+    type: number
+    weight: 24
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_height_of_each_ring:
+    type: expression_editable
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        541e75a3-17ec-4307-abcc-2446aba8dd1e:
+          entity_type: sigmaxim_workflow_order
+          bundle: pressure_vessel
+          dependee: field_body_types
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Multiple Rolled Rings'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        1cfa0b48-9ded-490a-937b-34cbcabbd0e7:
+          entity_type: sigmaxim_workflow_order
+          bundle: pressure_vessel
+          dependee: field_body_types
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Staggered Pieces'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_no_of_hor_strged_pies:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_number_of_vertical_rings:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        3637e662-da29-4b3f-bc92-1e69bac7db0f:
+          entity_type: sigmaxim_workflow_order
+          bundle: pressure_vessel
+          dependee: field_body_types
+          settings:
+            state: '!visible'
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Single Rolled Piece'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_radial_angle:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_radial_piece_ty:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ring_height_types:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_thick_cyl_wall:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_vessel_orientation:
+    type: options_buttons
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

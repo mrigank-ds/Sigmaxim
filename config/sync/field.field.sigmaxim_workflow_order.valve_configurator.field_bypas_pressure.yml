@@ -1,0 +1,23 @@
+uuid: 092c2ff0-4ecd-43a8-8ccb-14a9ce59915f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bypas_pressure
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_bypas_pressure
+field_name: field_bypas_pressure
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Bypass Pressure'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

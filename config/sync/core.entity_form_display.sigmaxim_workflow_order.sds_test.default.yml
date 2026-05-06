@@ -1,0 +1,241 @@
+uuid: 6cb567c6-9fa0-4c06-bd8f-3b14abe04f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.sds_test.field_checkbox
+    - field.field.sigmaxim_workflow_order.sds_test.field_concat_1
+    - field.field.sigmaxim_workflow_order.sds_test.field_concatenation
+    - field.field.sigmaxim_workflow_order.sds_test.field_cos_testing
+    - field.field.sigmaxim_workflow_order.sds_test.field_cos_val
+    - field.field.sigmaxim_workflow_order.sds_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.sds_test.field_india
+    - field.field.sigmaxim_workflow_order.sds_test.field_joindata
+    - field.field.sigmaxim_workflow_order.sds_test.field_new_numbers
+    - field.field.sigmaxim_workflow_order.sds_test.field_radio
+    - field.field.sigmaxim_workflow_order.sds_test.field_sigmaxim
+    - field.field.sigmaxim_workflow_order.sds_test.field_sum
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+  module:
+    - field_expression
+    - field_group
+    - field_group_image
+    - readonly_field_widget
+third_party_settings:
+  field_group:
+    group_unpublished:
+      children: {  }
+      label: Unpublished
+      region: content
+      parent_name: group_main_tabs
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_published:
+      children: {  }
+      label: Published
+      region: content
+      parent_name: group_main_tabs
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_main_tabs:
+      children:
+        - group_unpublished
+        - group_published
+      label: 'Main Tabs'
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: Tabs
+        direction: vertical
+        width_breakpoint: 640
+    group_team1:
+      children:
+        - name
+      label: Team
+      region: content
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+        formatter: closed
+        effect: none
+        direction: vertical
+        width_breakpoint: 640
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        speed: fast
+        weight: 0
+    group_vollyball:
+      children:
+        - field_radio
+        - group_first_accordion
+      label: Volleyball
+      region: content
+      parent_name: ''
+      weight: 13
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_first_accordion:
+      children: {  }
+      label: 'First Accordion'
+      region: content
+      parent_name: group_vollyball
+      weight: 12
+      format_type: accordion
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        effect: bounceslide
+        formatter: closed
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_team1:
+      image: 32
+      image_style: medium
+    group_vollyball:
+      image: 33
+      image_style: medium
+    group_first_accordion:
+      image: 0
+      image_style: large
+id: sigmaxim_workflow_order.sds_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: sds_test
+mode: default
+content:
+  field_checkbox:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_concat_1:
+    type: expression_editable
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_concatenation:
+    type: readonly_field_widget
+    weight: 5
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_cos_testing:
+    type: expression_editable
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cos_val:
+    type: expression_editable
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_india:
+    type: readonly_field_widget
+    weight: 3
+    region: content
+    settings:
+      label: inline
+      formatter_type: string
+      formatter_settings:
+        string:
+          link_to_entity: false
+      show_description: false
+    third_party_settings: {  }
+  field_joindata:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_new_numbers:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_radio:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sigmaxim:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sum:
+    type: expression_editable
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

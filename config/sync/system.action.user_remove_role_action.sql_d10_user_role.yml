@@ -1,0 +1,14 @@
+uuid: 2661d9e0-001e-45ba-9e4d-ad2e869bcb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sql_d10_user_role
+  module:
+    - user
+id: user_remove_role_action.sql_d10_user_role
+label: 'Remove the sql_d10_user_role role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sql_d10_user_role

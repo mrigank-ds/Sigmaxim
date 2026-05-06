@@ -1,0 +1,30 @@
+uuid: 66f1f403-20ce-41de-bf36-ee8f65388e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_ring_height_types
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753457709
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.pressure_vessel.field_ring_height_types
+field_name: field_ring_height_types
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Ring Height Types'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: EQUAL_RING_HEIGHT
+default_value_callback: ''
+settings: {  }
+field_type: list_string

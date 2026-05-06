@@ -1,0 +1,303 @@
+uuid: afad06ff-ffa7-4591-a681-13b0c34f4cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.loader.field_attachments8
+    - field.field.sigmaxim_workflow_order.loader.field_check_box
+    - field.field.sigmaxim_workflow_order.loader.field_climate_control14
+    - field.field.sigmaxim_workflow_order.loader.field_control_module10
+    - field.field.sigmaxim_workflow_order.loader.field_customer_email_2
+    - field.field.sigmaxim_workflow_order.loader.field_customer_name_1
+    - field.field.sigmaxim_workflow_order.loader.field_customer_order_number_3
+    - field.field.sigmaxim_workflow_order.loader.field_dashboard13
+    - field.field.sigmaxim_workflow_order.loader.field_documentation1
+    - field.field.sigmaxim_workflow_order.loader.field_emissions_package6
+    - field.field.sigmaxim_workflow_order.loader.field_folder_id
+    - field.field.sigmaxim_workflow_order.loader.field_fuel_cell3
+    - field.field.sigmaxim_workflow_order.loader.field_generate_a_3d_pdf_2
+    - field.field.sigmaxim_workflow_order.loader.field_generate_a_manufacturing_l
+    - field.field.sigmaxim_workflow_order.loader.field_generate_bom4
+    - field.field.sigmaxim_workflow_order.loader.field_generate_images_1
+    - field.field.sigmaxim_workflow_order.loader.field_generate_routing_docs6
+    - field.field.sigmaxim_workflow_order.loader.field_generate_shrinkwrap_model5
+    - field.field.sigmaxim_workflow_order.loader.field_hydraulic_upgrades9
+    - field.field.sigmaxim_workflow_order.loader.field_ignition_upgrades4
+    - field.field.sigmaxim_workflow_order.loader.field_lifting_boom7
+    - field.field.sigmaxim_workflow_order.loader.field_order_date
+    - field.field.sigmaxim_workflow_order.loader.field_power_take_off1
+    - field.field.sigmaxim_workflow_order.loader.field_power_train2
+    - field.field.sigmaxim_workflow_order.loader.field_seat_configuration11
+    - field.field.sigmaxim_workflow_order.loader.field_seat_location12
+    - field.field.sigmaxim_workflow_order.loader.field_suspension5
+    - field.field.sigmaxim_workflow_order.loader.field_test
+    - field.field.sigmaxim_workflow_order.loader.field_test_x
+    - field.field.sigmaxim_workflow_order.loader.field_wheels__tracks1
+    - field.field.sigmaxim_workflow_order.loader.field_window_options15
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - datetime
+    - options
+    - user
+id: sigmaxim_workflow_order.loader.default
+targetEntityType: sigmaxim_workflow_order
+bundle: loader
+mode: default
+content:
+  field_attachments8:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_check_box:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_climate_control14:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_control_module10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_customer_email_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_customer_name_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_customer_order_number_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_dashboard13:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_documentation1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_emissions_package6:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_fuel_cell3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_generate_a_3d_pdf_2:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_generate_a_manufacturing_l:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_generate_bom4:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_generate_images_1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_generate_routing_docs6:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_generate_shrinkwrap_model5:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_hydraulic_upgrades9:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_ignition_upgrades4:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_lifting_boom7:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_order_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_power_take_off1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_power_train2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_seat_configuration11:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_seat_location12:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_suspension5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_test:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_test_x:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_wheels__tracks1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_window_options15:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

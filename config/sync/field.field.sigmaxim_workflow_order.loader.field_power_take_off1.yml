@@ -1,0 +1,23 @@
+uuid: b8655406-cd48-492d-8e95-d1c270113539
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_power_take_off1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+id: sigmaxim_workflow_order.loader.field_power_take_off1
+field_name: field_power_take_off1
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Power Take Off'
+description: power_take_off1
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

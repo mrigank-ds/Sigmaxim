@@ -1,0 +1,6 @@
+uuid: af02cf22-79d4-4772-a048-654fe88c7e95
+langcode: en
+status: true
+dependencies: {  }
+id: cbc_cabinet_ext
+label: CBC_CABINET_EXT

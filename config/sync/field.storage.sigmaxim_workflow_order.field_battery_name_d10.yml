@@ -1,0 +1,50 @@
+uuid: b32b4df1-ffb2-4d0d-9cbe-159fec90a66a
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+    exide_mileage:
+      image: '349'
+    amaron_pro:
+      image: '350'
+    bosch_high_performance:
+      image: '351'
+    luminous_red:
+      image: '352'
+    tata_green:
+      image: '353'
+id: sigmaxim_workflow_order.field_battery_name_d10
+field_name: field_battery_name_d10
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: exide_mileage
+      label: 'Exide Mileage'
+    -
+      value: amaron_pro
+      label: 'Amaron Pro'
+    -
+      value: bosch_high_performance
+      label: 'Bosch High Performance'
+    -
+      value: luminous_red
+      label: 'Luminous Red Charge'
+    -
+      value: tata_green
+      label: 'Tata Green'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

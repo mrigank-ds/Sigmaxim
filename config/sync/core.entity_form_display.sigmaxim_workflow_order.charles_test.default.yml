@@ -1,0 +1,116 @@
+uuid: 1b986b7f-9450-4382-a4c6-35f517afa4ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.charles_test.field_extra_info
+    - field.field.sigmaxim_workflow_order.charles_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.charles_test.field_plain_text
+    - field.field.sigmaxim_workflow_order.charles_test.field_project_number
+    - field.field.sigmaxim_workflow_order.charles_test.field_types
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.charles_test
+  module:
+    - field_expression
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_tab_1:
+      children:
+        - field_types
+      label: 'Tab Group'
+      region: content
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: 'Field Group'
+        formatter: open
+        description: ''
+        required_fields: true
+    group_tabs:
+      children:
+        - group_tab_1
+        - group_tab1
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: Tabs
+        direction: horizontal
+        width_breakpoint: 640
+    group_tab1:
+      children:
+        - field_extra_info
+        - field_plain_text
+      label: Tab1
+      region: content
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.charles_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: charles_test
+mode: default
+content:
+  field_extra_info:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_plain_text:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_project_number:
+    type: expression
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_types:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true

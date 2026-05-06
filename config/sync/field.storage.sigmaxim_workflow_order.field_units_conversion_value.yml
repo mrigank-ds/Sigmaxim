@@ -1,0 +1,18 @@
+uuid: 1f205521-95a3-4505-9943-0d86dee9bf2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_units_conversion_value
+field_name: field_units_conversion_value
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

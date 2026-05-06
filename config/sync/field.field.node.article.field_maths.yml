@@ -1,0 +1,21 @@
+uuid: 8be4a56d-b1cd-4a3e-bd60-42d9ef1d3b0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maths
+    - node.type.article
+  module:
+    - text
+id: node.article.field_maths
+field_name: field_maths
+entity_type: node
+bundle: article
+label: Maths
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

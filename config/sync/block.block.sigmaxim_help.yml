@@ -1,0 +1,22 @@
+uuid: 8e702b7a-d271-4224-acac-8cf1b086a8a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sigmaxim
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: sigmaxim_help
+theme: sigmaxim
+region: content
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

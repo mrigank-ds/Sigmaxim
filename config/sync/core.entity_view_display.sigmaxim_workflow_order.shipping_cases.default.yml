@@ -1,0 +1,309 @@
+uuid: 6626459e-d00f-438d-8bb5-2471e7325c26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_add_name_on_a_name_plate
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_blue1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bom_routing_sheet_quote
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bool1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_bool_15
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_case_color
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_case_depth
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_caster
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_catch_type
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_corner_type_
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_creoview
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_dxf
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_first_name_on_plate
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_float1
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_folder_id
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_green
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_handle_type
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_iges
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_length
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_lid_height
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_name_plate_location
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_order_name
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_pdf
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_red
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_shrinkwrap
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_standard_color_
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_step
+    - field.field.sigmaxim_workflow_order.shipping_cases.field_width
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.shipping_cases.default
+targetEntityType: sigmaxim_workflow_order
+bundle: shipping_cases
+mode: default
+content:
+  field_add_name_on_a_name_plate:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_blue1:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_bom_routing_sheet_quote:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_bool1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_bool_15:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 47
+    region: content
+  field_case_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_case_depth:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_caster:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 48
+    region: content
+  field_catch_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_corner_type_:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_creoview:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_dxf:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_first_name_on_plate:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_float1:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 46
+    region: content
+  field_green:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_handle_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_iges:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_length:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lid_height:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_name_plate_location:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  field_order_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pdf:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_red:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_shrinkwrap:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_standard_color_:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_step:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_width:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

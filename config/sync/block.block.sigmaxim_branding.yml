@@ -1,0 +1,35 @@
+uuid: 39f00827-040e-4a9b-a17a-4ba394ed8d57
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - sigmaxim
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: sigmaxim_branding
+theme: sigmaxim
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Powered by SIGMAXIM SmartDesignServer™(link is external)'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      admin: admin
+      user: user

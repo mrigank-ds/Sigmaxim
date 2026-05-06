@@ -1,0 +1,236 @@
+uuid: 5044a205-2172-436f-aa4f-fa43b6cdee84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator1
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator2
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator_color_legend10
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_agency_approval
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_auxiliaryalarm_switch5
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_auxiliaryalarm_switch6
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_c
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit4
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit5
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_current_rating8
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_folder_id
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency__delay46
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency__delay6
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency_delay7
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_maximum_application_rating
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_mountingbarriers11
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles2
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles4
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_terminal9
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_viduthalai
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group_image:
+    group_series_c:
+      image: 0
+      image_style: large
+    group_concat:
+      image: 0
+      image_style: large
+    group_group_poles_and_actuato:
+      image: 0
+      image_style: large
+    group_group_circuit_and_frequenc:
+      image: 0
+      image_style: large
+    group_group_field_terminal_other:
+      image: 0
+      image_style: large
+    group_group_maxappratingplus:
+      image: 0
+      image_style: large
+  field_group:
+    group_series_c:
+      children: {  }
+      label: 'Series C'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_concat:
+      children:
+        - field_c
+      label: Concat
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_group_poles_and_actuato:
+      children:
+        - field_actuator2
+        - field_poles4
+        - field_circuit5
+        - field_auxiliaryalarm_switch6
+        - field_frequency_delay7
+        - field_current_rating8
+      label: group_poles_and_actuator
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_group_circuit_and_frequenc:
+      children: {  }
+      label: group_circuit_and_frequency
+      region: hidden
+      parent_name: ''
+      weight: 17
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_group_field_terminal_other:
+      children:
+        - field_terminal9
+        - field_actuator_color_legend10
+        - field_mountingbarriers11
+      label: group_field_terminal_others
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_group_maxappratingplus:
+      children:
+        - field_maximum_application_rating
+        - field_viduthalai
+      label: group_maxappratingplus
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.miniature_rocker_switches_.default
+targetEntityType: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+mode: default
+content:
+  field_actuator2:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_actuator_color_legend10:
+    type: options_select
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_auxiliaryalarm_switch6:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_c:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_circuit5:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_current_rating8:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_frequency_delay7:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_maximum_application_rating:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mountingbarriers11:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_poles4:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_terminal9:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_viduthalai:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_actuator1: true
+  field_actuator3: true
+  field_agency_approval: true
+  field_auxiliaryalarm_switch5: true
+  field_circuit3: true
+  field_circuit4: true
+  field_folder_id: true
+  field_frequency__delay46: true
+  field_frequency__delay6: true
+  field_poles2: true
+  field_poles3: true
+  name: true
+  user_id: true

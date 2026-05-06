@@ -1,0 +1,27 @@
+uuid: e8b1172d-a449-4b01-9c79-193eacb15799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_manufacturer
+    - monarch_data_entity.data_entity_type.battery_database_d10
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758061566
+  field_inline_label:
+    inline_label: 0
+id: data_entity.battery_database_d10.field_manufacturer
+field_name: field_manufacturer
+entity_type: data_entity
+bundle: battery_database_d10
+label: Manufacturer
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

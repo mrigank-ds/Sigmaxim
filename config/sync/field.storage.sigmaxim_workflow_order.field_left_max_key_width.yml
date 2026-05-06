@@ -1,0 +1,18 @@
+uuid: 66a60f17-5559-4042-8a76-d63339976e9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_left_max_key_width
+field_name: field_left_max_key_width
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

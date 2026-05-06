@@ -1,0 +1,493 @@
+<?php
+
+/**
+ * @file
+ * Contains sigmaxim_workflow.module.
+ */
+
+use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\File\FileSystem;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Link;
+use Drupal\Core\Cache\Cache;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+use Symfony\Component\Serializer\Serializer;
+
+
+/**
+ * Implements hook_help().
+ */
+function sigmaxim_workflow_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sigmaxim_workflow module.
+    case 'help.page.sigmaxim_workflow':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Defines the workflow for product configurations and orders.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function sigmaxim_workflow_theme() {
+  $theme = [];
+  $theme['sigmaxim_workflow_order'] = [
+    'render element' => 'elements',
+    'file' => 'sigmaxim_workflow_order.page.inc',
+    'template' => 'sigmaxim_workflow_order',
+  ];
+  $theme['sigmaxim_workflow_order_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'sigmaxim_workflow_order.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function sigmaxim_workflow_theme_suggestions_sigmaxim_workflow_order(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#sigmaxim_workflow_order'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'sigmaxim_workflow_order__' . $sanitized_view_mode;
+  $suggestions[] = 'sigmaxim_workflow_order__' . $entity->bundle();
+  $suggestions[] = 'sigmaxim_workflow_order__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'sigmaxim_workflow_order__' . $entity->id();
+  $suggestions[] = 'sigmaxim_workflow_order__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function sigmaxim_workflow_form_alter(&$form, FormStateInterface &$form_state, $form_id) {	
+  // Check if the form is the order add form.
+  if ($form_id == 'sigmaxim_workflow_order_battery_only_cabinet_add_form') {
+    // Get the entity reference field you want to modify.
+    // Replace 'field_example_entity_reference' with your actual field name.
+    $field_name = 'field_cabinet';
+    // Check if the field exists in the form.
+    if (isset($form[$field_name])) {
+      // Set the 'show_label' property to TRUE to display the label.
+      $form[$field_name]['#title_display'] = 'before';
+
+    }
+  }
+
+
+
+  // Redirecting replicated entity to front page.
+  if (strpos($form_id, 'sigmaxim_workflow_order') !== FALSE && (strpos($form_id, 'replicate_form') !== FALSE)) {
+    $form_object = $form_state->getFormObject();
+    if ($form_object instanceof ContentEntityForm) {
+      $oid = $form_object->getEntity()->id();
+    }
+    $form['#title'] = 'Are you sure you want to replicate this configuration id ' . $oid;
+    unset($form['new_label_en']);
+    unset($form['actions']['cancel']);
+    $form['actions']['cancel'] = [
+      '#type' => 'submit',
+      '#name' => 'Cancel',
+      '#value' => 'Cancel',
+      '#submit' => ['sigmaxim_workflow_replicate_form_submit'],
+      '#weight' => 10,
+    ];
+
+    $form['actions']['submit']['#submit'][] = 'sigmaxim_workflow_replicate_form_submit';
+  }
+
+  // Altering order configuration form to do manipulations for the admin fields.
+  if (strpos($form_id, 'sigmaxim_workflow_order') !== FALSE && (strpos($form_id, 'add_form') !== FALSE || strpos($form_id, 'edit_form') !== FALSE) && $form_id !== 'sigmaxim_workflow_order_type_edit_form' && $form_id !== 'sigmaxim_workflow_order_type_add_form') {
+
+    // Adding no validate to disable the required action for form submitting.
+    $form['#attributes']['novalidate'] = 'novalidate';
+
+    // Altering buttons and actions for the different states.
+    $form['actions']['submit']['#value'] = t('Save Draft');
+    $form['actions']['submit']['#submit'][] = 'sigmaxim_workflow_process_form_submit';
+    $form['actions']['delete']['#attributes']['class'] = ['button js-form-submit form-submit'];
+    $button_name = t('Process Configuration');
+    if (strpos($form_id, 'add_form') !== FALSE) {
+      $form['status']['widget']['value']['#default_value'] = FALSE;
+    }
+    if ($form['status']['widget']['value']['#default_value'] == TRUE) {
+      $button_name = t('Save');
+      $form['actions']['submit']['#type'] = 'hidden';
+      $form['new_revision']['#default_value'] = TRUE;
+    }
+    $form['actions']['process_configuration'] = [
+      '#type' => 'submit',
+      '#name' => 'Process Configuration',
+      '#value' => $button_name,
+      '#submit' => $form['actions']['submit']['#submit'],
+    ];
+    $form['revision_log']['#attributes']['class'][] = 'hidden';
+    $form['status']['#attributes']['class'][] = 'hidden';
+    $form['archive']['#attributes']['class'][] = 'hidden';
+    $form['results']['#attributes']['class'][] = 'hidden';
+    $form['new_revision']['#attributes']['class'][] = 'hidden';
+    $form['#validate'][] = '_validate_order_entity_form';
+
+    // Add custom title to the product page.
+    if (strpos($form_id, 'sigmaxim_workflow_order') !== FALSE && (strpos($form_id, 'add_form') !== FALSE)) {
+      $current_uri = \Drupal::request()->getRequestUri();
+      $current_uri_parts = explode('/', $current_uri);
+      $current_uri_parts = explode('?', end($current_uri_parts));
+      $current_product = reset($current_uri_parts);
+    }
+    else {
+      $current_product = FALSE;
+      $form_object = $form_state->getFormObject();
+      if ($form_object instanceof ContentEntityForm) {
+        $current_product = $form_object->getEntity()->bundle();
+      }
+    }
+    $product_entity = \Drupal::entityTypeManager()->getStorage('sigmaxim_workflow_order_type')->load($current_product);
+    $product_label = $product_entity->label();
+    $form['#title'] = 'Now Configuring: ' . $product_label;
+  }
+}
+
+/**
+ * Adding custom form submit to redirect replicated form.
+ */
+function sigmaxim_workflow_replicate_form_submit($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('<front>');
+}
+
+/**
+ * Adding custom form validation for the configuration form.
+ */
+function _validate_order_entity_form($form, FormStateInterface $form_state) {
+  $triggered_button = $form_state->getTriggeringElement();
+  if ($triggered_button['#name'] == 'op') {
+    // Removing required attributes for the draft state.
+    $form_state->clearErrors();
+  }
+}
+
+/**
+ * Adding custom form submission for the configuration form.
+ */
+function sigmaxim_workflow_process_form_submit($form, FormStateInterface $form_state) {
+  // Setting conditional status as 1 for the process configuration and 0 for
+  // the draft.
+  $triggered_button = $form_state->getTriggeringElement();
+  $entity = $form_state->getFormObject()->getEntity();
+  $order_id = $entity->id();
+
+  if ($triggered_button['#name'] == 'Process Configuration') {
+    $entity->set('status', 1);
+    $entity->save();
+    \Drupal::service('messenger')->addMessage("The configuration (ID: $order_id) has been submitted.");
+  }
+
+  if ($triggered_button['#name'] == 'op') {
+    $entity->set('status', 0);
+    $entity->save();
+    \Drupal::service('messenger')->addMessage("Your configuration (ID: $order_id) has been saved.");
+  }
+
+  $form_state->setRedirect('<front>');
+}
+
+function sigmaxim_workflow_preprocess_views_view_field(array &$variables) {
+  $view = $variables['view'];
+  $field_name = $variables['field']->field;
+
+  if (in_array($view->id(), ['orders', 'my_orders']) && $field_name === 'nothing') {
+    $row = $variables['row'];
+    $entity = $row->_entity;
+
+    if (!$entity instanceof ContentEntityInterface) {
+      return;
+    }
+
+    $id = $entity->id();
+    $vid = $entity->getRevisionId();
+    $links = [];
+
+    $links[] = Link::fromTextAndUrl('view', Url::fromUri("internal:/order/$id"))->toString();
+    $links[] = Link::fromTextAndUrl('edit', Url::fromUri("internal:/order/$id/edit"))->toString();
+    $links[] = Link::fromTextAndUrl('archive', Url::fromUri("internal:/order/$id/archive"))->toString();
+    $links[] = Link::fromTextAndUrl('replicate', Url::fromUri("internal:/order/$id/replicate"))->toString();
+
+    // Result cache logic (custom per order ID)
+    $cid = "order_result_check:$id";
+    $cache = \Drupal::cache()->get($cid);
+    $show_results = FALSE;
+
+    if (!$cache || (REQUEST_TIME - $cache->created) > 30) { //  sec
+      $scheme = 'private';
+      $folder = "$scheme://filedepot/$id";
+      $file_system = \Drupal::service('file_system');
+
+      try {
+        $real_path = $file_system->realpath($folder);
+        if (is_dir($real_path)) {
+          $files = array_diff(scandir($real_path), ['.', '..']);
+          if (!empty($files)) {
+            $show_results = TRUE;
+          }
+        }
+      } catch (\Exception $e) {
+        // Silent fail
+      }
+
+      \Drupal::cache()->set($cid, ['results' => $show_results], time() + 30);
+    } else {
+      $show_results = $cache->data['results'];
+    }
+
+    if ($show_results) {
+      $links[] = '<a href="/order/results/' . $id . '" target="_blank">results</a>';
+    }
+
+    // Show revisions if more than one
+    $entity_type_id = $entity->getEntityTypeId();
+    $storage = \Drupal::entityTypeManager()->getStorage($entity_type_id);
+    $revisions = $storage->revisionIds($entity);
+
+    if (count($revisions) > 1) {
+      $links[] = Link::fromTextAndUrl('revisions', Url::fromUri("internal:/order/$id/revisions"))->toString();
+    }
+
+    // Set output with render cache context and tags
+    $variables['output'] = [
+      '#markup' => implode(' | ', $links),
+      '#cache' => [
+        'contexts' => ['user.permissions'], // Or add more based on need
+        'tags' => [$id, 'custom_order_results'],
+        'max-age' => 30, //  sec
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function sigmaxim_workflow_link_alter(&$variables) {
+
+  if (is_null($variables['text'] ?? NULL)) {
+    return;
+  }
+
+  $user = \Drupal::currentUser();
+  $logged_in = $user->isAuthenticated();
+
+  if ($variables['text'] == t('Edit Profile') && $logged_in == 1) {
+    $variables['url'] = Url::fromRoute('entity.user.edit_form', ['user' => $user->id()]);
+    $variables['text'] == t('Dashboard');
+
+  }
+
+  if ($variables['text'] == t('Flush All Caches') && $logged_in == 1) {
+    if (!in_array('admin', \Drupal::currentUser()->getRoles())) {
+      unset($variables['text']);
+    }
+  }
+
+  // if ($variables['text'] == t('Dashboard/Login') && $logged_in == 1) {
+  if (isset($variables['text']) && $variables['text'] == t('Dashboard/Login') && $logged_in == 1) {
+    $variables['text'] = t('Dashboard');
+  }
+  // elseif ($variables['text'] == 'Dashboard/Login' && $logged_in != 1) {
+  elseif (isset($variables['text']) && $variables['text'] == 'Dashboard/Login' && !$logged_in){
+    $variables['text'] = t('Login');
+    $variables['url'] = Url::fromUserInput('/user/login');
+  }
+}
+
+/**
+ * Exports an order entity as XML.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The order entity.
+ * Comment placeholder.
+ *
+ * @todo Add doc comment.
+ */
+function sigmaxim_workflow_entity_update(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'sigmaxim_workflow_order') {
+    _sigmaxim_workflow_export_order_as_xml($entity);
+  }
+}
+
+/**
+ * Comment placeholder.
+ *
+ * @todo Add doc comment.
+ */
+function _sigmaxim_workflow_export_order_as_xml($entity) {
+  $owner = $entity->getOwner();
+  $sender_name = $owner->label();
+  $sender_uid = $owner->id();
+  $email = $owner->getEmail();
+  $product_type = $entity->bundle();
+  $product_entity = \Drupal::entityTypeManager()->getStorage('sigmaxim_workflow_order_type')->load($product_type);
+  $product_entity_info = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($product_entity->getProductCategory());
+  $product_category = $product_entity_info->getName();
+  $cnt = 0;
+
+  $exclude_fields = [
+    "user_id",
+    "langcode",
+    "revision_log",
+    "status",
+    "archive",
+    "results",
+    "id",
+    "uuid",
+    "vid",
+    "type",
+    "revision_created",
+    "revision_user",
+    "created",
+    "changed",
+    "revision_translation_affected",
+    "default_langcode",
+    "revision_default",
+  ];
+
+  foreach ($entity->getFields() as $name => $field) {
+    // Exclude system/internal fields if any.
+    if (!in_array($name, $exclude_fields)) {
+      // Check if the field is an entity reference field.
+      if ($field->getFieldDefinition()->getType() === 'entity_reference') {
+        // Get referenced entities.
+        $referenced_entities = $field->referencedEntities();
+  
+        foreach ($referenced_entities as $referenced_entity) {
+          foreach ($referenced_entity->getFields() as $sub_field_name => $sub_field) {
+            $field_definition = $sub_field->getFieldDefinition();
+          
+            // List of system fields to exclude.
+            $system_fields = ['created', 'changed', 'status', 'label', 'feeds_item', 'revision_id', 'langcode', 'default_langcode'];
+          
+            // Exclude computed, read-only, and system fields.
+            if (
+              !$field_definition->isComputed() &&
+              !$field_definition->isReadOnly() &&
+              !in_array($sub_field_name, $system_fields)
+            ) {
+              if ($sub_field->getValue()) {
+                // Add the referenced field's data to $myFields with prefixed name.
+                $myFields[$cnt]['name'] = $name . ':' . $sub_field_name;
+                $myFields[$cnt]['type'] = $field_definition->getType();
+                $myFields[$cnt]['value'] = $sub_field->getString();
+                $cnt++;
+              }
+            }
+          }
+          
+          
+          
+        }
+      } else {
+        // Handle normal fields (text, numeric, etc.).
+        $myFields[$cnt]['name'] = $name;
+        $myFields[$cnt]['type'] = $field->getFieldDefinition()->getType();
+        $myFields[$cnt]['value'] = $field->getString();
+        $cnt++;
+      }
+    }
+  }
+  
+
+  // // Results path for the order.
+
+  $uri = 'private://filedepot/' . $entity->id(); 
+$absolute_path = \Drupal::service('file_system')->realpath($uri);
+$path_parts = explode('/', $absolute_path); // ✅ Fix
+$results_path = reset($path_parts) . '\\' . $entity->id();
+$encoder = new XmlEncoder(['xml_format_output' => TRUE]);
+$encoder->formatOutput = TRUE;
+// $encoder->setRootNodeName('order');
+$context = [
+  XmlEncoder::ROOT_NODE_NAME => 'order', // replaces setRootNodeName()
+  XmlEncoder::FORMAT_OUTPUT => true,     // pretty-print XML
+];
+
+  $request_detail = $encoder->encode([
+    'id' => $entity->id(),
+    'field_product_category' => $product_category,
+    'results' => $results_path,
+    'sender' => [
+      'uid' => $sender_uid,
+      'name' => $sender_name,
+      'mail' => $email,
+    ],
+    'variables' => [
+      'variable' => $myFields,
+    ],
+  ], 'xml', $context);
+
+  $watched_folder = $product_entity->getWatchedFolder();
+  
+  $directory = 'private://' . $watched_folder;
+  $directory_path = 'private://' . $watched_folder . '/order-' . $entity->id() . '.xml';
+
+
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+  $file_system->saveData($request_detail, $directory_path, FileSystemInterface::EXISTS_REPLACE);
+
+  // Creating a filedepot child folder for the order with the order id.
+
+  $new_folder_filedepot = 'private://filedepot/' . $entity->id();
+
+  if (!is_dir($new_folder_filedepot)) {
+    mkdir($new_folder_filedepot, FileSystem::CHMOD_DIRECTORY, TRUE);
+  }
+}
+
+/**
+ * Add 'results' field to 'sigmaxim_workflow_order_type' entities.
+ */
+function sigmaxim_workflow_update_8002() {
+  $field_storage_definition = BaseFieldDefinition::create('textfield')
+    ->setLabel(t('permission'));
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('permission', 'sigmaxim_workflow_order_type', 'sigmaxim_workflow', $field_storage_definition);
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function sigmaxim_workflow_page_attachments(array &$attachments) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'sigmaxim_workflow/admin_pages';
+  }
+
+    // Specify the paths where you want to load the CSS and JS
+    $current_path = \Drupal::service('path.current')->getPath();
+    $allowed_paths = ['/admin/config/content/fancy_file_delete/list', '/admin/delete_files/list'];
+  
+    if (in_array($current_path, $allowed_paths)) {
+      // Attach your CSS file
+      $attachments['#attached']['library'][] = 'sigmaxim_workflow/fancy_file_custom';
+    }
+}
+

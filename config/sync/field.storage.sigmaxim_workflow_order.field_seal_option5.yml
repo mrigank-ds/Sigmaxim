@@ -1,0 +1,46 @@
+uuid: b60b895e-5680-4a46-a2c1-b66371c6ea80
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_seal_option5
+field_name: field_seal_option5
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Buna-N
+      label: Buna-N
+    -
+      value: EPDM
+      label: EPDM
+    -
+      value: FFKM
+      label: FFKM
+    -
+      value: HNBR
+      label: HNBR
+    -
+      value: Neoprene
+      label: Neoprene
+    -
+      value: Polyacrylate
+      label: Polyacrylate
+    -
+      value: Silicone
+      label: Silicone
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

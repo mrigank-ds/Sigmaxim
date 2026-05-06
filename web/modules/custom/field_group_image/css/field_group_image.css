@@ -1,0 +1,39 @@
+
+.field-group-image .image-position-right {
+  margin: 1.5em;
+  margin-left: 10px;
+  max-width: 100%;
+  height: auto;
+  float: right;
+
+}
+
+.field-group-image .image-position-left {
+  margin: 1.5em;
+  margin-right: 10px;
+  max-width: 100%;
+  height: auto;
+  float: left;
+
+}
+
+/* 
+  css to make the left and right images on their own side when screen size reduced
+  otherwise due to responsiveness image will move above fields.
+ */
+
+body {
+  min-width: 960px;
+}
+
+/* 
+  css to make the left and right images on their own side when screen size reduced
+  otherwise image is coming between label and input of first field.
+ */
+
+@media screen and (max-width: 600px) {
+  .field-group-image input {
+    width: auto !important;
+    font-size: 1em !important;
+  }
+}

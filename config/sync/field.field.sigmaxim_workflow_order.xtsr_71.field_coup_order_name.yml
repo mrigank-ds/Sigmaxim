@@ -1,0 +1,27 @@
+uuid: 392ddbce-09cb-4912-b426-b44ab8e228f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_coup_order_name
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1744901806
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_coup_order_name
+field_name: field_coup_order_name
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Rexnord Order or Quote Number'
+description: ''
+required: 1
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

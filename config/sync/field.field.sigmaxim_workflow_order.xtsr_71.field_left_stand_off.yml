@@ -1,0 +1,33 @@
+uuid: 0dea15c9-e24f-4545-9159-47483221d753
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_stand_off
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746186868
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_stand_off
+field_name: field_left_stand_off
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Stand Off'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '.125'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: in
+field_type: float

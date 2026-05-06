@@ -1,0 +1,8 @@
+uuid: 0f29f528-bd6d-4510-8e0e-72a49572e3e3
+langcode: en
+status: true
+dependencies: {  }
+id: clear-cache
+label: 'Clear Cache'
+description: ''
+locked: false

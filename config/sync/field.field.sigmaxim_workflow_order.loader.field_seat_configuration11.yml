@@ -1,0 +1,23 @@
+uuid: a682e381-7d0a-42ab-a3e8-d527fadedcd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_seat_configuration11
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_seat_configuration11
+field_name: field_seat_configuration11
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Seat Configuration'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Standard Low Back, Fixed'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

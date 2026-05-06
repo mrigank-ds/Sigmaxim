@@ -1,0 +1,21 @@
+uuid: 86e13154-589d-4b30-afdf-bff00f52ea3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_4
+field_name: field_label_4
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P1 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_4
+default_value_callback: ''
+settings: {  }
+field_type: string

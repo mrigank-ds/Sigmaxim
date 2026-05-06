@@ -1,0 +1,7 @@
+name: 'Inline Label'
+type: module
+description: 'Custom inline label field widget for Drupal 9.'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - field

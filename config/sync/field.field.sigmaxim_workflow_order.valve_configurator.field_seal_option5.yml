@@ -1,0 +1,23 @@
+uuid: c0041328-28de-46b2-a452-8ab1118fa1bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_seal_option5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - options
+id: sigmaxim_workflow_order.valve_configurator.field_seal_option5
+field_name: field_seal_option5
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Seal Option'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Buna-N
+default_value_callback: ''
+settings: {  }
+field_type: list_string

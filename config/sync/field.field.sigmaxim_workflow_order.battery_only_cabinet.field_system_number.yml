@@ -1,0 +1,27 @@
+uuid: f445ade3-9484-47df-94e2-688273ae6b20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_system_number
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700481984
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.battery_only_cabinet.field_system_number
+field_name: field_system_number
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: 'System Number'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

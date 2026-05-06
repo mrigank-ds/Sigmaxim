@@ -1,0 +1,399 @@
+uuid: d166bc78-39dd-4ffe-9a85-a5d6f40d40ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.counter.field_90_degree_corner_turn1
+    - field.field.sigmaxim_workflow_order.counter.field__of_sides1
+    - field.field.sigmaxim_workflow_order.counter.field__of_sides2
+    - field.field.sigmaxim_workflow_order.counter.field_folder_id
+    - field.field.sigmaxim_workflow_order.counter.field_oa_height1
+    - field.field.sigmaxim_workflow_order.counter.field_oa_height2
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length1
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length2
+    - field.field.sigmaxim_workflow_order.counter.field_oa_length3
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_12
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_23
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_34
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_45
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_56
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_67
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_78
+    - field.field.sigmaxim_workflow_order.counter.field_splash_side_89
+    - field.field.sigmaxim_workflow_order.counter.field_width1
+    - field.field.sigmaxim_workflow_order.counter.field_width2
+    - field.field.sigmaxim_workflow_order.counter.field_width3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+  module:
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group_image:
+    group_main_option:
+      image: 0
+      image_style: large
+    group_side1:
+      image: 0
+      image_style: large
+    group_side2:
+      image: 0
+      image_style: large
+    group_side3:
+      image: 0
+      image_style: large
+    group_splash_sides:
+      image: 0
+      image_style: large
+  field_group:
+    group_main_option:
+      children:
+        - field__of_sides1
+        - field_oa_height1
+      label: 'Main Option'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_side1:
+      children:
+        - field_oa_length1
+        - field_width1
+      label: Side1
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_side2:
+      children:
+        - field_oa_length2
+        - field_width2
+      label: Side2
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_side3:
+      children:
+        - field_oa_length3
+        - field_width3
+      label: Side3
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_splash_sides:
+      children:
+        - field_splash_side_12
+        - field_splash_side_23
+        - field_splash_side_34
+        - field_splash_side_45
+        - field_splash_side_56
+        - field_splash_side_67
+        - field_splash_side_78
+        - field_splash_side_89
+      label: 'Splash Sides'
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.counter.default
+targetEntityType: sigmaxim_workflow_order
+bundle: counter
+mode: default
+content:
+  field_90_degree_corner_turn1:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field__of_sides1:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_oa_height1:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_oa_length1:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_oa_length2:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_oa_length3:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_splash_side_12:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_splash_side_23:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_splash_side_34:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_splash_side_45:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_splash_side_56:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        da3c97cf-98f9-4ba7-aff0-b7a583ccf4e1:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: "2\r\n1"
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_splash_side_67:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        838581db-5c99-4a22-8761-e78d44675626:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: "2\r\n1"
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_splash_side_78:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        e0c2b32a-15a4-4808-ab1a-aedb7ecf515c:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "2\r\n1"
+            value_form:
+              -
+                value: '2'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_splash_side_89:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        eb49f70f-f738-4038-820c-4fe1797e31ec:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_width1:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_width2:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_width3:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  group_side2:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        3a72ac48-910d-482d-80a5-a86be10bb04b:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: "3\r\n2"
+            value_form:
+              -
+                value: '1'
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  group_side3:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        1b1d9250-a770-4546-aa2b-4e27fb096032:
+          entity_type: sigmaxim_workflow_order
+          bundle: counter
+          dependee: field__of_sides1
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 3
+            value: ''
+            values: '3'
+            value_form:
+              -
+                value: '3'
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field__of_sides2: true
+  field_folder_id: true
+  field_oa_height2: true

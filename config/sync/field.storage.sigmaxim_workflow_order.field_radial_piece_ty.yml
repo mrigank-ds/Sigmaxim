@@ -1,0 +1,31 @@
+uuid: 5fe83355-c2ce-41ef-9468-09dc0eed7b70
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_radial_piece_ty
+field_name: field_radial_piece_ty
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: EQUAL_STAGGERED_PIECES
+      label: EQUAL_STAGGERED_PIECES
+    -
+      value: VARIABLE_STAGGERED_PIECES
+      label: VARIABLE_STAGGERED_PIECES
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

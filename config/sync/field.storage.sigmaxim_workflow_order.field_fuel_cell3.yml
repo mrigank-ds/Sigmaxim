@@ -1,0 +1,31 @@
+uuid: ccfc4035-0978-4502-8c98-90bb391aaee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_fuel_cell3
+field_name: field_fuel_cell3
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Standard
+      label: Standard
+    -
+      value: 'Shock Protected'
+      label: 'Shock Protected'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

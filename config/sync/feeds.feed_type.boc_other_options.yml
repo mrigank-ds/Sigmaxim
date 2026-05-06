@@ -1,0 +1,69 @@
+uuid: 0d55776e-2f07-47a4-b43b-58389d519bd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_other_options.field_gcode_oth_opt_boc
+    - field.field.data_entity.boc_other_options.field_oth_desc_oth_opt_boc
+    - monarch_data_entity.data_entity_type.boc_other_options
+  module:
+    - monarch_data_entity
+label: BOC_OTHER_OPTIONS
+id: boc_other_options
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: boc_other_options
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  gcode:
+    value: GCODE
+    label: GCODE
+    machine_name: gcode
+    type: csv
+  other_description:
+    value: OTHER_DESCRIPTION
+    label: OTHER_DESCRIPTION
+    machine_name: other_description
+    type: csv
+mappings:
+  -
+    target: field_gcode_oth_opt_boc
+    map:
+      value: gcode
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: gcode
+    settings: {  }
+    unique: {  }
+  -
+    target: field_oth_desc_oth_opt_boc
+    map:
+      value: other_description
+    settings:
+      language: null
+    unique: {  }

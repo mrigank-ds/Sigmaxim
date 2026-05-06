@@ -1,0 +1,21 @@
+uuid: 250a9d07-d1d6-4788-b7b6-131beaa3e54b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_test_x
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_test_x
+field_name: field_test_x
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: test_x
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

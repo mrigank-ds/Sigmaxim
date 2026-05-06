@@ -1,0 +1,46 @@
+uuid: 76dc784e-f859-4564-9360-d370c7a675fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_dilip_test_math
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_expression
+    - image
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  field_dilip_test_math:
+    type: field_expression_default
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    type: image_image
+    weight: -1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden: {  }

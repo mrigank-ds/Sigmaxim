@@ -1,0 +1,30 @@
+uuid: 22e5dafd-ce0e-461c-9f45-6b2f3f601bb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_list_int2
+field_name: field_list_int2
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Flammability
+    -
+      value: 1
+      label: 'Flammability FT2'
+    -
+      value: 2
+      label: 'Flammability FT2'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

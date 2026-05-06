@@ -1,0 +1,18 @@
+uuid: 8a6f1a89-1f9b-4d37-8bea-3f41e4382913
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_bom_routing_sheet_quote
+field_name: field_bom_routing_sheet_quote
+entity_type: sigmaxim_workflow_order
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

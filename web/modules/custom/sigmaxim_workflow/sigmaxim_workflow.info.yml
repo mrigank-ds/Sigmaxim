@@ -1,0 +1,7 @@
+name: 'sigmaxim_workflow'
+type: module
+description: 'Defines the workflow for product configurations and orders.'
+core_version_requirement: ^9 || ^10
+package: 'Sigmaxim'
+dependencies:
+  - replicate_ui

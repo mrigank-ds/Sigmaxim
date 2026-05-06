@@ -1,0 +1,39 @@
+sigmaxim_import_export.export_node_type:
+  path: '/admin/export/node/{node_type}'
+  defaults:
+    _controller: '\Drupal\sigmaxim_import_export\Controller\SigmaximExportController::exportNode'
+    _title: 'Export Node'
+  requirements:
+    _permission: 'export entities'
+
+sigmaxim_import_export.product_export:
+  path: '/admin/structure/products/{sigmaxim_workflow_order_type}/export'
+  defaults:
+    _controller: '\Drupal\sigmaxim_import_export\Controller\SigmaximExportController::exportPage'
+    _title: 'Export Product'
+  requirements:
+    _permission: 'export entities'
+
+# sigmaxim_import_export.import:
+#   path: '/admin/structure/products/import'
+#   defaults:
+#     _form: '\Drupal\sigmaxim_import_export\Form\SigmaximImportForm'
+#     _title: 'Import Product'
+#   requirements:
+#     _permission: 'export entities'
+
+
+sigmaxim_import_export.import_form:
+  path: '/admin/structure/products/import'
+  defaults:
+    _form: '\Drupal\sigmaxim_import_export\Form\SigmaximImportForm'
+    _title: 'Import Product'
+  requirements:
+    _permission: 'administer site configuration'
+
+sigmaxim_import_export.process:
+  path: '/admin/structure/products/import/process'
+  defaults:
+    _controller: '\Drupal\sigmaxim_import_export\Controller\SigmaximImportController::process'
+  requirements:
+    _permission: 'administer site configuration'

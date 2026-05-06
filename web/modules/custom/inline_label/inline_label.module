@@ -1,0 +1,32 @@
+<?php
+
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function inline_label_field_widget_info_alter(&$widget_types) {
+  // Add a class to the checkbox widget when it's required.
+    
+  $widget_types['text_textfield']['field types'][] = 'Text field';
+    $widget_types['text_textfield']['process_alter'][] = 'inline_label_add_class_to_required';
+
+ $widget_types['options_buttons']['field types'][] = 'checkbox';
+
+  $widget_types['options_buttons']['process_alter'][] = 'inline_label_add_class_to_required';
+}
+
+/**
+ * Process callback to add a class to the required field.
+ */
+function inline_label_add_class_to_required($element, &$form_state, $form) {
+  // Check if the field is required.
+  if (!empty($element['#required'])) {
+    // Add the class to the field.
+    $element['#attributes']['class'][] = 'required-field';
+  }
+
+  return $element;
+}
+
+
+

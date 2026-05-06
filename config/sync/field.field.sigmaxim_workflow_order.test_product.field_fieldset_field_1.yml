@@ -1,0 +1,27 @@
+uuid: e7b31c9d-2e1a-41f4-bea0-5c659d5afb54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_fieldset_field_1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753358088
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_fieldset_field_1
+field_name: field_fieldset_field_1
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'fieldset field 1'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

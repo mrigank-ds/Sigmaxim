@@ -1,0 +1,28 @@
+uuid: dc1a14c3-cf6f-43b1-9fc8-037861fe95d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.alpha_testing
+    - field.storage.comment.comment_body
+  module:
+    - field_inline_label
+    - text
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: comment.alpha_testing.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: alpha_testing
+label: Comment
+description: ''
+required: 1
+translatable: true
+default_value:
+  -
+    value: "<p>hii testing</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

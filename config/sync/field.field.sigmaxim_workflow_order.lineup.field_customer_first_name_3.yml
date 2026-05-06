@@ -1,0 +1,21 @@
+uuid: 3f44a884-6d95-417d-8b57-1a15a08add5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_customer_first_name_3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_customer_first_name_3
+field_name: field_customer_first_name_3
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Customer First Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: customer_first_name_3
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 4be3d646-457c-4faa-9fb8-a3f2f43f15fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_dilip_test
+field_name: field_dilip_test
+entity_type: sigmaxim_workflow_order
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

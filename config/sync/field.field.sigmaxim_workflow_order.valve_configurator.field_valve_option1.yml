@@ -1,0 +1,23 @@
+uuid: df518b84-f0c4-4feb-a965-2056c65869b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_valve_option1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - options
+id: sigmaxim_workflow_order.valve_configurator.field_valve_option1
+field_name: field_valve_option1
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Valve Option'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: DDRXQ-55
+default_value_callback: ''
+settings: {  }
+field_type: list_string

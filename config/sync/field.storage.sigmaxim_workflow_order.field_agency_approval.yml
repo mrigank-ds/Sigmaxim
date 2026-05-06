@@ -1,0 +1,37 @@
+uuid: b85ded99-6e8f-498c-8935-5c7213fda4b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_agency_approval
+field_name: field_agency_approval
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'A - w/o approvals'
+      label: 'A - w/o approvals'
+    -
+      value: 'F - UL489 Listed, CSA Certified & VDE Certified'
+      label: 'F - UL489 Listed, CSA Certified & VDE Certified'
+    -
+      value: 'G - UL489 Listed & CSA Certified'
+      label: 'G - UL489 Listed & CSA Certified'
+    -
+      value: 'J - UL489 Listed, CSA Certified & TUV Certified'
+      label: 'J - UL489 Listed, CSA Certified & TUV Certified'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

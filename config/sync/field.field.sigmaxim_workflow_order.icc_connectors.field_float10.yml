@@ -1,0 +1,23 @@
+uuid: 48bde353-3b9b-4f20-808f-f687a0e0415e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float10
+field_name: field_float10
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Length P1-P7'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

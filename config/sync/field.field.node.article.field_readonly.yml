@@ -1,0 +1,19 @@
+uuid: c6a50053-db2f-4d3c-8110-d14bfb4905ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_readonly
+    - node.type.article
+id: node.article.field_readonly
+field_name: field_readonly
+entity_type: node
+bundle: article
+label: Readonly
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 6d47f84b-e7a4-45ad-95bb-525dbf84f962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_accessories10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_accessories10
+field_name: field_accessories10
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: Accessories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,26 @@
+uuid: 90f0cba0-089c-4a2b-be90-8ae7ef992f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.feeds_item
+    - monarch_data_entity.data_entity_type.standard_data_d10
+  module:
+    - feeds
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757370137
+id: data_entity.standard_data_d10.feeds_item
+field_name: feeds_item
+entity_type: data_entity
+bundle: standard_data_d10
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

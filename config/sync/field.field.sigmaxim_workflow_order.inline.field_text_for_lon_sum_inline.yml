@@ -1,0 +1,31 @@
+uuid: a52690bf-77a4-4f0a-bf13-79ee3387b71d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_text_for_lon_sum_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+    - text
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_text_for_lon_sum_inline
+field_name: field_text_for_lon_sum_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: text_for_lon_sum_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>a4</p>\r\n\r\n<p>5a63</p>\r\n\r\n<p>a5d65s</p>\r\n\r\n<p>a56f</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

@@ -1,0 +1,29 @@
+uuid: cdc8355d-3477-499f-a39d-a1f957081abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_text_concat
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dilip_test
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1764934830
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.dilip_test.field_text_concat
+field_name: field_text_concat
+entity_type: sigmaxim_workflow_order
+bundle: dilip_test
+label: text_concat
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: Dilip
+default_value_callback: ''
+settings: {  }
+field_type: string

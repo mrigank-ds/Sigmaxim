@@ -1,0 +1,273 @@
+<?php
+
+/**
+ * @file
+ * Allows fields to be concatenated together using tokens for any entity type.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
+
+/**
+ * Applies custom string functions after token replacement.
+ *
+ * Supported functions (mirrors the JS implementation):
+ *   strleft(value, n)          first n characters
+ *   strright(value, n)         last n characters
+ *   substr(value, start, len)  substring (0-based start)
+ *   upper(value)               UPPERCASE
+ *   lower(value)               lowercase
+ *   trim(value)                trim whitespace
+ *   strlen(value)              string length as string
+ *   replace(value, find, repl) str_replace
+ *
+ * Example patterns:
+ *   strleft([field_textinput1],2) [field_textinput2]
+ *   upper([field_textinput1]) - lower([field_textinput2])
+ */
+function _concat_field_evaluate_functions($str) {
+  $max_passes = 10;
+  $pass = 0;
+  $changed = TRUE;
+
+  while ($changed && $pass < $max_passes) {
+    $changed = FALSE;
+    $pass++;
+
+    $result = preg_replace_callback(
+      '/([a-zA-Z_]+)\(([^()]*)\)/',
+      function ($matches) use (&$changed) {
+        $func_name = strtolower(trim($matches[1]));
+        $parts     = explode(',', $matches[2]);
+        $value     = $parts[0];
+        $extra     = array_slice($parts, 1);
+
+        $changed = TRUE;
+
+        switch ($func_name) {
+          case 'strleft':
+            $n = isset($extra[0]) ? (int) trim($extra[0]) : 0;
+            return mb_substr($value, 0, $n);
+
+          case 'strright':
+            $n = isset($extra[0]) ? (int) trim($extra[0]) : 0;
+            return $n > 0 ? mb_substr($value, -$n) : '';
+
+          case 'substr':
+            $start = isset($extra[0]) ? (int) trim($extra[0]) : 0;
+            if (isset($extra[1])) {
+              return mb_substr($value, $start, (int) trim($extra[1]));
+            }
+            return mb_substr($value, $start);
+
+          case 'upper':
+            return mb_strtoupper($value);
+
+          case 'lower':
+            return mb_strtolower($value);
+
+          case 'trim':
+            return trim($value);
+
+          case 'strlen':
+            return (string) mb_strlen($value);
+
+          case 'replace':
+            $find = isset($extra[0]) ? trim($extra[0]) : '';
+            $repl = isset($extra[1]) ? trim($extra[1]) : '';
+            return str_replace($find, $repl, $value);
+
+          default:
+            $changed = FALSE;
+            return $matches[0];
+        }
+      },
+      $str
+    );
+
+    $str = $result;
+  }
+
+  return $str;
+}
+
+/**
+ * Expands short-form tokens like [field_name] to [entity_type:field_name].
+ */
+function _concat_field_expand_short_tokens($pattern, $entity_type_id) {
+  return preg_replace_callback(
+    '/\[([a-zA-Z0-9_]+)\]/',
+    function ($matches) use ($entity_type_id) {
+      return '[' . $entity_type_id . ':' . $matches[1] . ']';
+    },
+    $pattern
+  );
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function concat_field_entity_presave(EntityInterface $entity) {
+  if (!$entity instanceof FieldableEntityInterface) {
+    return;
+  }
+
+  $field_definitions = \Drupal::service('entity_field.manager')
+    ->getFieldDefinitions($entity->getEntityTypeId(), $entity->bundle());
+
+  foreach ($field_definitions as $field_name => $field_definition) {
+    if ($field_definition->getType() === 'concat_field') {
+      _concat_field_compute_value($entity, $field_name, $field_definition);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function concat_field_entity_insert(EntityInterface $entity) {
+  concat_field_entity_presave($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function concat_field_entity_update(EntityInterface $entity) {
+  concat_field_entity_presave($entity);
+}
+
+/**
+ * Computes the concatenated value for a concat field.
+ *
+ * Pipeline:
+ *   1. Expand short tokens:  [field_name]  →  [entity_type:field_name]
+ *   2. Drupal token replace: [entity_type:field_name]  →  actual value
+ *   3. Evaluate functions:   strleft(value,2)  →  "va"
+ *   4. Normalise whitespace and strip HTML tags.
+ */
+function _concat_field_compute_value(FieldableEntityInterface $entity, $field_name, FieldDefinitionInterface $field_definition) {
+  $token_pattern = $field_definition->getSetting('token_pattern');
+
+  if (empty($token_pattern)) {
+    $entity->set($field_name, ['value' => '']);
+    return;
+  }
+
+  $entity_type_id = $entity->getEntityTypeId();
+
+  // Step 1: Expand short tokens inside function calls and bare tokens.
+  // We need to expand tokens that are inside function call parens too.
+  // e.g. strleft([field_textinput1],2) -> strleft([entity_type:field_textinput1],2)
+  $expanded_pattern = _concat_field_expand_short_tokens($token_pattern, $entity_type_id);
+
+  // Step 2: Drupal token replacement.
+  $token_service = \Drupal::service('token');
+  $result = $token_service->replace(
+    $expanded_pattern,
+    [$entity_type_id => $entity],
+    [
+      'clear'    => TRUE,
+      'sanitize' => FALSE,
+    ]
+  );
+
+  // Step 3: Evaluate string functions like strleft(), upper(), etc.
+  $result = _concat_field_evaluate_functions($result);
+
+  // Step 4: Normalise — strip HTML tags and collapse whitespace.
+  $result = trim(preg_replace('/\s+/', ' ', strip_tags($result)));
+
+  $entity->set($field_name, ['value' => $result]);
+
+  \Drupal::logger('concat_field')->info(
+    'Computed value for @field: "@value" from pattern "@pattern"',
+    ['@field' => $field_name, '@value' => $result, '@pattern' => $token_pattern]
+  );
+}
+
+/**
+ * Implements hook_field_widget_single_element_form_alter().
+ */
+function concat_field_field_widget_single_element_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  if ($context['widget']->getPluginId() === 'concat_field_default') {
+    $items          = $context['items'];
+    $delta          = $context['delta'];
+    $entity         = $items->getEntity();
+    $field_definition = $context['items']->getFieldDefinition();
+    $token_pattern  = $field_definition->getSetting('token_pattern');
+
+    $current_value = '';
+
+    if (!empty($token_pattern) && $entity) {
+      $entity_type_id   = $entity->getEntityTypeId();
+      $expanded_pattern = _concat_field_expand_short_tokens($token_pattern, $entity_type_id);
+
+      $token_service = \Drupal::service('token');
+      $current_value = $token_service->replace(
+        $expanded_pattern,
+        [$entity_type_id => $entity],
+        ['clear' => TRUE, 'sanitize' => FALSE]
+      );
+
+      // Apply string functions.
+      $current_value = _concat_field_evaluate_functions($current_value);
+      $current_value = trim(preg_replace('/\s+/', ' ', strip_tags($current_value)));
+    }
+
+    // Use stored value if it exists.
+    if (isset($items[$delta]->value) && !empty($items[$delta]->value)) {
+      $current_value = $items[$delta]->value;
+    }
+
+    $element['value']['#default_value'] = $current_value;
+    $element['value']['#description']   = '';
+
+    $element['#attached']['library'][] = 'concat_field/concat_field.admin';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function concat_field_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'field_config_edit_form') !== FALSE || strpos($form_id, 'field_storage_config_edit_form') !== FALSE) {
+    $form['#attached']['library'][] = 'concat_field/concat_field.admin';
+  }
+
+  if (preg_match('/^node_.*_form$/', $form_id) || preg_match('/^.*_.*_form$/', $form_id)) {
+    $form['#validate'][] = 'concat_field_form_validate';
+  }
+}
+
+/**
+ * Form validation handler to compute concat field values.
+ */
+function concat_field_form_validate($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form_object = $form_state->getFormObject();
+
+  if (method_exists($form_object, 'getEntity')) {
+    $entity = $form_object->getEntity();
+
+    if ($entity instanceof FieldableEntityInterface) {
+      $field_definitions = \Drupal::service('entity_field.manager')
+        ->getFieldDefinitions($entity->getEntityTypeId(), $entity->bundle());
+
+      foreach ($field_definitions as $field_name => $field_definition) {
+        if ($field_definition->getType() === 'concat_field') {
+          $form_state->cleanValues();
+          foreach ($form_state->getValues() as $key => $value) {
+            if ($entity->hasField($key)) {
+              $entity->set($key, $value);
+            }
+          }
+
+          _concat_field_compute_value($entity, $field_name, $field_definition);
+
+          $computed_value = $entity->get($field_name)->value;
+          $form_state->setValue([$field_name, 0, 'value'], $computed_value);
+        }
+      }
+    }
+  }
+}

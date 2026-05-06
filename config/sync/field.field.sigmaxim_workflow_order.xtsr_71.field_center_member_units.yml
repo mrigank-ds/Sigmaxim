@@ -1,0 +1,30 @@
+uuid: 60a15360-00e6-4422-a610-34c13da7b7b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_center_member_units
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1744902888
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_center_member_units
+field_name: field_center_member_units
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Center Member Units'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: Imperial
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: 9fc8a901-8d02-418a-a46c-d42281c924f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_colors
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.te_connector
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746192541
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.te_connector.field_colors
+field_name: field_colors
+entity_type: sigmaxim_workflow_order
+bundle: te_connector
+label: Colors
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: Red
+default_value_callback: ''
+settings: {  }
+field_type: list_string

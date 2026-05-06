@@ -1,0 +1,23 @@
+uuid: bf42a549-93da-40e1-8606-aaa7b168d1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_level
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_level
+field_name: field_level
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: Level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

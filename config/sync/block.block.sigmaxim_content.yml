@@ -1,0 +1,22 @@
+uuid: 0004b98d-bcd0-4284-a10c-0a1ea3e372c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sigmaxim
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: sigmaxim_content
+theme: sigmaxim
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

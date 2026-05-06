@@ -1,0 +1,5 @@
+# Schema for the configuration files of the sigmaxim theme.
+
+sigmaxim.settings:
+  type: theme_settings
+  label: 'sigmaxim settings'

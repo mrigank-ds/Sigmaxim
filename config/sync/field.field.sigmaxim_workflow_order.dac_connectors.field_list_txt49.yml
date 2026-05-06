@@ -1,0 +1,21 @@
+uuid: 7f5ea170-7662-4ca1-a0a3-89058b6c3158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt49
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.dac_connectors.field_list_txt49
+field_name: field_list_txt49
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P2 Label Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,14 @@
+sigmaxim_workflow.order_results:
+  path: '/order/results/{id}'
+  defaults:
+    _controller: '\Drupal\sigmaxim_workflow\Controller\FileDepotController::orderResults'
+    _title: 'Results'
+  requirements:
+    _custom_access: '\Drupal\sigmaxim_workflow\Controller\FileDepotController::accessResults'
+
+sigmaxim_workflow.download_file:
+  path: '/workflow/file/download'
+  defaults:
+    _controller: '\Drupal\sigmaxim_workflow\Controller\FileDepotController::download'
+  requirements:
+    _permission: 'access content'

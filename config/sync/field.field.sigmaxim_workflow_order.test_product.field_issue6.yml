@@ -1,0 +1,34 @@
+uuid: ca4b0b3f-70ff-4cfe-888d-55536da8b8c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_issue6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753360608
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_issue6
+field_name: field_issue6
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Issue6
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>In the Advanced reference Field,</p>\r\n\r\n<p>&gt; Same as Standard, we don't have display specific columns</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;While adding filter tokens we need to do the settings in d7 by default it used appear.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

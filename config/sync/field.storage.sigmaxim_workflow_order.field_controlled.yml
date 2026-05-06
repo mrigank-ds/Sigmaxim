@@ -1,0 +1,37 @@
+uuid: ff51e4f0-17b7-4e5c-adad-ea548b1f2b24
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_controlled
+field_name: field_controlled
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Red
+      label: Red
+    -
+      value: Yellow
+      label: Yellow
+    -
+      value: Blue
+      label: Blue
+    -
+      value: Green
+      label: Green
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

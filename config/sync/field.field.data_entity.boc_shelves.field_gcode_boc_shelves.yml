@@ -1,0 +1,27 @@
+uuid: d6f9c725-2ea8-4dc6-8290-04b85cb661ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_gcode_boc_shelves
+    - monarch_data_entity.data_entity_type.boc_shelves
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737527730
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_shelves.field_gcode_boc_shelves
+field_name: field_gcode_boc_shelves
+entity_type: data_entity
+bundle: boc_shelves
+label: GCODE
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

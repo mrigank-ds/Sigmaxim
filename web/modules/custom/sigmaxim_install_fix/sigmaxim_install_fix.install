@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Fixes installs.
+ */
+
+/**
+ * Removes multiple modules with broken installs.
+ */
+function sigmaxim_install_fix_update_9002() {
+    $core_extension = Drupal::configFactory()->getEditable('core.extension');
+    $module = $core_extension->get('module');
+
+    unset($module['feeds']);
+
+    $core_extension->set('module', $module);
+    $core_extension->save();
+
+    \Drupal::database()->schema()->dropTable('feeds_clean_list');
+}
+
+/**
+ * Removes multiple modules with broken installs.
+ */
+function sigmaxim_install_fix_update_9001() {
+    foreach ([
+        'core.entity_view_mode.data_entity.table',
+        'feeds.settings',
+        'field.storage.data_entity.field_type',
+        'monarch_data_entity.data_entity_type.cabinet',
+        'monarch_data_entity.data_entity_type.table_1',
+        'monarch_data_entity.data_entity_type.test',
+        'system.action.feeds_feed_clear_action',
+        'system.action.feeds_feed_import_action',
+    ] as $config_name) {
+        Drupal::configFactory()->getEditable($config_name)->delete();
+    }
+
+    $core_extension = Drupal::configFactory()->getEditable('core.extension');
+    $module = $core_extension->get('module');
+
+    unset($module['entity_browser']);
+    unset($module['feeds']);
+    unset($module['monarch_data_entity']);
+
+    $core_extension->set('module', $module);
+    $core_extension->save();
+
+    \Drupal::database()->schema()->dropTable('feeds_clean_list');
+}
+
+/**
+ * Uninstall broken modules manually.
+ */
+function sigmaxim_install_fix_install() {
+    sigmaxim_install_fix_update_9001();
+}

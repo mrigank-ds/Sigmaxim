@@ -1,0 +1,33 @@
+uuid: d57358c1-0323-4a0e-9274-04110f62fcac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_operating_power
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745801458
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_operating_power
+field_name: field_operating_power
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Operating Power'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1000'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

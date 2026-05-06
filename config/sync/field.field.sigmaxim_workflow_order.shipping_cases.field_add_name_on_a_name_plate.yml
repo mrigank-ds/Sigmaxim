@@ -1,0 +1,23 @@
+uuid: fe61fbd4-277e-43be-9fc5-401c31931a28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_add_name_on_a_name_plate
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_add_name_on_a_name_plate
+field_name: field_add_name_on_a_name_plate
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Add name on a Name plate'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

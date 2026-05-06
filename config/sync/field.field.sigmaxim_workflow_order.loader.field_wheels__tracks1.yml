@@ -1,0 +1,21 @@
+uuid: 3c9dbb7e-2256-4319-8275-93ad7d48667f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_wheels__tracks1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_wheels__tracks1
+field_name: field_wheels__tracks1
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Wheels \ Tracks'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

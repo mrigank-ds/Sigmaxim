@@ -1,0 +1,40 @@
+uuid: 3b4e906e-44cb-4d23-8636-b5b981c71922
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_accessories10
+field_name: field_accessories10
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'emergency pack'
+      label: 'emergency pack'
+    -
+      value: bend
+      label: bend
+    -
+      value: 'three pin plug'
+      label: 'three pin plug'
+    -
+      value: 'clear flex'
+      label: 'clear flex'
+    -
+      value: 'separate circuit wiring'
+      label: 'separate circuit wiring'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

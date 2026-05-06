@@ -1,0 +1,23 @@
+uuid: 52d9cb11-8cf1-49cc-af2a-f1003e10161e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_43
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_bool_43
+field_name: field_bool_43
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: Chamfer
+description: bool_43
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

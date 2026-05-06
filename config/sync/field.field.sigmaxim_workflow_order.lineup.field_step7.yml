@@ -1,0 +1,23 @@
+uuid: cf53578e-d26d-4769-be5e-18f069b4d723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_step7
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_step7
+field_name: field_step7
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: STEP
+description: step7
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

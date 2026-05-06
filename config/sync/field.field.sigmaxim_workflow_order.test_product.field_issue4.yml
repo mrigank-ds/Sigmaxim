@@ -1,0 +1,34 @@
+uuid: f114dc30-c379-4122-8902-72c42af30ba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_issue4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753357837
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_issue4
+field_name: field_issue4
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Issue4
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>We don't have unit conversion in D9&nbsp;</p>\r\n\r\n<p>the process is in float/integer fields we will have a option to add the conversion mechanical which will link the other field option</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

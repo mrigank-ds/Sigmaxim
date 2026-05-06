@@ -1,0 +1,21 @@
+uuid: b74d1cfa-a6bf-474b-9616-2695d620902c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_sigmaxim
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+id: sigmaxim_workflow_order.sds_test.field_sigmaxim
+field_name: field_sigmaxim
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: Sigmaxim
+description: 'concat option is not working'
+required: false
+translatable: false
+default_value:
+  -
+    value: Sigmaxim
+default_value_callback: ''
+settings: {  }
+field_type: string

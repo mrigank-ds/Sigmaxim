@@ -1,0 +1,23 @@
+uuid: b191bcca-01dd-4381-8db6-c46480e7e486
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_window_options15
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_window_options15
+field_name: field_window_options15
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Window Options'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: 772f227f-3535-46d0-9816-53ecc2b2531f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+  module:
+    - field_inline_label
+    - options
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.ssg_test.field_list_txt5
+field_name: field_list_txt5
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Cable Family'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 97c72b3d-e234-40ca-98c0-d5a865e94ec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt39
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.dac_connectors.field_list_txt39
+field_name: field_list_txt39
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Left Pull Tab'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Without Logo'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

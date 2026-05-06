@@ -1,0 +1,37 @@
+uuid: 2bac462b-c786-434c-8964-25731d40ee6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_anchor_method7
+field_name: field_anchor_method7
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: None
+      label: None
+    -
+      value: Glide
+      label: Glide
+    -
+      value: 'Concrete Drilled'
+      label: 'Concrete Drilled'
+    -
+      value: Caster
+      label: Caster
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

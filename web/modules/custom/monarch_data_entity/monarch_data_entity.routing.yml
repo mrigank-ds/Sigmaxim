@@ -1,0 +1,28 @@
+monarch_data_entity.view_input_view_embed.normal:
+  path: '/view-input-view-embed/{view_name}/{view_display_id}/{view_arguments}'
+  defaults:
+    view_arguments: NULL
+    _title: 'View Input View Embed'
+    _controller: '\Drupal\monarch_data_entity\Controller\ViewInputViewController::build'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: FALSE
+monarch_data_entity.view_input_view_embed.admin:
+  path: '/view-input-view-embed-admin/{view_name}/{view_display_id}/{view_arguments}'
+  defaults:
+    view_arguments: NULL
+    _title: 'View Input View Embed'
+    _controller: '\Drupal\monarch_data_entity\Controller\ViewInputViewController::build'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+monarch_data_entity.json_callback:
+  path: '/monarch-data-entity/json-callback'
+  defaults:
+    _controller: '\Drupal\monarch_data_entity\Controller\JsonController::handle'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: FALSE

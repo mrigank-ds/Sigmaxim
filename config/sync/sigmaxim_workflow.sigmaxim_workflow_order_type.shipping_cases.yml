@@ -1,0 +1,17 @@
+uuid: cf7b79b3-03e3-4af9-aa92-fa784b6190e7
+langcode: en
+status: true
+dependencies: {  }
+id: shipping_cases
+label: 'Shipping Cases'
+description: 'Shipping Cases'
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '0'
+product_category: '12'

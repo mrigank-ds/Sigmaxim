@@ -1,0 +1,34 @@
+uuid: e4cf4679-d7a5-44a6-9a9a-4f59b6bd90ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_issue8
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753361603
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_issue8
+field_name: field_issue8
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Issue8
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>We don't have dynamic images, due to in standard data reference we don't have display option.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

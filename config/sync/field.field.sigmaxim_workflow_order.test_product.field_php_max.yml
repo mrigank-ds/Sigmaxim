@@ -1,0 +1,38 @@
+uuid: 1ce9e790-8e03-45d9-b19e-342c77a112b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_php_max
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753430178
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_php_max
+field_name: field_php_max
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'PHP Max'
+description: 'should show the larger of the two values from Integer Field and Float Field'
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: 'max([field_integer_field],[field_float_field])'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

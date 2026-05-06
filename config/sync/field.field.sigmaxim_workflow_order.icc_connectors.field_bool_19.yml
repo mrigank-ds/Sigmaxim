@@ -1,0 +1,23 @@
+uuid: 576b2b69-8a31-4f63-adbc-0fae32d65762
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_19
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_bool_19
+field_name: field_bool_19
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Cable model with shrink'
+description: bool_19
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Cable model with shrink'
+field_type: boolean

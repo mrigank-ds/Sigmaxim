@@ -1,0 +1,35 @@
+uuid: 9c354ac6-e611-46e9-91cb-2fd98e3d3ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_iss_sta_da_fie_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758026266
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_iss_sta_da_fie_d10
+field_name: field_iss_sta_da_fie_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Issue with Standard Data Fields'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: '<p>In Standard Data we dont have controls for Filter Tokens and Display Columns as like in Drupal 7 Site</p><p>&nbsp;</p><img data-entity-uuid="642fb7a3-80a8-4435-9a9f-30e077ecc101" data-entity-type="file" src="/sites/default/files/inline-images/image.png" width="1125" height="224">'
+    format: basic_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

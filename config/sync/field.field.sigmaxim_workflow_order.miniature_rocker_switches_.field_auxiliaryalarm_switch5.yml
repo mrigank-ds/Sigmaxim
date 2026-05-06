@@ -1,0 +1,23 @@
+uuid: 160b4215-f16f-46ec-99f3-2e039c8aec53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_auxiliaryalarm_switch5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_auxiliaryalarm_switch5
+field_name: field_auxiliaryalarm_switch5
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Auxiliary/Alarm Switch'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0 - Without Aux Switch'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

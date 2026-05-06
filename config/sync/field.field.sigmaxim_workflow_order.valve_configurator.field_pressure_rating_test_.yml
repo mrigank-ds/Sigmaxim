@@ -1,0 +1,25 @@
+uuid: d9695e79-29ae-45d4-949f-7d05beb3bb9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_pressure_rating_test_
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_pressure_rating_test_
+field_name: field_pressure_rating_test_
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Pressure Rating (test)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 300
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

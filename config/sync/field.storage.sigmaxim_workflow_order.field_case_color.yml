@@ -1,0 +1,53 @@
+uuid: 9265d48c-4e1d-4e19-b61f-e3b281b91308
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+  list_image:
+    image_style: thumbnail
+    0:
+      image: '298'
+    1:
+      image: '299'
+    2:
+      image: '300'
+    3:
+      image: '301'
+    4:
+      image: '302'
+id: sigmaxim_workflow_order.field_case_color
+field_name: field_case_color
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Blue
+    -
+      value: 1
+      label: Yellow
+    -
+      value: 2
+      label: Green
+    -
+      value: 3
+      label: Red
+    -
+      value: 4
+      label: Purple
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+uuid: 2ebb8f1c-5eaa-4f73-8f1a-b09205eb32b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_issue3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753357413
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.test_product.field_issue3
+field_name: field_issue3
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: Issue3
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>Math Expression is not working, here Previosuly we have d7 math field in d9 we have expression which function while gaurav were there now it not working, jatin commited in other two he will fix it.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: 0
+  required_summary: 0
+field_type: text_with_summary

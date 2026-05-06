@@ -1,0 +1,33 @@
+uuid: 029818fb-73dc-4c8f-bd81-990a902f9e9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_operating_speed
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745801743
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_operating_speed
+field_name: field_operating_speed
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Operating Speed'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1000'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: RPM
+field_type: integer

@@ -1,0 +1,8 @@
+# Library for Inline .
+inline_label:
+   css:
+    theme:
+      css/inline.css: {}
+   dependencies:
+    - core/jquery
+    - core/drupalSettings

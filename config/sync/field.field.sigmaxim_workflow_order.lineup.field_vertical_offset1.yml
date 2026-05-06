@@ -1,0 +1,23 @@
+uuid: 97bde189-2b05-4a52-bc1e-a4b36ffef15f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_vertical_offset1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+id: sigmaxim_workflow_order.lineup.field_vertical_offset1
+field_name: field_vertical_offset1
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Vertical Offset'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

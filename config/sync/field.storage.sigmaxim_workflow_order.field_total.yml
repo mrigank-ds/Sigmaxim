@@ -1,0 +1,25 @@
+uuid: c264151f-0020-4d15-840f-3704da7a7766
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_total
+field_name: field_total
+entity_type: sigmaxim_workflow_order
+type: expression_integer
+settings:
+  unsigned: false
+  size: normal
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: e87087be-cd0a-437a-83da-8da126a8245b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_temperature_requirements2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+id: sigmaxim_workflow_order.lineup.field_temperature_requirements2
+field_name: field_temperature_requirements2
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Temperature Requirements'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

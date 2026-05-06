@@ -1,0 +1,31 @@
+uuid: 1af39a46-f551-4a0f-bb92-d3e14d14a9dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_hub_key_precision
+field_name: field_left_hub_key_precision
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Commercial
+      label: Commercial
+    -
+      value: Precision
+      label: Precision
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

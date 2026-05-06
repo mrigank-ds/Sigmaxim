@@ -1,0 +1,8 @@
+uuid: 12fc007a-2d98-48b1-919a-bfb6b66cb4eb
+langcode: en
+status: true
+dependencies: {  }
+id: alpha_testing
+label: 'Alpha Testing'
+target_entity_type_id: node
+description: 'Alpha Testing'

@@ -1,0 +1,23 @@
+uuid: 8bd7f2ae-49fa-444d-a1c3-d733a9758586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_drawing4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_drawing4
+field_name: field_drawing4
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: Drawing
+description: drawing4
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

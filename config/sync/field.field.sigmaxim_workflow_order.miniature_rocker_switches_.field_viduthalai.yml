@@ -1,0 +1,21 @@
+uuid: ecb2c4cd-eff5-4375-98b9-39f62744d82a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_viduthalai
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_viduthalai
+field_name: field_viduthalai
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Agency Approval'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

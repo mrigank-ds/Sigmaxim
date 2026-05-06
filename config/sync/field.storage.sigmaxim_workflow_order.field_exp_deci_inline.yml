@@ -1,0 +1,25 @@
+uuid: 221b0d33-1d23-4c33-97a5-55086113f777
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_exp_deci_inline
+field_name: field_exp_deci_inline
+entity_type: sigmaxim_workflow_order
+type: expression_decimal
+settings:
+  precision: '10'
+  scale: '2'
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

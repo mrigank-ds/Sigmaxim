@@ -1,0 +1,26 @@
+uuid: 8e1d2b53-d065-4638-94de-abe1dc617393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_test1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sub_alpha_test
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.sub_alpha_test.field_test1
+field_name: field_test1
+entity_type: sigmaxim_workflow_order
+bundle: sub_alpha_test
+label: Test1
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '10'
+default_value_callback: ''
+settings: {  }
+field_type: string

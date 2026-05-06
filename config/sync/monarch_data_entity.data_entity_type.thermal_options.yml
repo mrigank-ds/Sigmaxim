@@ -1,0 +1,6 @@
+uuid: af5d664e-306c-4334-8c1f-07908fc55c4b
+langcode: en
+status: true
+dependencies: {  }
+id: thermal_options
+label: 'Thermal Options'

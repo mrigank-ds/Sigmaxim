@@ -1,0 +1,12 @@
+.list_image__wrapper img {
+  display: none;
+}
+
+.list_image__field_wrapper > div {
+  display: inline-block;
+}
+
+.list_image__field_wrapper .list_image__wrapper {
+  vertical-align: top;
+  padding: 1rem 1rem;
+}

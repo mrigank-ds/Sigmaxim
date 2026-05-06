@@ -1,0 +1,63 @@
+uuid: f418edef-7121-415f-a77c-48c1ddafe594
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_frequency__delay6
+field_name: field_frequency__delay6
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '11 - DC Ultra Short</option>'
+      label: '11 - DC Ultra Short</option>'
+    -
+      value: '12 - DC Short</option>'
+      label: '12 - DC Short</option>'
+    -
+      value: '14 - DC Medium</option>'
+      label: '14 - DC Medium</option>'
+    -
+      value: '16 - DC Long</option>'
+      label: '16 - DC Long</option>'
+    -
+      value: '21 - 50/60Hz Ultra Short</opti'
+      label: '21 - 50/60Hz Ultra Short</opti'
+    -
+      value: '22 - 50/60Hz Short</option>'
+      label: '22 - 50/60Hz Short</option>'
+    -
+      value: '24 - 50/60Hz Medium</option>'
+      label: '24 - 50/60Hz Medium</option>'
+    -
+      value: '26 - 50/60Hz Long</option>'
+      label: '26 - 50/60Hz Long</option>'
+    -
+      value: '42 - 50/60Hz Short, Hi-Inrush<'
+      label: '42 - 50/60Hz Short, Hi-Inrush<'
+    -
+      value: '44 - 50/60Hz Medium, Hi-Inrush'
+      label: '44 - 50/60Hz Medium, Hi-Inrush'
+    -
+      value: '46 - 50/60Hz Long, Hi-Inrush</'
+      label: '46 - 50/60Hz Long, Hi-Inrush</'
+    -
+      value: '52 - DC Short, Hi-Inrush</opti'
+      label: '52 - DC Short, Hi-Inrush</opti'
+    -
+      value: '54 - DC Medium, Hi-Inrush</opt'
+      label: '54 - DC Medium, Hi-Inrush</opt'
+    -
+      value: '56 - DC Long, Hi-Inrush</optio'
+      label: '56 - DC Long, Hi-Inrush</optio'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

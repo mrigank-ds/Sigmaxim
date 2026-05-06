@@ -1,0 +1,27 @@
+uuid: a77c49d3-7636-436c-8e52-a9d291f3a52f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_power_boc_shelves
+    - monarch_data_entity.data_entity_type.boc_shelves
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737527677
+  field_inline_label:
+    inline_label: 0
+id: data_entity.boc_shelves.field_power_boc_shelves
+field_name: field_power_boc_shelves
+entity_type: data_entity
+bundle: boc_shelves
+label: POWER
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

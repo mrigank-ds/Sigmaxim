@@ -1,0 +1,26 @@
+uuid: 7e62814e-57d6-4fbf-97bc-37a4347754d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263280
+id: sigmaxim_workflow_order.lineup.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: lineup
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

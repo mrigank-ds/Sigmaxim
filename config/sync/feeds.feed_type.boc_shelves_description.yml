@@ -1,0 +1,82 @@
+uuid: cf0c0d74-ea0c-465e-84a6-e83f1b14eb48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_shelves.field_gcode_boc_shelves
+    - field.field.data_entity.boc_shelves.field_power_boc_shelves
+    - field.field.data_entity.boc_shelves.field_shel_des_boc_shelves
+    - monarch_data_entity.data_entity_type.boc_shelves
+  module:
+    - monarch_data_entity
+label: BOC_SHELVES_DESCRIPTION
+id: boc_shelves_description
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: boc_shelves
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  power:
+    value: POWER
+    label: POWER
+    machine_name: power
+    type: csv
+  gcode:
+    value: GCODE
+    label: GCODE
+    machine_name: gcode
+    type: csv
+  shelves_description:
+    value: SHELVES_DESCRIPTION
+    label: SHELVES_DESCRIPTION
+    machine_name: shelves_description
+    type: csv
+mappings:
+  -
+    target: field_power_boc_shelves
+    map:
+      value: power
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: power
+    settings: {  }
+    unique: {  }
+  -
+    target: field_gcode_boc_shelves
+    map:
+      value: gcode
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_shel_des_boc_shelves
+    map:
+      value: shelves_description
+    settings:
+      language: null
+    unique: {  }

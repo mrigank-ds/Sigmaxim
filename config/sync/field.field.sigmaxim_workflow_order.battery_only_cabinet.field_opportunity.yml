@@ -1,0 +1,29 @@
+uuid: 1dcc1667-0124-46fd-9f66-cc364dbbe915
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_opportunity
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1700482035
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.battery_only_cabinet.field_opportunity
+field_name: field_opportunity
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: Opportunity
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: AA00112244_O
+default_value_callback: ''
+settings: {  }
+field_type: string

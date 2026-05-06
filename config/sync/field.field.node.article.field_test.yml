@@ -1,0 +1,26 @@
+uuid: fbe7de83-9c3c-4220-b989-86a0507c37a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.article
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: node.article.field_test
+field_name: field_test
+entity_type: node
+bundle: article
+label: Test
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '12'
+default_value_callback: ''
+settings: {  }
+field_type: string

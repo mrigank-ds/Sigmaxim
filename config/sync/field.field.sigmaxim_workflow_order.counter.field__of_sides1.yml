@@ -1,0 +1,23 @@
+uuid: 6a49f06f-b86b-4b6f-8d2d-8e71c15522f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field__of_sides1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+  module:
+    - options
+id: sigmaxim_workflow_order.counter.field__of_sides1
+field_name: field__of_sides1
+entity_type: sigmaxim_workflow_order
+bundle: counter
+label: '# of Sides'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

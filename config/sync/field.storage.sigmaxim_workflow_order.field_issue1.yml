@@ -1,0 +1,19 @@
+uuid: 274a5a35-8067-47a7-a968-17650bcc0168
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+    - text
+id: sigmaxim_workflow_order.field_issue1
+field_name: field_issue1
+entity_type: sigmaxim_workflow_order
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

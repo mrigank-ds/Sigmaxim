@@ -1,0 +1,406 @@
+uuid: 136f2de9-fa7d-43c1-b71a-3768725aaf73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.loader.field_attachments8
+    - field.field.sigmaxim_workflow_order.loader.field_check_box
+    - field.field.sigmaxim_workflow_order.loader.field_climate_control14
+    - field.field.sigmaxim_workflow_order.loader.field_control_module10
+    - field.field.sigmaxim_workflow_order.loader.field_customer_email_2
+    - field.field.sigmaxim_workflow_order.loader.field_customer_name_1
+    - field.field.sigmaxim_workflow_order.loader.field_customer_order_number_3
+    - field.field.sigmaxim_workflow_order.loader.field_dashboard13
+    - field.field.sigmaxim_workflow_order.loader.field_documentation1
+    - field.field.sigmaxim_workflow_order.loader.field_emissions_package6
+    - field.field.sigmaxim_workflow_order.loader.field_folder_id
+    - field.field.sigmaxim_workflow_order.loader.field_fuel_cell3
+    - field.field.sigmaxim_workflow_order.loader.field_generate_a_3d_pdf_2
+    - field.field.sigmaxim_workflow_order.loader.field_generate_a_manufacturing_l
+    - field.field.sigmaxim_workflow_order.loader.field_generate_bom4
+    - field.field.sigmaxim_workflow_order.loader.field_generate_images_1
+    - field.field.sigmaxim_workflow_order.loader.field_generate_routing_docs6
+    - field.field.sigmaxim_workflow_order.loader.field_generate_shrinkwrap_model5
+    - field.field.sigmaxim_workflow_order.loader.field_hydraulic_upgrades9
+    - field.field.sigmaxim_workflow_order.loader.field_ignition_upgrades4
+    - field.field.sigmaxim_workflow_order.loader.field_lifting_boom7
+    - field.field.sigmaxim_workflow_order.loader.field_order_date
+    - field.field.sigmaxim_workflow_order.loader.field_power_take_off1
+    - field.field.sigmaxim_workflow_order.loader.field_power_train2
+    - field.field.sigmaxim_workflow_order.loader.field_seat_configuration11
+    - field.field.sigmaxim_workflow_order.loader.field_seat_location12
+    - field.field.sigmaxim_workflow_order.loader.field_suspension5
+    - field.field.sigmaxim_workflow_order.loader.field_test
+    - field.field.sigmaxim_workflow_order.loader.field_test_x
+    - field.field.sigmaxim_workflow_order.loader.field_wheels__tracks1
+    - field.field.sigmaxim_workflow_order.loader.field_window_options15
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - datetime
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group:
+    group_tab_gr:
+      children:
+        - group_order_information
+        - group_chassis
+        - group_hydraulics_and_attachments
+        - group_cab
+        - group_order_options
+      label: 'Tab Group'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_order_information:
+      children:
+        - group_customer_information
+        - group_order_date
+      label: 'Order Information'
+      region: content
+      parent_name: group_tab_gr
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_customer_information:
+      children:
+        - field_customer_name_1
+        - field_customer_email_2
+        - field_customer_order_number_3
+      label: 'Customer Information'
+      region: content
+      parent_name: group_order_information
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_chassis:
+      children:
+        - field_power_train2
+        - field_wheels__tracks1
+        - field_fuel_cell3
+        - field_ignition_upgrades4
+        - field_suspension5
+        - field_emissions_package6
+      label: Chassis
+      region: content
+      parent_name: group_tab_gr
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_hydraulics_and_attachments:
+      children:
+        - field_lifting_boom7
+        - field_attachments8
+        - field_hydraulic_upgrades9
+        - field_power_take_off1
+        - field_control_module10
+      label: 'Hydraulics and Attachments'
+      region: content
+      parent_name: group_tab_gr
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_cab:
+      children:
+        - field_seat_configuration11
+        - field_seat_location12
+        - field_dashboard13
+        - field_climate_control14
+        - field_window_options15
+      label: Cab
+      region: content
+      parent_name: group_tab_gr
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_order_options:
+      children:
+        - field_generate_images_1
+        - field_generate_a_3d_pdf_2
+        - field_generate_a_manufacturing_l
+        - field_generate_bom4
+        - field_generate_shrinkwrap_model5
+        - field_generate_routing_docs6
+        - field_documentation1
+      label: 'Order Options'
+      region: content
+      parent_name: group_tab_gr
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_order_date:
+      children:
+        - field_order_date
+      label: Order
+      region: content
+      parent_name: group_order_information
+      weight: 21
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_order_information:
+      image: 35
+      image_style: large
+    group_order_date:
+      image: 0
+      image_style: large
+    group_customer_information:
+      image: 47
+      image_style: large
+      image_position: left
+    group_order_options:
+      image: 48
+      image_style: large
+id: sigmaxim_workflow_order.loader.default
+targetEntityType: sigmaxim_workflow_order
+bundle: loader
+mode: default
+content:
+  field_attachments8:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_climate_control14:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_control_module10:
+    type: options_buttons
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_customer_email_2:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_name_1:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_order_number_3:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dashboard13:
+    type: options_select
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_documentation1:
+    type: options_select
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_emissions_package6:
+    type: options_select
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fuel_cell3:
+    type: options_buttons
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_generate_a_3d_pdf_2:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_generate_a_manufacturing_l:
+    type: boolean_checkbox
+    weight: 28
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_generate_bom4:
+    type: boolean_checkbox
+    weight: 29
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_generate_images_1:
+    type: boolean_checkbox
+    weight: 25
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_generate_routing_docs6:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_generate_shrinkwrap_model5:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_hydraulic_upgrades9:
+    type: options_buttons
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ignition_upgrades4:
+    type: options_buttons
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lifting_boom7:
+    type: options_select
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_order_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_power_take_off1:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_power_train2:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  field_seat_configuration11:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_seat_location12:
+    type: options_buttons
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_suspension5:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wheels__tracks1:
+    type: options_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_window_options15:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group_chassis:
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  group_customer_information:
+    weight: 33
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  group_order_options:
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+hidden:
+  field_check_box: true
+  field_folder_id: true
+  field_test: true
+  field_test_x: true
+  name: true
+  user_id: true

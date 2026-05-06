@@ -1,0 +1,35 @@
+uuid: 6fb56f04-9ac1-44f3-a2d2-be80cf2cf679
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.boc_thermal_options.feeds_item
+    - field.field.data_entity.boc_thermal_options.field_gcode_ther_opts_boc
+    - field.field.data_entity.boc_thermal_options.field_ther_desc_ther_opts_boc
+    - monarch_data_entity.data_entity_type.boc_thermal_options
+id: data_entity.boc_thermal_options.default
+targetEntityType: data_entity
+bundle: boc_thermal_options
+mode: default
+content:
+  field_gcode_ther_opts_boc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ther_desc_ther_opts_boc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

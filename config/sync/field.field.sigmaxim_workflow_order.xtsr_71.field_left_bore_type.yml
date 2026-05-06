@@ -1,0 +1,30 @@
+uuid: c4fa0dc6-4db0-4d90-82d1-ae1bd50d36e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_bore_type
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746182262
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.xtsr_71.field_left_bore_type
+field_name: field_left_bore_type
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Bore Type'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: Straight
+default_value_callback: ''
+settings: {  }
+field_type: list_string

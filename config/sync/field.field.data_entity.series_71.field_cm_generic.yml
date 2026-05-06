@@ -1,0 +1,27 @@
+uuid: 45bc9011-3836-4ffd-8422-b449d1b20199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cm_generic
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745589905
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_cm_generic
+field_name: field_cm_generic
+entity_type: data_entity
+bundle: series_71
+label: CM_GENERIC
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

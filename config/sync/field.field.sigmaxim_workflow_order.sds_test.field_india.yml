@@ -1,0 +1,19 @@
+uuid: b982cee6-ad75-492a-bdc5-d6661d73904b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_india
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sds_test
+id: sigmaxim_workflow_order.sds_test.field_india
+field_name: field_india
+entity_type: sigmaxim_workflow_order
+bundle: sds_test
+label: India
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

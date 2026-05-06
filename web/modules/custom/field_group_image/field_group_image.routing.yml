@@ -1,0 +1,7 @@
+field_group_image.image_upload_form:
+  path: '/admin/structure/{entity_type}/manage/{bundle}/form-display/{group_name}/upload-image'
+  defaults:
+    _form: '\Drupal\field_group_image\Form\FieldGroupImageUploadForm'
+    _title: 'Upload field group image'
+  requirements:
+    _permission: 'access content'

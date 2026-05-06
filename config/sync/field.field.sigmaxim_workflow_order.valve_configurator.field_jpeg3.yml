@@ -1,0 +1,23 @@
+uuid: df1d2d87-c362-4cf9-a8b4-f49d4163d55a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_jpeg3
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_jpeg3
+field_name: field_jpeg3
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: JPEG
+description: jpeg3
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

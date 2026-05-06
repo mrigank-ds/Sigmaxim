@@ -1,0 +1,21 @@
+uuid: b7e5c99f-7fae-4309-8b99-c7ea9b6b2dfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+id: data_entity.field_warranty_years
+field_name: field_warranty_years
+entity_type: data_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

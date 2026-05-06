@@ -1,0 +1,31 @@
+uuid: 11e72f9a-b207-4826-ad46-93e7188bc052
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_taper_key_type
+field_name: field_left_taper_key_type
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Parallel
+      label: Parallel
+    -
+      value: Straight
+      label: Straight
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

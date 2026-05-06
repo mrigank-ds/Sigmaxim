@@ -1,0 +1,21 @@
+uuid: ff0db4b7-ccd9-4db1-ab13-d8e980131b01
+langcode: en
+status: true
+dependencies:
+  module:
+    - monarch_data_entity
+id: data_entity.field_voltage_v
+field_name: field_voltage_v
+entity_type: data_entity
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

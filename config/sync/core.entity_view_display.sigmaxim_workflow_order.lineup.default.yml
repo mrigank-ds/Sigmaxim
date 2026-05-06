@@ -1,0 +1,290 @@
+uuid: cb4ce726-e4c9-4585-b15e-db4a7edae9be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.lineup.field_accessories10
+    - field.field.sigmaxim_workflow_order.lineup.field_actuator8
+    - field.field.sigmaxim_workflow_order.lineup.field_agency_approval6
+    - field.field.sigmaxim_workflow_order.lineup.field_alternation4
+    - field.field.sigmaxim_workflow_order.lineup.field_anchor_method7
+    - field.field.sigmaxim_workflow_order.lineup.field_autocad_dwg9
+    - field.field.sigmaxim_workflow_order.lineup.field_autocalc1
+    - field.field.sigmaxim_workflow_order.lineup.field_bom5
+    - field.field.sigmaxim_workflow_order.lineup.field_common_forcemain3
+    - field.field.sigmaxim_workflow_order.lineup.field_control_module3
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_first_name_3
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_last_name_4
+    - field.field.sigmaxim_workflow_order.lineup.field_customer_name_2
+    - field.field.sigmaxim_workflow_order.lineup.field_dxf8
+    - field.field.sigmaxim_workflow_order.lineup.field_enclosure9
+    - field.field.sigmaxim_workflow_order.lineup.field_folder_id
+    - field.field.sigmaxim_workflow_order.lineup.field_grounding1
+    - field.field.sigmaxim_workflow_order.lineup.field_level
+    - field.field.sigmaxim_workflow_order.lineup.field_order_or_quote_number_1
+    - field.field.sigmaxim_workflow_order.lineup.field_path_to_bom_files_5
+    - field.field.sigmaxim_workflow_order.lineup.field_pdf6
+    - field.field.sigmaxim_workflow_order.lineup.field_start_levels2
+    - field.field.sigmaxim_workflow_order.lineup.field_step7
+    - field.field.sigmaxim_workflow_order.lineup.field_style5
+    - field.field.sigmaxim_workflow_order.lineup.field_temperature_requirements2
+    - field.field.sigmaxim_workflow_order.lineup.field_terminal4
+    - field.field.sigmaxim_workflow_order.lineup.field_time
+    - field.field.sigmaxim_workflow_order.lineup.field_vertical_offset1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.lineup
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.lineup.default
+targetEntityType: sigmaxim_workflow_order
+bundle: lineup
+mode: default
+content:
+  field_accessories10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_actuator8:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_agency_approval6:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_alternation4:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_anchor_method7:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_autocad_dwg9:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_autocalc1:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_bom5:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_common_forcemain3:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_control_module3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_customer_first_name_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_customer_last_name_4:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_customer_name_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_dxf8:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_enclosure9:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_grounding1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_level:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_order_or_quote_number_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_path_to_bom_files_5:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_pdf6:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_start_levels2:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_step7:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_style5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_temperature_requirements2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_terminal4:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_time:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_vertical_offset1:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

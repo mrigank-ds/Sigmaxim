@@ -1,0 +1,21 @@
+uuid: 51928c40-c7f2-4513-839f-76752e1d4b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_18
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_18
+field_name: field_label_18
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Mechanical test request'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_18
+default_value_callback: ''
+settings: {  }
+field_type: string

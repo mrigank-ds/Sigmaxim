@@ -1,0 +1,23 @@
+uuid: 405f842d-bc5e-441b-bc12-eacc9d390082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_3d_pdf6
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_3d_pdf6
+field_name: field_3d_pdf6
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: '3D PDF'
+description: 3d_pdf6
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 67d5ae1a-b6f6-4dfd-bf77-8a76fc4f33f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_height_of_cylinder
+field_name: field_height_of_cylinder
+entity_type: sigmaxim_workflow_order
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

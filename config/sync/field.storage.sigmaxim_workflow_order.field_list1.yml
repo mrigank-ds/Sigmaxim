@@ -1,0 +1,43 @@
+uuid: 453f49cf-94b6-48eb-b96c-730374d20a14
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+  list_image:
+    image_style: thumbnail
+    1:
+      image: '257'
+    2:
+      image: '245'
+    3:
+      image: '246'
+id: sigmaxim_workflow_order.field_list1
+field_name: field_list1
+entity_type: sigmaxim_workflow_order
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1'
+    -
+      value: 2
+      label: '2'
+    -
+      value: 3
+      label: '3'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 99e5b7d8-8e57-49b6-82ab-335fe9019c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263294
+id: sigmaxim_workflow_order.valve_configurator.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

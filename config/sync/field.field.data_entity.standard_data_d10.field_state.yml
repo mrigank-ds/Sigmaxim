@@ -1,0 +1,27 @@
+uuid: 9762689b-cd80-4632-a486-5dd7c8d1c3a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_state
+    - monarch_data_entity.data_entity_type.standard_data_d10
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757369811
+  field_inline_label:
+    inline_label: 0
+id: data_entity.standard_data_d10.field_state
+field_name: field_state
+entity_type: data_entity
+bundle: standard_data_d10
+label: State
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

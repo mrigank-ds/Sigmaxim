@@ -1,0 +1,21 @@
+uuid: eea6c87b-3b4f-4810-81a9-9d7fc7363d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_21
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_label_21
+field_name: field_label_21
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'P1 Label Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_21
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 6527dde5-22f4-4345-8693-d375ca5870c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_power_train2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_power_train2
+field_name: field_power_train2
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Power Train'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '45 HP, Standard Flow Intake, Low Temp Exhaust, LP Turbo,10 gal Tank, Single Speed'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

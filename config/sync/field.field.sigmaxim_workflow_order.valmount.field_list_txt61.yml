@@ -1,0 +1,23 @@
+uuid: dbe68133-ce6b-4914-a97d-b0b2b6b81d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt61
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+  module:
+    - options
+id: sigmaxim_workflow_order.valmount.field_list_txt61
+field_name: field_list_txt61
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: Finish
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Galvanized
+default_value_callback: ''
+settings: {  }
+field_type: list_string

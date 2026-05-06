@@ -1,0 +1,37 @@
+uuid: 86acf1fc-9680-4b00-896f-aea19b46b997
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_shelves_boc
+    - monarch_data_entity.data_entity_type.boc_shelves
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737528596
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.battery_only_cabinet.field_shelves_boc
+field_name: field_shelves_boc
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: SHELVES
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      boc_shelves: boc_shelves
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

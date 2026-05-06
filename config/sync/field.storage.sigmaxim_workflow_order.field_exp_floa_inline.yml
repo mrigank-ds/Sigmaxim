@@ -1,0 +1,23 @@
+uuid: c38d04e5-7654-4d48-8d75-033959b877f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_expression
+    - field_permissions
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_exp_floa_inline
+field_name: field_exp_floa_inline
+entity_type: sigmaxim_workflow_order
+type: expression_float
+settings: {  }
+module: field_expression
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

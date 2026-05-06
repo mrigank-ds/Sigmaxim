@@ -1,0 +1,175 @@
+uuid: 1c92b89d-6823-4b1a-ae30-8e0340f73f07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field__engineer
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_bat_pan_boc
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_cabinet
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_display
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_folder_id
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_opportunity
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_oth_opts_boc
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_proj_desc
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_project_name
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_quote
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_quote_engineer
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_reset_boc
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_shelves_boc
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_system_number
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_testfield
+    - field.field.sigmaxim_workflow_order.battery_only_cabinet.field_ther_opt_boc
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - options
+    - resetfield
+    - user
+id: sigmaxim_workflow_order.battery_only_cabinet.default
+targetEntityType: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+mode: default
+content:
+  field__engineer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_bat_pan_boc:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_cabinet:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 9
+    region: content
+  field_display:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_opportunity:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_oth_opts_boc:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: hello
+        label_tag: ''
+    weight: 13
+    region: content
+  field_proj_desc:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_project_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_quote:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_quote_engineer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_reset_boc:
+    type: reset_button_formatter
+    label: above
+    settings:
+      display_mode: button_only
+      show_fields_list: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_shelves_boc:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_system_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_testfield:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_ther_opt_boc:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

@@ -1,0 +1,27 @@
+uuid: 7e1c1430-9b39-4c5a-a060-2799dbe70780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_battery_id
+    - monarch_data_entity.data_entity_type.battery_database_d10
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758061501
+  field_inline_label:
+    inline_label: 0
+id: data_entity.battery_database_d10.field_battery_id
+field_name: field_battery_id
+entity_type: data_entity
+bundle: battery_database_d10
+label: Battery_ID
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

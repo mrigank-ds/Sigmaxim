@@ -1,0 +1,20 @@
+uuid: 55d468c4-d065-471d-98d2-2c2dda558f24
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_number_of_vertical_rings
+field_name: field_number_of_vertical_rings
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

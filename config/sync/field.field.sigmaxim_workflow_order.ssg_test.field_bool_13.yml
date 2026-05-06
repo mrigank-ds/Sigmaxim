@@ -1,0 +1,23 @@
+uuid: 7a1f843e-46f8-4cc4-9f4d-e0e3ee2c13ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_bool_13
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+id: sigmaxim_workflow_order.ssg_test.field_bool_13
+field_name: field_bool_13
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Same Lengths'
+description: bool_13
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'Same Lengths'
+field_type: boolean

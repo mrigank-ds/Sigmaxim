@@ -1,0 +1,96 @@
+uuid: 2dd27971-1a03-4c11-9e7f-b6021c83c5df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_aimage
+    - field.field.node.article.field_calendar
+    - field.field.node.article.field_career
+    - field.field.node.article.field_dilip_test_math
+    - field.field.node.article.field_green
+    - field.field.node.article.field_image
+    - field.field.node.article.field_int_new
+    - field.field.node.article.field_maths
+    - field.field.node.article.field_maths1
+    - field.field.node.article.field_new_field
+    - field.field.node.article.field_new_list_string
+    - field.field.node.article.field_others
+    - field.field.node.article.field_readonly
+    - field.field.node.article.field_services
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_tax
+    - field.field.node.article.field_tax1
+    - field.field.node.article.field_tea
+    - field.field.node.article.field_test
+    - field.field.node.article.field_test_12
+    - field.field.node.article.field_testing
+    - field.field.node.article.field_time
+    - image.style.medium
+    - node.type.article
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: 0ur5-yZyR8pJ3lugC_Micbr6V_tpMWz-yHFhtuLcZo8
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  comment: true
+  field_aimage: true
+  field_calendar: true
+  field_career: true
+  field_dilip_test_math: true
+  field_green: true
+  field_int_new: true
+  field_maths: true
+  field_maths1: true
+  field_new_field: true
+  field_new_list_string: true
+  field_others: true
+  field_readonly: true
+  field_services: true
+  field_tags: true
+  field_tax: true
+  field_tax1: true
+  field_tea: true
+  field_test: true
+  field_test_12: true
+  field_testing: true
+  field_time: true

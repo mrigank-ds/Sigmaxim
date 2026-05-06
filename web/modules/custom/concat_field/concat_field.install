@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the concat_field module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function concat_field_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'runtime') {
+    // Check if token module is available.
+    if (!\Drupal::moduleHandler()->moduleExists('token')) {
+      $requirements['concat_field_token'] = [
+        'title' => t('Concat Field'),
+        'description' => t('The Token module is recommended for the Concat Field module to work properly. Please enable the Token module for better token browsing and validation.'),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    } else {
+      $requirements['concat_field_token'] = [
+        'title' => t('Concat Field'),
+        'description' => t('Token module is enabled and available.'),
+        'severity' => REQUIREMENT_OK,
+        'value' => t('Available'),
+      ];
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function concat_field_install() {
+  \Drupal::messenger()->addStatus(t('Concat Field module installed successfully. You can now add concat fields to any fieldable entity type (nodes, users, taxonomy terms, etc.).'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function concat_field_uninstall() {
+  // Clear field info cache.
+  \Drupal::service('entity_field.manager')->clearCachedFieldDefinitions();
+  \Drupal::messenger()->addStatus(t('Concat Field module uninstalled successfully.'));
+}

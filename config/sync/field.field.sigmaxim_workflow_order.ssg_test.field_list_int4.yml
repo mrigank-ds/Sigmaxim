@@ -1,0 +1,21 @@
+uuid: 81f649b8-2482-43fe-8ec5-389e79c34b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_int4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+  module:
+    - options
+id: sigmaxim_workflow_order.ssg_test.field_list_int4
+field_name: field_list_int4
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: 'Regulatory Compliance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

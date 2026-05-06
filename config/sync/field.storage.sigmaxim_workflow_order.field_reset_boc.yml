@@ -1,0 +1,19 @@
+uuid: 5ca01b56-6326-481f-8fbc-943eabaa55c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - resetfield
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_reset_boc
+field_name: field_reset_boc
+entity_type: sigmaxim_workflow_order
+type: reset_button_field
+settings: {  }
+module: resetfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

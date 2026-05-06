@@ -1,0 +1,21 @@
+uuid: 941a75f3-abf9-4ad1-ae40-3d6a661fdc89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_20
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+id: sigmaxim_workflow_order.dac_connectors.field_label_20
+field_name: field_label_20
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Flex Sleeve Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_20
+default_value_callback: ''
+settings: {  }
+field_type: string

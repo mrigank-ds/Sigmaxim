@@ -1,0 +1,23 @@
+uuid: 2e870912-7a41-425c-b626-03330d6c4f54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_list_txt59
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.dac_connectors
+  module:
+    - options
+id: sigmaxim_workflow_order.dac_connectors.field_list_txt59
+field_name: field_list_txt59
+entity_type: sigmaxim_workflow_order
+bundle: dac_connectors
+label: 'Right Cable Count'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

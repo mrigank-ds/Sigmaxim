@@ -1,0 +1,6 @@
+uuid: b3df8b9b-0faf-4db1-9854-4713eda43cce
+langcode: en
+status: true
+dependencies: {  }
+id: boc_cabinet
+label: BOC_CABINET

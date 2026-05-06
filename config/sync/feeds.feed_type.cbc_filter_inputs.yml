@@ -1,0 +1,69 @@
+uuid: 54310765-6c27-498a-a0e6-43f7952debac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.cbc_filter_inputs.field_cbc_fil_in_ac_in
+    - field.field.data_entity.cbc_filter_inputs.field_cbc_fil_in_dc_out
+    - monarch_data_entity.data_entity_type.cbc_filter_inputs
+  module:
+    - monarch_data_entity
+label: CBC_FILTER_INPUTS
+id: cbc_filter_inputs
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:data_entity'
+processor_configuration:
+  values:
+    bundle: cbc_filter_inputs
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  ac_input:
+    value: AC_INPUT
+    label: AC_INPUT
+    machine_name: ac_input
+    type: csv
+  dc_output:
+    value: DC_OUTPUT
+    label: DC_OUTPUT
+    machine_name: dc_output
+    type: csv
+mappings:
+  -
+    target: field_cbc_fil_in_ac_in
+    map:
+      value: ac_input
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_cbc_fil_in_dc_out
+    map:
+      value: dc_output
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: label
+    map:
+      value: ac_input
+    settings: {  }
+    unique: {  }

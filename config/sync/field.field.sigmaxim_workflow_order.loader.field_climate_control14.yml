@@ -1,0 +1,23 @@
+uuid: 64c6749c-5a5e-4cf1-9e17-bccf933f3eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_climate_control14
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.loader
+  module:
+    - options
+id: sigmaxim_workflow_order.loader.field_climate_control14
+field_name: field_climate_control14
+entity_type: sigmaxim_workflow_order
+bundle: loader
+label: 'Climate Control'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: None
+default_value_callback: ''
+settings: {  }
+field_type: list_string

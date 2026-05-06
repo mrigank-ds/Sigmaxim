@@ -1,0 +1,31 @@
+uuid: d2459e7f-806e-4b92-84f0-d6006fcc73f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_each_ring_height
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753457330
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_each_ring_height
+field_name: field_each_ring_height
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Each Ring Height'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: decimal

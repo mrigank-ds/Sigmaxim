@@ -1,0 +1,58 @@
+uuid: fc9d3daa-6082-40ee-ad1c-64875ac1fb1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_corner_type_
+field_name: field_corner_type_
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '922'
+      label: '922'
+    -
+      value: '959'
+      label: '959'
+    -
+      value: 959_S
+      label: 959_S
+    -
+      value: S-1149
+      label: S-1149
+    -
+      value: S-1261
+      label: S-1261
+    -
+      value: 'S-1261 1/4'
+      label: 'S-1261 1/4'
+    -
+      value: '951'
+      label: '951'
+    -
+      value: '953'
+      label: '953'
+    -
+      value: '954'
+      label: '954'
+    -
+      value: '955'
+      label: '955'
+    -
+      value: '999'
+      label: '999'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: 1ed47f85-4907-4ba9-b4ff-0e34118d36e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_b
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745590136
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_b
+field_name: field_b
+entity_type: data_entity
+bundle: series_71
+label: B
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

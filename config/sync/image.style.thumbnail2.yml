@@ -1,0 +1,14 @@
+uuid: 064e6257-ff22-4f3f-afc3-b420ec209bd7
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail2
+label: thumbnail2
+effects:
+  bf6ec86b-76e9-4199-ba07-f3dc8b963d1a:
+    uuid: bf6ec86b-76e9-4199-ba07-f3dc8b963d1a
+    id: image_resize
+    weight: 1
+    data:
+      width: 100
+      height: 100

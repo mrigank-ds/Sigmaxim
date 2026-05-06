@@ -1,0 +1,20 @@
+uuid: 9030818d-2ca0-4223-9dd8-3520fab67aaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_operating_power_metric
+field_name: field_operating_power_metric
+entity_type: sigmaxim_workflow_order
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

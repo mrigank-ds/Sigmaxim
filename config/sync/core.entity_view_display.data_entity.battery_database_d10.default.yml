@@ -1,0 +1,80 @@
+uuid: ae0fe8ae-81ab-44fb-bea9-293821f27cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.data_entity.battery_database_d10.feeds_item
+    - field.field.data_entity.battery_database_d10.field_battery_id
+    - field.field.data_entity.battery_database_d10.field_battery_name
+    - field.field.data_entity.battery_database_d10.field_capacity_ah
+    - field.field.data_entity.battery_database_d10.field_manufacturer
+    - field.field.data_entity.battery_database_d10.field_type
+    - field.field.data_entity.battery_database_d10.field_voltage_v
+    - field.field.data_entity.battery_database_d10.field_warranty_years
+    - monarch_data_entity.data_entity_type.battery_database_d10
+id: data_entity.battery_database_d10.default
+targetEntityType: data_entity
+bundle: battery_database_d10
+mode: default
+content:
+  field_battery_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_battery_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_capacity_ah:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_manufacturer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_voltage_v:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_warranty_years:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  label: true
+  status: true

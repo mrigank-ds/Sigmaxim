@@ -1,0 +1,37 @@
+uuid: 1f4dffd2-146e-46d8-9980-e617364102a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_testfield
+    - monarch_data_entity.data_entity_type.cbc_cabinet
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.battery_only_cabinet
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1738571586
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.battery_only_cabinet.field_testfield
+field_name: field_testfield
+entity_type: sigmaxim_workflow_order
+bundle: battery_only_cabinet
+label: testfield
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:data_entity'
+  handler_settings:
+    target_bundles:
+      cbc_cabinet: cbc_cabinet
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

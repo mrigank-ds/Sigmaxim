@@ -1,0 +1,38 @@
+uuid: 69669d38-de8a-4cbc-8691-1983590e46c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_math_expression_multiply
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_expression
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753430780
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_math_expression_multiply
+field_name: field_math_expression_multiply
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Math Expression Multiply'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  expression: '[field_integer_field]*[field_float_field]'
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+  prefix: ''
+  suffix: ''
+  min: ''
+  max: ''
+field_type: expression_integer

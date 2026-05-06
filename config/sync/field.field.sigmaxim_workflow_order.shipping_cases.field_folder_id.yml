@@ -1,0 +1,26 @@
+uuid: 89c4fbb1-379f-48b8-910c-c6eee9aa391d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_folder_id
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751263287
+id: sigmaxim_workflow_order.shipping_cases.field_folder_id
+field_name: field_folder_id
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Folder ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

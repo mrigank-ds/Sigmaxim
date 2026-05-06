@@ -1,0 +1,27 @@
+uuid: 5c5b6eab-04bc-41c3-a683-78d468af5373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_wr2
+    - monarch_data_entity.data_entity_type.series_71
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1745590718
+  field_inline_label:
+    inline_label: 0
+id: data_entity.series_71.field_wr2
+field_name: field_wr2
+entity_type: data_entity
+bundle: series_71
+label: WR2
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

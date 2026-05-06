@@ -1,0 +1,209 @@
+uuid: 2ad1f7c5-976c-4383-9d4c-f641c1bef7b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator1
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator2
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_actuator_color_legend10
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_agency_approval
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_auxiliaryalarm_switch5
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_auxiliaryalarm_switch6
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_c
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit4
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_circuit5
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_current_rating8
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_folder_id
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency__delay46
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency__delay6
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_frequency_delay7
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_maximum_application_rating
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_mountingbarriers11
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles2
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles3
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_poles4
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_terminal9
+    - field.field.sigmaxim_workflow_order.miniature_rocker_switches_.field_viduthalai
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+    - user
+id: sigmaxim_workflow_order.miniature_rocker_switches_.default
+targetEntityType: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+mode: default
+content:
+  field_actuator1:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_actuator2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_actuator3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_actuator_color_legend10:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_agency_approval:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_auxiliaryalarm_switch5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_auxiliaryalarm_switch6:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_c:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_circuit3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_circuit4:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_circuit5:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_current_rating8:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_frequency__delay46:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_frequency__delay6:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_frequency_delay7:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_maximum_application_rating:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_mountingbarriers11:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_poles2:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_poles3:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_poles4:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_terminal9:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_viduthalai:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

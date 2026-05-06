@@ -1,0 +1,753 @@
+uuid: bb21d35e-87ff-4182-b355-a69718659e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_activate_advance_data
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_activate_battery
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_addition_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_advance_data_table1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_advance_data_table_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery1
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_name_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_type
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_battery_type_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_boolean_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_concat_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependee_list_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependent_boolean1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_dependent_boolean_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_first_input_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_float_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_integer_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_iss_sta_da_fie_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_list_integers_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_manufacturer
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_math_expression_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_math_multiply
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_radio_button_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_reset_field_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_second_input_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_standard_data_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_standard_data_table1_d10
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_test_math_token_ad
+    - field.field.sigmaxim_workflow_order.drupal_field_compare.field_text_list_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - conditional_fields
+    - field_expression
+    - field_group
+    - field_group_image
+    - monarch_data_entity
+    - readonly_field_widget
+    - sigmaxim_data_entity
+third_party_settings:
+  field_group_image:
+    group_simple_fields:
+      image: 0
+      image_style: large
+      image_position: above
+    group_math:
+      image: 0
+      image_style: large
+      image_position: above
+    group_data_tables_d10:
+      image: 0
+      image_style: large
+      image_position: above
+    group_standard_data_filter_token:
+      image: 0
+      image_style: large
+      image_position: above
+    group_horizontal_tabs_d10:
+      image: 0
+      image_style: large
+      image_position: above
+    group_simple_dependency:
+      image: 0
+      image_style: large
+      image_position: above
+    group_dependency_simple_to_data:
+      image: 0
+      image_style: large
+      image_position: above
+    group_battery_block:
+      image: 0
+      image_style: large
+      image_position: above
+    group_and_or_dependency:
+      image: 0
+      image_style: large
+      image_position: above
+  field_group:
+    group_simple_fields:
+      children:
+        - field_integer_d10
+        - field_float_d10
+        - field_boolean_d10
+        - field_concat_d10
+        - field_radio_button_d10
+        - field_text_list_d10
+        - field_reset_field_d10
+      label: 'Simple Fields'
+      region: content
+      parent_name: group_horizontal_tabs_d10
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_math:
+      children:
+        - field_first_input_d10
+        - field_second_input_d10
+        - field_addition_d10
+        - field_math_expression_d10
+      label: 'Math Expression'
+      region: content
+      parent_name: group_horizontal_tabs_d10
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_data_tables_d10:
+      children:
+        - field_iss_sta_da_fie_d10
+        - field_standard_data_d10
+        - field_advance_data_table_d10
+        - field_activate_advance_data
+        - group_standard_data_filter_token
+      label: 'Data Tables'
+      region: content
+      parent_name: group_horizontal_tabs_d10
+      weight: 26
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_standard_data_filter_token:
+      children:
+        - field_standard_data_table1_d10
+        - field_advance_data_table1_d10
+      label: 'Standard Data Filter Tokens'
+      region: content
+      parent_name: group_data_tables_d10
+      weight: 25
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_horizontal_tabs_d10:
+      children:
+        - group_simple_fields
+        - group_math
+        - group_data_tables_d10
+        - group_simple_dependency
+        - group_and_or_dependency
+      label: 'Horizontal Tabs'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: horizontal
+        width_breakpoint: 640
+    group_simple_dependency:
+      children:
+        - field_dependee_list_d10
+        - field_list_integers_d10
+        - field_dependent_boolean1_d10
+        - field_dependent_boolean_d10
+        - group_dependency_simple_to_data
+      label: 'Simple Dependency'
+      region: content
+      parent_name: group_horizontal_tabs_d10
+      weight: 27
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_dependency_simple_to_data:
+      children:
+        - group_battery_block
+      label: 'Dependency Simple to Data'
+      region: hidden
+      parent_name: group_simple_dependency
+      weight: 13
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_battery_block:
+      children:
+        - field_activate_battery
+        - field_battery_d10
+        - field_battery1
+      label: 'Battery Block'
+      region: hidden
+      parent_name: group_dependency_simple_to_data
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_and_or_dependency:
+      children:
+        - field_battery_name_d10
+        - field_manufacturer
+        - field_battery_type_d10
+        - field_battery_type
+      label: 'AND / OR Dependency'
+      region: content
+      parent_name: group_horizontal_tabs_d10
+      weight: 28
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.drupal_field_compare.default
+targetEntityType: sigmaxim_workflow_order
+bundle: drupal_field_compare
+mode: default
+content:
+  field_activate_advance_data:
+    type: options_select
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_activate_battery:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_addition_d10:
+    type: readonly_field_widget
+    weight: 9
+    region: content
+    settings:
+      label: inline
+      formatter_type: expression_integer
+      formatter_settings:
+        expression_integer:
+          thousand_separator: .
+          prefix_suffix: '1'
+          always_evaluate: '1'
+      show_description: false
+    third_party_settings: {  }
+  field_advance_data_table1_d10:
+    type: monarch_data_entity_view
+    weight: 8
+    region: content
+    settings:
+      view: standard_data_d10_view1.embed_1
+      args: {  }
+    third_party_settings: {  }
+  field_advance_data_table_d10:
+    type: monarch_data_entity_view
+    weight: 23
+    region: content
+    settings:
+      view: standard_data_d10_view1.embed_1
+      args: {  }
+    third_party_settings: {  }
+  field_battery1:
+    type: monarch_data_entity_view
+    weight: 11
+    region: content
+    settings:
+      view: battery_database_d10_view.embed_1
+      args: {  }
+    third_party_settings:
+      conditional_fields:
+        97b1c62c-7548-4fb4-8a90-d8b0eabed983:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_activate_advance_data
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'yes'
+            effect: show
+            effect_options: {  }
+            selector: ''
+        202d5795-0fd9-4751-be3e-a88e98ae6b4e:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_battery_d10
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_battery_d10:
+    type: monarch_data_entity_data_drill_down
+    weight: 9
+    region: content
+    settings:
+      weights:
+        label:
+          weight: -2
+        id:
+          weight: -1
+      height: 1
+    third_party_settings:
+      conditional_fields:
+        6a07e7ee-6468-4115-8023-ff89e8966380:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_activate_battery
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_battery_name_d10:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_battery_type:
+    type: readonly_field_widget
+    weight: 7
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields: {  }
+  field_battery_type_d10:
+    type: readonly_field_widget
+    weight: 6
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings:
+      conditional_fields:
+        5b54ddfc-1530-4286-818c-abf0d0bda12e:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_battery_name_d10
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: exide_mileage
+            effect: show
+            effect_options: {  }
+            selector: ''
+        e6408183-36a9-4739-a706-50636b8e6606:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_manufacturer
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: exide
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_boolean_d10:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_concat_d10:
+    type: readonly_field_widget
+    weight: 6
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_dependee_list_d10:
+    type: options_buttons
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dependent_boolean1_d10:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        b629ba84-9363-4e10-a2a9-9ef4055f8e4b:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_dependee_list_d10
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: battery_type
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_dependent_boolean_d10:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        abc05048-c0ec-4eea-8c15-38d82b44b712:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_dependee_list_d10
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: fuel_type
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_first_input_d10:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_float_d10:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_integer_d10:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_iss_sta_da_fie_d10:
+    type: readonly_field_widget
+    weight: 21
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_list_integers_d10:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        2fac8d46-3bcf-4022-9329-c9173758e0f2:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_battery_d10
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_manufacturer:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_math_expression_d10:
+    type: readonly_field_widget
+    weight: 10
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_math_multiply:
+    type: expression_editable
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_radio_button_d10:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_reset_field_d10:
+    type: readonly_field_widget
+    weight: 9
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: {  }
+      show_description: false
+    third_party_settings: {  }
+  field_second_input_d10:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_standard_data_d10:
+    type: sigmaxim_simple_data_reference
+    weight: 22
+    region: content
+    settings:
+      height: '1'
+      weights:
+        label:
+          weight: '-10'
+          token: ''
+          enabled: 0
+        id:
+          weight: '-9'
+          token: ''
+          enabled: 0
+        uuid:
+          weight: '-8'
+          token: ''
+          enabled: 0
+        bundle:
+          weight: '-7'
+          token: ''
+          enabled: 0
+        status:
+          weight: '-6'
+          token: ''
+          enabled: 0
+        created:
+          weight: '-5'
+          token: ''
+          enabled: 0
+        changed:
+          weight: '-4'
+          token: ''
+          enabled: 0
+        feeds_item:
+          weight: '-3'
+          token: ''
+          enabled: 0
+        field_country:
+          weight: '-2'
+          token: ''
+          enabled: '1'
+        field_state:
+          weight: '-1'
+          token: ''
+          enabled: '1'
+        field_sector:
+          weight: '0'
+          token: ''
+          enabled: '1'
+        field_companies:
+          weight: '1'
+          token: ''
+          enabled: '1'
+        field_market_occupancy:
+          weight: '2'
+          token: ''
+          enabled: 0
+    third_party_settings: {  }
+  field_standard_data_table1_d10:
+    type: monarch_data_entity_data_drill_down
+    weight: 7
+    region: content
+    settings:
+      height: '1'
+      weights:
+        field_country:
+          weight: '-10'
+        field_state:
+          weight: '-9'
+        field_sector:
+          weight: '-8'
+        field_companies:
+          weight: '-7'
+        label:
+          weight: '-6'
+        id:
+          weight: '-5'
+        feeds_item:
+          weight: '-4'
+        field_market_occupancy:
+          weight: '-3'
+    third_party_settings:
+      conditional_fields:
+        df0e8b17-be9c-4417-ab5e-9d52e9e220c4:
+          entity_type: sigmaxim_workflow_order
+          bundle: drupal_field_compare
+          dependee: field_standard_data_d10
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                wrapper:
+                  label:
+                    label: 'a:1:{s:5:"value";s:7:"America";}'
+                  id:
+                    id: '12990'
+                  clear-input: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_test_math_token_ad:
+    type: expression_editable
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text_list_d10:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group_battery_block:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

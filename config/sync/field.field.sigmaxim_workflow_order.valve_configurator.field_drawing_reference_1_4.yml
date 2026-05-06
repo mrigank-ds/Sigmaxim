@@ -1,0 +1,21 @@
+uuid: 092baf76-b915-4a72-ad96-1ed5a9ccec49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_drawing_reference_1_4
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_drawing_reference_1_4
+field_name: field_drawing_reference_1_4
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: 'Drawing Reference 1'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: drawing_reference_1_4
+default_value_callback: ''
+settings: {  }
+field_type: string

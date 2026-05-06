@@ -1,0 +1,27 @@
+uuid: 0c21db6e-f1d7-4143-94a4-32f83d0785dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_test_product_list
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.ssg_test
+  module:
+    - field_inline_label
+    - options
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.ssg_test.field_test_product_list
+field_name: field_test_product_list
+entity_type: sigmaxim_workflow_order
+bundle: ssg_test
+label: test_product_list
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

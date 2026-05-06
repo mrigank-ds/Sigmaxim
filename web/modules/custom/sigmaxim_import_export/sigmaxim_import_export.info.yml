@@ -1,0 +1,5 @@
+name: Sigmaxim Import Export
+type: module
+description: Export Node and Product by name
+core_version_requirement: ^10
+package: Custom

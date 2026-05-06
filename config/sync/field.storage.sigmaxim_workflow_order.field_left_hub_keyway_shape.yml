@@ -1,0 +1,31 @@
+uuid: a4fa6513-3a31-46e1-9dfc-dd31dd77d199
+langcode: en
+status: true
+dependencies:
+  module:
+    - list_image
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  list_image:
+    image_style: thumbnail
+id: sigmaxim_workflow_order.field_left_hub_keyway_shape
+field_name: field_left_hub_keyway_shape
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Square
+      label: Square
+    -
+      value: Rectangular
+      label: Rectangular
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

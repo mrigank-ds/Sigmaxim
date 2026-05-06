@@ -1,0 +1,21 @@
+uuid: 8f5a738f-2356-4ccb-84bd-9919cd5421b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_actuator3
+field_name: field_actuator3
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

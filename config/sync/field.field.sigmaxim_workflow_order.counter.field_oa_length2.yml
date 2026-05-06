@@ -1,0 +1,25 @@
+uuid: 026b05a0-8231-4db9-80c1-9110fbcb5a04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_oa_length2
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.counter
+id: sigmaxim_workflow_order.counter.field_oa_length2
+field_name: field_oa_length2
+entity_type: sigmaxim_workflow_order
+bundle: counter
+label: 'O.A. Length'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 120.0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

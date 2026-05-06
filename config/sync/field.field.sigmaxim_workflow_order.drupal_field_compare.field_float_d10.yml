@@ -1,0 +1,33 @@
+uuid: 8ae71c24-231c-458e-b4f3-a21e00bf68cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757315349
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.drupal_field_compare.field_float_d10
+field_name: field_float_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: Float
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: '15'
+default_value_callback: ''
+settings:
+  min: '10'
+  max: '25'
+  prefix: ''
+  suffix: ''
+field_type: float

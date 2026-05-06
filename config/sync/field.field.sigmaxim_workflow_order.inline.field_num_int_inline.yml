@@ -1,0 +1,30 @@
+uuid: 1cf54cbd-5df8-483e-8798-0ac99130707e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_num_int_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_num_int_inline
+field_name: field_num_int_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: num_int_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: '1245'
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer

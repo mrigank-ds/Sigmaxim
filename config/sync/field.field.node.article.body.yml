@@ -1,0 +1,32 @@
+uuid: 7f3b9069-cc45-4ac6-9e7f-c4b3f9a76b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.article
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+    - text
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1711015270
+  field_inline_label:
+    inline_label: 0
+_core:
+  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
+id: node.article.body
+field_name: body
+entity_type: node
+bundle: article
+label: Body
+description: ''
+required: 0
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: 1
+  required_summary: 0
+field_type: text_with_summary

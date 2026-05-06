@@ -1,0 +1,241 @@
+uuid: 6d51f921-6435-42ed-8dbb-4e3b1078c420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_ball
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_date
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_decimal
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_email
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_expression
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_folder_id
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_link
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_list1
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_list1text
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_list2
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_list2text
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_test1
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_test2
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_times
+    - field.field.sigmaxim_workflow_order.sub_alpha_test.field_total
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sub_alpha_test
+  module:
+    - datetime
+    - field_group
+    - field_group_image
+    - link
+    - readonly_field_widget
+third_party_settings:
+  field_group_image:
+    group_first_tab:
+      image: 0
+      image_style: wide
+    group_tabs:
+      image: 0
+      image_style: large
+    group_second_:
+      image: 0
+      image_style: large
+    group_new_group:
+      image: 154
+      image_style: medium
+    group_education:
+      image: 227
+      image_style: medium
+  field_group:
+    group_first_tab:
+      children:
+        - group_tabs
+        - group_second_
+      label: 'First Tab'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_tabs:
+      children:
+        - field_test2
+        - field_test1
+        - field_total
+      label: 'First Tab'
+      region: content
+      parent_name: group_first_tab
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_second_:
+      children:
+        - user_id
+      label: 'Second Tab'
+      region: content
+      parent_name: group_first_tab
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_new_group:
+      children: {  }
+      label: 'New Group'
+      region: hidden
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_education:
+      children:
+        - name
+      label: Education
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: sigmaxim_workflow_order.sub_alpha_test.default
+targetEntityType: sigmaxim_workflow_order
+bundle: sub_alpha_test
+mode: default
+content:
+  field_ball:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_default
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_expression:
+    type: readonly_field_widget
+    weight: 6
+    region: content
+    settings:
+      label: above
+      formatter_type: field_expression_value
+      formatter_settings:
+        field_expression_value:
+          always_evaluate: '1'
+      show_description: true
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_list1:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list1text:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_list2text:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_test1:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_test2:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_times:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_total:
+    type: readonly_field_widget
+    weight: 6
+    region: content
+    settings:
+      label: above
+      formatter_type: expression_integer
+      formatter_settings:
+        expression_integer:
+          thousand_separator: ''
+          prefix_suffix: '1'
+          always_evaluate: '1'
+      show_description: false
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_decimal: true
+  field_folder_id: true
+  field_list2: true

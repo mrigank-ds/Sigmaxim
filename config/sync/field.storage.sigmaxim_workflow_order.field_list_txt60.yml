@@ -1,0 +1,61 @@
+uuid: 0c9d1e1b-e872-46f3-b300-914faf77399d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - sigmaxim_workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: sigmaxim_workflow_order.field_list_txt60
+field_name: field_list_txt60
+entity_type: sigmaxim_workflow_order
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: "DS30 RTS 1' Rise Pipe Arm Assembly"
+      label: "DS30 RTS 1' Rise Pipe Arm Assembly"
+    -
+      value: 'DS32 RTS Variable Rise Round Tapered Arm Assembly'
+      label: 'DS32 RTS Variable Rise Round Tapered Arm Assembly'
+    -
+      value: 'DS36 RTS Variable Rise Elliptical Arm Assembly'
+      label: 'DS36 RTS Variable Rise Elliptical Arm Assembly'
+    -
+      value: "DS50 RTS 3' Rise Pipe Arm Assembly (20'-30')"
+      label: "DS50 RTS 3' Rise Pipe Arm Assembly (20'-30')"
+    -
+      value: "DS50 RTS 3' Rise Pipe Arm Assembly (32'-50')"
+      label: "DS50 RTS 3' Rise Pipe Arm Assembly (32'-50')"
+    -
+      value: "DS56 RTS Variable Rise Round Tapered Arm Assembly (30'-35')"
+      label: "DS56 RTS Variable Rise Round Tapered Arm Assembly (30'-35')"
+    -
+      value: "DS56 RTS Variable Rise Round Tapered Arm Assembly (40'-45')"
+      label: "DS56 RTS Variable Rise Round Tapered Arm Assembly (40'-45')"
+    -
+      value: "DS60 RTS 5' Rise Truss Arm Assembly"
+      label: "DS60 RTS 5' Rise Truss Arm Assembly"
+    -
+      value: "DS66 RTS 6.5' Ride Truss Arm Assembly"
+      label: "DS66 RTS 6.5' Ride Truss Arm Assembly"
+    -
+      value: "DS70 RTS 6' Rise Truss Arm Assembly"
+      label: "DS70 RTS 6' Rise Truss Arm Assembly"
+    -
+      value: 'DS90 RTS Round Tapered Davit Arm Assembly'
+      label: 'DS90 RTS Round Tapered Davit Arm Assembly'
+    -
+      value: 'DS96 RTS Round Tapered Davit Arm Assembly'
+      label: 'DS96 RTS Round Tapered Davit Arm Assembly'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: 27155f54-9c8b-44da-8529-af8f9b6633e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.filedepot_folder
+  module:
+    - file
+id: node.filedepot_folder.field_files
+field_name: field_files
+entity_type: node
+bundle: filedepot_folder
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf xls doc csv xml'
+  max_filesize: ''
+  description_field: false
+field_type: file

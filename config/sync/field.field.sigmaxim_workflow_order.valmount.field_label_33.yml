@@ -1,0 +1,21 @@
+uuid: 64521654-7ab0-457d-b1b8-3627c1b511c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_33
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valmount
+id: sigmaxim_workflow_order.valmount.field_label_33
+field_name: field_label_33
+entity_type: sigmaxim_workflow_order
+bundle: valmount
+label: 'Project Number'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_33
+default_value_callback: ''
+settings: {  }
+field_type: string

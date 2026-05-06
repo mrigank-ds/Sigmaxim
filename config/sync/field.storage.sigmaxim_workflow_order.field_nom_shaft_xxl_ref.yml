@@ -1,0 +1,21 @@
+uuid: fbcfd45d-cb88-4257-9f6f-d3fc33ae1d89
+langcode: en
+status: true
+dependencies:
+  module:
+    - sigmaxim_workflow
+id: sigmaxim_workflow_order.field_nom_shaft_xxl_ref
+field_name: field_nom_shaft_xxl_ref
+entity_type: sigmaxim_workflow_order
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

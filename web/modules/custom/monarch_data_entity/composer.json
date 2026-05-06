@@ -1,0 +1,20 @@
+{
+  "name": "monarch/monarch_data_entity",
+  "description": "Allows admins to create custom data entities for managing data and integrating with views.",
+  "type": "drupal-module",
+  "license": "MIT",
+  "keywords": [
+    "Drupal Module"
+  ],
+  "authors": [
+    {
+      "name": "Monarch Digital",
+      "email": "monarch@monarchdigital.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/entity_browser": "*",
+    "drupal/feeds": "*"
+  }
+}

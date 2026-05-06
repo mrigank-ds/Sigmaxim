@@ -1,0 +1,17 @@
+services:
+  sigmaxim_workflow.replicate_node:
+    class: Drupal\sigmaxim_workflow\EventSubscriber\ReplicateUnpublishProducts
+    arguments: ['@language_manager']
+    tags:
+      - { name: event_subscriber }
+
+  # sigmaxim_workflow.event_subscriber:
+  #   class: Drupal\sigmaxim_workflow\EventSubscriber\RedirectAnonymousSubscriber
+  #   arguments: []
+  #   tags:
+  #     - {name: event_subscriber}
+  sigmaxim_workflow.redirect_anonymous_subscriber:
+    class: Drupal\sigmaxim_workflow\EventSubscriber\RedirectAnonymousSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }

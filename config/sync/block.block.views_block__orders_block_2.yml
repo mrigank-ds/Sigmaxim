@@ -1,0 +1,39 @@
+uuid: 7a93b8bb-502e-4794-bafc-bcd2985b65ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.orders
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - sigmaxim
+id: views_block__orders_block_2
+theme: sigmaxim
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:orders-block_2'
+settings:
+  id: 'views_block:orders-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/user/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin: admin
+      user: user

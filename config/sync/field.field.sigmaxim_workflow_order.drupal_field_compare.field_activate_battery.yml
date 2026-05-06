@@ -1,0 +1,29 @@
+uuid: cc99eb30-a5c3-4b52-9646-9af3e9f6d085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_activate_battery
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1758069718
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_activate_battery
+field_name: field_activate_battery
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Activate Battery'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

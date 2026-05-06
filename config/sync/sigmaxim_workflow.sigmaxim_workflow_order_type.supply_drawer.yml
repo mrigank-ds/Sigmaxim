@@ -1,0 +1,17 @@
+uuid: ee199d3e-1562-4845-9e7f-f55c45f2b1a3
+langcode: en
+status: true
+dependencies: {  }
+id: supply_drawer
+label: 'Supply Drawer'
+description: ''
+group: null
+name: null
+value: null
+watched_folder: orders/case
+permission:
+  - administrator_role
+  - admin_role
+  - user_role
+weight: '-10'
+product_category: '28'

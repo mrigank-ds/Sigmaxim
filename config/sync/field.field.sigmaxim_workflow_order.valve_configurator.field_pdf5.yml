@@ -1,0 +1,23 @@
+uuid: 7414b524-c4ed-4612-a99d-66f2f0141c5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_pdf5
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+id: sigmaxim_workflow_order.valve_configurator.field_pdf5
+field_name: field_pdf5
+entity_type: sigmaxim_workflow_order
+bundle: valve_configurator
+label: PDF
+description: pdf5
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: 'TRUE'
+field_type: boolean

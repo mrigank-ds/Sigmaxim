@@ -1,0 +1,30 @@
+uuid: bdfbf5c8-75ef-436b-9b67-4ba2171ed7f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_left_hub_keyway_shape
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.xtsr_71
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1746185406
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.xtsr_71.field_left_hub_keyway_shape
+field_name: field_left_hub_keyway_shape
+entity_type: sigmaxim_workflow_order
+bundle: xtsr_71
+label: 'Keyway Shape (keyed fit only)'
+description: ''
+required: 1
+translatable: false
+default_value:
+  -
+    value: Square
+default_value_callback: ''
+settings: {  }
+field_type: list_string

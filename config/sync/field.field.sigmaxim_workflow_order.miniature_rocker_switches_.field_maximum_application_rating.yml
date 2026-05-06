@@ -1,0 +1,23 @@
+uuid: 508fba9c-e3a9-4531-a27d-b489ff7a10e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_maximum_application_rating
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.miniature_rocker_switches_
+  module:
+    - options
+id: sigmaxim_workflow_order.miniature_rocker_switches_.field_maximum_application_rating
+field_name: field_maximum_application_rating
+entity_type: sigmaxim_workflow_order
+bundle: miniature_rocker_switches_
+label: 'Maximum Application Rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'A - 65 DC'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

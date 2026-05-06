@@ -1,0 +1,25 @@
+uuid: f296e013-acdd-4958-bfb1-62a398d1f640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_lid_height
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.shipping_cases
+id: sigmaxim_workflow_order.shipping_cases.field_lid_height
+field_name: field_lid_height
+entity_type: sigmaxim_workflow_order
+bundle: shipping_cases
+label: 'Lid Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 5.0
+default_value_callback: ''
+settings:
+  min: 3.0
+  max: 5.0
+  prefix: ''
+  suffix: inches
+field_type: float

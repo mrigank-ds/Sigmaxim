@@ -1,0 +1,12 @@
+# Library for boolean image.
+boolean_image:
+  js:
+    js/boolean_image.js: {}
+  css:
+    component:
+      css/boolean_image.css: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupalSettings
+    - core/drupal

@@ -1,0 +1,23 @@
+uuid: 50323c72-7722-42d6-874b-834a6b4d839f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_float16
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_float16
+field_name: field_float16
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'P1 Label Distance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

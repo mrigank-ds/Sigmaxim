@@ -1,0 +1,340 @@
+uuid: 1d945206-89e0-41ac-9dc9-84705cd04896
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_3d_pdf6
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_bypas_pressure
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_cartridge_material_option4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_customer_email_7
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_customer_name_3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing_reference_1_4
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_drawing_reference_2_5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_dxf7
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_folder_id
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_job_name_2
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_jpeg3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_location_6
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_opening_pressure
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pdf5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pressure_rating_design_
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_pressure_rating_test_
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_project_number_1
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_seal_option5
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_shrinkwrap1
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_step2
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_telephone_number_8
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_temperature_requirements3
+    - field.field.sigmaxim_workflow_order.valve_configurator.field_valve_option1
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.valve_configurator
+  module:
+    - field_group
+    - field_group_image
+third_party_settings:
+  field_group:
+    group_order:
+      children:
+        - group_valve_type
+        - group_design_specification1
+        - group_material_specification
+        - group_output_types1
+        - group_customer_information1
+      label: Order
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_design_specification1:
+      children:
+        - field_pressure_rating_design_
+        - field_pressure_rating_test_
+        - field_opening_pressure
+        - field_bypas_pressure
+        - field_temperature_requirements3
+      label: 'Design Specification'
+      region: content
+      parent_name: group_order
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_valve_type:
+      children:
+        - field_valve_option1
+      label: 'Valve Type'
+      region: content
+      parent_name: group_order
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_material_specification:
+      children:
+        - field_cartridge_material_option4
+        - field_seal_option5
+      label: 'Material Specification'
+      region: content
+      parent_name: group_order
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_output_types1:
+      children:
+        - field_shrinkwrap1
+        - field_step2
+        - field_jpeg3
+        - field_drawing4
+        - field_pdf5
+        - field_3d_pdf6
+        - field_dxf7
+      label: 'Output Types'
+      region: content
+      parent_name: group_order
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_customer_information1:
+      children:
+        - field_project_number_1
+        - field_job_name_2
+        - field_customer_name_3
+        - field_drawing_reference_1_4
+        - field_drawing_reference_2_5
+        - field_location_6
+        - field_customer_email_7
+        - field_telephone_number_8
+      label: 'Customer Information'
+      region: content
+      parent_name: group_order
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+  field_group_image:
+    group_valve_type:
+      image: 50
+      image_style: large
+id: sigmaxim_workflow_order.valve_configurator.default
+targetEntityType: sigmaxim_workflow_order
+bundle: valve_configurator
+mode: default
+content:
+  field_3d_pdf6:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings:
+      conditional_fields:
+        064af53b-0842-4f05-a651-4d13630890cf:
+          entity_type: sigmaxim_workflow_order
+          bundle: valve_configurator
+          dependee: id
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_bypas_pressure:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_cartridge_material_option4:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_customer_email_7:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_name_3:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_drawing4:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_drawing_reference_1_4:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_drawing_reference_2_5:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dxf7:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_job_name_2:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_jpeg3:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_location_6:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_opening_pressure:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pdf5:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_pressure_rating_design_:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pressure_rating_test_:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_project_number_1:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_seal_option5:
+    type: options_buttons
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_shrinkwrap1:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_step2:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_telephone_number_8:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_temperature_requirements3:
+    type: options_buttons
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_valve_option1:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_folder_id: true
+  name: true
+  user_id: true

@@ -1,0 +1,30 @@
+uuid: 06444746-71ad-4770-b460-48a815ae5393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_body_types
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.pressure_vessel
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1751870168
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.pressure_vessel.field_body_types
+field_name: field_body_types
+entity_type: sigmaxim_workflow_order
+bundle: pressure_vessel
+label: 'Body Types'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: 'Single Rolled Piece'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

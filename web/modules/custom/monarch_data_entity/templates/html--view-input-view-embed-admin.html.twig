@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+    <style>
+      html, body, .page-wrapper {
+        background: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body{{ attributes }}>
+    <a href="#main-content" class="visually-hidden focusable">
+        {{ 'Skip to main content'|t }}
+    </a>
+    {{ page }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>

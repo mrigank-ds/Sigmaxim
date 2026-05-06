@@ -1,0 +1,31 @@
+uuid: a1f1e95d-5970-40be-abad-464c944e5234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_exp_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - field_expression
+    - field_inline_label
+third_party_settings:
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.inline.field_exp_inline
+field_name: field_exp_inline
+entity_type: sigmaxim_workflow_order
+bundle: inline
+label: exp_inline
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  expression: 5+9
+  default_zero: 1
+  suppress_errors: 1
+  debug_mode: 0
+field_type: field_expression

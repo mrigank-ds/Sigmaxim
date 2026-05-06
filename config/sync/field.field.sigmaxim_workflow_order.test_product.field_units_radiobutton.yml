@@ -1,0 +1,28 @@
+uuid: 4b5f85fb-5364-4564-87db-f76ad23866b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_units_radiobutton
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - options
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753357635
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_units_radiobutton
+field_name: field_units_radiobutton
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Units Radiobutton'
+description: ''
+required: 1
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

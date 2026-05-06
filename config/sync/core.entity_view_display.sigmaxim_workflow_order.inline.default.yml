@@ -1,0 +1,261 @@
+uuid: 45f1f6c6-2d4e-4da2-83ee-81d5a4fb18fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sigmaxim_workflow_order.inline.field_bool_inline
+    - field.field.sigmaxim_workflow_order.inline.field_content_inline
+    - field.field.sigmaxim_workflow_order.inline.field_date_inline
+    - field.field.sigmaxim_workflow_order.inline.field_email_inline
+    - field.field.sigmaxim_workflow_order.inline.field_exp_deci_inline
+    - field.field.sigmaxim_workflow_order.inline.field_exp_floa_inline
+    - field.field.sigmaxim_workflow_order.inline.field_exp_inline
+    - field.field.sigmaxim_workflow_order.inline.field_exp_int_inline
+    - field.field.sigmaxim_workflow_order.inline.field_folder_id
+    - field.field.sigmaxim_workflow_order.inline.field_link_inline
+    - field.field.sigmaxim_workflow_order.inline.field_list_float_inline
+    - field.field.sigmaxim_workflow_order.inline.field_list_inline
+    - field.field.sigmaxim_workflow_order.inline.field_list_int_inline
+    - field.field.sigmaxim_workflow_order.inline.field_num_float_inline
+    - field.field.sigmaxim_workflow_order.inline.field_num_inline
+    - field.field.sigmaxim_workflow_order.inline.field_num_int_inline
+    - field.field.sigmaxim_workflow_order.inline.field_tex_ter_inline
+    - field.field.sigmaxim_workflow_order.inline.field_text_for_lon_sum_inline
+    - field.field.sigmaxim_workflow_order.inline.field_text_for_long_inline
+    - field.field.sigmaxim_workflow_order.inline.field_text_format_inline
+    - field.field.sigmaxim_workflow_order.inline.field_text_inline
+    - field.field.sigmaxim_workflow_order.inline.field_text_pla_inline
+    - field.field.sigmaxim_workflow_order.inline.field_timestamp_inline
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.inline
+  module:
+    - datetime
+    - field_expression
+    - link
+    - options
+    - text
+    - user
+id: sigmaxim_workflow_order.inline.default
+targetEntityType: sigmaxim_workflow_order
+bundle: inline
+mode: default
+content:
+  field_bool_inline:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content_inline:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_date_inline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_email_inline:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_exp_deci_inline:
+    type: expression_decimal
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_exp_floa_inline:
+    type: expression_decimal
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_exp_inline:
+    type: field_expression_value
+    label: above
+    settings:
+      always_evaluate: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_exp_int_inline:
+    type: expression_integer
+    label: above
+    settings:
+      always_evaluate: false
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_link_inline:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_list_float_inline:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_list_inline:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_list_int_inline:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_num_float_inline:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_num_inline:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_num_int_inline:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_tex_ter_inline:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_text_for_lon_sum_inline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_text_for_long_inline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_text_format_inline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text_inline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_text_pla_inline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_timestamp_inline:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: ''
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_folder_id: true

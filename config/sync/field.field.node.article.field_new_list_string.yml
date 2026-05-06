@@ -1,0 +1,25 @@
+uuid: 333bca40-82c3-4709-8318-d374ced08136
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_list_string
+    - node.type.article
+  module:
+    - field_inline_label
+    - options
+third_party_settings:
+  field_inline_label:
+    inline_label: 0
+id: node.article.field_new_list_string
+field_name: field_new_list_string
+entity_type: node
+bundle: article
+label: 'New List String'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

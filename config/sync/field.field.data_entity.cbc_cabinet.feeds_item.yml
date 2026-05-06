@@ -1,0 +1,26 @@
+uuid: efac1538-0f8f-400e-9d41-c0f4dc101276
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.feeds_item
+    - monarch_data_entity.data_entity_type.cbc_cabinet
+  module:
+    - feeds
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737533605
+id: data_entity.cbc_cabinet.feeds_item
+field_name: feeds_item
+entity_type: data_entity
+bundle: cbc_cabinet
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

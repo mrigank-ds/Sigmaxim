@@ -1,0 +1,27 @@
+uuid: 8cb01d98-2428-4ca3-9981-a9d17abd3511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.data_entity.field_cbc_ext_cab_cab_desc
+    - monarch_data_entity.data_entity_type.cbc_cabinet_ext
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1737534723
+  field_inline_label:
+    inline_label: 0
+id: data_entity.cbc_cabinet_ext.field_cbc_ext_cab_cab_desc
+field_name: field_cbc_ext_cab_cab_desc
+entity_type: data_entity
+bundle: cbc_cabinet_ext
+label: CABINET_DESCRIPTION
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

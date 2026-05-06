@@ -1,0 +1,21 @@
+uuid: d686c15a-6bf6-43df-8b73-031b2132bf4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_label_17
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.icc_connectors
+id: sigmaxim_workflow_order.icc_connectors.field_label_17
+field_name: field_label_17
+entity_type: sigmaxim_workflow_order
+bundle: icc_connectors
+label: 'Environmental test request'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: label_17
+default_value_callback: ''
+settings: {  }
+field_type: string

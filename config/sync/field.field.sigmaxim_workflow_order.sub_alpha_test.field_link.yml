@@ -1,0 +1,30 @@
+uuid: 9a0a49b1-cf75-4b6d-a0a8-b7bd68340463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_link
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.sub_alpha_test
+  module:
+    - field_inline_label
+    - link
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1712841027
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.sub_alpha_test.field_link
+field_name: field_link
+entity_type: sigmaxim_workflow_order
+bundle: sub_alpha_test
+label: Link
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: '17'
+  title: '1'
+field_type: link

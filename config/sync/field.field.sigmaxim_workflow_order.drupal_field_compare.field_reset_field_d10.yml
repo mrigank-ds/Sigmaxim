@@ -1,0 +1,29 @@
+uuid: e2f6e534-5714-4359-811e-0fecac49fbfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_reset_field_d10
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.drupal_field_compare
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1757366704
+  field_inline_label:
+    inline_label: 0
+id: sigmaxim_workflow_order.drupal_field_compare.field_reset_field_d10
+field_name: field_reset_field_d10
+entity_type: sigmaxim_workflow_order
+bundle: drupal_field_compare
+label: 'Reset Field'
+description: ''
+required: 0
+translatable: false
+default_value:
+  -
+    value: "Here In Drupal 10 we don't have a field to reset"
+default_value_callback: ''
+settings: {  }
+field_type: string

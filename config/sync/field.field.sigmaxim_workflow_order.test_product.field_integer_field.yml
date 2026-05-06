@@ -1,0 +1,31 @@
+uuid: da1b96e0-e31d-4f1a-a59b-ada0ba240c2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.sigmaxim_workflow_order.field_integer_field
+    - sigmaxim_workflow.sigmaxim_workflow_order_type.test_product
+  module:
+    - field_inline_label
+    - sigmaxim_data_entity
+third_party_settings:
+  sigmaxim_data_entity:
+    timestamp: 1753357326
+  field_inline_label:
+    inline_label: 1
+id: sigmaxim_workflow_order.test_product.field_integer_field
+field_name: field_integer_field
+entity_type: sigmaxim_workflow_order
+bundle: test_product
+label: 'Integer Field'
+description: ''
+required: 0
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: ''
+  max: ''
+  prefix: ''
+  suffix: ''
+field_type: integer
