@@ -80,6 +80,18 @@ class TokenService
         $values = $form_state->getValues();
         $values = NestedArray::getValue($values, $path, $key_exists);
 
+        if (!$key_exists || empty($values)) {
+          $values = $form_state->getUserInput();
+          $values = NestedArray::getValue($values, $path, $key_exists);
+          
+          // Fallback for fields that might be at the root of User Input
+          if (!$key_exists && count($path) > 1) {
+             $values = $form_state->getUserInput();
+             $values = $values[end($path)] ?? NULL;
+             $key_exists = ($values !== NULL);
+          }
+        }
+
         if ($key_exists) {
           $widget = $form_display->getRenderer($field_name);
 

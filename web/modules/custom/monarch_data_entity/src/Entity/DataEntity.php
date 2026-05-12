@@ -36,7 +36,7 @@ use Drupal\monarch_data_entity\DataEntityInterface;
  *     }
  *   },
  *   base_table = "data_entity",
- *   admin_permission = "administer data entity types",
+ *   admin_permission = "administer data types",
  *   entity_keys = {
  *     "id" = "id",
  *     "bundle" = "bundle",

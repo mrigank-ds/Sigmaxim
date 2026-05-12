@@ -118,3 +118,7 @@ Thumbs.db
 /drupal
 
 vendor/
+
+# Ignore custom documentation files
+code_structure.md
+resolved_issues_log.txt

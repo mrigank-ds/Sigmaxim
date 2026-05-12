@@ -162,12 +162,16 @@ class SimpleDataReferenceWidget extends WidgetBase {
     }
 
     foreach ($target_field_definitions as $field_name => $target_field_definition) {
+      // Force visibility to TRUE unless it was explicitly saved as FALSE in a newer config.
+      // Using isset() and checking if it's strictly empty to decide on the default.
+      $visibility = isset($weights[$field_name]['visibility']) ? $weights[$field_name]['visibility'] : TRUE;
+
       $rows[$field_name] = [
         $target_field_definition->getLabel(),
         $weights[$field_name]['weight'] ?? 0,
         $weights[$field_name]['token'] ?? '',
-        $weights[$field_name]['enabled'] ?? !($target_field_definition instanceof BaseFieldDefinition),
-        $weights[$field_name]['visibility'] ?? in_array($field_name, $primary_keys),
+        $weights[$field_name]['enabled'] ?? FALSE,
+        $visibility,
       ];
     }
 
@@ -368,9 +372,11 @@ class SimpleDataReferenceWidget extends WidgetBase {
     $target_fields = $this->getFieldList();
     $target_type = $this->fieldDefinition->getSetting('target_type');
     $es = $this->entityTypeManager->getStorage($target_type);
+    $bundle_id = current($this->fieldDefinition->getSetting('handler_settings')['target_bundles']);
+    $bundle_key = $es->getEntityType()->getKey('bundle') ?: 'bundle';
 
     $query_values = [];
-    $query_values['bundle'] = current($this->fieldDefinition->getSetting('handler_settings')['target_bundles']);
+    $query_values[$bundle_key] = $bundle_id;
 
     $all_query_values = $query_values;
     $last_value_field = NULL;
@@ -380,7 +386,8 @@ class SimpleDataReferenceWidget extends WidgetBase {
         $input_field_value = $input[$target_field_name][$target_field_name] ?? FALSE ?: FALSE;
       }
       else {
-        $input_field_value = json_decode($input[$target_field_name][$target_field_name] ?? '' ?: '', TRUE);
+        $raw_input = $input[$target_field_name][$target_field_name] ?? '';
+        $input_field_value = json_decode($raw_input, TRUE) ?? $raw_input ?: FALSE;
       }
 
       $all_query_values[$target_field_name] = $input_field_value;
@@ -408,10 +415,9 @@ class SimpleDataReferenceWidget extends WidgetBase {
       $res = [];
 
       if ($staged) {
-        $bundle_id = current($this->fieldDefinition->getSetting('handler_settings')['target_bundles']);
         $res['bundle'] = $es->getQuery()
           ->accessCheck(FALSE)
-          ->condition('bundle', $bundle_id)
+          ->condition($bundle_key, $bundle_id)
           ->range(0, 500)
           ->execute() ?: [];
 
@@ -539,9 +545,8 @@ class SimpleDataReferenceWidget extends WidgetBase {
       $token = $weights[$target_field_name]['token'] ?? NULL ?: NULL;
       $enabled = $weights[$target_field_name]['enabled'] ?? FALSE ?: FALSE;
 
-      // Visibility defaults to TRUE only for Primary Keys if not explicitly set.
-      $is_primary_key = in_array($target_field_name, $primary_keys);
-      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : $is_primary_key;
+      // Visibility defaults to TRUE if not explicitly set.
+      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : TRUE;
 
       $element[$target_field_name]['#type'] = 'html_tag';
       $element[$target_field_name]['#tag'] = 'div';
@@ -661,8 +666,7 @@ class SimpleDataReferenceWidget extends WidgetBase {
 
     $visible_values = [];
     foreach ($this->getFieldList() as $vis_tfn) {
-      $is_pk = in_array($vis_tfn, $primary_keys, TRUE);
-      $vis = isset($weights[$vis_tfn]['visibility']) ? $weights[$vis_tfn]['visibility'] : $is_pk;
+      $vis = isset($weights[$vis_tfn]['visibility']) ? $weights[$vis_tfn]['visibility'] : TRUE;
       if ($vis && isset($values[$vis_tfn])) {
         $visible_values[$vis_tfn] = $values[$vis_tfn];
       }
@@ -677,8 +681,7 @@ class SimpleDataReferenceWidget extends WidgetBase {
 
     while ($current_stage) {
       $target_field_name = current(explode('.', $current_stage));
-      $is_primary_key = in_array($target_field_name, $primary_keys, TRUE);
-      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : $is_primary_key;
+      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : TRUE;
       $token = $weights[$target_field_name]['token'] ?? NULL ?: NULL;
 
       if ($visibility && !$stop_populating) {
@@ -707,27 +710,40 @@ class SimpleDataReferenceWidget extends WidgetBase {
 
             // Match the token value against available options.
             $matched_val = NULL;
-            foreach ($options as $opt_val => $opt_label) {
-              if ($opt_val === '') continue;
-              
-              // Direct match (label or value).
-              if (strcasecmp((string)$opt_label, $token_value) === 0 || strcasecmp((string)$opt_val, $token_value) === 0) {
-                $matched_val = $opt_val;
-                break;
-              }
-              
-              // Key-based JSON match.
-              $decoded = json_decode((string)$opt_val, TRUE);
-              if (is_array($decoded)) {
-                $sub_val = $decoded['value'] ?? $decoded['target_id'] ?? reset($decoded);
-                if (is_scalar($sub_val) && strcasecmp((string)$sub_val, $token_value) === 0) {
+            $token_value_trimmed = trim((string)$token_value);
+            
+            if ($token_value_trimmed !== '') {
+              foreach ($options as $opt_val => $opt_label) {
+                if ($opt_val === '') continue;
+                
+                $opt_label_str = trim(strip_tags((string)$opt_label));
+                $opt_val_str = trim((string)$opt_val);
+                
+                // 1. Direct label match
+                if (strcasecmp($opt_label_str, $token_value_trimmed) === 0) {
                   $matched_val = $opt_val;
                   break;
+                }
+                
+                // 2. Direct value match
+                if (strcasecmp($opt_val_str, $token_value_trimmed) === 0) {
+                  $matched_val = $opt_val;
+                  break;
+                }
+                
+                // 3. JSON value match
+                $decoded = json_decode((string)$opt_val, TRUE);
+                if (is_array($decoded)) {
+                  $sub_val = $decoded['value'] ?? $decoded['target_id'] ?? reset($decoded);
+                  if (is_scalar($sub_val) && strcasecmp(trim((string)$sub_val), $token_value_trimmed) === 0) {
+                    $matched_val = $opt_val;
+                    break;
+                  }
                 }
               }
             }
 
-            if ($matched_val !== NULL && !$is_my_ajax) {
+            if ($matched_val !== NULL && (!$is_my_ajax || empty($values[$target_field_name][$target_field_name]))) {
               $values[$target_field_name][$target_field_name] = $matched_val;
               // Explicitly set the value in form state so it sticks and cascades.
               $form_state->setValue([...$parents, $delta, 'wrapper', $target_field_name, $target_field_name], $matched_val);

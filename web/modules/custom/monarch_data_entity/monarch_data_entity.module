@@ -11,6 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\FieldConfigInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
 
 /**
  * Implements hook_theme().
@@ -150,6 +151,42 @@ function monarch_data_entity_preprocess_page__view_input_view_embed(&$variables)
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function monarch_data_entity_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  // 1. Set default for 'Add field' page: Reference -> Other
+  // Drupal 10.2 uses 'field_ui_field_storage_add_form' for the field creation process.
+  if ($form_id === 'field_ui_field_storage_add_form') {
+    // Step 1: Default category to 'Reference'
+    if (isset($form['add']['new_storage_type'])) {
+      $form['add']['new_storage_type']['#default_value'] = 'reference';
+    }
+    
+    // Step 2: Default sub-option to 'Other' (entity_reference)
+    if (isset($form['group_field_options_wrapper']['fields'])) {
+      $form['group_field_options_wrapper']['fields']['#default_value'] = 'entity_reference';
+    }
+
+    // Step 2: Default sub-option to 'Other' (entity_reference)
+    if (isset($form['group_field_options_wrapper']['fields'])) {
+      $form['group_field_options_wrapper']['fields']['#default_value'] = 'entity_reference';
+    }
+  }
+
+  // 2. Set default for 'Storage settings' page: Type of item to reference -> Data
+  if ($form_id === 'field_config_edit_form' || $form_id === 'field_storage_config_edit_form' || $form_id === 'field_storage_config_add_form') {
+    // Force target_type to data_entity if it's node or empty.
+    $target_type_element = &$form['field_storage']['subform']['settings']['target_type'] ?? $form['settings']['target_type'];
+    if (isset($target_type_element)) {
+      if (empty($target_type_element['#default_value']) || $target_type_element['#default_value'] === 'node') {
+        $target_type_element['#default_value'] = 'data_entity';
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter() for 'field_config_edit_form'.
  *
  */
@@ -206,7 +243,6 @@ function monarch_data_entity_form_field_config_edit_form_alter(array &$form, For
     'id',
     'uuid',
     'bundle',
-    'label',
     'status',
     'created',
     'changed',
@@ -234,8 +270,8 @@ function monarch_data_entity_form_field_config_edit_form_alter(array &$form, For
       'enabled' => $weights[$field_name]['enabled'] ?? TRUE, // Default to true for new ones
     ];
 
-    if ($widget_type === 'sigmaxim_simple_data_reference' && $is_primary_key) {
-      $rows[$field_name]['visibility'] = $weights[$field_name]['visibility'] ?? TRUE;
+    if ($widget_type === 'sigmaxim_simple_data_reference') {
+      $rows[$field_name]['visibility'] = (isset($weights[$field_name]['visibility'])) ? $weights[$field_name]['visibility'] : TRUE;
     }
   }
 
@@ -411,7 +447,6 @@ function monarch_data_entity_json_data_reference_get_result_table($field_name, $
       'id',
       'uuid',
       'bundle',
-      'label',
       'status',
       'created',
       'changed',
@@ -532,6 +567,20 @@ function monarch_data_entity_views_query_alter($view, $query)
       }
     } else {
       $query->addWhere(0, "$base_table.$effective_field_name", $value, '=');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_input().
+ */
+function monarch_data_entity_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  
+  // Target the 'Other' radio button in the field creation process.
+  if (isset($element['#name']) && $element['#name'] === 'group_field_options_wrapper') {
+    if (isset($element['#return_value']) && $element['#return_value'] === 'entity_reference') {
+      $variables['attributes']['checked'] = 'checked';
     }
   }
 }

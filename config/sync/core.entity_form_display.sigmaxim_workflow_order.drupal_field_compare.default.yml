@@ -616,55 +616,69 @@ content:
         label:
           weight: '-10'
           token: ''
-          enabled: 0
+          enabled: 1
+          visibility: 1
+          title: 'Field Name'
         id:
           weight: '-9'
           token: ''
           enabled: 0
+          visibility: 0
         uuid:
           weight: '-8'
           token: ''
           enabled: 0
+          visibility: 0
         bundle:
           weight: '-7'
           token: ''
           enabled: 0
+          visibility: 0
         status:
           weight: '-6'
           token: ''
           enabled: 0
+          visibility: 0
         created:
           weight: '-5'
           token: ''
           enabled: 0
+          visibility: 0
         changed:
           weight: '-4'
           token: ''
           enabled: 0
+          visibility: 0
         feeds_item:
           weight: '-3'
           token: ''
           enabled: 0
+          visibility: 0
         field_country:
           weight: '-2'
           token: ''
           enabled: '1'
+          visibility: 1
         field_state:
           weight: '-1'
           token: ''
           enabled: '1'
+          visibility: 1
         field_sector:
           weight: '0'
           token: ''
           enabled: '1'
+          visibility: 1
         field_companies:
           weight: '1'
           token: ''
           enabled: '1'
+          visibility: 1
         field_market_occupancy:
           weight: '2'
           token: ''
           enabled: 0
+          visibility: 0
     third_party_settings: {  }
   field_standard_data_table1_d10:
     type: monarch_data_entity_data_drill_down
@@ -683,6 +697,7 @@ content:
           weight: '-7'
         label:
           weight: '-6'
+          enabled: 1
         id:
           weight: '-5'
         feeds_item:

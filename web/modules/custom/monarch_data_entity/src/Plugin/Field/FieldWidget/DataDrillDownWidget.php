@@ -135,7 +135,7 @@ class DataDrillDownWidget extends WidgetBase
         $target_field_definition->getLabel(),
         $weights[$field_name]['weight'] ?? 0,
         $weights[$field_name]['token'] ?? '',
-        $weights[$field_name]['enabled'] ?? !($target_field_definition instanceof BaseFieldDefinition),
+        $weights[$field_name]['enabled'] ?? FALSE,
       ];
     }
 

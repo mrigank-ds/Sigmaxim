@@ -25,7 +25,7 @@ translatable: false
 default_value:
   -
     summary: ''
-    value: '<p>In Standard Data we dont have controls for Filter Tokens and Display Columns as like in Drupal 7 Site</p><p>&nbsp;</p><img data-entity-uuid="642fb7a3-80a8-4435-9a9f-30e077ecc101" data-entity-type="file" src="/sites/default/files/inline-images/image.png" width="1125" height="224">'
+    value: '<p>In Standard Data we dont have controls for Filter Tokens and Display Columns as like in Drupal 7 Site</p>'
     format: basic_html
 default_value_callback: ''
 settings:

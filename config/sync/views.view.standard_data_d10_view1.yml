@@ -76,6 +76,70 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+        label:
+          id: label
+          table: data_entity
+          field: label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: data_entity
+          plugin_id: field
+          label: 'Field Name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_country:
           id: field_country
           table: data_entity__field_country
@@ -676,6 +740,7 @@ display:
           default_row_class: true
           columns:
             view_input_selector: view_input_selector
+            label: label
             field_country: field_country
             field_state: field_state
             field_sector: field_sector
@@ -684,6 +749,13 @@ display:
           default: '-1'
           info:
             view_input_selector:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            label:
               sortable: false
               default_sort_order: asc
               align: ''
