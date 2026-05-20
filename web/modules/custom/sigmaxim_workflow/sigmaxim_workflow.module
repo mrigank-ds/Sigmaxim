@@ -162,8 +162,10 @@ function sigmaxim_workflow_form_alter(&$form, FormStateInterface &$form_state, $
       }
     }
     $product_entity = \Drupal::entityTypeManager()->getStorage('sigmaxim_workflow_order_type')->load($current_product);
-    $product_label = $product_entity->label();
-    $form['#title'] = 'Now Configuring: ' . $product_label;
+    if ($product_entity) {
+      $product_label = $product_entity->label();
+      $form['#title'] = 'Now Configuring: ' . $product_label;
+    }
   }
 }
 

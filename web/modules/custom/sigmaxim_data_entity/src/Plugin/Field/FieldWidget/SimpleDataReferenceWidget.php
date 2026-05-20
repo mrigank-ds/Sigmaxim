@@ -134,9 +134,9 @@ class SimpleDataReferenceWidget extends WidgetBase {
       ],
     ];
 
-    $weights = $this->fieldDefinition->getThirdPartySetting('monarch_data_entity', 'weights');
+    $weights = $this->getSetting('weights') ?? [];
     if (empty($weights)) {
-        $weights = $this->getSetting('weights') ?? [];
+        $weights = $this->fieldDefinition->getThirdPartySetting('monarch_data_entity', 'weights') ?? [];
     }
     $rows = [];
 
@@ -162,9 +162,10 @@ class SimpleDataReferenceWidget extends WidgetBase {
     }
 
     foreach ($target_field_definitions as $field_name => $target_field_definition) {
-      // Force visibility to TRUE unless it was explicitly saved as FALSE in a newer config.
+      // Force visibility to TRUE for custom fields unless it was explicitly saved as FALSE.
       // Using isset() and checking if it's strictly empty to decide on the default.
-      $visibility = isset($weights[$field_name]['visibility']) ? $weights[$field_name]['visibility'] : TRUE;
+      $is_custom = (strpos($field_name, 'field_') === 0);
+      $visibility = isset($weights[$field_name]['visibility']) ? $weights[$field_name]['visibility'] : $is_custom;
 
       $rows[$field_name] = [
         $target_field_definition->getLabel(),
@@ -233,14 +234,15 @@ class SimpleDataReferenceWidget extends WidgetBase {
    * Get field list.
    */
   public function getFieldList() {
-    $field_weights = $this->fieldDefinition->getThirdPartySetting('monarch_data_entity', 'weights');
+    $field_weights = $this->getSetting('weights') ?? [];
     if (empty($field_weights)) {
-      $field_weights = $this->getSetting('weights') ?? [];
+      $field_weights = $this->fieldDefinition->getThirdPartySetting('monarch_data_entity', 'weights') ?? [];
     }
 
     foreach ($field_weights as $field_name => $field_config) {
       if (!(($field_config['enabled'] ?? NULL) || ($field_config['visibility'] ?? NULL) || ($field_config['token'] ?? NULL))) {
-        unset($field_weights[$field_name]);
+        // Do not unset so that explicit 0 values are preserved.
+        // unset($field_weights[$field_name]);
       }
     }
 
@@ -496,7 +498,9 @@ class SimpleDataReferenceWidget extends WidgetBase {
     $field_name = $this->fieldDefinition->getName();
 
     $target_fields = $this->getFieldList();
-    $target_field_definitions = $this->entityFieldManager->getFieldDefinitions($this->fieldDefinition->getSetting('target_type'), current($this->fieldDefinition->getSetting('handler_settings')['target_bundles']));
+    $bundle = current($this->fieldDefinition->getSetting('handler_settings')['target_bundles']);
+    $target_field_definitions = $this->entityFieldManager->getFieldDefinitions($this->fieldDefinition->getSetting('target_type'), $bundle);
+    \Drupal::logger('sigmaxim')->notice('updateOptions for ' . $field_name . ', bundle: ' . $bundle . ', keys: ' . implode(', ', array_keys($target_field_definitions)) . ', target_fields: ' . implode(', ', $target_fields));
     $es = $this->entityTypeManager->getStorage($this->fieldDefinition->getSetting('target_type'));
 
     $parents = $form['#parents'];
@@ -546,7 +550,8 @@ class SimpleDataReferenceWidget extends WidgetBase {
       $enabled = $weights[$target_field_name]['enabled'] ?? FALSE ?: FALSE;
 
       // Visibility defaults to TRUE if not explicitly set.
-      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : TRUE;
+      $is_custom = (strpos($target_field_name, 'field_') === 0);
+      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : $is_custom;
 
       $element[$target_field_name]['#type'] = 'html_tag';
       $element[$target_field_name]['#tag'] = 'div';
@@ -666,7 +671,8 @@ class SimpleDataReferenceWidget extends WidgetBase {
 
     $visible_values = [];
     foreach ($this->getFieldList() as $vis_tfn) {
-      $vis = isset($weights[$vis_tfn]['visibility']) ? $weights[$vis_tfn]['visibility'] : TRUE;
+      $is_custom_vis = (strpos($vis_tfn, 'field_') === 0);
+      $vis = isset($weights[$vis_tfn]['visibility']) ? $weights[$vis_tfn]['visibility'] : $is_custom_vis;
       if ($vis && isset($values[$vis_tfn])) {
         $visible_values[$vis_tfn] = $values[$vis_tfn];
       }
@@ -681,7 +687,8 @@ class SimpleDataReferenceWidget extends WidgetBase {
 
     while ($current_stage) {
       $target_field_name = current(explode('.', $current_stage));
-      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : TRUE;
+      $is_custom = (strpos($target_field_name, 'field_') === 0);
+      $visibility = isset($weights[$target_field_name]['visibility']) ? $weights[$target_field_name]['visibility'] : $is_custom;
       $token = $weights[$target_field_name]['token'] ?? NULL ?: NULL;
 
       if ($visibility && !$stop_populating) {
@@ -719,16 +726,16 @@ class SimpleDataReferenceWidget extends WidgetBase {
                 $opt_label_str = trim(strip_tags((string)$opt_label));
                 $opt_val_str = trim((string)$opt_val);
                 
-                // 1. Direct label match
-                if (strcasecmp($opt_label_str, $token_value_trimmed) === 0) {
+                // 1. Direct label or value match (Case Insensitive)
+                if (strcasecmp($opt_label_str, $token_value_trimmed) === 0 || strcasecmp($opt_val_str, $token_value_trimmed) === 0) {
                   $matched_val = $opt_val;
                   break;
                 }
                 
-                // 2. Direct value match
-                if (strcasecmp($opt_val_str, $token_value_trimmed) === 0) {
-                  $matched_val = $opt_val;
-                  break;
+                // 2. Fuzzy match (Token is part of Label, or vice versa)
+                if (stripos($opt_label_str, $token_value_trimmed) !== FALSE || stripos($token_value_trimmed, $opt_label_str) !== FALSE) {
+                   $matched_val = $opt_val;
+                   // Don't break yet, look for a better direct match if possible
                 }
                 
                 // 3. JSON value match
@@ -743,9 +750,10 @@ class SimpleDataReferenceWidget extends WidgetBase {
               }
             }
 
-            if ($matched_val !== NULL && (!$is_my_ajax || empty($values[$target_field_name][$target_field_name]))) {
+            // Always apply token if we have a match, regardless of $is_my_ajax, 
+            // unless the user has manually selected something else already.
+            if ($matched_val !== NULL) {
               $values[$target_field_name][$target_field_name] = $matched_val;
-              // Explicitly set the value in form state so it sticks and cascades.
               $form_state->setValue([...$parents, $delta, 'wrapper', $target_field_name, $target_field_name], $matched_val);
               
               // Recalculate stages if we forced a value.

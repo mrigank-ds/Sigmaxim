@@ -271,7 +271,8 @@ function monarch_data_entity_form_field_config_edit_form_alter(array &$form, For
     ];
 
     if ($widget_type === 'sigmaxim_simple_data_reference') {
-      $rows[$field_name]['visibility'] = (isset($weights[$field_name]['visibility'])) ? $weights[$field_name]['visibility'] : TRUE;
+      $is_custom = (strpos($field_name, 'field_') === 0);
+      $rows[$field_name]['visibility'] = (isset($weights[$field_name]['visibility'])) ? $weights[$field_name]['visibility'] : $is_custom;
     }
   }
 
@@ -581,6 +582,20 @@ function monarch_data_entity_preprocess_input(&$variables) {
   if (isset($element['#name']) && $element['#name'] === 'group_field_options_wrapper') {
     if (isset($element['#return_value']) && $element['#return_value'] === 'entity_reference') {
       $variables['attributes']['checked'] = 'checked';
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_prepare_form().
+ */
+function monarch_data_entity_entity_prepare_form(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if ($entity instanceof \Drupal\field\FieldConfigInterface && $entity->isNew()) {
+    $storage = $entity->getFieldStorageDefinition();
+    if ($storage instanceof \Drupal\field\FieldStorageConfigInterface && $storage->getType() === 'entity_reference') {
+      if (empty($storage->getSetting('target_type')) || $storage->getSetting('target_type') === 'node') {
+        $storage->setSetting('target_type', 'data_entity');
+      }
     }
   }
 }

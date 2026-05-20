@@ -49,7 +49,12 @@
         element.dataset.formDataHash = newHash;
 
         checkFormChange.debounced[element.id] = checkFormChange.debounced[element.id] || debounce(function () {
-          element.dispatchEvent(new Event('change'));
+          console.log('Antigravity Notifier: Triggering change on dependent field: ' + element.id);
+          // Use both native and jQuery triggers for maximum compatibility with Drupal AJAX
+          element.dispatchEvent(new Event('change', { bubbles: true }));
+          if (window.jQuery) {
+            window.jQuery(element).trigger('change');
+          }
         });
 
         checkFormChange.debounced[element.id]();

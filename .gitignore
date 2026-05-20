@@ -122,3 +122,13 @@ vendor/
 # Ignore custom documentation files
 code_structure.md
 resolved_issues_log.txt
+*.md
+
+# Temporary developer scripts
+add_fields.php
+copy_fields.php
+debug.php
+fix_config.php
+fix_third_party.php
+test_*.php
+update_display.php

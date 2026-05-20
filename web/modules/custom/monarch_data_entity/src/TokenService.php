@@ -81,14 +81,21 @@ class TokenService
         $values = NestedArray::getValue($values, $path, $key_exists);
 
         if (!$key_exists || empty($values)) {
-          $values = $form_state->getUserInput();
-          $values = NestedArray::getValue($values, $path, $key_exists);
+          $input = $form_state->getUserInput();
+          $values = NestedArray::getValue($input, $path, $key_exists);
           
-          // Fallback for fields that might be at the root of User Input
-          if (!$key_exists && count($path) > 1) {
-             $values = $form_state->getUserInput();
-             $values = $values[end($path)] ?? NULL;
-             $key_exists = ($values !== NULL);
+          // Fallback 1: Try the field name directly in the root of input (for AJAX simplified inputs)
+          if (!$key_exists || empty($values)) {
+            $field_id = end($path);
+            if (isset($input[$field_id])) {
+              $values = $input[$field_id];
+              $key_exists = TRUE;
+            }
+          }
+
+          // Ensure values is an array to prevent fatal errors in foreach loops later.
+          if ($key_exists && !is_array($values)) {
+            $values = [['value' => $values]];
           }
         }
 
